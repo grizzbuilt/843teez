@@ -1,46 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://843teez.com/</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/#about</loc>
-    <lastmod>2025-06-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/#services</loc>
-    <lastmod>2025-06-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/#samples</loc>
-    <lastmod>2025-06-30</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/#pricing</loc>
-    <lastmod>2025-06-30</lastmod>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/#contact</loc>
-    <lastmod>2025-06-30</lastmod>
-    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://843teez.com/843teezLogo.png</image:loc>
+      <image:caption>843 Teez Custom T-Shirts Conway SC</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://store.843teez.com/</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <priority>0.9</priority>
   </url>
 
