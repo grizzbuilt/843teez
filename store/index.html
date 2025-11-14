@@ -1,1 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>843 Teez Store – Custom Tees, Hoodies & Sweatshirts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Order custom tees, hoodies, and sweatshirts printed and pressed by 843 Teez in Horry County, South Carolina. Veteran owned local apparel."
+  />
 
+  <style>
+    :root {
+      --navy: #133362;
+      --navy-light: #123a6f;
+      --accent: #b22222;
+      --text: #ffffff;
+      --muted: #cfd8e3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+.btn-white {
+  display: inline-block;
+  background: #ffffff;
+  color: #03254a; /* your navy text color */
+  padding: 0.55rem 1rem;
+  border-radius: 999px; 
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+  border: 2px solid #ffffff;
+}
+
+.btn-white:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header img.logo {
+      max-width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Product grid */
+    .section-title {
+      font-size: 1.3rem;
+      margin: 2.2rem 0 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .product-card {
+      background: rgba(5, 35, 80, 0.9);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      border: 1px solid rgba(207, 216, 227, 0.12);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .product-image {
+      background: #133362;
+      border-radius: 0.5rem;
+      height: 180px;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      font-size: 1rem;
+    }
+
+    .product-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .product-price {
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+      font-size: 0.95rem;
+    }
+
+    .product-description {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+
+    .product-actions {
+      margin-top: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.05s ease-out, box-shadow 0.05s ease-out,
+        background 0.15s ease-out;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
+      background: #cc2a2a;
+    }
+
+    .btn-sm {
+      padding: 0.45rem 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .btn + .btn {
+      margin-left: 0.35rem;
+    }
+
+    /* Form section */
+    .form-section {
+      margin-top: 3rem;
+    }
+
+    .form-wrapper {
+      background: rgba(5, 35, 80, 0.95);
+      border-radius: 0.9rem;
+      padding: 1.5rem 1.25rem;
+      border: 1px solid rgba(207, 216, 227, 0.18);
+    }
+
+    form {
+      margin-top: 1rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem 1.25rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.45rem 0.55rem;
+      border-radius: 0.45rem;
+      border: 1px solid rgba(207, 216, 227, 0.25);
+      background: #021c39;
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #7f8ca0;
+    }
+
+    .field-group {
+      margin-bottom: 0.75rem;
+    }
+
+    .radio-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .radio-row label {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .notes-group {
+      grid-column: 1 / -1;
+    }
+
+    .disclaimer {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      margin-top: 0.08rem;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+
+    .helper-text {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .form-wrapper {
+        padding: 1.75rem 1.75rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrap">
+    <header>
+      <!-- Replace src with your actual logo path -->
+      <img
+        src="http://843teez.com/843teezlogo.png"
+        alt="843 Teez Logo"
+        class="logo"
+      />
+   
+  <h1>Future Home of 843 Teez Online Orders</h1> 
+      <p class="tagline">
+        Custom tees, hoodies, and sweatshirts printed and pressed locally in
+        Horry County, SC.
+      </p>
+      <div class="badge">Veteran Owned • Conway, South Carolina</div>
+    </header>
+
+      <center><h3>Please bear with us as we're making upgrades to our online order system.  
+        <br /><br />In the mean time,
+        feel freel to give us a call at: <br /> <br />843-350-1943 <br /><br />or<br /><br />
+   
+     
+        send an email:<br /><br /> Sales@843Teez.com <br /><br />and we'll be glad to help with an order.
+      <br /><br />
+        Visit our main wesite for more information:<br /><br />
+        <a href="https://843teez.com" class="btn-white">843 Teez Main Website</a>
+        <br /><br />
+        Keep up with our latest drops on our Socials: <br /><br />
+        <a href="https://instagram.com/843teez" class="btn-white">843 Teez Instagram</a>
+<nbsp><nbsp></nbsp><a href="https://facebook.com/843teez" class="btn-white">843 Teez Facebook</a>
+
+        
+      </h3><center
+    <!-- PRODUCTS -->
+  <!--  <section>
+      <h2 class="section-title">Featured Designs</h2>
+      <p class="section-subtitle">
+        Choose a design and send us an order request. We’ll follow up with a
+        zero-fee invoice through Talech &amp; U.S. Bank.
+      </p>
+
+      <div class="product-grid">
+        <!-- Product 1 -->
+      <!--  <article class="product-card">
+          <div class="product-image">
+            <!-- Swap placeholder image with your mockup -->
+           <!-- <img
+              src="/images/products/conway-skyline-tee.jpg"
+              alt="Conway Skyline Tee"
+            />
+          </div>
+          <div class="product-title">Conway Skyline Tee</div>
+          <div class="product-meta">Short Sleeve Tee</div>
+          <div class="product-price">From $22</div>
+          <p class="product-description">
+            Soft unisex cotton tee featuring our Conway-inspired design. Printed
+            and pressed in-house at 843 Teez.
+          </p>
+          <div class="product-actions">
+            <button
+              class="btn btn-primary btn-sm order-button"
+              data-product-type="Tee"
+              data-design="Conway Skyline"
+            >
+              Order This Design
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+      <!--  <article class="product-card">
+          <div class="product-image">
+            <img
+              src="/images/products/843-sweet-tea-hoodie.jpg"
+              alt="843 Sweet Tea Hoodie"
+            />
+          </div>
+          <div class="product-title">843 Sweet Tea Hoodie</div>
+          <div class="product-meta">Midweight Hoodie</div>
+          <div class="product-price">From $38</div>
+          <p class="product-description">
+            Cozy pullover hoodie with our 843 Sweet Tea graphic — perfect for
+            cool Carolina evenings.
+          </p>
+          <div class="product-actions">
+            <button
+              class="btn btn-primary btn-sm order-button"
+              data-product-type="Hoodie"
+              data-design="843 Sweet Tea"
+            >
+              Order This Design
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+       <!-- <article class="product-card">
+          <div class="product-image">
+            <img
+              src="/images/products/palmetto-flag-crew.jpg"
+              alt="Palmetto Flag Crewneck"
+            />
+          </div>
+          <div class="product-title">Palmetto Flag Crew</div>
+          <div class="product-meta">Crewneck Sweatshirt</div>
+          <div class="product-price">From $34</div>
+          <p class="product-description">
+            Classic crewneck featuring a bold Palmetto &amp; crescent design in
+            843 Teez style.
+          </p>
+          <div class="product-actions">
+            <button
+              class="btn btn-primary btn-sm order-button"
+              data-product-type="Sweatshirt"
+              data-design="Palmetto Flag Crew"
+            >
+              Order This Design
+            </button>
+          </div>
+        </article>
+
+        <!-- Duplicate and customize more product cards as needed -->
+   <!--   </div>
+    </section>
+
+    <!-- ORDER FORM -->
+   <!-- <section id="order-form" class="form-section">
+      <h2 class="section-title">Request an Invoice</h2>
+      <p class="section-subtitle">
+        Fill out the form below to place your order. We’ll review your details,
+        confirm availability, and email you a secure invoice through Talech with
+        zero credit card fees.
+      </p>
+
+      <div class="form-wrapper">
+        <!-- Netlify Forms: important attributes + hidden input -->
+      <!--  <form
+          name="843teez-order"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="843teez-order" />
+          <p style="display: none;">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <div class="form-grid">
+            <!-- Customer Info -->
+        <!--    <div class="field-group">
+              <label for="customer-name">Full Name *</label>
+              <input
+                type="text"
+                id="customer-name"
+                name="customer_name"
+                required
+                placeholder="Jane Doe"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="customer-email">Email *</label>
+              <input
+                type="email"
+                id="customer-email"
+                name="customer_email"
+                required
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="customer-phone">Phone (optional)</label>
+              <input
+                type="tel"
+                id="customer-phone"
+                name="customer_phone"
+                placeholder="Best number to reach you"
+              />
+            </div>
+
+            <!-- Pickup / Shipping -->
+          <!--  <div class="field-group">
+              <label>Pickup or Shipping? *</label>
+              <div class="radio-row">
+                <label>
+                  <input
+                    type="radio"
+                    name="fulfillment_type"
+                    value="Local pickup in Conway, SC"
+                    required
+                  />
+                  Local pickup (Conway, SC)
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="fulfillment_type"
+                    value="Shipping"
+                  />
+                  Shipping
+                </label>
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+         <!--   <div class="field-group">
+              <label for="shipping-address"
+                >Shipping Address (if shipping)</label
+              >
+              <textarea
+                id="shipping-address"
+                name="shipping_address"
+                placeholder="Street, city, state, ZIP"
+              ></textarea>
+            </div>
+
+            <!-- Product Info -->
+          <!--  <div class="field-group">
+              <label for="product-type">Product Type *</label>
+              <select id="product-type" name="product_type" required>
+                <option value="">Select an option</option>
+                <option value="Tee">Tee</option>
+                <option value="Hoodie">Hoodie</option>
+                <option value="Sweatshirt">Sweatshirt</option>
+                <option value="Other">Other apparel</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="design-name">Design Name / Description *</label>
+              <input
+                type="text"
+                id="design-name"
+                name="design_name"
+                required
+                placeholder="e.g., Conway Skyline, 843 Sweet Tea, etc."
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="size">Size *</label>
+              <select id="size" name="size" required>
+                <option value="">Select size</option>
+                <option value="YS">Youth Small</option>
+                <option value="YM">Youth Medium</option>
+                <option value="YL">Youth Large</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="2XL">2XL</option>
+                <option value="3XL">3XL</option>
+                <option value="4XL">4XL</option>
+                <option value="5XL">5XL</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="quantity">Quantity *</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                required
+                min="1"
+                step="1"
+                value="1"
+              />
+            </div>
+
+            <!-- Notes -->
+         <!--   <div class="field-group notes-group">
+              <label for="order-notes">Notes / Custom Requests</label>
+              <textarea
+                id="order-notes"
+                name="order_notes"
+                placeholder="Ink color, deadlines, event date, or anything else we should know."
+              ></textarea>
+            </div>
+          </div>
+
+          <p class="disclaimer">
+            This form sends your order details directly to 843 Teez. We’ll
+            confirm your order and email a secure invoice through Talech &amp;
+            U.S. Bank. Nothing is charged until you approve and pay the
+            invoice.
+          </p>
+
+          <div class="checkbox-row">
+            <input
+              type="checkbox"
+              id="invoice-confirm"
+              name="invoice_confirm"
+              required
+            />
+            <label for="invoice-confirm">
+              I understand this is an order request and that 843 Teez will
+              follow up with a Talech invoice for payment.
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary">
+              Submit Order Request
+            </button>
+            <div class="helper-text">
+              You’ll hear from us soon with confirmation and next steps.
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      843 Teez • Printed &amp; pressed in Horry County, South Carolina •
+      Veteran-owned local apparel
+    </footer>
+  </div>
+
+  <script>
+    // When user clicks "Order This Design", pre-fill form and scroll down
+    document.querySelectorAll(".order-button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var productType = this.getAttribute("data-product-type") || "";
+        var designName = this.getAttribute("data-design") || "";
+
+        var productSelect = document.getElementById("product-type");
+        var designInput = document.getElementById("design-name");
+
+        if (productSelect && productType) {
+          productSelect.value = productType;
+        }
+        if (designInput && designName) {
+          designInput.value = designName;
+        }
+
+        var formSection = document.getElementById("order-form");
+        if (formSection) {
+          formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  </script> -->
+</body>
+</html>
