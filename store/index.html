@@ -40,323 +40,231 @@
     content="Order custom tees, hoodies, and sweatshirts printed and pressed by 843 Teez in Horry County, South Carolina. Veteran owned local apparel."
   />
   <style>
-  <link rel="stylesheet" href="https://843teez.com/styles.css">
+/* --------------------------------------------------
+   GLOBAL THEME — MATCHES MAIN 843TEEZ WEBSITE
+-------------------------------------------------- */
 
-background-image: url('https://843teez.com/surf-texture.png');
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #f8fcff;
+  background-image: url('https://843teez.com/surf-texture.png');
+  background-repeat: repeat;
+  background-size: 300px;
+  color: #222;
+}
 
-    :root {
-      --navy: #133362;
-      --navy-light: #123a6f;
-      --accent: #b22222;
-      --text: #ffffff;
-      --muted: #cfd8e3;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+/* --------------------------------------------------
+   WRAPPER PANEL (keeps store readable)
+-------------------------------------------------- */
 
-    /*  body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: var(--navy);
-      color: var(--text);
-      line-height: 1.6;
-    } */
-    
+.page-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+header .logo {
+  max-width: 260px;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  color: #007c9e; /* 843Teez aqua/navy tone */
+  margin-top: 0;
+}
+
+/* Tagline under header */
+.tagline {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  background: #003466;
+  color: #fff;
+  border-radius: 999px;
+}
+
+/* --------------------------------------------------
+   BUTTONS — MATCH MAIN SITE STYLE
+-------------------------------------------------- */
+
 .btn-white {
   display: inline-block;
   background: #ffffff;
-  color: #03254a; /* your navy text color */
-  padding: 0.55rem 1rem;
-  border-radius: 999px; 
+  color: #003466;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 0.9rem;
   text-decoration: none;
-  transition: all 0.15s ease-out;
   border: 2px solid #ffffff;
+  transition: all 0.2s ease;
 }
 
 .btn-white:hover {
   background: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
-  transform: translateY(-1px);
+  color: #003466;
+  border-color: #003466;
 }
 
-    .page-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
-    }
+.btn-primary {
+  display: inline-block;
+  background: #33b5e5;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+.btn-primary:hover {
+  background: #28a3ce;
+}
 
-    header img.logo {
-      max-width: 220px;
-      height: auto;
-      display: block;
-      margin: 0 auto 1rem;
-    }
+/* --------------------------------------------------
+   PRODUCT GRID
+-------------------------------------------------- */
 
-    h1 {
-      font-size: 1.9rem;
-      margin: 0.25rem 0 0.5rem;
-    }
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
 
-    .tagline {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
+.section-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
 
-    .badge {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--muted);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
 
-    /* Product grid */
-    .section-title {
-      font-size: 1.3rem;
-      margin: 2.2rem 0 0.75rem;
-    }
+/* Product card style matches main 843Teez aesthetic */
+.product-card {
+  background: rgba(255,255,255,0.75);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #d6e6ec;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
 
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
+.product-card:hover {
+  transform: translateY(-3px);
+}
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.25rem;
-    }
+/* Product images */
+.product-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e7f7fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .product-card {
-      background: rgba(5, 35, 80, 0.9);
-      border-radius: 0.75rem;
-      padding: 1rem;
-      border: 1px solid rgba(207, 216, 227, 0.12);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .product-image {
-      background: #133362;
-      border-radius: 0.5rem;
-      height: 180px;
-      margin-bottom: 0.85rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+/* Product Titles & Text */
+.product-title {
+  font-weight: 700;
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+}
 
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.product-meta {
+  font-size: 0.85rem;
+  color: #555;
+}
 
-    .product-title {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      font-size: 1rem;
-    }
+.product-price {
+  font-weight: 700;
+  margin: 0.4rem 0;
+}
 
-    .product-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.25rem;
-    }
+.product-description {
+  font-size: 0.85rem;
+  color: #333;
+  flex-grow: 1;
+}
 
-    .product-price {
-      font-weight: 600;
-      margin-bottom: 0.45rem;
-      font-size: 0.95rem;
-    }
+.product-actions {
+  margin-top: 1rem;
+}
 
-    .product-description {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-      flex-grow: 1;
-    }
+/* --------------------------------------------------
+   FORM SECTION
+-------------------------------------------------- */
 
-    .product-actions {
-      margin-top: auto;
-    }
+.form-wrapper {
+  background: rgba(255,255,255,0.75);
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid #d6e6ec;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.55rem 0.85rem;
-      border-radius: 999px;
-      border: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      cursor: pointer;
-      transition: transform 0.05s ease-out, box-shadow 0.05s ease-out,
-        background 0.15s ease-out;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+form label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
 
-    .btn-primary {
-      background: var(--accent);
-      color: #ffffff;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-    }
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #aac5ce;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
-      background: #cc2a2a;
-    }
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
 
-    .btn-sm {
-      padding: 0.45rem 0.75rem;
-      font-size: 0.8rem;
-    }
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  color: #003466;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 
-    .btn + .btn {
-      margin-left: 0.35rem;
-    }
-
-    /* Form section */
-    .form-section {
-      margin-top: 3rem;
-    }
-
-    .form-wrapper {
-      background: rgba(5, 35, 80, 0.95);
-      border-radius: 0.9rem;
-      padding: 1.5rem 1.25rem;
-      border: 1px solid rgba(207, 216, 227, 0.18);
-    }
-
-    form {
-      margin-top: 1rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1rem 1.25rem;
-    }
-
-    label {
-      font-size: 0.85rem;
-      font-weight: 500;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.45rem 0.55rem;
-      border-radius: 0.45rem;
-      border: 1px solid rgba(207, 216, 227, 0.25);
-      background: #021c39;
-      color: #ffffff;
-      font-size: 0.9rem;
-    }
-
-    textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #7f8ca0;
-    }
-
-    .field-group {
-      margin-bottom: 0.75rem;
-    }
-
-    .radio-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-    }
-
-    .radio-row label {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      margin: 0;
-      font-weight: 400;
-    }
-
-    .notes-group {
-      grid-column: 1 / -1;
-    }
-
-    .disclaimer {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin: 0.5rem 0 0.75rem;
-    }
-
-    .checkbox-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.4rem;
-      font-size: 0.78rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .checkbox-row input[type="checkbox"] {
-      margin-top: 0.08rem;
-    }
-
-    .form-footer {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.75rem;
-      justify-content: flex-start;
-      margin-top: 0.5rem;
-    }
-
-    .helper-text {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    footer {
-      margin-top: 2.5rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    @media (min-width: 768px) {
-      .form-wrapper {
-        padding: 1.75rem 1.75rem 1.5rem;
-      }
-    }
   </style>
 
   <script type="application/ld+json">
