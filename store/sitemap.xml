@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Store Homepage: Highest priority, most likely to be updated (but only if products change frequently) -->
+    <url>
+        <loc>https://store.843teez.com/</loc>
+        <lastmod>2025-11-14</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Example Collection/Category Page -->
+    <url>
+        <loc>https://store.843teez.com/collections/local-designs</loc>
+        <lastmod>2025-11-14</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Example Product Page 1 -->
+    <url>
+        <loc>https://store.843teez.com/products/conway-grizz-tee</loc>
+        <lastmod>2025-11-14</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Example Product Page 2 -->
+    <url>
+        <loc>https://store.843teez.com/products/myrtle-beach-ghost-shirt</loc>
+        <lastmod>2025-11-14</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- IMPORTANT: Add all other product and collection pages here. -->
+
+</urlset>
