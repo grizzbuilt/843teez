@@ -36,6 +36,30 @@
     #main-content {
         min-height: calc(100vh - 80px); /* Adjust for padding/margins */
     }
+    /* Styles for the click-to-cycle image */
+    .product-image-container {
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+    }
+    .product-image-container .image-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: opacity 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    .product-image-container:hover .image-overlay {
+        opacity: 1;
+    }
   </style>
 
   <!-- SEO and Metadata -->
@@ -68,7 +92,7 @@
             <h1 id="page-title" class="text-3xl font-extrabold text-[#007c9e]">
                 Online Shop
             </h1>
-            <!-- NEW: Global View Cart Button -->
+            <!-- Global View Cart Button -->
             <button 
                 onclick="changeView('cart')" 
                 id="global-view-cart-button"
@@ -293,18 +317,74 @@
   <script>
     // --- 1. CONFIGURATION DATA ---
     
-    // Product Definitions now include available colors
-    // NOTE: imageUrls is now an array for the carousel feature
+    // Base prices for apparel types (NEW PRICING MODEL)
+    const APPAREL_BASE_PRICES = {
+        'T-Shirt': 20.00,
+        'Sweatshirt': 37.00,
+        'Hoodie': 39.00
+    };
+
+    // Product Definitions now use product_options array for base price flexibility
     const products = [
-        { id: 't101', name: 'City of Conway Sweatshirt', price: 37.00, colors: ['Heather Grey', 'Gold'], imageUrls: ['https://store.843teez.com/store/ConwayModel.png', 'https://store.843teez.com/store/ConwayGrey.jpg', 'https://store.843teez.com/store/ConwayYellow.jpg'] },
-        { id: 'h202', name: 'Horry County Hoodie', price: 45.00, colors: ['Black', 'Navy', 'Charcoal', 'Maroon'], imageUrls: ['https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+F', 'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+B', 'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+S'] },
-        { id: 's303', name: '843 Surf Sweatshirt', price: 40.00, colors: ['Heather Gray', 'Ash', 'Royal Blue'], imageUrls: ['https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+F', 'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+B', 'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+S'] },
-        { id: 't404', name: 'MB Ghost Tee', price: 28.00, colors: ['Black', 'White', 'Safety Green'], imageUrls: ['https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+F', 'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+B', 'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+S'] },
-        { id: 'a505', name: 'Veteran Owned Cap', price: 20.00, colors: ['Navy', 'Camo'], imageUrls: ['https://placehold.co/400x400/003466/FFFFFF?text=VO+Cap+F', 'https://placehold.co/400x400/003466/FFFFFF?text=VO+Cap+B'] },
-        { id: 'c606', name: 'Custom Design Voucher', price: 10.00, colors: ['N/A'], imageUrls: ['https://placehold.co/400x400/007c9e/FFFFFF?text=Design+Voucher'] },
-        // --- NEW ITEMS ADDED ---
-        { id: 'a601', name: '843 Flexfit Hat', price: 25.00, colors: ['Black', 'Navy', 'Red'], imageUrls: ['https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+F', 'https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+B'] },
-        { id: 'm701', name: 'Coffee Mug', price: 15.00, colors: ['White', 'Black'], imageUrls: ['https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+L', 'https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+R'] },
+        // Apparel Designs: Use product_options, Price determined by APPAREL_BASE_PRICES
+        { 
+            id: 't101', 
+            name: 'City of Conway', 
+            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
+            colors: ['Heather Gray', 'Yellow'], 
+            imageUrls: [
+                'https://store.843teez.com/store/ConwayModel.png', 
+                'https://store.843teez.com/store/ConwayGrey.jpg', 
+                'https://store.843teez.com/store/ConwayYellow.jpg'
+            ] 
+        },
+        { 
+            id: 'h202', 
+            name: 'Horry County Flag Design', 
+            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
+            colors: ['Black', 'Navy', 'Charcoal', 'Maroon'], 
+            imageUrls: [
+                'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+F', 
+                'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+B', 
+                'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+S'
+            ] 
+        },
+        { 
+            id: 's303', 
+            name: '843 Surf Design', 
+            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
+            colors: ['Heather Gray', 'Ash', 'Royal Blue'], 
+            imageUrls: [
+                'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+F', 
+                'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+B', 
+                'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+S'
+            ] 
+        },
+        { 
+            id: 't404', 
+            name: 'MB Ghost Design', 
+            product_options: ['T-Shirt', 'Sweatshirt'],
+            colors: ['Black', 'White', 'Safety Green'], 
+            imageUrls: [
+                'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+F', 
+                'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+B', 
+                'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+S'
+            ] 
+        },
+        { 
+            id: 's304', 
+            name: 'City of Conway Design', // Renamed to Design
+            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
+            colors: ['Heather Grey', 'Gold'], 
+            imageUrls: [
+                'https://store.843teez.com/ConwayModel.png', 
+                'https://store.843teez.com/ConwayGrey.jpg', 
+                'https://store.843teez.com/ConwayYellow.jpg'
+            ]
+        },
+        // Non-Apparel Items: Use fixed price
+        { id: 'a601', name: '843 Flexfit Hat', price: 25.00, colors: ['Black', 'Navy', 'Red'], imageUrls: ['https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+F', 'https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+B'], product_options: ['Hat'] },
+        { id: 'm701', name: 'Coffee Mug', price: 15.00, colors: ['White', 'Black'], imageUrls: ['https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+L', 'https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+R'], product_options: ['Mug'] },
     ];
 
     // Financial Configuration
@@ -325,7 +405,8 @@
         '4XL': 6.00,
         '5XL': 7.00
     };
-    const ALL_SIZES = Object.keys(SIZE_UPCHARGES); 
+    // Only apparel needs sizes. Non-apparel items use 'OS' (One Size)
+    const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
 
     // --- 2. CART STATE MANAGEMENT & VIEW MANAGEMENT ---
@@ -440,9 +521,20 @@
         const grid = document.getElementById('product-grid');
         grid.innerHTML = products.map(product => {
             
-            // Generate size options HTML
-            const needsSize = product.id.startsWith('t') || product.id.startsWith('h') || product.id.startsWith('s');
+            // Determine if the product needs size options (any apparel option)
+            const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
             
+            // --- Product Type Options ---
+            const typeOptionsHTML = product.product_options.map(type => {
+                const basePrice = APPAREL_BASE_PRICES[type] || product.price || 0.00;
+                const priceText = basePrice > 0 ? ` - ${formatCurrency(basePrice)}` : '';
+                // The base price is stored in the data attribute of the option tag
+                return `<option value="${type}" data-base-price="${basePrice.toFixed(2)}">${type}${priceText}</option>`;
+            }).join('');
+            
+            const startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.00;
+            
+            // --- Size Options ---
             let sizeOptionsHTML = '';
             let sizeSelectorHiddenClass = 'hidden';
             
@@ -454,49 +546,52 @@
                     return `<option value="${size}">${size}${upchargeText}</option>`;
                 }).join('');
             } else {
-                // If it doesn't need a size (like a hat or mug), use a default 'OS' for One Size
                 sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
             }
             
-            // Generate color options HTML
+            // --- Color Options ---
             const colorOptions = product.colors.map(color => {
                 return `<option value="${color}">${color}</option>`;
             }).join('');
 
-            // Use the base price display in the card
-            const basePriceDisplay = formatCurrency(product.price);
-            
             const imageCount = product.imageUrls.length;
             
             return `
                 <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                     
                     <!-- Image Carousel Area: Clickable Image -->
-                    <div class="relative group cursor-pointer" onclick="cycleImage(this)">
+                    <div class="product-image-container relative group cursor-pointer rounded-lg mb-4" onclick="cycleImage(this)">
                         <img 
                             id="img-${product.id}"
                             src="${product.imageUrls[0]}" 
                             alt="${product.name} (View 1 of ${imageCount})" 
-                            class="w-full h-auto object-cover rounded-lg mb-4 transition-transform duration-300" 
+                            class="w-full h-auto object-cover rounded-lg transition-transform duration-300" 
                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';"
                             data-image-urls='${JSON.stringify(product.imageUrls)}'
                             data-current-index="0"
                         />
-                        ${imageCount > 1 ? `
-                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-bold rounded-lg pointer-events-none">
-                                CLICK for next view (${imageCount} total)
-                            </div>
-                            <div class="absolute bottom-2 right-2 text-xs text-white bg-black/60 px-2 py-0.5 rounded-full">${imageCount} views</div>
-                            ` : ''}
+                        <div class="image-overlay">
+                            ${imageCount > 1 ? `CLICK to see next view (${imageCount} total)` : 'No additional views'}
+                        </div>
                     </div>
                     
                     <h3 class="text-lg font-bold text-[#003466] mb-1">${product.name}</h3>
-                    <p class="text-xl font-extrabold text-[#007c9e] mb-3">Base Price: ${basePriceDisplay}</p>
+                    <p class="text-xl font-extrabold text-[#007c9e] mb-3">Starting at ${formatCurrency(startingPrice)}</p>
                     
+                    <!-- Product Type Selector (NEW) -->
+                    <div class="mb-3">
+                        <label for="type-${product.id}" class="block text-sm font-medium text-gray-700">Select Product Type</label>
+                        <select id="type-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
+                            <option value="" disabled selected>Choose type...</option>
+                            ${typeOptionsHTML}
+                        </select>
+                    </div>
+
                     <!-- Color Selector -->
                     <div class="mb-3">
                         <label for="color-${product.id}" class="block text-sm font-medium text-gray-700">Select Color</label>
-                        <select id="color-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
+                        <select id="color-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
+                            <option value="" disabled selected>Choose color...</option>
                             ${colorOptions}
                         </select>
                     </div>
@@ -505,10 +600,12 @@
                     <div class="mb-4 ${sizeSelectorHiddenClass}">
                         <label for="size-${product.id}" class="block text-sm font-medium text-gray-700">Select Size</label>
                         <select id="size-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
+                            <option value="S" disabled selected>Choose size...</option>
                             ${sizeOptionsHTML}
                         </select>
                     </div>
                     ${!needsSize ? `<input type="hidden" id="size-${product.id}" value="OS">` : ''}
+
 
                     <button 
                         onclick="addToCart('${product.id}')" 
@@ -534,14 +631,14 @@
         document.getElementById('goto-checkout-button').disabled = false;
         
         cartItemsDiv.innerHTML = cart.map((item, index) => {
-            // Unique ID includes ID, Size, and Color for tracking
-            const uniqueId = item.id + '-' + item.size + '-' + item.color;
+            // Unique ID now includes ID, Type, Size, and Color for tracking
+            const uniqueId = item.id + '-' + item.type + '-' + item.size + '-' + item.color;
             const itemTotal = item.price * item.quantity;
             
             return `
                 <div class="flex items-start justify-between text-base border-b border-gray-100 pb-3">
                     <div class="flex-grow pr-4">
-                        <span class="font-semibold text-[#003466]">${item.name}</span>
+                        <span class="font-semibold text-[#003466]">${item.name} (${item.type})</span>
                         <div class="text-sm text-gray-600">
                             Size: ${item.size === 'OS' ? 'One Size' : item.size}, Color: ${item.color}
                         </div>
@@ -599,37 +696,56 @@
         const product = products.find(p => p.id === productId);
         if (!product) return;
         
-        // Get selected size and color
+        // Get selected options
+        const typeSelector = document.getElementById(`type-${productId}`);
+        const selectedType = typeSelector.value;
+        const basePriceElement = typeSelector.options[typeSelector.selectedIndex];
+        
         const sizeSelector = document.getElementById(`size-${productId}`);
         const selectedSize = sizeSelector.value;
+        
         const colorSelector = document.getElementById(`color-${productId}`);
         const selectedColor = colorSelector.value;
 
-
-        if (!selectedSize || !selectedColor) {
-            showMessage('Please select both a Size and a Color.', 'error');
+        // Validation
+        if (!selectedType) {
+            showMessage('Please select a Product Type.', 'error');
             return;
         }
+        if (!selectedColor) {
+            showMessage('Please select a Color.', 'error');
+            return;
+        }
+        if (product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined) && (selectedSize === 'S' || selectedSize === '')) {
+            // Check if size is needed and if the selected size is still the default/disabled value
+            showMessage('Please select a Size.', 'error');
+            return;
+        }
+        
+        // 1. Get Base Price from the selected Product Type option's data attribute
+        const basePrice = parseFloat(basePriceElement.dataset.basePrice);
 
-        // Calculate the final price for this size (will be 0.00 upcharge if not apparel)
-        const finalPrice = getProductPriceWithSize(product.price, selectedSize);
+        // 2. Calculate the final price (Base Price + Size Upcharge)
+        const finalPrice = getProductPriceWithSize(basePrice, selectedSize);
 
-        // A cart item is unique by product ID, size, AND color
+        // A cart item is unique by product ID, product type, size, AND color
         const cartItemIndex = cart.findIndex(item => 
             item.id === productId && 
+            item.type === selectedType &&
             item.size === selectedSize &&
             item.color === selectedColor
         );
 
         if (cartItemIndex > -1) {
-            // Found the exact item/size/color combo, just increment quantity
+            // Found the exact item combo, just increment quantity
             cart[cartItemIndex].quantity += 1;
         } else {
-            // New item/size/color combo, push as a new item
+            // New item combo, push as a new item
             cart.push({ 
                 id: product.id, 
                 name: product.name, 
-                price: finalPrice, // Store the final price
+                type: selectedType, // T-Shirt, Sweatshirt, etc.
+                price: finalPrice, // Store the final calculated price
                 size: selectedSize, 
                 color: selectedColor, 
                 quantity: 1 
@@ -642,19 +758,21 @@
         if (currentView !== 'shop') {
              updateCheckoutSummary(currentView === 'checkout');
         }
-        showMessage(`${selectedColor} ${product.name} (${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`);
+        showMessage(`${selectedColor} ${product.name} (${selectedType} / ${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`);
     };
 
-    // Remove one unit of item from cart based on unique ID (ID + Size + Color)
+    // Remove one unit of item from cart based on unique ID (ID + Type + Size + Color)
     const removeFromCart = (uniqueId) => {
-        // Find the index by splitting the uniqueId (e.g., 't101-M-Black')
+        // Find the index by splitting the uniqueId (e.g., 't101-T-Shirt-M-Black')
         const parts = uniqueId.split('-');
         const productId = parts[0];
-        const selectedSize = parts[1];
-        const selectedColor = parts[2]; 
+        const selectedType = parts[1];
+        const selectedSize = parts[2]; 
+        const selectedColor = parts[3]; 
 
         const cartItemIndex = cart.findIndex(item => 
             item.id === productId && 
+            item.type === selectedType &&
             item.size === selectedSize &&
             item.color === selectedColor
         );
@@ -835,4 +953,4 @@
     };
   </script>
 </body>
-</html>  
+</html>
