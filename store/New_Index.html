@@ -294,17 +294,17 @@
     // --- 1. CONFIGURATION DATA ---
     
     // Product Definitions now include available colors
-    // NOTE: To add a new product, duplicate an entry, change the ID, name, price, colors, and imageUrl.
+    // NOTE: imageUrls is now an array for the carousel feature
     const products = [
-        { id: 't101', name: 'Conway Grizz Tee', price: 25.00, colors: ['Black', 'White', 'Navy', 'Heather Gray'], imageUrl: 'https://placehold.co/400x400/007c9e/FFFFFF?text=Grizz+Tee' },
-        { id: 'h202', name: 'Horry County Hoodie', price: 45.00, colors: ['Black', 'Navy', 'Charcoal', 'Maroon'], imageUrl: 'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie' },
-        { id: 's303', name: '843 Surf Sweatshirt', price: 40.00, colors: ['Heather Gray', 'Ash', 'Royal Blue'], imageUrl: 'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt' },
-        { id: 't404', name: 'MB Ghost Tee', price: 28.00, colors: ['Black', 'White', 'Safety Green'], imageUrl: 'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee' },
-        { id: 'a505', name: 'Veteran Owned Cap', price: 20.00, colors: ['Navy', 'Camo'], imageUrl: 'https://placehold.co/400x400/003466/FFFFFF?text=VO+Cap' },
-        { id: 'c606', name: 'Custom Design Voucher', price: 10.00, colors: ['N/A'], imageUrl: 'https://placehold.co/400x400/007c9e/FFFFFF?text=Design+Voucher' },
+        { id: 't101', name: 'Conway Grizz Tee', price: 25.00, colors: ['Black', 'White', 'Navy', 'Heather Gray'], imageUrls: ['https://placehold.co/400x400/007c9e/FFFFFF?text=Grizz+Tee+F', 'https://placehold.co/400x400/007c9e/FFFFFF?text=Grizz+Tee+B', 'https://placehold.co/400x400/007c9e/FFFFFF?text=Grizz+Tee+S'] },
+        { id: 'h202', name: 'Horry County Hoodie', price: 45.00, colors: ['Black', 'Navy', 'Charcoal', 'Maroon'], imageUrls: ['https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+F', 'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+B', 'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie+S'] },
+        { id: 's303', name: '843 Surf Sweatshirt', price: 40.00, colors: ['Heather Gray', 'Ash', 'Royal Blue'], imageUrls: ['https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+F', 'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+B', 'https://placehold.co/400x400/33b5e5/000000?text=843+Sweatshirt+S'] },
+        { id: 't404', name: 'MB Ghost Tee', price: 28.00, colors: ['Black', 'White', 'Safety Green'], imageUrls: ['https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+F', 'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+B', 'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee+S'] },
+        { id: 'a505', name: 'Veteran Owned Cap', price: 20.00, colors: ['Navy', 'Camo'], imageUrls: ['https://placehold.co/400x400/003466/FFFFFF?text=VO+Cap+F', 'https://placehold.co/400x400/003466/FFFFFF?text=VO+Cap+B'] },
+        { id: 'c606', name: 'Custom Design Voucher', price: 10.00, colors: ['N/A'], imageUrls: ['https://placehold.co/400x400/007c9e/FFFFFF?text=Design+Voucher'] },
         // --- NEW ITEMS ADDED ---
-        { id: 'a601', name: '843 Flexfit Hat', price: 25.00, colors: ['Black', 'Navy', 'Red'], imageUrl: 'https://placehold.co/400x400/333333/FFFFFF?text=843+Hat' },
-        { id: 'm701', name: 'Coffee Mug', price: 15.00, colors: ['White', 'Black'], imageUrl: 'https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug' },
+        { id: 'a601', name: '843 Flexfit Hat', price: 25.00, colors: ['Black', 'Navy', 'Red'], imageUrls: ['https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+F', 'https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+B'] },
+        { id: 'm701', name: 'Coffee Mug', price: 15.00, colors: ['White', 'Black'], imageUrls: ['https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+L', 'https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+R'] },
     ];
 
     // Financial Configuration
@@ -413,13 +413,34 @@
 
     // --- 3. RENDERING FUNCTIONS ---
     
-    // Renders the product grid on the right
+    // Function to cycle the image on click
+    const cycleImage = (element) => {
+        // Get the image element which holds the data
+        const imgElement = element.querySelector('img');
+        
+        // Use the dataset to read and write the state
+        const urls = JSON.parse(imgElement.dataset.imageUrls);
+        let currentIndex = parseInt(imgElement.dataset.currentIndex, 10);
+        
+        if (urls.length <= 1) return; // Cannot cycle
+
+        // Calculate the next index (loop back to 0)
+        currentIndex = (currentIndex + 1) % urls.length;
+
+        // Update the image source and the index data attribute
+        imgElement.src = urls[currentIndex];
+        imgElement.dataset.currentIndex = currentIndex;
+        
+        // Update the alt text for accessibility
+        imgElement.alt = imgElement.alt.replace(/\(View \d+ of \d+\)/, `(View ${currentIndex + 1} of ${urls.length})`);
+    };
+
+    // Renders the product grid
     const renderProducts = () => {
         const grid = document.getElementById('product-grid');
         grid.innerHTML = products.map(product => {
             
             // Generate size options HTML
-            // Note: Caps and Mugs don't need size options, so we handle that check here.
             const needsSize = product.id.startsWith('t') || product.id.startsWith('h') || product.id.startsWith('s');
             
             let sizeOptionsHTML = '';
@@ -445,9 +466,30 @@
             // Use the base price display in the card
             const basePriceDisplay = formatCurrency(product.price);
             
+            const imageCount = product.imageUrls.length;
+            
             return `
                 <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-auto object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';" />
+                    
+                    <!-- Image Carousel Area: Clickable Image -->
+                    <div class="relative group cursor-pointer" onclick="cycleImage(this)">
+                        <img 
+                            id="img-${product.id}"
+                            src="${product.imageUrls[0]}" 
+                            alt="${product.name} (View 1 of ${imageCount})" 
+                            class="w-full h-auto object-cover rounded-lg mb-4 transition-transform duration-300" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';"
+                            data-image-urls='${JSON.stringify(product.imageUrls)}'
+                            data-current-index="0"
+                        />
+                        ${imageCount > 1 ? `
+                            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-bold rounded-lg pointer-events-none">
+                                CLICK for next view (${imageCount} total)
+                            </div>
+                            <div class="absolute bottom-2 right-2 text-xs text-white bg-black/60 px-2 py-0.5 rounded-full">${imageCount} views</div>
+                            ` : ''}
+                    </div>
+                    
                     <h3 class="text-lg font-bold text-[#003466] mb-1">${product.name}</h3>
                     <p class="text-xl font-extrabold text-[#007c9e] mb-3">Base Price: ${basePriceDisplay}</p>
                     
@@ -793,4 +835,4 @@
     };
   </script>
 </body>
-</html>
+</html>  
