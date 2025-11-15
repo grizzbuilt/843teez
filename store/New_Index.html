@@ -187,7 +187,7 @@
                 Final Step: Shipping & Contact
             </h2>
             <p class="text-sm text-gray-600 mb-4">
-                **Note:** This is an *Order Request*. No payment is processed now. You will receive a separate invoice via email from Taltech after submission.
+                **Note:** This is an *Order Request*. No payment is processed now. An invoice will be emailed shortly after submission.
             </p>
             
             <!-- Netlify Form Setup: data-netlify="true" and hidden form-name are crucial -->
@@ -197,6 +197,7 @@
                 <!-- Hidden field for serialized cart data. Populated by JS before submission. -->
                 <input type="hidden" name="cart_data_json" id="cart-data-json" value="" />
 
+                <!-- Contact Info -->
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700 text-left">Full Name</label>
                     <input type="text" id="name" name="name" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg">
@@ -213,16 +214,43 @@
                 <!-- SHIPPING SELECTION FIELD -->
                 <div>
                     <label for="shipping_method" class="block text-sm font-medium text-gray-700 text-left">Shipping Method</label>
-                    <select id="shipping_method" name="shipping_method" onchange="updateCheckoutSummary(true)" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg">
+                    <select id="shipping_method" name="shipping_method" onchange="updateCheckoutSummary(true); toggleAddressFields();" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg">
                         <option value="" disabled selected>Select an option...</option>
                         <option value="local_pickup">Local Pickup (Conway) - FREE</option>
                         <option value="standard_shipping">Standard Shipping - $8.00</option>
                     </select>
                 </div>
 
-                <div>
-                    <label for="shipping_address" class="block text-sm font-medium text-gray-700 text-left">Shipping Address / Pickup Note</label>
-                    <textarea id="shipping_address" name="shipping_address" rows="3" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg" placeholder="If shipping: Full address. If local pickup: Best way to contact you for arrangements."></textarea>
+                <!-- NEW: ADDRESS FIELDS (Hidden by default, shown for shipping) -->
+                <div id="shipping-address-group" class="hidden space-y-4 pt-2 border-l-4 border-red-200 pl-4">
+                    <h4 class="text-base font-semibold text-red-500">Shipping Address Details</h4>
+                    <div>
+                        <label for="full_address" class="block text-sm font-medium text-gray-700 text-left">Full Address (Street, Apt/Suite)</label>
+                        <input type="text" id="full_address" name="full_address" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 rounded-lg">
+                    </div>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div>
+                            <label for="city" class="block text-sm font-medium text-gray-700 text-left">City</label>
+                            <input type="text" id="city" name="city" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="state" class="block text-sm font-medium text-gray-700 text-left">State</label>
+                            <input type="text" id="state" name="state" maxlength="2" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="zip_code" class="block text-sm font-medium text-gray-700 text-left">Zip Code</label>
+                            <input type="text" id="zip_code" name="zip_code" maxlength="10" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 rounded-lg">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: PICKUP NOTE (Hidden by default, shown for pickup) -->
+                <div id="pickup-note-group" class="hidden space-y-4 pt-2 border-l-4 border-green-200 pl-4">
+                    <h4 class="text-base font-semibold text-green-600">Local Pickup Note</h4>
+                    <div>
+                        <label for="pickup_note" class="block text-sm font-medium text-gray-700 text-left">Best way to contact you for pickup arrangements (phone/email preference)</label>
+                        <textarea id="pickup_note" name="pickup_note" rows="3" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-green-600 focus:border-green-600 rounded-lg" placeholder="Example: Please text me at 843-555-1234 when the order is ready."></textarea>
+                    </div>
                 </div>
 
                 <div class="mt-6 pt-4 border-t border-gray-200">
@@ -347,11 +375,35 @@
             title = "Finalize Order Request";
             subtitle = "Enter your contact and shipping details to receive an invoice.";
             updateCheckoutSummary(true); // Update form totals, defaulting shipping to 0
+            toggleAddressFields(); // Initialize field visibility
         }
         
         document.getElementById('page-title').textContent = title;
         document.getElementById('page-subtitle').textContent = subtitle;
         window.scrollTo(0, 0); // Scroll to top on view change
+    };
+    
+    // NEW: Function to toggle address/pickup fields based on shipping method
+    const toggleAddressFields = () => {
+        const method = document.getElementById('shipping_method').value;
+        const addressGroup = document.getElementById('shipping-address-group');
+        const pickupGroup = document.getElementById('pickup-note-group');
+        
+        const isShipping = method === 'standard_shipping';
+        const isPickup = method === 'local_pickup';
+        
+        // Toggle visibility
+        addressGroup.classList.toggle('hidden', !isShipping);
+        pickupGroup.classList.toggle('hidden', !isPickup);
+        
+        // Toggle required attribute for shipping address fields
+        document.getElementById('full_address').required = isShipping;
+        document.getElementById('city').required = isShipping;
+        document.getElementById('state').required = isShipping;
+        document.getElementById('zip_code').required = isShipping;
+        
+        // Toggle required attribute for pickup note
+        document.getElementById('pickup_note').required = isPickup;
     };
 
 
@@ -664,31 +716,34 @@
     const handleFormSubmission = async (event) => {
         event.preventDefault(); // Stop the default Netlify redirect
         
-        // Check shipping selection before submission
-        if (!document.getElementById('shipping_method').value) {
+        const shippingMethod = document.getElementById('shipping_method').value;
+        if (!shippingMethod) {
             showMessage('Please select a shipping method.', 'error');
             return;
         }
         
-        // Final update to ensure JSON data is correct
+        // Final update to ensure JSON data is correct (important for form data integrity)
         updateCheckoutSummary(true); 
 
         const form = event.target;
-        const formData = new FormData(form);
         
         const submitButton = form.querySelector('button[type="submit"]');
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
 
+        // NOTE: The 'required' attribute on inputs will handle the conditional validation 
+        // (i.e., address fields only required if shipping is selected, pickup note only if local pickup)
+
         try {
             // Standard Netlify form submission (sends data to Netlify backend)
+            // We use the raw form action URL here, which is standard practice for Netlify AJAX submissions
             const response = await fetch(form.action, {
                 method: form.method,
-                body: formData,
+                body: new FormData(form),
             });
 
             if (response.ok) {
-                showMessage('Order request submitted! Check your email shortly for the Taltech invoice.', 'success');
+                showMessage('Order request submitted! An invoice will be emailed to you shortly.', 'success');
                 
                 // Clear the cart locally
                 cart = [];
