@@ -294,6 +294,7 @@
     // --- 1. CONFIGURATION DATA ---
     
     // Product Definitions now include available colors
+    // NOTE: To add a new product, duplicate an entry, change the ID, name, price, colors, and imageUrl.
     const products = [
         { id: 't101', name: 'Conway Grizz Tee', price: 25.00, colors: ['Black', 'White', 'Navy', 'Heather Gray'], imageUrl: 'https://placehold.co/400x400/007c9e/FFFFFF?text=Grizz+Tee' },
         { id: 'h202', name: 'Horry County Hoodie', price: 45.00, colors: ['Black', 'Navy', 'Charcoal', 'Maroon'], imageUrl: 'https://placehold.co/400x400/003466/FFFFFF?text=HC+Hoodie' },
@@ -301,6 +302,9 @@
         { id: 't404', name: 'MB Ghost Tee', price: 28.00, colors: ['Black', 'White', 'Safety Green'], imageUrl: 'https://placehold.co/400x400/94A3B8/000000?text=MB+Ghost+Tee' },
         { id: 'a505', name: 'Veteran Owned Cap', price: 20.00, colors: ['Navy', 'Camo'], imageUrl: 'https://placehold.co/400x400/003466/FFFFFF?text=VO+Cap' },
         { id: 'c606', name: 'Custom Design Voucher', price: 10.00, colors: ['N/A'], imageUrl: 'https://placehold.co/400x400/007c9e/FFFFFF?text=Design+Voucher' },
+        // --- NEW ITEMS ADDED ---
+        { id: 'a601', name: '843 Flexfit Hat', price: 25.00, colors: ['Black', 'Navy', 'Red'], imageUrl: 'https://placehold.co/400x400/333333/FFFFFF?text=843+Hat' },
+        { id: 'm701', name: 'Coffee Mug', price: 15.00, colors: ['White', 'Black'], imageUrl: 'https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug' },
     ];
 
     // Financial Configuration
@@ -383,7 +387,7 @@
         window.scrollTo(0, 0); // Scroll to top on view change
     };
     
-    // NEW: Function to toggle address/pickup fields based on shipping method
+    // Function to toggle address/pickup fields based on shipping method
     const toggleAddressFields = () => {
         const method = document.getElementById('shipping_method').value;
         const addressGroup = document.getElementById('shipping-address-group');
@@ -415,11 +419,23 @@
         grid.innerHTML = products.map(product => {
             
             // Generate size options HTML
-            const sizeOptions = ALL_SIZES.map(size => {
-                const upcharge = SIZE_UPCHARGES[size];
-                const upchargeText = upcharge > 0 ? ` (+${formatCurrency(upcharge)})` : '';
-                return `<option value="${size}">${size}${upchargeText}</option>`;
-            }).join('');
+            // Note: Caps and Mugs don't need size options, so we handle that check here.
+            const needsSize = product.id.startsWith('t') || product.id.startsWith('h') || product.id.startsWith('s');
+            
+            let sizeOptionsHTML = '';
+            let sizeSelectorHiddenClass = 'hidden';
+            
+            if (needsSize) {
+                sizeSelectorHiddenClass = '';
+                sizeOptionsHTML = ALL_SIZES.map(size => {
+                    const upcharge = SIZE_UPCHARGES[size];
+                    const upchargeText = upcharge > 0 ? ` (+${formatCurrency(upcharge)})` : '';
+                    return `<option value="${size}">${size}${upchargeText}</option>`;
+                }).join('');
+            } else {
+                // If it doesn't need a size (like a hat or mug), use a default 'OS' for One Size
+                sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
+            }
             
             // Generate color options HTML
             const colorOptions = product.colors.map(color => {
@@ -444,12 +460,13 @@
                     </div>
 
                     <!-- Size Selector -->
-                    <div class="mb-4">
+                    <div class="mb-4 ${sizeSelectorHiddenClass}">
                         <label for="size-${product.id}" class="block text-sm font-medium text-gray-700">Select Size</label>
                         <select id="size-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
-                            ${sizeOptions}
+                            ${sizeOptionsHTML}
                         </select>
                     </div>
+                    ${!needsSize ? `<input type="hidden" id="size-${product.id}" value="OS">` : ''}
 
                     <button 
                         onclick="addToCart('${product.id}')" 
@@ -484,7 +501,7 @@
                     <div class="flex-grow pr-4">
                         <span class="font-semibold text-[#003466]">${item.name}</span>
                         <div class="text-sm text-gray-600">
-                            Size: ${item.size}, Color: ${item.color}
+                            Size: ${item.size === 'OS' ? 'One Size' : item.size}, Color: ${item.color}
                         </div>
                         <div class="text-sm text-gray-500">
                             ${formatCurrency(item.price)} x ${item.quantity}
@@ -552,7 +569,7 @@
             return;
         }
 
-        // Calculate the final price for this size
+        // Calculate the final price for this size (will be 0.00 upcharge if not apparel)
         const finalPrice = getProductPriceWithSize(product.price, selectedSize);
 
         // A cart item is unique by product ID, size, AND color
@@ -583,7 +600,7 @@
         if (currentView !== 'shop') {
              updateCheckoutSummary(currentView === 'checkout');
         }
-        showMessage(`${selectedColor} ${product.name} (${selectedSize}) added!`);
+        showMessage(`${selectedColor} ${product.name} (${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`);
     };
 
     // Remove one unit of item from cart based on unique ID (ID + Size + Color)
@@ -731,12 +748,8 @@
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
 
-        // NOTE: The 'required' attribute on inputs will handle the conditional validation 
-        // (i.e., address fields only required if shipping is selected, pickup note only if local pickup)
-
         try {
             // Standard Netlify form submission (sends data to Netlify backend)
-            // We use the raw form action URL here, which is standard practice for Netlify AJAX submissions
             const response = await fetch(form.action, {
                 method: form.method,
                 body: new FormData(form),
