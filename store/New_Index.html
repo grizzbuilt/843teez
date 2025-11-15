@@ -79,6 +79,15 @@
 </head>
 
 <body class="min-h-screen p-4 sm:p-8">
+    <!-- NEW: Construction/Order Banner (Sticky) -->
+    <div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base sticky top-0 z-50">
+        <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+        <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by 
+            <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or 
+            <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
+        </p>
+    </div>
+
   <!-- Page Wrap -->
   <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
     
@@ -146,7 +155,7 @@
         
         <!-- Left Column: Sticky Cart Summary -->
         <div class="lg:col-span-1">
-            <div id="cart-summary-sticky" class="sticky top-8 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+            <div id="cart-summary-sticky" class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
                 <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
                 <p class="text-sm text-gray-600 mb-2">Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span></p>
                 <p class="text-xl font-extrabold text-[#003466] mb-4">Est. Total: <span id="summary-cart-total">$0.00</span></p>
@@ -385,21 +394,8 @@
                 'https://store.843teez.com/store/MiserBroLightPink.jpg'
             ] 
         },
-        { 
-            id: 's304', 
-            name: '843 Surf Design', // Reusing ID, updating name for clarity
-            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Heather Grey', 'Gold'], 
-            imageUrls: [
-                'https://store.843teez.com/ConwayModel.png', 
-                'https://store.843teez.com/ConwayGrey.jpg', 
-                'https://store.843teez.com/ConwayYellow.jpg'
-            ]
-        },
-        // Non-Apparel Items: Use fixed price (product.price)
-        { id: 'a601', name: '843 Flexfit Hat', price: 25.00, colors: ['Black', 'Navy', 'Red'], imageUrls: ['https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+F', 'https://placehold.co/400x400/333333/FFFFFF?text=843+Hat+B'], product_options: ['Hat'] },
-        { id: 'm701', name: 'Coffee Mug', price: 15.00, colors: ['White', 'Black'], imageUrls: ['https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+L', 'https://placehold.co/400x400/D1D5DB/003466?text=Coffee+Mug+R'], product_options: ['Mug'] },
-    ];
+     
+      
 
     // Financial Configuration
     const SALES_TAX_RATE = 0.08; 
@@ -453,6 +449,12 @@
         document.getElementById('cart-view').classList.add('hidden');
         document.getElementById('checkout-view').classList.add('hidden');
         document.getElementById('back-to-shop-button').classList.add('hidden');
+
+        // Adjust sticky cart position when banner is visible
+        const stickyCart = document.getElementById('cart-summary-sticky');
+        const bannerHeight = document.getElementById('construction-banner').offsetHeight;
+        stickyCart.style.top = (newView === 'shop' ? bannerHeight + 16 : 16) + 'px';
+
 
         let title = "Online Shop";
         let subtitle = "Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re nearby or across the map, we offer convenient local delivery and fast shipping.";
