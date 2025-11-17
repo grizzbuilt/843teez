@@ -1,15 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- MS Calrify-->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tr3lwvejev");
-</script>
-
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -69,6 +60,14 @@
     .product-image-container:hover .image-overlay {
         opacity: 1;
     }
+    /* Style for category filter buttons */
+    .category-btn {
+        @apply px-4 py-2 text-sm font-semibold rounded-full border border-gray-300 transition-colors duration-200;
+        @apply bg-white text-gray-700 hover:bg-gray-100;
+    }
+    .category-btn.active {
+        @apply bg-[#007c9e] text-white border-[#007c9e] hover:bg-[#003466];
+    }
   </style>
 
   <!-- SEO and Metadata -->
@@ -88,14 +87,15 @@
 </head>
 
 <body class="min-h-screen p-4 sm:p-8">
-    <!-- NEW: Construction/Order Banner (Sticky) -->
-    <div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base sticky top-0 z-50">
-        <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
-        <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by 
-            <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or 
-            <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
-        </p>
-    </div>
+  
+  <!-- CONSTRUCTION BANNER -->
+  <div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base sticky top-0 z-50">
+      <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+      <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by 
+          <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or 
+          <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
+      </p>
+  </div>
 
   <!-- Page Wrap -->
   <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
@@ -143,6 +143,15 @@
             <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
                 Featured Apparel
             </h2>
+            
+            <!-- Category Filter Bar -->
+            <div id="category-filter" class="flex flex-wrap justify-center gap-3 mb-8 pt-4 border-b pb-4">
+                <button onclick="filterProducts('all')" class="category-btn active">All Designs</button>
+                <button onclick="filterProducts('Originals')" class="category-btn">843 Teez Originals</button>
+                <button onclick="filterProducts('Christmas')" class="category-btn">Christmas</button>
+                <button onclick="filterProducts('Fall')" class="category-btn">Fall & Halloween</button>
+            </div>
+
             <!-- Product Grid Container -->
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Products will be dynamically loaded here -->
@@ -351,15 +360,16 @@
         'T-Shirt': 20.00,
         'Sweatshirt': 37.00,
         'Hoodie': 39.00,
-        'Baseball Tee': 28.00 // NEW: Added Baseball Tee base price
+        'Baseball Tee': 28.00
     };
 
     // Product Definitions now use product_options array for base price flexibility
     const products = [
-        // Apparel Designs: Use product_options, Price determined by APPAREL_BASE_PRICES
+        // Category: Originals
         { 
             id: 'C101', 
             name: 'City of Conway', 
+            category: 'Originals',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Heather Gray', 'Yellow'], 
             imageUrls: [
@@ -371,6 +381,7 @@
         { 
             id: 'C102', 
             name: 'Conway SC Tiger', 
+            category: 'Originals',
             product_options: ['Baseball Tee'],
             colors: ['Black/White'], 
             imageUrls: [
@@ -381,6 +392,7 @@
         { 
             id: 'C103', 
             name: 'Historic Conway SC', 
+            category: 'Originals',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Forest Green'], 
             imageUrls: [
@@ -388,22 +400,10 @@
                 'https://store.843teez.com/store/HstConway.jpg'
             ] 
         },
-            { 
-            id: 'C202', 
-            name: 'Coastal Christmas Myrtle Beach', 
-            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Burgandy','Navy Blue','Forest Green','Red'], 
-            imageUrls: [
-                'https://store.843teez.com/store/CCModel.png', 
-                'https://store.843teez.com/store/CCBurg.jpg',
-              'https://store.843teez.com/store/CCNavy.jpg',
-              'https://store.843teez.com/store/CCForest.jpg',
-              'https://store.843teez.com/store/CCRed.jpg'
-            ] 
-        },
         { 
             id: 'C201', 
             name: 'Miser Brothers Heating & Cooling', 
+            category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt'],
             colors: ['Heather Gray', 'Carolina Blue', 'Natural', 'Light Blue', 'Light Pink'], 
             imageUrls: [
@@ -418,67 +418,86 @@
         },
         { 
             id: 's304', 
-            name: 'Buddys Syrup Supply', // Reusing ID, updating name for clarity
+            name: 'Buddys Syrup Supply', 
+            category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Green','Red','Heather Grey', 'Purple'], 
             imageUrls: [
                 'https://store.843teez.com/store/BuddyModel.png', 
                 'https://store.843teez.com/store/BuddyGreen.jpg', 
                 'https://store.843teez.com/store/BuddyRed.jpg', 
-              'https://store.843teez.com/store/BuddyGray.jpg', 
-              'https://store.843teez.com/store/BuddyPurple.jpg'
+                'https://store.843teez.com/store/BuddyGray.jpg', 
+                'https://store.843teez.com/store/BuddyPurple.jpg'
             ]
         },
-       { 
+        { 
             id: 'wb101', 
-            name: 'Wet Bandit Plumbing', // Reusing ID, updating name for clarity
+            name: 'Wet Bandit Plumbing', 
+            category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Natural','Heather Gray','Light Pink', 'Light Blue'], 
             imageUrls: [
                 'https://store.843teez.com/store/wetbanditModel.png', 
                 'https://store.843teez.com/store/BanditNatural.jpg', 
                 'https://store.843teez.com/store/BanditGray.jpg', 
-              'https://store.843teez.com/store/BanditPink.jpg', 
-              'https://store.843teez.com/store/BanditBlue.jpg'
+                'https://store.843teez.com/store/BanditPink.jpg', 
+                'https://store.843teez.com/store/BanditBlue.jpg'
             ]
         },
-             { 
+        { 
             id: 'sp101', 
-            name: 'Sweet Potato', // Reusing ID, updating name for clarity
+            name: 'Sweet Potato', 
+            category: 'Halloween',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Heather Gray','Sand', 'Heliconia'], 
             imageUrls: [
                 'https://store.843teez.com/store/SweetModel.png', 
                 'https://store.843teez.com/store/SweetGray.jpg', 
                 'https://store.843teez.com/store/SweetSand.jpg', 
-              'https://store.843teez.com/store/SweetHeliconia.jpg'
-
+                'https://store.843teez.com/store/SweetHeliconia.jpg'
             ]
         },
-             { 
+        { 
             id: 'gp101', 
-            name: 'Grouchy Potato', // Reusing ID, updating name for clarity
+            name: 'Grouchy Potato', 
+            category: 'Halloween',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Heather Gray','Sand', 'Carolina Blue'], 
             imageUrls: [
                 'https://store.843teez.com/store/GrouchyModel.png', 
                 'https://store.843teez.com/store/GrouchyGray.jpg', 
                 'https://store.843teez.com/store/GrouchySand.jpg', 
-              'https://store.843teez.com/store/GrouchyCaroBlue.jpg'
+                'https://store.843teez.com/store/GrouchyCaroBlue.jpg'
             ]
         },
-         { 
+        { 
             id: 'b101', 
-            name: 'Beard Gauge', // Reusing ID, updating name for clarity
+            name: 'Beard Gauge', 
+            category: 'Originals',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
             colors: ['Black','Navy','Neon Blue', 'Garnet'], 
             imageUrls: [
                 'https://store.843teez.com/store/BeardLengthModel.png', 
                 'https://store.843teez.com/store/BeardBlack.jpg', 
                 'https://store.843teez.com/store/BeardNavy.jpg', 
-              'https://store.843teez.com/store/BeardNeon.jpg', 
-              'https://store.843teez.com/store/BeardGarnet.jpg'
+                'https://store.843teez.com/store/BeardNeon.jpg', 
+                'https://store.843teez.com/store/BeardGarnet.jpg'
             ]
+        },
+        // Category: Christmas
+        { 
+            id: 'C202', 
+            name: 'Coastal Christmas Myrtle Beach', 
+            category: 'Christmas',
+            product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
+            colors: ['Burgandy','Navy Blue','Forest Green','Red'], 
+            imageUrls: [
+                'https://store.843teez.com/store/CCModel.png', 
+                'https://store.843teez.com/store/CCBurg.jpg', 
+                'https://store.843teez.com/store/CCNavy.jpg', 
+                'https://store.843teez.com/store/CCForest.jpg', 
+                'https://store.843teez.com/store/CCRed.jpg'
+            ] 
         },
     ];
 
@@ -494,7 +513,7 @@
         'S': 0.00,
         'M': 0.00,
         'L': 0.00,
-        'XL': 2.00, // Adjusted XL back to upcharge for safety, as price changes were requested.
+        'XL': 2.00, // Upcharge for XL
         '2XL': 4.00,
         '3XL': 5.00,
         '4XL': 6.00,
@@ -503,6 +522,8 @@
     // ALL_SIZES is used to generate the size selectors
     const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
+    // Current filter applied to the product grid
+    let activeFilter = 'all'; 
 
     // --- 2. CART STATE MANAGEMENT & VIEW MANAGEMENT ---
     let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
@@ -523,6 +544,25 @@
     // Function to save cart state to localStorage
     const saveCart = () => {
         localStorage.setItem('843teez_cart', JSON.stringify(cart));
+    };
+    
+    // Function to handle product filtering
+    const filterProducts = (category) => {
+        activeFilter = category;
+        renderProducts(); // Re-render the grid with the new filter
+
+        // Update button states
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        // Find the button that was clicked (using the category name as content)
+        const clickedButton = Array.from(document.querySelectorAll('.category-btn')).find(btn => btn.textContent.toLowerCase().includes(category.toLowerCase()));
+        if (clickedButton) {
+             clickedButton.classList.add('active');
+        } else {
+             // Default to 'All Designs' if the specific button wasn't found (safety check)
+             document.querySelector('.category-btn').classList.add('active');
+        }
     };
     
     // Function to change the visible page view
@@ -625,7 +665,12 @@
         const grid = document.getElementById('product-grid');
         let productSchema = []; // Array to hold Product Schema objects
         
-        grid.innerHTML = products.map(product => {
+        // Filter products based on active filter
+        const filteredProducts = activeFilter === 'all' 
+            ? products 
+            : products.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
+
+        grid.innerHTML = filteredProducts.map(product => {
             
             // Determine if the product needs size options (any apparel option)
             const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
@@ -698,7 +743,6 @@
                     }
                 }
             });
-
             // --- End Schema Generation ---
             
             return `
@@ -1107,4 +1151,3 @@
   </script>
 </body>
 </html>
-
