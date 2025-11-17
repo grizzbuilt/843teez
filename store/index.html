@@ -68,6 +68,7 @@
     .category-btn.active {
         @apply bg-[#007c9e] text-white border-[#007c9e] hover:bg-[#003466];
     }
+
   </style>
 
   <!-- SEO and Metadata -->
@@ -145,13 +146,14 @@
             </h2>
             
             <!-- Category Filter Bar -->
-            <div id="category-filter" class="flex flex-wrap justify-center gap-3 mb-8 pt-4 border-b pb-4">
+                <div id="category-filter" class="flex flex-wrap justify-center divide-x divide-gray-300 mb-8 pt-4 border-b pb-4">
+                <!-- Note the individual buttons now use 'px-4' for spacing around the new divider -->
                 <button onclick="filterProducts('all')" class="category-btn active">All Designs</button>
                 <button onclick="filterProducts('Originals')" class="category-btn">843 Teez Originals</button>
                 <button onclick="filterProducts('Christmas')" class="category-btn">Christmas</button>
                 <button onclick="filterProducts('Fall')" class="category-btn">Fall & Halloween</button>
             </div>
-
+          
             <!-- Product Grid Container -->
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Products will be dynamically loaded here -->
