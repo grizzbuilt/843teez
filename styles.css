@@ -1,149 +1,392 @@
+/* Base Styles */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8fcff;
-  background-image: url('surf-texture.png');
-  background-repeat: repeat;
-  background-size: 300px;
-  color: #222;
-}
-
- /* Make the "What We Do" bullets look normal */
-#services ul {
-  list-style: disc outside;
-  padding-left: 0.75rem;   /* indent the bullets */
-  margin: 0;               /* keep it tight under the heading */
-}
-#services li { 
-  margin: 0.4rem 0; 
-}
-    
-#services ul { 
-  list-style: none; 
-  padding: 0; 
-  margin: 0 auto; 
-  max-width: 700px;
-}
-#services li {
-  position: relative;
-  padding-left: 1.25rem;
-  margin: 0.4rem 0;
-}
-#services li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  line-height: 1.2;
-}
-
-table.pricing-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
-}
-.addons-list {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  padding-left: 1.2rem;
-}
-.pricing-table th,
-.pricing-table td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-.pricing-table thead {
-  background-color: #8cdaf0;
-}
-
-.pricing-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8fcff;
+    /* Textured background for visual interest */
+    background-image: url('surf-texture.png'); 
+    background-repeat: repeat;
+    background-size: 300px;
+    color: #222;
 }
 
 html {
-  scroll-behavior: smooth;
-}
-.hero {
-  text-align: center;
-  padding: 2rem 1rem;
+    scroll-behavior: smooth;
 }
 
-.logo {
-  max-width: 320px;
-  margin-top: 1rem;
-  }
-  .logo2 {
-  max-width: 350px;
-  margin-top: 1rem;
-}
-#pricing {
-  padding: 2rem;
-  background-color: #8cdaf0;
-}
-.cta-button {
-  background-color: #33b5e5;
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
+/* Headings */
+h1, h2, h3 {
+    color: #007c9e; /* Primary brand blue */
 }
 
-.cta-button:hover {
-  background-color: #28a3ce;
-}
-
-h1, h2 {
-  color: #007c9e;
-}
-
+/* Section Containers */
 .section {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+    padding: 3rem 1rem; /* Increased padding for better separation */
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
 }
 
+/* --- Navigation --- */
+.top-nav {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 0; /* padding for easier clicks */
+}
+.top-nav a:hover {
+    color: #8cdaf0; /* Hover color */
+}
+
+/* Logo in Nav */
+.top-nav .logo-link {
+    /* Hide the logo link text, keep only the image */
+    line-height: 0; 
+}
+.top-nav .logo {
+    max-width: 120px; /* Smaller logo in the nav bar */
+    height: auto;
+    margin: 0;
+}
+
+/* Store CTA in Nav */
+.top-nav .cta-link {
+    background-color: #33b5e5;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+.top-nav .cta-link:hover {
+    background-color: #28a3ce;
+    color: #fff;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero-image.jpg'); /* Placeholder for a background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.hero-section h1 {
+    color: #8cdaf0; /* Highlighted color for H1 */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.hero-tagline {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+.hero-cta {
+    /* Inherits .contact-button styles, adding extra margin */
+    margin-top: 1.5rem;
+}
+
+/* --- General CTA Button Styling (Used by .contact-button and .cta-button) --- */
+.contact-button {
+    display: inline-block;
+    background-color: #003466; /* Deep blue for high contrast CTAs */
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0.5rem; 
+    transition: background 0.3s ease;
+}
+.contact-button:hover {
+    background-color: #007c9e; 
+}
+
+/* --- About Section --- */
+.about-section {
+    padding: 40px 20px;
+    text-align: left; /* Align text left for readability */
+}
+.about-section h2 {
+    text-align: center;
+}
+.about-intro-text {
+    font-weight: 600; 
+    color: #444; 
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.about-content-flex {
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    gap: 30px;
+}
+.about-text-column {
+    flex: 1; 
+    min-width: 300px;
+}
+.about-text-column p {
+    margin-bottom: 1.2rem;
+}
+.about-image-column {
+    flex: 0 0 300px; 
+    min-width: 250px; 
+    text-align: center;
+}
+.about-founder-img {
+    max-width: 100%; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.founder-caption {
+    margin-top: 10px; 
+    font-size: 0.9rem; 
+    color: #555;
+}
+
+/* --- Services Section --- */
+.services-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+.service-column {
+    flex: 1;
+    min-width: 280px;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.service-column h3 {
+    text-align: center;
+    border-bottom: 2px solid #8cdaf0;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+.service-column ul {
+    list-style: disc outside;
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+}
+.service-cta {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+/* --- Samples Gallery --- */
 .sample-bg {
-  background: linear-gradient(135deg, #a0e3f3, #33b5e5);
-  color: #fff;
-  padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, #a0e3f3, #33b5e5);
+    color: #fff;
+    padding: 4rem 1.5rem;
 }
-
 .sample-bg h2,
 .sample-bg p {
-  color: #fff;
+    color: #fff;
 }
-
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
-
 .gallery img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-
 .gallery img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-footer {
-  background-color: #0f4d5e;
-  color: #eee;
-  text-align: center;
-  padding: 1rem;
+/* --- Pricing Section --- */
+.pricing-section {
+    padding: 0; /* Remove padding here, use it inside sections */
+    background-color: #f9f9f9;
+}
+/* Store Section (Nested) */
+.store-section {
+    background-color: #8cdaf0;
+    padding: 3rem 1rem;
+}
+.store-section h2, .store-section p {
+    color: #222;
+}
+.store-tagline {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+.store-link-wrapper {
+    margin-top: 1.5rem;
+}
+
+/* Custom Pricing Section (Nested) */
+#custom-pricing {
+    padding: 3rem 1rem;
+}
+.custom-price-block {
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    text-align: center;
+}
+.price-detail {
+    margin-bottom: 1rem; 
+    line-height: 1.5;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 3rem 1rem; 
+    background-color: #fff;
+}
+.contact-text {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+.contact-info {
+    margin-bottom: 2rem;
+}
+.or-message {
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Styles */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-button-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+.form-button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.form-button:hover {
+    background-color: #444;
+}
+
+/* --- Socials Section --- */
+#socials {
+    padding-bottom: 4rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.footer-social-img {
+    max-width: 44px; 
+    height: auto; 
+    display: block; 
+    transition: opacity 0.3s;
+}
+.social-links a:hover .footer-social-img {
+    opacity: 0.7;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #0f4d5e;
+    color: #eee;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    line-height: 1.6;
+}
+.site-footer a {
+    color: #8cdaf0;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 768px) {
+    .about-content-flex {
+        flex-direction: column;
+    }
+    .about-image-column {
+        order: -1; /* Move image above text on mobile */
+        margin-bottom: 1.5rem;
+    }
+    .services-columns {
+        flex-direction: column;
+    }
+    .service-column {
+        min-width: 100%;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-nav ul {
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+    .top-nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.2rem;
+    }
+    .contact-button {
+        display: block;
+        margin: 1rem auto;
+    }
+    .social-links {
+        gap: 1rem;
+    }
 }
