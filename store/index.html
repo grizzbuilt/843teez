@@ -4,16 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Load Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font: Inter (Used for modern aesthetic) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     /* Custom style for the specific background texture and font */
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      background-color: #f8fcff; 
+      background-color: #f8fcff;
       background-image: url('https://843teez.com/surf-texture.png');
       background-repeat: repeat;
       background-size: 300px;
@@ -31,7 +29,7 @@
     .btn-primary:hover {
         background-color: #007c9e; /* Teal Blue */
     }
-    
+
     /* Ensure the main container grows to fill the page height */
     #main-content {
         min-height: calc(100vh - 80px); /* Adjust for padding/margins */
@@ -68,13 +66,10 @@
     .category-btn.active {
         @apply bg-[#007c9e] text-white border-[#007c9e] hover:bg-[#003466];
     }
-
   </style>
 
-  <!-- SEO and Metadata -->
   <title>843 Teez Store | Custom Tees, Hoodies & Sweatshirts in Conway SC</title>
   <meta name="description" content="Shop the official 843 Teez online store. Custom tees, hoodies, and sweatshirts printed and pressed locally in Conway, South Carolina." />
-  <!-- ... other meta tags ... -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -87,20 +82,15 @@
   </script>
 </head>
 
-<body class="min-h-screen p-4 sm:p-8">
-  
-  <!-- CONSTRUCTION BANNER -->
-  <div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base sticky top-0 z-50">
-      <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
-      <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by 
-          <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or 
+<body class="min-h-screen p-4 sm:p-8 **pt-[60px]**"> <div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base **fixed top-0 z-50**"> <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+      <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
+          <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
           <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
       </p>
   </div>
 
-  <!-- Page Wrap -->
   <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
-    
+
     <header class="text-center mb-8">
         <img
             src="https://843teez.com/843teezlogo.png"
@@ -111,9 +101,8 @@
             <h1 id="page-title" class="text-3xl font-extrabold text-[#007c9e]">
                 Online Shop
             </h1>
-            <!-- Global View Cart Button -->
-            <button 
-                onclick="changeView('cart')" 
+            <button
+                onclick="changeView('cart')"
                 id="global-view-cart-button"
                 class="flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full transition-colors duration-200 shadow-md hover:bg-red-700 disabled:opacity-50"
                 disabled
@@ -137,51 +126,44 @@
         </div>
     </header>
 
-    <!-- SHOPPING VIEW (Default) -->
     <div id="shop-view" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <!-- Right Column: Product Grid -->
         <div class="lg:col-span-3">
             <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
                 Featured Apparel
             </h2>
-            
-            <!-- Category Filter Bar -->
-                <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
-                <!-- Note the individual buttons now use 'px-4' for spacing around the new divider -->
+
+            <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
                 <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
                 <button onclick="filterProducts('Originals')" class="category-btn active px-4">843 Teez Originals</button>
                 <button onclick="filterProducts('Christmas')" class="category-btn active px-4">Christmas</button>
                 <button onclick="filterProducts('Fall')" class="category-btn active px-4">Fall & Halloween</button>
             </div>
-          
-            <!-- Product Grid Container -->
+
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Products will be dynamically loaded here -->
-            </div>
-            
+                </div>
+
             <div class="mt-12 text-center pt-8 border-t border-gray-200">
               <p class="text-gray-700 font-medium mb-4">For custom apparel and large orders, please contact us directly:</p>
-              
-              <a href="tel:8433501943"
-                 class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mr-2 mb-2 sm:mr-4">
+
+                            <a href="tel:8433501943"
+                                 class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mr-2 mb-2 sm:mr-4">
                   📞 Call: 843-350-1943
               </a>
               <a href="mailto:Sales@843Teez.com"
-                 class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mb-2">
+                                 class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mb-2">
                   📧 Email: Sales@843Teez.com
               </a>
             </div>
         </div>
-        
-        <!-- Left Column: Sticky Cart Summary -->
+
         <div class="lg:col-span-1">
             <div id="cart-summary-sticky" class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
                 <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
                 <p class="text-sm text-gray-600 mb-2">Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span></p>
                 <p class="text-xl font-extrabold text-[#003466] mb-4">Est. Total: <span id="summary-cart-total">$0.00</span></p>
-                
-                <button 
-                    onclick="changeView('cart')" 
+
+                <button
+                    onclick="changeView('cart')"
                     id="view-cart-button"
                     class="w-full text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md disabled:opacity-50 btn-primary"
                     disabled
@@ -191,21 +173,17 @@
             </div>
         </div>
     </div>
-    
-    <!-- CART VIEW (Hidden by default) -->
+
     <div id="cart-view" class="hidden max-w-3xl mx-auto py-6">
-        
-        <!-- Shopping Cart Display (Step 1) -->
+
         <div id="cart-items-display" class="bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg mb-8">
             <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
                 Review Your Order
             </h2>
             <div id="cart-items" class="space-y-4">
-                <!-- Cart items will be inserted here by JavaScript -->
-            </div>
-            
+                </div>
+
             <div class="mt-6 pt-4 border-t border-gray-200">
-                <!-- Tax and Shipping Breakdown in Cart -->
                 <div class="flex justify-between text-base text-gray-600">
                     <span>Subtotal:</span>
                     <span id="cart-subtotal">$0.00</span>
@@ -223,8 +201,8 @@
                     <span id="cart-total">$0.00</span>
                 </div>
 
-                <button 
-                    onclick="changeView('checkout')" 
+                <button
+                    onclick="changeView('checkout')"
                     id="goto-checkout-button"
                     class="w-full mt-6 text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md btn-primary"
                 >
@@ -232,13 +210,12 @@
                 </button>
             </div>
         </div>
-        
+
         <button type="button" onclick="changeView('shop')" class="text-[#007c9e] hover:text-[#003466] font-semibold block mx-auto mt-4">
             &larr; Continue Shopping
         </button>
     </div>
-    
-    <!-- CHECKOUT FORM VIEW (Hidden by default) -->
+
     <div id="checkout-view" class="hidden max-w-3xl mx-auto py-6">
         <div class="bg-white p-6 rounded-xl border-2 border-red-500 shadow-lg">
             <h2 class="text-2xl font-bold text-red-500 border-b pb-2 mb-4">
@@ -247,15 +224,12 @@
             <p class="text-sm text-gray-600 mb-4">
                 **Note:** This is an *Order Request*. No payment is processed now. An invoice will be emailed shortly after submission.
             </p>
-            
-            <!-- Netlify Form Setup: data-netlify="true" and hidden form-name are crucial -->
-            <form name="843Teez_Order" method="POST" data-netlify="true" id="checkout-form" class="space-y-4">
+
+            <form name="843Teez_Order" method="POST" data-netlify="true" id="checkout-form" class='space-y-4'>
                 <input type="hidden" name="form-name" value="843Teez_Order" />
-                
-                <!-- Hidden field for serialized cart data. Populated by JS before submission. -->
+
                 <input type="hidden" name="cart_data_json" id="cart-data-json" value="" />
 
-                <!-- Contact Info -->
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700 text-left">Full Name</label>
                     <input type="text" id="name" name="name" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg">
@@ -268,8 +242,7 @@
                     <label for="phone" class="block text-sm font-medium text-gray-700 text-left">Phone Number</label>
                     <input type="tel" id="phone" name="phone" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg">
                 </div>
-                
-                <!-- SHIPPING SELECTION FIELD -->
+
                 <div>
                     <label for="shipping_method" class="block text-sm font-medium text-gray-700 text-left">Shipping Method</label>
                     <select id="shipping_method" name="shipping_method" onchange="updateCheckoutSummary(true); toggleAddressFields();" required class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e] rounded-lg">
@@ -279,7 +252,6 @@
                     </select>
                 </div>
 
-                <!-- NEW: ADDRESS FIELDS (Hidden by default, shown for shipping) -->
                 <div id="shipping-address-group" class="hidden space-y-4 pt-2 border-l-4 border-red-200 pl-4">
                     <h4 class="text-base font-semibold text-red-500">Shipping Address Details</h4>
                     <div>
@@ -302,7 +274,6 @@
                     </div>
                 </div>
 
-                <!-- NEW: PICKUP NOTE (Hidden by default, shown for pickup) -->
                 <div id="pickup-note-group" class="hidden space-y-4 pt-2 border-l-4 border-green-200 pl-4">
                     <h4 class="text-base font-semibold text-green-600">Local Pickup Note</h4>
                     <div>
@@ -312,7 +283,6 @@
                 </div>
 
                 <div class="mt-6 pt-4 border-t border-gray-200">
-                    <!-- FINAL ORDER SUMMARY -->
                     <h3 class="text-xl font-bold text-[#003466] mb-2">Order Summary</h3>
                     <div class="flex justify-between text-sm text-gray-600">
                         <span>Subtotal:</span>
@@ -330,7 +300,7 @@
                         <span>Grand Total:</span>
                         <span id="form-total-display">$0.00</span>
                     </div>
-                    
+
                     <p class="text-sm text-gray-700 text-center mb-4 p-2 bg-yellow-50 rounded-lg border border-yellow-200">
                         **No payment is processed on this page** — you’ll receive an emailed invoice after we review your order.
                     </p>
@@ -345,8 +315,7 @@
             </form>
         </div>
     </div>
-    
-    <!-- FOOTER -->
+
     <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
       <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
       <p>Woman & Veteran-owned local apparel.</p>
@@ -356,7 +325,7 @@
 
   <script>
     // --- 1. CONFIGURATION DATA ---
-    
+
     // Base prices for apparel types (NEW PRICING MODEL)
     const APPAREL_BASE_PRICES = {
         'T-Shirt': 20.00,
@@ -368,175 +337,175 @@
     // Product Definitions now use product_options array for base price flexibility
     const products = [
         // Category: Originals
-        { 
-            id: 'O101', 
-            name: 'City of Conway', 
+        {
+            id: 'O101',
+            name: 'City of Conway',
             category: 'Originals',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Heather Gray', 'Yellow'], 
+            colors: ['Heather Gray', 'Yellow'],
             imageUrls: [
-                'https://store.843teez.com/store/ConwayModel.png', 
-                'https://store.843teez.com/store/ConwayGrey.jpg', 
+                'https://store.843teez.com/store/ConwayModel.png',
+                'https://store.843teez.com/store/ConwayGrey.jpg',
                 'https://store.843teez.com/store/ConwayYellow.jpg'
-            ] 
+            ]
         },
-        { 
-            id: 'O102', 
-            name: 'Conway SC Tiger', 
+        {
+            id: 'O102',
+            name: 'Conway SC Tiger',
             category: 'Originals',
             product_options: ['Baseball Tee'],
-            colors: ['Black/White'], 
+            colors: ['Black/White'],
             imageUrls: [
-                'https://store.843teez.com/store/ConwaySTModel.png', 
+                'https://store.843teez.com/store/ConwaySTModel.png',
                 'https://store.843teez.com/store/ConwayST.jpg'
-            ] 
+            ]
         },
-        { 
-            id: 'O103', 
-            name: 'Historic Conway SC', 
+        {
+            id: 'O103',
+            name: 'Historic Conway SC',
             category: 'Originals',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Forest Green'], 
+            colors: ['Forest Green'],
             imageUrls: [
-                'https://store.843teez.com/store/HstConwayModel.png', 
+                'https://store.843teez.com/store/HstConwayModel.png',
                 'https://store.843teez.com/store/HstConway.jpg'
-            ] 
+            ]
         },
-        { 
-            id: 'F101', 
-            name: 'Fall Candle', 
+        {
+            id: 'F101',
+            name: 'Fall Candle',
             category: 'Fall',
             product_options: ['T-Shirt', 'Sweatshirt'],
-            colors: ['Texas Orang', 'Heather Gray', 'Gold', 'Light Pink', 'Sand', 'Orange'], 
+            colors: ['Texas Orang', 'Heather Gray', 'Gold', 'Light Pink', 'Sand', 'Orange'],
             imageUrls: [
-                'https://store.843teez.com/store/FallCandleModel.png', 
-                'https://store.843teez.com/store/FallCandleTexOrg.jpg', 
-                'https://store.843teez.com/store/FallCandleGray.jpg', 
-                'https://store.843teez.com/store/FallCandleGold.jpg', 
-                'https://store.843teez.com/store/FallCandlePink.jpg', 
-                'https://store.843teez.com/store/FallCandleSand.jpg', 
+                'https://store.843teez.com/store/FallCandleModel.png',
+                'https://store.843teez.com/store/FallCandleTexOrg.jpg',
+                'https://store.843teez.com/store/FallCandleGray.jpg',
+                'https://store.843teez.com/store/FallCandleGold.jpg',
+                'https://store.843teez.com/store/FallCandlePink.jpg',
+                'https://store.843teez.com/store/FallCandleSand.jpg',
                 'https://store.843teez.com/store/FallCandleOrange.jpg'
-            ] 
+            ]
         },
-        { 
-            id: 'C101', 
-            name: 'Miser Brothers Heating & Cooling', 
+        {
+            id: 'C101',
+            name: 'Miser Brothers Heating & Cooling',
             category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt'],
-            colors: ['Heather Gray', 'Carolina Blue', 'Natural', 'Light Blue', 'Light Pink'], 
+            colors: ['Heather Gray', 'Carolina Blue', 'Natural', 'Light Blue', 'Light Pink'],
             imageUrls: [
-                'https://store.843teez.com/store/MiserBroFrontModel.png', 
-                'https://store.843teez.com/store/MiserBroBackModel.png', 
-                'https://store.843teez.com/store/MiserBroGray.jpg', 
-                'https://store.843teez.com/store/MiserBroCaroBlue.jpg', 
-                'https://store.843teez.com/store/MiserBroNatural.jpg', 
-                'https://store.843teez.com/store/MiserBroLightBlue.jpg', 
+                'https://store.843teez.com/store/MiserBroFrontModel.png',
+                'https://store.843teez.com/store/MiserBroBackModel.png',
+                'https://store.843teez.com/store/MiserBroGray.jpg',
+                'https://store.843teez.com/store/MiserBroCaroBlue.jpg',
+                'https://store.843teez.com/store/MiserBroNatural.jpg',
+                'https://store.843teez.com/store/MiserBroLightBlue.jpg',
                 'https://store.843teez.com/store/MiserBroLightPink.jpg'
-            ] 
+            ]
         },
-        { 
-            id: 'C102', 
-            name: 'Buddys Syrup Supply', 
+        {
+            id: 'C102',
+            name: 'Buddys Syrup Supply',
             category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Green','Red','Heather Grey', 'Purple'], 
+            colors: ['Green','Red','Heather Grey', 'Purple'],
             imageUrls: [
-                'https://store.843teez.com/store/BuddyModel.png', 
-                'https://store.843teez.com/store/BuddyGreen.jpg', 
-                'https://store.843teez.com/store/BuddyRed.jpg', 
-                'https://store.843teez.com/store/BuddyGray.jpg', 
+                'https://store.843teez.com/store/BuddyModel.png',
+                'https://store.843teez.com/store/BuddyGreen.jpg',
+                'https://store.843teez.com/store/BuddyRed.jpg',
+                'https://store.843teez.com/store/BuddyGray.jpg',
                 'https://store.843teez.com/store/BuddyPurple.jpg'
             ]
         },
-        { 
-            id: 'C103', 
-            name: 'Wet Bandit Plumbing', 
+        {
+            id: 'C103',
+            name: 'Wet Bandit Plumbing',
             category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Natural','Heather Gray','Light Pink', 'Light Blue'], 
+            colors: ['Natural','Heather Gray','Light Pink', 'Light Blue'],
             imageUrls: [
-                'https://store.843teez.com/store/wetbanditModel.png', 
-                'https://store.843teez.com/store/BanditNatural.jpg', 
-                'https://store.843teez.com/store/BanditGray.jpg', 
-                'https://store.843teez.com/store/BanditPink.jpg', 
+                'https://store.843teez.com/store/wetbanditModel.png',
+                'https://store.843teez.com/store/BanditNatural.jpg',
+                'https://store.843teez.com/store/BanditGray.jpg',
+                'https://store.843teez.com/store/BanditPink.jpg',
                 'https://store.843teez.com/store/BanditBlue.jpg'
             ]
         },
-        { 
-            id: 'F102', 
-            name: 'Sweet Potato', 
+        {
+            id: 'F102',
+            name: 'Sweet Potato',
             category: 'Fall',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Heather Gray','Sand', 'Heliconia'], 
+            colors: ['Heather Gray','Sand', 'Heliconia'],
             imageUrls: [
-                'https://store.843teez.com/store/SweetModel.png', 
-                'https://store.843teez.com/store/SweetGray.jpg', 
-                'https://store.843teez.com/store/SweetSand.jpg', 
+                'https://store.843teez.com/store/SweetModel.png',
+                'https://store.843teez.com/store/SweetGray.jpg',
+                'https://store.843teez.com/store/SweetSand.jpg',
                 'https://store.843teez.com/store/SweetHeliconia.jpg'
             ]
         },
-        { 
-            id: 'F103', 
-            name: 'Grouchy Potato', 
+        {
+            id: 'F103',
+            name: 'Grouchy Potato',
             category: 'Fall',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Heather Gray','Sand', 'Carolina Blue'], 
+            colors: ['Heather Gray','Sand', 'Carolina Blue'],
             imageUrls: [
-                'https://store.843teez.com/store/GrouchyModel.png', 
-                'https://store.843teez.com/store/GrouchyGray.jpg', 
-                'https://store.843teez.com/store/GrouchySand.jpg', 
+                'https://store.843teez.com/store/GrouchyModel.png',
+                'https://store.843teez.com/store/GrouchyGray.jpg',
+                'https://store.843teez.com/store/GrouchySand.jpg',
                 'https://store.843teez.com/store/GrouchyCaroBlue.jpg'
             ]
         },
-        { 
-            id: 'O104', 
-            name: 'Beard Gauge', 
+        {
+            id: 'O104',
+            name: 'Beard Gauge',
             category: 'Originals',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Black','Navy','Neon Blue', 'Garnet'], 
+            colors: ['Black','Navy','Neon Blue', 'Garnet'],
             imageUrls: [
-                'https://store.843teez.com/store/BeardLengthModel.png', 
-                'https://store.843teez.com/store/BeardBlack.jpg', 
-                'https://store.843teez.com/store/BeardNavy.jpg', 
-                'https://store.843teez.com/store/BeardNeon.jpg', 
+                'https://store.843teez.com/store/BeardLengthModel.png',
+                'https://store.843teez.com/store/BeardBlack.jpg',
+                'https://store.843teez.com/store/BeardNavy.jpg',
+                'https://store.843teez.com/store/BeardNeon.jpg',
                 'https://store.843teez.com/store/BeardGarnet.jpg'
             ]
         },
         // Category: Christmas
-        { 
-            id: 'C104', 
-            name: 'Coastal Christmas Myrtle Beach', 
+        {
+            id: 'C104',
+            name: 'Coastal Christmas Myrtle Beach',
             category: 'Christmas',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Burgandy','Navy Blue','Forest Green','Red'], 
+            colors: ['Burgandy','Navy Blue','Forest Green','Red'],
             imageUrls: [
-                'https://store.843teez.com/store/CCModel.png', 
-                'https://store.843teez.com/store/CCBurg.jpg', 
-                'https://store.843teez.com/store/CCNavy.jpg', 
-                'https://store.843teez.com/store/CCForest.jpg', 
+                'https://store.843teez.com/store/CCModel.png',
+                'https://store.843teez.com/store/CCBurg.jpg',
+                'https://store.843teez.com/store/CCNavy.jpg',
+                'https://store.843teez.com/store/CCForest.jpg',
                 'https://store.843teez.com/store/CCRed.jpg'
-            ] 
+            ]
         },
-           { 
-            id: 'F103', 
-            name: 'Suffing is my Safe Word', 
+        {
+            id: 'F104', // CORRECTED ID FROM F103 TO F104
+            name: 'Suffing is my Safe Word',
             category: 'Fall',
             product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-            colors: ['Orange'], 
+            colors: ['Orange'],
             imageUrls: [
-                'https://store.843teez.com/store/StuffingModel.png', 
+                'https://store.843teez.com/store/StuffingModel.png',
                 'https://store.843teez.com/store/SuffingOrange.jpg'
-            ] 
+            ]
         },
     ];
 
     // Financial Configuration
-    const SALES_TAX_RATE = 0.08; 
+    const SALES_TAX_RATE = 0.08;
     const SHIPPING_OPTIONS = {
         local_pickup: { name: "Local Pickup (Conway)", cost: 0.00 },
         standard_shipping: { name: "Standard Shipping", cost: 8.00 }
     };
-    
+
     // Size Configuration with Upcharges for 2XL and above
     const SIZE_UPCHARGES = {
         'S': 0.00,
@@ -552,7 +521,7 @@
     const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
     // Current filter applied to the product grid
-    let activeFilter = 'all'; 
+    let activeFilter = 'all';
 
     // --- 2. CART STATE MANAGEMENT & VIEW MANAGEMENT ---
     let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
@@ -560,12 +529,12 @@
 
     // Helper to format currency
     const formatCurrency = (amount) => `$${amount.toFixed(2)}`;
-    
+
     // Helper to calculate price including size upcharge
     const getProductPriceWithSize = (basePrice, size) => {
         // If size is 'OS' (One Size), the upcharge is always 0
         if (size === 'OS') return basePrice;
-        
+
         const upcharge = SIZE_UPCHARGES[size] || 0.00;
         return basePrice + upcharge;
     }
@@ -574,7 +543,7 @@
     const saveCart = () => {
         localStorage.setItem('843teez_cart', JSON.stringify(cart));
     };
-    
+
     // Function to handle product filtering
     const filterProducts = (category) => {
         activeFilter = category;
@@ -593,11 +562,11 @@
              document.querySelector('.category-btn').classList.add('active');
         }
     };
-    
+
     // Function to change the visible page view
     const changeView = (newView) => {
         currentView = newView;
-        
+
         // Hide all views
         document.getElementById('shop-view').classList.add('hidden');
         document.getElementById('cart-view').classList.add('hidden');
@@ -606,8 +575,23 @@
 
         // Adjust sticky cart position when banner is visible
         const stickyCart = document.getElementById('cart-summary-sticky');
+        // Banner height is about 56-60px, so 16px (pt-4) below it is approx 72-76px
+        // top-20 is 5rem or 80px, so we leave it as top-20 and let the padding handle the offset
         const bannerHeight = document.getElementById('construction-banner').offsetHeight;
-        stickyCart.style.top = (newView === 'shop' ? bannerHeight + 16 : 16) + 'px';
+
+        // ORIGINAL JS LOGIC: This logic is based on the banner being in the document flow.
+        // stickyCart.style.top = (newView === 'shop' ? bannerHeight + 16 : 16) + 'px';
+        // With the FIXED banner, the content below it is pushed down by the body's padding.
+        // We now need to adjust the sticky top position based on the calculated banner height
+        // for the sticky cart *within* the main-content wrapper.
+
+        // Since the main content starts *below* the fixed banner, the sticky position
+        // is relative to the top of the *main-content* container. Let's use a fixed
+        // value that looks good, or just stick to the CSS class `top-20` if the
+        // main content has no margin/padding relative to the viewport top.
+        // Since we've added padding to the body, we don't need this complex JS offset
+        // unless you want the cart to scroll below the banner in a specific way.
+        // For now, let's remove the JS adjustment and rely on the CSS `top-20`.
 
 
         let title = "Online Shop";
@@ -635,47 +619,47 @@
             updateCheckoutSummary(true); // Update form totals, defaulting shipping to 0
             toggleAddressFields(); // Initialize field visibility
         }
-        
+
         document.getElementById('page-title').textContent = title;
         document.getElementById('page-subtitle').textContent = subtitle;
         window.scrollTo(0, 0); // Scroll to top on view change
     };
-    
+
     // Function to toggle address/pickup fields based on shipping method
     const toggleAddressFields = () => {
         const method = document.getElementById('shipping_method').value;
         const addressGroup = document.getElementById('shipping-address-group');
         const pickupGroup = document.getElementById('pickup-note-group');
-        
+
         const isShipping = method === 'standard_shipping';
         const isPickup = method === 'local_pickup';
-        
+
         // Toggle visibility
         addressGroup.classList.toggle('hidden', !isShipping);
         pickupGroup.classList.toggle('hidden', !isPickup);
-        
+
         // Toggle required attribute for shipping address fields
         document.getElementById('full_address').required = isShipping;
         document.getElementById('city').required = isShipping;
         document.getElementById('state').required = isShipping;
         document.getElementById('zip_code').required = isShipping;
-        
+
         // Toggle required attribute for pickup note
         document.getElementById('pickup_note').required = isPickup;
     };
 
 
     // --- 3. RENDERING FUNCTIONS ---
-    
+
     // Function to cycle the image on click
     const cycleImage = (element) => {
         // Get the image element which holds the data
         const imgElement = element.querySelector('img');
-        
+
         // Use the dataset to read and write the state
         const urls = JSON.parse(imgElement.dataset.imageUrls);
         let currentIndex = parseInt(imgElement.dataset.currentIndex, 10);
-        
+
         if (urls.length <= 1) return; // Cannot cycle
 
         // Calculate the next index (loop back to 0)
@@ -684,7 +668,7 @@
         // Update the image source and the index data attribute
         imgElement.src = urls[currentIndex];
         imgElement.dataset.currentIndex = currentIndex;
-        
+
         // Update the alt text for accessibility
         imgElement.alt = imgElement.alt.replace(/\(View \d+ of \d+\)/, `(View ${currentIndex + 1} of ${urls.length})`);
     };
@@ -693,17 +677,17 @@
     const renderProducts = () => {
         const grid = document.getElementById('product-grid');
         let productSchema = []; // Array to hold Product Schema objects
-        
+
         // Filter products based on active filter
-        const filteredProducts = activeFilter === 'all' 
-            ? products 
+        const filteredProducts = activeFilter === 'all'
+            ? products
             : products.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
 
         grid.innerHTML = filteredProducts.map(product => {
-            
+
             // Determine if the product needs size options (any apparel option)
             const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
-            
+
             // --- Product Type Options ---
             const typeOptionsHTML = product.product_options.map(type => {
                 // Get the base price from the APPAREL_BASE_PRICES list, or use product.price for non-apparel
@@ -712,7 +696,7 @@
                 // The base price is stored in the data attribute of the option tag
                 return `<option value="${type}" data-base-price="${basePrice.toFixed(2)}">${type}${priceText}</option>`;
             }).join('');
-            
+
             // Display the price of the first option as the 'Starting at' price
             let startingPrice = 0.00;
             if (product.product_options.length > 0) {
@@ -722,7 +706,7 @@
             // --- Size Options ---
             let sizeOptionsHTML = '';
             let sizeSelectorHiddenClass = 'hidden';
-            
+
             if (needsSize) {
                 sizeSelectorHiddenClass = '';
                 sizeOptionsHTML = ALL_SIZES.map(size => {
@@ -733,19 +717,19 @@
             } else {
                 sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
             }
-            
+
             // --- Color Options ---
             const colorOptions = product.colors.map(color => {
                 return `<option value="${color}">${color}</option>`;
             }).join('');
 
             const imageCount = product.imageUrls.length;
-            
+
             // --- Dynamic Product Schema Generation ---
             // Create a JSON-LD object for the first product option/type
             const initialType = product.product_options[0];
             const initialPrice = APPAREL_BASE_PRICES[initialType] || product.price || 0.00;
-            
+
             productSchema.push({
                 "@context": "https://schema.org",
                 "@type": "Product",
@@ -773,17 +757,16 @@
                 }
             });
             // --- End Schema Generation ---
-            
+
             return `
                 <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    
-                    <!-- Image Carousel Area: Clickable Image -->
+
                     <div class="product-image-container relative group cursor-pointer rounded-lg mb-4" onclick="cycleImage(this)">
-                        <img 
+                        <img
                             id="img-${product.id}"
-                            src="${product.imageUrls[0]}" 
-                            alt="${product.name} ${initialType} Design (View 1 of ${imageCount})" 
-                            class="w-full h-auto object-cover rounded-lg transition-transform duration-300" 
+                            src="${product.imageUrls[0]}"
+                            alt="${product.name} ${initialType} Design (View 1 of ${imageCount})"
+                            class="w-full h-auto object-cover rounded-lg transition-transform duration-300"
                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';"
                             data-image-urls='${JSON.stringify(product.imageUrls)}'
                             data-current-index="0"
@@ -792,11 +775,10 @@
                             ${imageCount > 1 ? `CLICK to see next view (${imageCount} total)` : 'No additional views'}
                         </div>
                     </div>
-                    
+
                     <h3 class="text-lg font-bold text-[#003466] mb-1">${product.name}</h3>
                     <p class="text-xl font-extrabold text-[#007c9e] mb-3">Starting at ${formatCurrency(startingPrice)}</p>
-                    
-                    <!-- Product Type Selector (NEW) -->
+
                     <div class="mb-3">
                         <label for="type-${product.id}" class="block text-sm font-medium text-gray-700">Select Product Type</label>
                         <select id="type-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
@@ -805,7 +787,6 @@
                         </select>
                     </div>
 
-                    <!-- Color Selector -->
                     <div class="mb-3">
                         <label for="color-${product.id}" class="block text-sm font-medium text-gray-700">Select Color</label>
                         <select id="color-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
@@ -814,7 +795,6 @@
                         </select>
                     </div>
 
-                    <!-- Size Selector -->
                     <div class="mb-4 ${sizeSelectorHiddenClass}">
                         <label for="size-${product.id}" class="block text-sm font-medium text-gray-700">Select Size</label>
                         <select id="size-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
@@ -824,9 +804,8 @@
                     </div>
                     ${!needsSize ? `<input type="hidden" id="size-${product.id}" value="OS">` : ''}
 
-
-                    <button 
-                        onclick="addToCart('${product.id}')" 
+                    <button
+                        onclick="addToCart('${product.id}')"
                         class="w-full text-white font-semibold py-2 rounded-lg transition-colors duration-200 btn-primary"
                     >
                         Add to Cart
@@ -834,7 +813,7 @@
                 </div>
             `;
         }).join('');
-        
+
         // Inject Product Schema into the head
         const script = document.createElement('script');
         script.type = 'application/ld+json';
@@ -845,7 +824,7 @@
     // Renders the cart details for the full cart view
     const renderCartDetails = () => {
         const cartItemsDiv = document.getElementById('cart-items');
-        
+
         if (cart.length === 0) {
             cartItemsDiv.innerHTML = '<p class="text-gray-500 text-base text-center italic py-4">Your cart is empty.</p>';
             document.getElementById('goto-checkout-button').disabled = true;
@@ -853,12 +832,12 @@
         }
 
         document.getElementById('goto-checkout-button').disabled = false;
-        
+
         cartItemsDiv.innerHTML = cart.map((item, index) => {
             // Unique ID now includes ID, Type, Size, and Color for tracking
             const uniqueId = item.id + '-' + item.type + '-' + item.size + '-' + item.color;
             const itemTotal = item.price * item.quantity;
-            
+
             return `
                 <div class="flex items-start justify-between text-base border-b border-gray-100 pb-3">
                     <div class="flex-grow pr-4">
@@ -878,7 +857,7 @@
             `;
         }).join('');
     };
-    
+
     // Updates the cart summary (visible in the shop view) AND the new global button
     const updateCartSummary = () => {
         const viewCartButton = document.getElementById('view-cart-button');
@@ -904,7 +883,7 @@
         // Calculate totals (shipping is not included in summary total)
         const taxAmount = subtotal * SALES_TAX_RATE;
         const totalBeforeShipping = subtotal + taxAmount;
-        
+
         document.getElementById('summary-item-count').textContent = totalItems;
         document.getElementById('summary-cart-total').textContent = formatCurrency(totalBeforeShipping);
         document.getElementById('global-item-count').textContent = totalItems;
@@ -919,16 +898,16 @@
     const addToCart = (productId) => {
         const product = products.find(p => p.id === productId);
         if (!product) return;
-        
+
         // Get selected options
         const typeSelector = document.getElementById(`type-${productId}`);
         const selectedType = typeSelector.value;
         // Get the specific option element to read the base price data attribute
         const basePriceElement = typeSelector.options[typeSelector.selectedIndex];
-        
+
         const sizeSelector = document.getElementById(`size-${productId}`);
         const selectedSize = sizeSelector.value;
-        
+
         const colorSelector = document.getElementById(`color-${productId}`);
         const selectedColor = colorSelector.value;
 
@@ -947,7 +926,7 @@
             showMessage('Please select a Size.', 'error');
             return;
         }
-        
+
         // 1. Get Base Price from the selected Product Type option's data attribute
         const basePrice = parseFloat(basePriceElement.dataset.basePrice);
 
@@ -955,8 +934,8 @@
         const finalPrice = getProductPriceWithSize(basePrice, selectedSize);
 
         // A cart item is unique by product ID, product type, size, AND color
-        const cartItemIndex = cart.findIndex(item => 
-            item.id === productId && 
+        const cartItemIndex = cart.findIndex(item =>
+            item.id === productId &&
             item.type === selectedType &&
             item.size === selectedSize &&
             item.color === selectedColor
@@ -967,17 +946,17 @@
             cart[cartItemIndex].quantity += 1;
         } else {
             // New item combo, push as a new item
-            cart.push({ 
-                id: product.id, 
-                name: product.name, 
+            cart.push({
+                id: product.id,
+                name: product.name,
                 type: selectedType, // T-Shirt, Sweatshirt, etc.
                 price: finalPrice, // Store the final calculated price
-                size: selectedSize, 
-                color: selectedColor, 
-                quantity: 1 
+                size: selectedSize,
+                color: selectedColor,
+                quantity: 1
             });
         }
-        
+
         saveCart();
         updateCartSummary(); // Always update sticky summary and global button
         // If we are in the cart/checkout view, re-render details
@@ -993,11 +972,11 @@
         const parts = uniqueId.split('-');
         const productId = parts[0];
         const selectedType = parts[1];
-        const selectedSize = parts[2]; 
-        const selectedColor = parts[3]; 
+        const selectedSize = parts[2];
+        const selectedColor = parts[3];
 
-        const cartItemIndex = cart.findIndex(item => 
-            item.id === productId && 
+        const cartItemIndex = cart.findIndex(item =>
+            item.id === productId &&
             item.type === selectedType &&
             item.size === selectedSize &&
             item.color === selectedColor
@@ -1005,26 +984,26 @@
 
         if (cartItemIndex > -1) {
             cart[cartItemIndex].quantity -= 1;
-            
+
             if (cart[cartItemIndex].quantity <= 0) {
                 cart.splice(cartItemIndex, 1);
             }
         }
-        
+
         saveCart();
-        updateCartSummary(); 
-        
+        updateCartSummary();
+
         // Re-render based on current view
         if (currentView === 'cart' || currentView === 'checkout') {
             updateCheckoutSummary(currentView === 'checkout');
         }
-        
+
         // If cart becomes empty, switch back to shop view
         if (cart.length === 0 && currentView !== 'shop') {
             changeView('shop');
         }
     };
-    
+
     // Simple message box (no alert())
     const showMessage = (message, type = 'success') => {
         let msgBox = document.getElementById('temp-message-box');
@@ -1033,13 +1012,13 @@
             msgBox.id = 'temp-message-box';
             document.body.appendChild(msgBox);
         }
-        
+
         const color = type === 'success' ? 'bg-green-500' : 'bg-red-500';
-        
+
         msgBox.className = `fixed top-4 left-1/2 transform -translate-x-1/2 ${color} text-white px-5 py-3 rounded-xl shadow-2xl opacity-0 transition-opacity duration-500 z-50`;
         msgBox.textContent = message;
         msgBox.style.opacity = '1';
-        
+
         // Hide after 3 seconds
         setTimeout(() => {
             msgBox.style.opacity = '0';
@@ -1052,10 +1031,10 @@
     const calculateTotals = (currentCart, includeShipping) => {
         // Recalculate subtotal from items in cart
         const subtotal = currentCart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        
+
         let shippingCost = 0.00;
         let selectedShippingId = '';
-        
+
         if (includeShipping) {
             // Get selected shipping cost (Default to 0 if not selected yet)
             selectedShippingId = document.getElementById('shipping_method')?.value || '';
@@ -1064,7 +1043,7 @@
 
         const taxAmount = subtotal * SALES_TAX_RATE;
         const finalTotal = subtotal + taxAmount + shippingCost;
-        
+
         return {
             subtotal: subtotal,
             taxAmount: taxAmount,
@@ -1079,19 +1058,19 @@
     // Function to update the financial breakdown in the visible cart or checkout form
     const updateCheckoutSummary = (includeShippingInTotal) => {
         if (cart.length === 0) return;
-        
+
         // 1. Render the cart details first
         renderCartDetails();
 
         // 2. Calculate totals
         const totals = calculateTotals(cart, includeShippingInTotal);
-        
+
         // 3. Update Cart View (always shows TBD shipping, but includes tax)
         document.getElementById('cart-subtotal').textContent = formatCurrency(totals.subtotal);
         document.getElementById('cart-tax').textContent = formatCurrency(totals.taxAmount);
         document.getElementById('cart-shipping').textContent = "TBD";
         document.getElementById('cart-total').textContent = formatCurrency(totals.subtotal + totals.taxAmount);
-        
+
         // 4. Update Checkout View (includes shipping in total if requested)
         if (document.getElementById('checkout-view').classList.contains('hidden') === false) {
             document.getElementById('form-subtotal-display').textContent = formatCurrency(totals.subtotal);
@@ -1099,7 +1078,7 @@
             document.getElementById('form-shipping-display').textContent = formatCurrency(totals.shippingCost);
             document.getElementById('form-total-display').textContent = formatCurrency(totals.finalTotal);
         }
-        
+
         // 5. Prepare the final JSON data for submission (ALWAYS includes calculated shipping)
         const finalTotalsForForm = calculateTotals(cart, true); // Calculate full totals including shipping
         const orderSummary = {
@@ -1118,18 +1097,18 @@
     // Netlify Form Submission Handler
     const handleFormSubmission = async (event) => {
         event.preventDefault(); // Stop the default Netlify redirect
-        
+
         const shippingMethod = document.getElementById('shipping_method').value;
         if (!shippingMethod) {
             showMessage('Please select a shipping method.', 'error');
             return;
         }
-        
+
         // Final update to ensure JSON data is correct (important for form data integrity)
-        updateCheckoutSummary(true); 
+        updateCheckoutSummary(true);
 
         const form = event.target;
-        
+
         const submitButton = form.querySelector('button[type="submit"]');
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
@@ -1143,14 +1122,14 @@
 
             if (response.ok) {
                 showMessage('Order request submitted! An invoice will be emailed to you shortly.', 'success');
-                
+
                 // Clear the cart locally
                 cart = [];
                 saveCart();
                 updateCartSummary(); // Update summary
                 document.getElementById('shipping_method').value = ''; // Reset form field
                 changeView('shop'); // Switch back to shop view
-                
+
             } else {
                 const errorText = await response.text();
                 console.error('Netlify Form Submission Error:', errorText);
@@ -1170,12 +1149,12 @@
     window.onload = () => {
         renderProducts();
         updateCartSummary(); // Initial setup of the sticky summary and global button
-        
+
         // Attach the submission handler to the Netlify form
         document.getElementById('checkout-form').addEventListener('submit', handleFormSubmission);
-        
+
         // Ensure the correct view is shown on load (shop view)
-        changeView('shop'); 
+        changeView('shop');
     };
   </script>
 </body>
