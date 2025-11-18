@@ -1,297 +1,171 @@
-body {
-
-  margin: 0;
-
-  font-family: 'Segoe UI', sans-serif;
-
-  background-color: #f8fcff;
-
-  background-image: url('surf-texture.png');
-
-  background-repeat: repeat;
-
-  background-size: 300px;
-
-  color: #222;
-
-}
-
-
-
- /* Make the "What We Do" bullets look normal */
-
-#services ul {
-
-  list-style: disc outside;
-
-  padding-left: 0.75rem;   /* indent the bullets */
-
-  margin: 0;               /* keep it tight under the heading */
-
-}
-
-#services li { 
-
-  margin: 0.4rem 0; 
-
-}
-
-    
-
-#services ul { 
-
-  list-style: none; 
-
-  padding: 0; 
-
-  margin: 0 auto; 
-
-  max-width: 700px;
-
-}
-
-#services li {
-
-  position: relative;
-
-  padding-left: 1.25rem;
-
-  margin: 0.4rem 0;
-
-}
-
-#services li::before {
-
-  content: "•";
-
-  position: absolute;
-
-  left: 0;
-
-  top: 0;
-
-  line-height: 1.2;
-
-}
-
-
-
-table.pricing-table {
-
-  width: 100%;
-
-  border-collapse: collapse;
-
-  margin-bottom: 2rem;
-
-  font-size: 0.95rem;
-
-}
-
-.addons-list {
-
-  max-width: 600px;
-
-  margin: 0 auto 2rem;
-
-  font-size: 0.95rem;
-
-  line-height: 1.6;
-
-  padding-left: 1.2rem;
-
-}
-
-.pricing-table th,
-
-.pricing-table td {
-
-  border: 1px solid #ccc;
-
-  padding: 0.75rem;
-
-  text-align: left;
-
-}
-
-
-
-.pricing-table thead {
-
-  background-color: #8cdaf0;
-
-}
-
-
-
-.pricing-table tbody tr:nth-child(even) {
-
-  background-color: #f9f9f9;
-
-}
-
-
-
 html {
-
-  scroll-behavior: smooth;
-
-}
-
-.hero {
-
-  text-align: center;
-
-  padding: 2rem 1rem;
-
-}
-
-
-
-.logo {
-
-  max-width: 320px;
-
-  margin-top: 1rem;
-
-  }
-
-  .logo2 {
-
-  max-width: 350px;
-
-  margin-top: 1rem;
-
-}
-
-#pricing {
-
-  padding: 2rem;
-
-  background-color: #8cdaf0;
-
-}
-
-.cta-button {
-
-  background-color: #33b5e5;
-
-  color: white;
-
-  padding: 1rem 2rem;
-
-  border: none;
-
-  border-radius: 6px;
-
-  font-size: 1.2rem;
-
-  font-weight: bold;
-
-  text-decoration: none;
-
-  transition: background 0.3s ease;
-
-}
-
-
-
-.cta-button:hover {
-
-  background-color: #28a3ce;
-
-}
-
-
-
-h1, h2 {
-
-  color: #007c9e;
-
-}
-
-
-
-.section {
-
-  padding: 2rem 1rem;
-
-  max-width: 1000px;
-
-  margin: auto;
-
-  text-align: center;
-
-}
-
-
-
-.sample-bg {
-
-  background: linear-gradient(135deg, #a0e3f3, #33b5e5);
-
-  color: #fff;
-
-  padding: 4rem 1.5rem;
-
-}
-
-
-
-.sample-bg h2,
-
-.sample-bg p {
-
-  color: #fff;
-
-}
-
-
-
-.gallery {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-  gap: 1.5rem;
-
-  margin-top: 2rem;
-
-}
-
-
-
-.gallery img {
-
-  width: 100%;
-
-  border-radius: 8px;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  transition: transform 0.3s ease;
-
-}
-
-
-
-.gallery img:hover {
-
-  transform: scale(1.05);
-
-}
-
-
-
-footer {
-
-  background-color: #0f4d5e;
-
-  color: #eee;
-
-  text-align: center;
-
-  padding: 1rem;
-
-}
+    scroll-behavior: smooth;
+  }
+
+  .top-nav {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    padding: 0.5rem 1rem;
+    width: 100vw; /* full screen width */
+    box-sizing: border-box; /* include padding in width */
+    z-index: 1500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .top-nav a:hover {
+    color: #8cdaf0;
+  }
+
+  /* About Section Styling */
+  .about-section {
+      padding: 40px 20px;
+  }
+  .about-intro-text {
+      font-weight: 600; 
+      color: #444; 
+  }
+  .about-content-flex {
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: flex-start; 
+      gap: 30px;
+  }
+  .about-text-column {
+      flex: 1; 
+      min-width: 300px;
+  }
+  .about-image-column {
+      flex: 0 0 300px; 
+      min-width: 250px; 
+      text-align: center;
+  }
+  .about-founder-img {
+      max-width: 100%; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .founder-caption {
+      margin-top: 10px; 
+      font-size: 0.9rem; 
+      color: #555;
+  }
+
+  /* Pricing Section Styling */
+  .pricing-section {
+      padding: 2rem;
+      background-color: #f9f9f9;
+  }
+  .store-section {
+      padding: 2rem;
+  }
+  .pricing-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+  .store-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+  }
+  .store-tagline {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+  }
+  .custom-price-block {
+      text-align: center;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+  }
+  .custom-price-text {
+      text-align: center;
+  }
+  .price-paragraph {
+      margin-bottom: 1.5rem;
+  }
+  
+  /* Contact Section Styling */
+  .contact-section {
+      padding: 2rem; 
+      background-color: #fff;
+  }
+  .contact-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+  .contact-text {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+  }
+  .contact-button {
+      display: inline-block;
+      background-color: #003466;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0.5rem 0; 
+  }
+
+  /* Form Styles */
+  .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+  }
+  .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      box-sizing: border-box; 
+  }
+  .form-button {
+      background-color: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  /* Footer and Socials */
+  .footer-social-img {
+      max-width: 44px; 
+      height: auto; 
+      display: block; 
+      margin: auto;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 600px) {
+      .top-nav ul {
+          justify-content: space-evenly;
+          gap: 1rem;
+      }
+      .top-nav a {
+          font-size: 0.9rem;
+      }
+  }
