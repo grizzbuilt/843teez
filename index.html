@@ -1,308 +1,955 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     
-    <title>843 Teez | Custom T-Shirts Conway SC & Myrtle Beach | DTF & Screen Printing</title>
+
+    <title>843 Teez | Custom T-Shirts Conway SC | DTF Transfers & Screen Printing</title>
+
     
+
+    <link rel="stylesheet" href="styles.css">
+
     <link rel="canonical" href="https://843teez.com/" />
+
     
-    <meta name="description" content="843 Teez is a veteran-owned print shop in Conway, SC offering custom t-shirts, screen printing, and full-color DTF transfers. Serving the Myrtle Beach and Grand Strand areas with local, no-minimum custom shirts." />
-    <meta name="keywords" content="custom t-shirts conway sc, screen printing myrtle beach, dtf transfers conway, no minimum custom shirts, grand strand apparel" />
 
-    <meta property="og:title" content="843 Teez | Custom T-Shirts, DTF, and Screen Printing in Conway, SC" />
-    <meta property="og:description" content="843 Teez specializes in screen printing, DTF transfers, and full-color custom tees for Myrtle Beach, Conway, and the Grand Strand." />
-    <meta property="og:url" content="https://843teez.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://843teez.com/843teez.png" />
+    <meta name="description" content="843 Teez is a veteran-owned print shop in Conway, SC offering custom t-shirts, screen printing, and full-color DTF transfers. Serving the Myrtle Beach and Grand Strand areas with local, no-minimum custom shirts.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://843teez.com/843teez.png" />
-    <meta name="twitter:title" content="843 Teez | Custom T-Shirts in Conway, SC" />
-    <meta name="twitter:description" content="Veteran-owned screen printing and DTF t-shirt transfers in Conway, SC. Your idea, our ink." />
+    <meta property="og:title" content="843 Teez | Custom T-Shirts in Conway, SC">
 
-   <link rel="stylesheet" href="styles.css">
-    
+    <meta property="og:description" content="843 Teez specializes in screen printing, DTF transfers, and full-color custom tees for Myrtle Beach, Conway, and the Grand Strand.">
+
+    <meta property="og:url" content="https://843teez.com">
+
+    <meta property="og:type" content="website">
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:image" content="https://843teez.com/843teez.png">
+
+    <meta name="twitter:title" content="843 Teez | Custom T-Shirts in Conway, SC">
+
+    <meta name="twitter:description" content="Screen printing and DTF t-shirt transfers in the heart of Conway, SC. Your idea, our ink.">
+
+
+
     <script type="application/ld+json">
+
     [
+
       {
+
         "@context": "https://schema.org",
+
         "@type": "LocalBusiness",
+
         "name": "843 Teez",
+
         "description": "843 Teez is a custom t-shirt and apparel printing shop in Conway, SC, specializing in DTF transfers, screen printing, and personalized tees.",
+
         "url": "https://843teez.com",
+
         "telephone": "+1-843-350-1943",
+
         "email": "info@843teez.com",
+
         "address": {
+
           "@type": "PostalAddress",
+
           "addressLocality": "Conway",
+
           "addressRegion": "SC",
+
           "postalCode": "29527",
+
           "addressCountry": "US"
+
         },
+
         "openingHours": "Mo-Fr 10:00-18:00",
-        "image": "https://843teez.com/843teezLogo.png",
+
+        "image": "https://843teez.com/843teezLogo.png", 
+
         "geo": {
+
           "@type": "GeoCoordinates",
+
           "latitude": 33.836,
+
           "longitude": -79.048
+
         },
+
         "sameAs": [
+
           "https://www.instagram.com/843teez",
+
           "https://www.facebook.com/843teez"
+
         ],
+
         "priceRange": "$$",
+
         "areaServed": {
+
           "@type": "Place",
+
           "name": "Conway, Myrtle Beach, Horry County, South Carolina"
+
         }
+
       },
+
       {
+
         "@context": "https://schema.org",
+
         "@type": "FAQPage",
+
         "mainEntity": [
+
           {
+
             "@type": "Question",
+
             "name": "Do you have a minimum order requirement for custom t-shirts?",
+
             "acceptedAnswer": {
+
               "@type": "Answer",
+
               "text": "No, we do not! As a local shop specializing in both DTF transfers and screen printing, we can handle orders from a single shirt up to several hundred. This makes us perfect for personal gifts or small business runs in the Conway and Myrtle Beach area."
+
             }
+
           },
+
           {
+
             "@type": "Question",
+
             "name": "What is the difference between DTF and Screen Printing?",
+
             "acceptedAnswer": {
+
               "@type": "Answer",
+
               "text": "DTF (Direct-to-Film) is best for high-detail, full-color designs and smaller runs. Screen printing is ideal for single-color, large-bulk orders due to its durability and cost-effectiveness at scale. We offer both services right here in Conway, SC."
+
             }
+
           }
+
         ]
+
       }
+
     ]
+
     </script>
+
+
+
+    <style>
+
+        html { scroll-behavior: smooth; }
+
+
+
+        /* Top Nav Styling */
+
+        .top-nav {
+
+            position: sticky;
+
+            top: 0;
+
+            background-color: #000;
+
+            padding: 0.5rem 1rem;
+
+            width: 100vw;
+
+            box-sizing: border-box;
+
+            z-index: 1500;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .top-nav ul {
+
+            list-style: none;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 2rem;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        .top-nav a {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 1rem;
+
+        }
+
+        .top-nav a:hover {
+
+            color: #8cdaf0;
+
+        }
+
+
+
+        /* About Section Styling */
+
+        .about-section {
+
+            padding: 40px 20px;
+
+        }
+
+        .about-intro-text {
+
+            font-weight: 600; 
+
+            color: #444; 
+
+        }
+
+        .about-content-flex {
+
+            display: flex; 
+
+            flex-wrap: wrap; 
+
+            align-items: flex-start; 
+
+            gap: 30px;
+
+        }
+
+        .about-text-column {
+
+            flex: 1; 
+
+            min-width: 300px;
+
+        }
+
+        .about-image-column {
+
+            flex: 0 0 300px; 
+
+            min-width: 250px; 
+
+            text-align: center;
+
+        }
+
+        .about-founder-img {
+
+            max-width: 100%; 
+
+            border-radius: 12px; 
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+        }
+
+        .founder-caption {
+
+            margin-top: 10px; 
+
+            font-size: 0.9rem; 
+
+            color: #555;
+
+        }
+
+        
+
+        /* Pricing Section Styling */
+
+        .pricing-section {
+
+            padding: 2rem;
+
+            background-color: #f9f9f9;
+
+        }
+
+        .store-section {
+
+            padding: 2rem;
+
+        }
+
+        .pricing-title {
+
+            text-align: center;
+
+            font-size: 2rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+        .store-title {
+
+            text-align: center;
+
+            font-size: 2rem;
+
+            margin-bottom: 2rem;
+
+        }
+
+        .store-tagline {
+
+            text-align: center;
+
+            font-size: 1rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+        .custom-price-block {
+
+            text-align: center;
+
+            font-size: 1rem;
+
+            max-width: 600px;
+
+            margin: 0 auto 1rem;
+
+        }
+
+        .custom-price-text {
+
+            text-align: center;
+
+        }
+
+        .price-paragraph {
+
+            margin-bottom: 1.5rem; /* Spacing for paragraphs, replacing <br /><br /> */
+
+        }
+
+        
+
+        /* Contact Section Styling */
+
+        .contact-section {
+
+            padding: 2rem; 
+
+            background-color: #fff;
+
+        }
+
+        .contact-title {
+
+            text-align: center;
+
+            font-size: 2rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+        .contact-text {
+
+            text-align: center;
+
+            max-width: 600px;
+
+            margin: 0 auto 2rem;
+
+        }
+
+        .contact-button {
+
+            display: inline-block;
+
+            background-color: #003466;
+
+            color: #fff;
+
+            padding: 12px 20px;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            margin: 0.5rem 0; 
+
+        }
+
+
+
+        /* Form Styles */
+
+        .contact-form {
+
+            max-width: 500px;
+
+            margin: 0 auto;
+
+        }
+
+        .form-input, .form-textarea {
+
+            width: 100%;
+
+            padding: 0.75rem;
+
+            margin-bottom: 1rem;
+
+            box-sizing: border-box; 
+
+        }
+
+        .form-button {
+
+            background-color: #000;
+
+            color: #fff;
+
+            padding: 0.75rem 1.5rem;
+
+            border: none;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        /* Footer and Socials */
+
+        .footer-social-img {
+
+             max-width: 44px; 
+
+             height: auto; 
+
+             display: block; 
+
+             margin: auto;
+
+        }
+
+        
+
+        /* Mobile styles */
+
+        @media (max-width: 600px) {
+
+            .top-nav ul {
+
+                justify-content: space-evenly;
+
+                gap: 1rem;
+
+            }
+
+            .top-nav a {
+
+                font-size: 0.9rem;
+
+            }
+
+        }
+
+    </style>
+
+
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
+
     <script>
+
       window.dataLayer = window.dataLayer || [];
+
       function gtag(){dataLayer.push(arguments);}
+
       gtag('js', new Date());
+
+    
+
       gtag('config', 'G-4PVF756J01');
+
     </script>
+
     <script type="text/javascript">
+
       (function(c,l,a,r,i,t,y){
+
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+
       })(window, document, "clarity", "script", "tr5ljrm18n");
+
     </script>
+
     <script>
-      // Store redirect script (kept for functionality)
+
       if (window.location.hostname === "store.843teez.com") {
+
         window.location.replace("/store/index.html");
+
       }
+
     </script>
+
 </head>
 
-<body>
-    <header>
-        <nav class="top-nav" aria-label="Main Navigation">
-            <ul>
-                <li><a href="/" class="logo-link"><img src="843teezLogo.png" alt="843 Teez Logo - Custom T-shirts and DTF Transfers in Conway SC" class="logo"></a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#samples">Samples</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://store.843teez.com" target="_blank" class="cta-link">Shop Store</a></li>
-            </ul>
-        </nav>
 
-        <section class="hero-section">
-            <div class="overlay">
-                <h1>Custom T-Shirts, DTF Transfers & Screen Printing in Conway, SC</h1>
-                <p class="hero-tagline">
-                    Local, veteran-owned apparel printing serving the Grand Strand and Myrtle Beach area. **No minimum orders!**
-                </p>
-                <a href="#contact" class="contact-button hero-cta">Get a Custom Quote Today!</a>
-            </div>
-        </section>
+
+<body>
+
+    <nav class="top-nav">
+
+        <ul>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#samples">Samples</a></li>
+
+            <li><a href="#pricing">Pricing</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+            <li><a href="https://store.843teez.com" target="_blank">Store</a></li>
+
+            <li><a href="#Socials">Socials</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <header class="hero">
+
+        <img src="843teezLogo.png" alt="843 Teez Logo - Custom t-shirt print shop Conway SC" class="logo">
+
+        <div class="overlay">
+
+            <h1>Custom Coastal Shirts — Conway, SC</h1>
+
+        </div>
+
     </header>
 
+
+
     <main>
+
         <section id="about" class="section about-section">
-            <h2>About 843 Teez - Your Local Conway Print Shop</h2>
-            <p class="about-intro-text">We’re **Conway’s local custom t-shirt printing shop**, offering **DTF transfers** and **screen printing** across the Grand Strand and Myrtle Beach areas.</p>
+
+            <h2>About 843 Teez</h2>
+
+            <p class="about-intro-text">We’re Conway’s local **custom t-shirt printing** shop, offering **DTF transfers** and **screen printing** across the Grand Strand and Myrtle Beach areas.</p>
+
+
 
             <div class="about-content-flex">
+
+                
+
                 <div class="about-text-column">
-                    <p>
-                        **843 Teez** isn’t just a shirt shop — it’s a passion project built by Heather and Todd right here in **Conway, South Carolina**. We are proud to be a **veteran-owned** business dedicated to community and quality.
-                    </p>
 
                     <p>
-                        Heather, a natural leader, is the driving force and business mind. Todd ("Grizz"), a Desert Storm Vet, is the creative mind, turning wild ideas into bold designs. Together, we ensure every **custom tee** we produce has personality and quality stitched into it.
+
+                        **843 Teez** isn’t just a shirt shop — it’s a passion project built by Heather and Todd right here in Conway, South Carolina.
+
                     </p>
 
+
+
                     <p>
-                        We’re not a faceless online print shop — we’re your neighbors, focused on making sure your shirts are as original as your ideas. From small businesses and bands to family trips, if you’ve got a vision for **custom apparel**, we’ll help you wear it.
+
+                        **Heather brings the heart.** As a veteran, a natural leader, she’s the driving force that keeps everything moving forward. Heather’s vision is what makes 843 Teez more than a business — it’s a place where creativity, community, and hustle come together.
+
                     </p>
+
+
+
+                    <p>
+
+                        **Todd brings the grit.** A Desert Storm Vet affectionately known locally as “Grizz”, he’s the creative mind who loves turning wild ideas into bold designs. Whether it’s sketching out a custom tee, building out a booth for a local market, or dreaming up the next collection, Todd makes sure every shirt has a little personality stitched into it.
+
+                    </p>
+
+
+
+                    <p>
+
+                        Together, we built 843 Teez as a way to give our community something fun, expressive, and local. We’re not a faceless online print shop — we’re your neighbors, putting in the late nights and early mornings to make sure your shirts are as original as your ideas. From small businesses and bands to family trips and inside jokes, if you’ve got a vision, we’ll help you wear it.
+
+                    </p>
+
+
+
+                    <p>
+
+                        Welcome to 843 Teez — where Heather keeps us sharp, Todd keeps us scrappy, and every design has a story worth showing off.
+
+                    </p>
+
                 </div>
+
+
 
                 <div class="about-image-column">
-                    <img src="HandT.png" alt="Heather and Todd, Founders of 843 Teez - Custom T-shirts Conway SC" class="about-founder-img">
+
+                    <img src="HandT.png" alt="Heather and Todd - 843 Teez Founders" class="about-founder-img">
+
                     <p class="founder-caption">Heather & Todd, Founders</p>
+
                 </div>
+
             </div>
+
         </section>
 
-        <hr>
+
+
+
 
         <section id="services" class="section">
-            <h2>🥇 Our Custom Apparel Services: DTF and Screen Printing</h2>
+
+            <h2>What We Do</h2>
+
             <p>
-                At 843 Teez, we believe every shirt tells a story. We offer two powerful printing methods to cover all your needs, from a single gift to massive **bulk orders** in the **Myrtle Beach** and **Conway, SC** area. **No minimum order requirements!**
+
+                At 843 Teez, we believe every shirt tells a story—whether it’s for one person or an entire crowd. Need just a single tee for a special night out? We’ve got you. Planning an event, business launch, or family reunion and need hundreds? We can handle that too. With no minimum order requirements, you have the freedom to print exactly what you need. 
+
             </p>
 
-            <div class="services-columns">
-                <div class="service-column">
-                    <h3>Direct-to-Film (DTF) Transfers</h3>
-                    <p>DTF is ideal for high-detail, vibrant, and multi-color designs. Great for:</p>
-                    <ul>
-                        <li>**No Minimums:** Perfect for single shirts or small business runs.</li>
-                        <li>**Full Color & Detail:** Flawless reproduction of complex logos and photographs.</li>
-                        <li>**Fast Turnaround:** Quick service for urgent orders in Horry County.</li>
-                    </ul>
-                </div>
-                <div class="service-column">
-                    <h3>Traditional Screen Printing</h3>
-                    <p>Screen printing is the durable, economical choice for larger orders:</p>
-                    <ul>
-                        <li>**Bulk Savings:** Best pricing for orders of 25+ shirts.</li>
-                        <li>**High Durability:** Bold, long-lasting prints that withstand heavy wear.</li>
-                        <li>**Classic Look:** Ideal for simple, 1 to 2-color team or event apparel.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <p class="service-cta">
-                Need help choosing? <a href="#contact">Contact our Conway team</a> for expert advice on your custom project!
+            <p>
+
+                Our full-color **DTF transfers** deliver high-detail, vibrant prints that make designs pop, while our classic **screen printing** is bold, durable, and perfect for single-color styles. Already have artwork? Bring us your design and we’ll make sure it prints perfectly. Starting with just an idea? Our team will work with you to sketch, refine, and bring your vision to life. Plus, with fast turnaround times and local service you can count on, you’ll never be left waiting. From first concept to final press, 843 Teez makes custom printing easy, reliable, and built to impress.
+
             </p>
+
+            
+
+            <p>
+
+                **843 Teez** is a veteran-owned custom t-shirt printing shop based in Conway, South Carolina. We specialize in **DTF transfers**, **screen printing**, and **custom apparel** for the **Myrtle Beach**, **Grand Strand**, and **Horry County** areas. Whether you need **one custom shirt** or a full **bulk order**, we print everything locally — no minimums, fast turnaround, and creative designs made by Heather and Todd (“Grizz”).
+
+            </p>
+
         </section>
 
-        <hr>
+
 
         <section id="samples" class="section sample-bg">
-            <h2>👕 Custom T-Shirt Samples & Design Gallery</h2>
-            <p>Here’s a taste of what we’ve cooked up for local businesses and individuals—from ghosts riding bikes to Salty Life parody tees. If you can think it, we can print it!</p>
+
+            <h2>Sample Tees</h2>
+
+            <p>Here’s a taste of what we’ve cooked up for other folks — from ghosts riding bikes to a Saliter Life parody tee, if you can think it, we can do it.</p>
+
             <div class="gallery">
-                <img src="sample1.png" alt="Custom DTF transfer t-shirt design for Stonetone Guitars in Conway SC">
-                <img src="sample2.png" alt="Screen printed T-shirt design for Mystic Brew Coffee in Conway SC">
-                <img src="sample3.png" alt="Full color DTF transfer tee for Back Pocket Studio apparel brand">
+
+                <img src="sample1.png" alt="Custom DTF transfer t-shirt for Stonetone Guitars in Conway SC">
+
+                <img src="sample2.png" alt="Screen printed T-shirt for Mystic Brew Coffee in Conway SC">
+
+                <img src="sample3.png" alt="Full color DTF transfer tee for Back Pocket Studio">
+
                 <img src="sample4.png" alt="Custom printed shirt design for T. Stone Photography">
+
             </div>
+
         </section>
 
-        <hr>
+
 
         <section id="pricing" class="pricing-section">
-            
-            <section id="store" class="store-section">
-                <h2>Browse Our Online T-Shirt Store</h2>
-                <p class="store-tagline">
-                    We’ve got a growing lineup of local Conway and Myrtle Beach-themed designs ready to print just for you.
-                    Each tee is made on demand and available for local delviery, or can be shipped straight to your door. 
-                </p>
-                <p class="store-link-wrapper">
-                    <a href="http://store.843teez.com" target="_blank" class="contact-button">🛒 Shop Our Custom Designs</a>
-                </p>
+
+            <section id="store" class="section store-section">
+
+                <h2 class="store-title">Visit our online store</h2>
+
+                <h4 class="store-tagline">
+
+                    **We’ve got a growing lineup of designs ready to print just for you.<br />
+
+                    Each tee is made on demand and shipped straight to your door, keeping costs low, waste down, and creativity cranked up.**
+
+                </h4>
+
+                <h3 class="store-tagline">
+
+                    <a href="http://store.843teez.com" target="_blank">Shop the store</a>
+
+                </h3>
+
             </section>
+
             
-            <section id="custom-pricing">
-                <h2>Custom T-Shirt Pricing & Bulk Orders</h2>
-                <div class="custom-price-block">
-                    <p class="price-detail">Shirts from **$20** (depending on quantity, garment, and design complexity).</p>
+
+            <h2 class="pricing-title">Custom Shirt Pricing</h2>
+
+
+
+            <div class="custom-price-block">
+
+                <h3 class="custom-price-text">
+
+                    <p class="price-paragraph">Shirts from $20</p>
+
                     
-                    <p class="price-detail">
-                        Need shirts for your crew, company, or event? We press or print everything right here in **Conway, SC**.
+
+                    <p class="price-paragraph">
+
+                        Need shirts for your crew, company, or event? <br />
+
+                        We press or print everything right here in Conway, SC.
+
                     </p>
+
                     
-                    <p class="price-detail">
-                        Whether you need one shirt or a few hundred, we’re small enough to handle the personal jobs and big enough to deliver the bulk service your brand deserves.
+
+                    <p class="price-paragraph">
+
+                        Small runs? We press DTF designs in-house.<br />
+
+                        Big runs? We burn screens and lay down the ink ourselves.
+
                     </p>
+
                     
-                    <p class="price-detail">
-                        Bring your own design — or we’ll help you turn your idea into reality. Local delivery is on us!
+
+                    <p class="price-paragraph">
+
+                        Whether you need one shirt or a few hundred, we’re small enough to handle the personal jobs and big enough to deliver the service your brand deserves.
+
                     </p>
+
                     
+
+                    <p class="price-paragraph">
+
+                        Bring your own design — or we’ll help you turn your idea into reality.
+
+                    </p>
+
+                    
+
+                    <p class="price-paragraph">
+
+                        Local delivery’s on us — shipping’s always an option too.
+
+                    </p>
+
+                    
+
                     <p>
-                        <a href="#contact" class="contact-button">Get a Fast, Free Quote Now</a>
+
+                        <a href="#contact">Get a Quote</a>
+
                     </p>
-                </div>
-            </section>
+
+                </h3>
+
+            </div>
+
         </section>
 
-        <hr>
+
 
         <section id="contact" class="contact-section">
-            <h2>📞 Get a Quote for Custom Printing</h2>
+
+            <h2 class="contact-title">Contact us</h2>
+
             <p class="contact-text">
-                Got a custom idea for a **t-shirt or apparel order in Conway/Myrtle Beach**? Tell us what you need and we’ll hit you back with a price. Fast, friendly, and full of local vibes.
+
+                Got a custom idea? Tell us what you need and we’ll hit you back with a price. Fast, friendly, and full of local vibes.
+
+                <br /><br />
+
+                <a href="tel:8433501943" class="contact-button">
+
+                    📞 Call Us: 843-350-1943
+
+                </a>
+
+                
+
+                <br /><br />
+
+
+
+                <a href="mailto:info@843teez.com" class="contact-button">
+
+                    📧 Send us an email: info@843teez.com
+
+                </a>
+
+                
+
+                <br /><br />
+
+                Or use the below form to send us a message
+
             </p>
+
             
-            <div class="contact-info">
-                <a href="tel:8433501943" class="contact-button">📞 Call Us: (843) 350-1943</a>
-                <a href="mailto:info@843teez.com" class="contact-button">📧 Send Us an Email: info@843teez.com</a>
-                <p class="or-message">Or use the form below to send us a message:</p>
-            </div>
-            
+
             <form action="/thank-you.html" name="843Teezcontact" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+
                 <input type="hidden" name="form-name" value="843Teezcontact" />
+
                 <input type="hidden" name="form-location" value="843Teez Contact" />
-                <input type="hidden" name="subject" value="843 Teez Custom Quote Request" />
+
+                <input type="hidden" name="subject" value="843 Teez Contact" />
+
                 <p hidden>
+
                     <label>Don’t fill this out: <input name="bot-field" /></label>
+
                 </p>
 
+
+
                 <label for="name">Name</label>
+
                 <input type="text" name="name" required class="form-input">
 
+
+
                 <label for="email">Email</label>
+
                 <input type="email" name="email" required class="form-input">
 
-                <label for="shirt-details">Custom Printing Details (Quantity, Colors, Deadline)</label>
+
+
+                <label for="shirt-details">Message</label><br />
+
                 <textarea name="shirt-details" rows="5" required class="form-textarea"></textarea>
+
                 
-                <div data-netlify-recaptcha="true"></div>
+
+                <div data-netlify-recaptcha="true"></div><br/>
+
                 
-                <div class="form-button-wrapper">
-                    <button type="submit" class="form-button">Send Quote Request</button>
+
+                <div style="text-align: center;">
+
+                    <button type="submit" class="form-button">
+
+                        Send It
+
+                    </button>
+
                 </div>
+
             </form>
+
         </section>
 
-        <hr>
 
-        <section id="socials" class="section">
-            <h2>Follow Our Custom T-Shirt Journey</h2>
-            
-            <div class="social-links">
-                <a href="https://www.facebook.com/843teez" target="_blank" aria-label="Follow 843 Teez on Facebook">
-                    <img alt="843 Teez Facebook" class="footer-social-img" src="fb.png"/>
-                </a>
-                <a href="https://www.instagram.com/843teez" target="_blank" aria-label="Follow 843 Teez on Instagram">
-                    <img alt="843 Teez Instagram" class="footer-social-img" src="insta.png"/>
-                </a>
+
+        <section id="Socials">
+
+            <h2 class="contact-title">
+
+                Follow us on Social Media
+
+            </h2>
+
+            <div class="table-container">
+
+                <table class="responsive-table" style="margin: auto; text-align: center; width: 100%;">
+
+                    <tr>
+
+                        <td style="text-align: center;">
+
+                            <a href="https://www.facebook.com/843teez" target="new">
+
+                                <img alt="843 Teez Facebook" class="footer-social-img" src="fb.png"/>
+
+                            </a>
+
+                        </td>
+
+                        <td style="text-align: center;">
+
+                            <a href="https://www.instagram.com/843teez" target="new">
+
+                                <img alt="843 Teez Instagram" class="footer-social-img" src="insta.png"/>
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
             </div>
+
         </section>
+
     </main>
 
-    <footer class="site-footer">
+
+
+    <footer style="padding: 1rem; text-align: center; background-color: #007c9e;">
+
         <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank">GrizzBuilt™</a> brand.</p>
-        <p>&copy; 2025 843 Teez™ . All rights reserved. Locally printed in Conway, SC.</p>
-        <p>Contact: <a href="mailto:info@843teez.com">info@843teez.com</a> | (843) 350-1943</p>
-    </footer>
+
+        <p>&copy; 2025 843 Teez™ . All rights reserved. Made in Conway, SC.</p>
+
+        </footer>
+
+
 
 </body>
+
 </html>
