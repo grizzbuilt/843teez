@@ -4,11 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Tailwind via CDN (kept for utility classes) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <title>843 Teez Store | Custom Tees, Hoodies &amp; Sweatshirts in Conway SC</title>
+  <meta
+    name="description"
+    content="Shop the official 843 Teez online store. Custom tees, hoodies, and sweatshirts printed and pressed locally in Conway, South Carolina."
+  />
+
   <style>
-    /* Custom style for the specific background texture and font */
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background-color: #f8fcff;
@@ -16,26 +24,25 @@
       background-repeat: repeat;
       background-size: 300px;
     }
-
-    /* Custom scrollbar for better visual */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-    ::-webkit-scrollbar-track { background-color: #f0f0f0; }
-
-    /* Key brand colors */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #007c9e;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: #f0f0f0;
+    }
     .btn-primary {
-      background-color: #003466; /* Deep Navy */
+      background-color: #003466;
     }
     .btn-primary:hover {
-      background-color: #007c9e; /* Teal Blue */
+      background-color: #007c9e;
     }
-
-    /* Ensure the main container grows to fill the page height */
     #main-content {
-      min-height: calc(100vh - 80px); /* Adjust for padding/margins */
+      min-height: calc(100vh - 80px);
     }
-
-    /* Styles for the click-to-cycle image */
     .product-image-container {
       position: relative;
       cursor: pointer;
@@ -50,7 +57,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: #fff;
       font-weight: bold;
       border-radius: 0.5rem;
       text-align: center;
@@ -59,8 +66,6 @@
     .product-image-container:hover .image-overlay {
       opacity: 1;
     }
-
-    /* Style for category filter buttons (no @apply, pure CSS) */
     .category-btn {
       padding: 0.5rem 1rem;
       font-size: 0.875rem;
@@ -83,9 +88,6 @@
       background: #003466;
     }
   </style>
-
-  <title>843 Teez Store | Custom Tees, Hoodies & Sweatshirts in Conway SC</title>
-  <meta name="description" content="Shop the official 843 Teez online store. Custom tees, hoodies, and sweatshirts printed and pressed locally in Conway, South Carolina." />
 
   <!-- Store-level structured data -->
   <script type="application/ld+json">
@@ -110,18 +112,26 @@
 
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tr3lwvejev");
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', 'tr3lwvejev');
   </script>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
+  <!-- Fixed construction banner -->
   <div
     id="construction-banner"
-    class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base fixed top-0 z-50"
+    class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base fixed top-0 left-0 right-0 z-50"
   >
     <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
     <p>
@@ -131,7 +141,10 @@
     </p>
   </div>
 
-  <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+  <div
+    id="main-content"
+    class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl"
+  >
     <header class="text-center mb-8">
       <img
         src="https://843teez.com/843teezlogo.png"
@@ -139,9 +152,7 @@
         class="max-w-xs mx-auto mb-4 w-5/6"
       />
       <div class="flex items-center justify-center space-x-4 mb-2">
-        <h1 id="page-title" class="text-3xl font-extrabold text-[#007c9e]">
-          Online Shop
-        </h1>
+        <h1 id="page-title" class="text-3xl font-extrabold text-[#007c9e]">Online Shop</h1>
         <button
           onclick="changeView('cart')"
           id="global-view-cart-button"
@@ -149,42 +160,55 @@
           disabled
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M3 1a1 1 0 000 2h1.22l.305 1.25H16a1 1 0 001-1V5a1 1 0 00-1-1h-1.23l-1.041-4.168A1 1 0 0013.78 0H6.22a1 1 0 00-.989.832L4.11 4.25H3a1 1 0 000 2h1.22l1.246 5.003A2 2 0 007.467 13H15a1 1 0 00.95-.684l.75-3A1 1 0 0016 9H7.467L6.5 6.25H16l.192-.768A1 1 0 0016 5H4.11L3.5 2.5H3zM7 17a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z" />
+            <path
+              d="M3 1a1 1 0 000 2h1.22l.305 1.25H16a1 1 0 001-1V5a1 1 0 00-1-1h-1.23l-1.041-4.168A1 1 0 0013.78 0H6.22a1 1 0 00-.989.832L4.11 4.25H3a1 1 0 000 2h1.22l1.246 5.003A2 2 0 007.467 13H15a1 1 0 00.95-.684l.75-3A1 1 0 0016 9H7.467L6.5 6.25H16l.192-.768A1 1 0 0016 5H4.11L3.5 2.5H3zM7 17a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"
+            />
           </svg>
           Cart (<span id="global-item-count">0</span>)
         </button>
       </div>
       <p id="page-subtitle" class="text-sm text-gray-600">
-        Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re nearby or across the map, we offer convenient local delivery and fast shipping.
+        Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re
+        nearby or across the map, we offer convenient local delivery and fast shipping.
       </p>
       <div id="back-to-shop-button" class="hidden mt-4">
-        <button onclick="changeView('shop')" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto">
+        <button
+          onclick="changeView('shop')"
+          class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+            <path
+              fill-rule="evenodd"
+              d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
           </svg>
           Back to Shop
         </button>
       </div>
     </header>
 
+    <!-- SHOP VIEW -->
     <div id="shop-view" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
       <div class="lg:col-span-3">
-        <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
-          Featured Apparel
-        </h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">Featured Apparel</h2>
 
-        <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
+        <div
+          id="category-filter"
+          class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4"
+        >
           <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
           <button onclick="filterProducts('Originals')" class="category-btn px-4">843 Teez Originals</button>
           <button onclick="filterProducts('Christmas')" class="category-btn px-4">Christmas</button>
-          <button onclick="filterProducts('Fall')" class="category-btn px-4">Fall & Halloween</button>
+          <button onclick="filterProducts('Fall')" class="category-btn px-4">Fall &amp; Halloween</button>
         </div>
 
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        </div>
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
 
         <div class="mt-12 text-center pt-8 border-t border-gray-200">
-          <p class="text-gray-700 font-medium mb-4">For custom apparel and large orders, please contact us directly:</p>
+          <p class="text-gray-700 font-medium mb-4">
+            For custom apparel and large orders, please contact us directly:
+          </p>
 
           <a
             href="tel:8433501943"
@@ -201,8 +225,12 @@
         </div>
       </div>
 
+      <!-- Floating / sticky cart summary -->
       <div class="lg:col-span-1">
-        <div id="cart-summary-sticky" class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+        <div
+          id="cart-summary-sticky"
+          class="sticky top-24 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center"
+        >
           <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
           <p class="text-sm text-gray-600 mb-2">
             Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
@@ -217,17 +245,16 @@
             class="w-full text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md disabled:opacity-50 btn-primary"
             disabled
           >
-            Review & Checkout
+            Review &amp; Checkout
           </button>
         </div>
       </div>
     </div>
 
+    <!-- CART VIEW -->
     <div id="cart-view" class="hidden max-w-3xl mx-auto py-6">
       <div id="cart-items-display" class="bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg mb-8">
-        <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-          Review Your Order
-        </h2>
+        <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">Review Your Order</h2>
         <div id="cart-items" class="space-y-4"></div>
 
         <div class="mt-6 pt-4 border-t border-gray-200">
@@ -253,7 +280,7 @@
             id="goto-checkout-button"
             class="w-full mt-6 text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md btn-primary"
           >
-            Continue to Shipping Info & Finalize
+            Continue to Shipping Info &amp; Finalize
           </button>
         </div>
       </div>
@@ -267,18 +294,31 @@
       </button>
     </div>
 
+    <!-- CHECKOUT VIEW -->
     <div id="checkout-view" class="hidden max-w-3xl mx-auto py-6">
       <div class="bg-white p-6 rounded-xl border-2 border-red-500 shadow-lg">
-        <h2 class="text-2xl font-bold text-red-500 border-b pb-2 mb-4">
-          Final Step: Shipping & Contact
-        </h2>
+        <h2 class="text-2xl font-bold text-red-500 border-b pb-2 mb-4">Final Step: Shipping &amp; Contact</h2>
         <p class="text-sm text-gray-600 mb-4">
-          Note: This is an Order Request. No payment is processed now. An invoice will be emailed shortly after submission.
+          Note: This is an Order Request. No payment is processed now. An invoice will be emailed shortly after
+          submission.
         </p>
 
-        <form class="space-y-4" id="checkout-form" method="POST" name="843Teez_Order">
+        <form
+          class="space-y-4"
+          id="checkout-form"
+          method="POST"
+          action="/"
+          name="843Teez_Order"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="form-name" value="843Teez_Order" />
           <input type="hidden" name="cart_data_json" id="cart-data-json" value="" />
+
+          <!-- Honeypot for Netlify bots -->
+          <div style="display:none;">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </div>
 
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700 text-left">Full Name</label>
@@ -291,7 +331,9 @@
             />
           </div>
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 text-left">Email Address (for invoice)</label>
+            <label for="email" class="block text-sm font-medium text-gray-700 text-left"
+              >Email Address (for invoice)</label
+            >
             <input
               type="email"
               id="email"
@@ -328,7 +370,9 @@
           <div id="shipping-address-group" class="hidden space-y-4 pt-2 border-l-4 border-red-200 pl-4">
             <h4 class="text-base font-semibold text-red-500">Shipping Address Details</h4>
             <div>
-              <label for="full_address" class="block text-sm font-medium text-gray-700 text-left">Full Address (Street, Apt/Suite)</label>
+              <label for="full_address" class="block text-sm font-medium text-gray-700 text-left"
+                >Full Address (Street, Apt/Suite)</label
+              >
               <input
                 type="text"
                 id="full_address"
@@ -392,7 +436,7 @@
               <span id="form-subtotal-display">$0.00</span>
             </div>
             <div class="flex justify-between text-sm text-red-600">
-              <span>SC & Horry County Tax (8.0%):</span>
+              <span>SC &amp; Horry County Tax (8.0%):</span>
               <span id="form-tax-display">$0.00</span>
             </div>
             <div class="flex justify-between text-sm text-gray-600 mb-2">
@@ -412,7 +456,7 @@
               type="submit"
               class="w-full mt-6 text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md btn-primary"
             >
-              Confirm Order & Request Invoice
+              Confirm Order &amp; Request Invoice
             </button>
             <button
               type="button"
@@ -431,25 +475,20 @@
         843 Teez™ is a
         <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.
       </p>
-      <p>Woman & Veteran-owned local apparel.</p>
+      <p>Woman &amp; Veteran-owned local apparel.</p>
       <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
     </footer>
   </div>
 
   <script>
-    // --- 1. CONFIGURATION DATA ---
-
-    // Base prices for apparel types (NEW PRICING MODEL)
     const APPAREL_BASE_PRICES = {
-      'T-Shirt': 20.00,
-      'Sweatshirt': 37.00,
-      'Hoodie': 39.00,
-      'Baseball Tee': 28.00
+      'T-Shirt': 20.0,
+      Sweatshirt: 37.0,
+      Hoodie: 39.0,
+      'Baseball Tee': 28.0
     };
 
-    // Product Definitions now use product_options array for base price flexibility
     const products = [
-      // Category: Originals
       {
         id: 'O101',
         name: 'City of Conway',
@@ -521,7 +560,7 @@
         name: 'Buddys Syrup Supply',
         category: 'Christmas',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-        colors: ['Green','Red','Heather Grey', 'Purple'],
+        colors: ['Green', 'Red', 'Heather Grey', 'Purple'],
         imageUrls: [
           'https://store.843teez.com/store/BuddyModel.png',
           'https://store.843teez.com/store/BuddyGreen.jpg',
@@ -535,7 +574,7 @@
         name: 'Wet Bandit Plumbing',
         category: 'Christmas',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-        colors: ['Natural','Heather Gray','Light Pink', 'Light Blue'],
+        colors: ['Natural', 'Heather Gray', 'Light Pink', 'Light Blue'],
         imageUrls: [
           'https://store.843teez.com/store/wetbanditModel.png',
           'https://store.843teez.com/store/BanditNatural.jpg',
@@ -549,7 +588,7 @@
         name: 'Sweet Potato',
         category: 'Fall',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-        colors: ['Heather Gray','Sand', 'Heliconia'],
+        colors: ['Heather Gray', 'Sand', 'Heliconia'],
         imageUrls: [
           'https://store.843teez.com/store/SweetModel.png',
           'https://store.843teez.com/store/SweetGray.jpg',
@@ -562,7 +601,7 @@
         name: 'Grouchy Potato',
         category: 'Fall',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-        colors: ['Heather Gray','Sand', 'Carolina Blue'],
+        colors: ['Heather Gray', 'Sand', 'Carolina Blue'],
         imageUrls: [
           'https://store.843teez.com/store/GrouchyModel.png',
           'https://store.843teez.com/store/GrouchyGray.jpg',
@@ -575,7 +614,7 @@
         name: 'Beard Gauge',
         category: 'Originals',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-        colors: ['Black','Navy','Neon Blue', 'Garnet'],
+        colors: ['Black', 'Navy', 'Neon Blue', 'Garnet'],
         imageUrls: [
           'https://store.843teez.com/store/BeardLengthModel.png',
           'https://store.843teez.com/store/BeardBlack.jpg',
@@ -584,13 +623,12 @@
           'https://store.843teez.com/store/BeardGarnet.jpg'
         ]
       },
-      // Category: Christmas
       {
         id: 'C104',
         name: 'Coastal Christmas Myrtle Beach',
         category: 'Christmas',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
-        colors: ['Burgandy','Navy Blue','Forest Green','Red'],
+        colors: ['Burgandy', 'Navy Blue', 'Forest Green', 'Red'],
         imageUrls: [
           'https://store.843teez.com/store/CCModel.png',
           'https://store.843teez.com/store/CCBurg.jpg',
@@ -600,7 +638,7 @@
         ]
       },
       {
-        id: 'F104', // CORRECTED ID FROM F103 TO F104
+        id: 'F104',
         name: 'Suffing is my Safe Word',
         category: 'Fall',
         product_options: ['T-Shirt', 'Sweatshirt', 'Hoodie'],
@@ -609,102 +647,87 @@
           'https://store.843teez.com/store/StuffingModel.png',
           'https://store.843teez.com/store/SuffingOrange.jpg'
         ]
-      },
+      }
     ];
 
-    // Financial Configuration
     const SALES_TAX_RATE = 0.08;
     const SHIPPING_OPTIONS = {
-      local_pickup: { name: "Local Pickup (Conway)", cost: 0.00 },
-      standard_shipping: { name: "Standard Shipping", cost: 8.00 }
+      local_pickup: { name: 'Local Pickup (Conway)', cost: 0.0 },
+      standard_shipping: { name: 'Standard Shipping', cost: 8.0 }
     };
 
-    // Size Configuration with Upcharges for 2XL and above
     const SIZE_UPCHARGES = {
-      'S': 0.00,
-      'M': 0.00,
-      'L': 0.00,
-      'XL': 2.00, // Upcharge for XL
-      '2XL': 4.00,
-      '3XL': 5.00,
-      '4XL': 6.00,
-      '5XL': 7.00
+      S: 0.0,
+      M: 0.0,
+      L: 0.0,
+      XL: 2.0,
+      '2XL': 4.0,
+      '3XL': 5.0,
+      '4XL': 6.0,
+      '5XL': 7.0
     };
-    // ALL_SIZES is used to generate the size selectors
     const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
-    // Current filter applied to the product grid
     let activeFilter = 'all';
-
-    // --- 2. CART STATE MANAGEMENT & VIEW MANAGEMENT ---
     let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-    let currentView = 'shop'; // 'shop', 'cart', or 'checkout'
+    let currentView = 'shop';
 
-    // Helper to format currency
-    const formatCurrency = (amount) => `$${amount.toFixed(2)}`;
+    const formatCurrency = amount => `$${amount.toFixed(2)}`;
 
-    // Helper to calculate price including size upcharge
     const getProductPriceWithSize = (basePrice, size) => {
-      // If size is 'OS' (One Size), the upcharge is always 0
       if (size === 'OS') return basePrice;
-      const upcharge = SIZE_UPCHARGES[size] || 0.00;
+      const upcharge = SIZE_UPCHARGES[size] || 0.0;
       return basePrice + upcharge;
-    }
+    };
 
-    // Function to save cart state to localStorage
     const saveCart = () => {
       localStorage.setItem('843teez_cart', JSON.stringify(cart));
     };
 
-    // Function to handle product filtering
-    const filterProducts = (category) => {
+    const filterProducts = category => {
       activeFilter = category;
-      renderProducts(); // Re-render the grid with the new filter
-
-      // Update button states
-      document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      const clickedButton = Array.from(document.querySelectorAll('.category-btn'))
-        .find(btn => btn.textContent.toLowerCase().includes(category.toLowerCase()));
-      if (clickedButton) {
-        clickedButton.classList.add('active');
+      renderProducts();
+      document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+      const clicked = Array.from(document.querySelectorAll('.category-btn')).find(btn =>
+        btn.textContent.toLowerCase().includes(category.toLowerCase())
+      );
+      if (clicked) {
+        clicked.classList.add('active');
       } else {
         document.querySelector('.category-btn').classList.add('active');
       }
     };
 
-    // Function to change the visible page view
-    const changeView = (newView) => {
+    const changeView = newView => {
       currentView = newView;
 
-      // Hide all views
       document.getElementById('shop-view').classList.add('hidden');
       document.getElementById('cart-view').classList.add('hidden');
       document.getElementById('checkout-view').classList.add('hidden');
       document.getElementById('back-to-shop-button').classList.add('hidden');
 
-      let title = "Online Shop";
-      let subtitle = "Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re nearby or across the map, we offer convenient local delivery and fast shipping.";
+      let title = 'Online Shop';
+      let subtitle =
+        'Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re nearby or across the map, we offer convenient local delivery and fast shipping.';
 
       if (newView === 'shop') {
         document.getElementById('shop-view').classList.remove('hidden');
       } else if (newView === 'cart') {
         if (cart.length === 0) {
-          showMessage("Your cart is empty. Returning to shop.", 'error');
+          showMessage('Your cart is empty. Returning to shop.', 'error');
           changeView('shop');
           return;
         }
         document.getElementById('cart-view').classList.remove('hidden');
         document.getElementById('back-to-shop-button').classList.remove('hidden');
-        title = "Review Your Cart";
-        subtitle = "Verify items and continue to shipping details.";
+        title = 'Review Your Cart';
+        subtitle = 'Verify items and continue to shipping details.';
         updateCheckoutSummary(false);
       } else if (newView === 'checkout') {
         document.getElementById('checkout-view').classList.remove('hidden');
         document.getElementById('back-to-shop-button').classList.remove('hidden');
-        title = "Finalize Order Request";
-        subtitle = "Enter your contact and shipping details to receive an invoice.";
+        title = 'Finalize Order Request';
+        subtitle = 'Enter your contact and shipping details to receive an invoice.';
         updateCheckoutSummary(true);
         toggleAddressFields();
       }
@@ -714,7 +737,6 @@
       window.scrollTo(0, 0);
     };
 
-    // Function to toggle address/pickup fields based on shipping method
     const toggleAddressFields = () => {
       const method = document.getElementById('shipping_method').value;
       const addressGroup = document.getElementById('shipping-address-group');
@@ -730,19 +752,14 @@
       document.getElementById('city').required = isShipping;
       document.getElementById('state').required = isShipping;
       document.getElementById('zip_code').required = isShipping;
-
       document.getElementById('pickup_note').required = isPickup;
     };
 
-    // --- 3. RENDERING FUNCTIONS ---
-
-    const cycleImage = (element) => {
+    const cycleImage = element => {
       const imgElement = element.querySelector('img');
       const urls = JSON.parse(imgElement.dataset.imageUrls);
       let currentIndex = parseInt(imgElement.dataset.currentIndex, 10);
-
       if (urls.length <= 1) return;
-
       currentIndex = (currentIndex + 1) % urls.length;
       imgElement.src = urls[currentIndex];
       imgElement.dataset.currentIndex = currentIndex;
@@ -751,199 +768,205 @@
 
     const renderProducts = () => {
       const grid = document.getElementById('product-grid');
-      let productSchema = [];
-
-      const filteredProducts = activeFilter === 'all'
+      const filtered = activeFilter === 'all'
         ? products
         : products.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
 
-      grid.innerHTML = filteredProducts.map(product => {
-        const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
+      const productSchema = [];
 
-        const typeOptionsHTML = product.product_options.map(type => {
-          const basePrice = APPAREL_BASE_PRICES[type] || product.price || 0.00;
-          const priceText = basePrice > 0 ? ` - ${formatCurrency(basePrice)}` : '';
-          return `<option value="${type}" data-base-price="${basePrice.toFixed(2)}">${type}${priceText}</option>`;
-        }).join('');
+      grid.innerHTML = filtered
+        .map(product => {
+          const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
 
-        let startingPrice = 0.00;
-        if (product.product_options.length > 0) {
-          startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.00;
-        }
+          const typeOptionsHTML = product.product_options
+            .map(type => {
+              const basePrice = APPAREL_BASE_PRICES[type] || product.price || 0.0;
+              const priceText = basePrice > 0 ? ` - ${formatCurrency(basePrice)}` : '';
+              return `<option value="${type}" data-base-price="${basePrice.toFixed(2)}">${type}${priceText}</option>`;
+            })
+            .join('');
 
-        let sizeOptionsHTML = '';
-        let sizeSelectorHiddenClass = 'hidden';
+          let startingPrice = 0.0;
+          if (product.product_options.length > 0) {
+            startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.0;
+          }
 
-        if (needsSize) {
-          sizeSelectorHiddenClass = '';
-          sizeOptionsHTML = ALL_SIZES.map(size => {
-            const upcharge = SIZE_UPCHARGES[size];
-            const upchargeText = upcharge > 0 ? ` (+${formatCurrency(upcharge)})` : '';
-            return `<option value="${size}">${size}${upchargeText}</option>`;
-          }).join('');
-        } else {
-          sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
-        }
+          let sizeOptionsHTML = '';
+          let sizeSelectorHiddenClass = 'hidden';
 
-        const colorOptions = product.colors.map(color => {
-          return `<option value="${color}">${color}</option>`;
-        }).join('');
+          if (needsSize) {
+            sizeSelectorHiddenClass = '';
+            sizeOptionsHTML = ALL_SIZES.map(size => {
+              const upcharge = SIZE_UPCHARGES[size];
+              const upchargeText = upcharge > 0 ? ` (+${formatCurrency(upcharge)})` : '';
+              return `<option value="${size}">${size}${upchargeText}</option>`;
+            }).join('');
+          } else {
+            sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
+          }
 
-        const imageCount = product.imageUrls.length;
-        const initialType = product.product_options[0];
-        const initialPrice = APPAREL_BASE_PRICES[initialType] || product.price || 0.00;
+          const colorOptions = product.colors
+            .map(color => `<option value="${color}">${color}</option>`)
+            .join('');
 
-        // Product JSON-LD with review, aggregateRating, priceValidUntil
-        productSchema.push({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": product.name,
-          "image": product.imageUrls[0],
-          "description": `Custom ${initialType} with the ${product.name} design. Available in sizes S-${ALL_SIZES[ALL_SIZES.length - 1]}. Printed locally in Conway, SC.`,
-          "brand": {
-            "@type": "Brand",
-            "name": "843 Teez"
-          },
-          "review": {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Local Customer"
+          const imageCount = product.imageUrls.length;
+          const initialType = product.product_options[0];
+          const initialPrice = APPAREL_BASE_PRICES[initialType] || product.price || 0.0;
+
+          productSchema.push({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: product.name,
+            image: product.imageUrls[0],
+            description: `Custom ${initialType} with the ${product.name} design. Available in sizes S-${ALL_SIZES[ALL_SIZES.length - 1]}. Printed locally in Conway, SC.`,
+            brand: {
+              '@type': 'Brand',
+              name: '843 Teez'
             },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
+            review: {
+              '@type': 'Review',
+              author: {
+                '@type': 'Person',
+                name: 'Local Customer'
+              },
+              reviewRating: {
+                '@type': 'Rating',
+                ratingValue: '5',
+                bestRating: '5'
+              },
+              reviewBody: 'High-quality print and fast service. Great local shop!'
             },
-            "reviewBody": "High-quality print and fast service. Great local shop!"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "10"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://store.843teez.com/",
-            "priceCurrency": "USD",
-            "price": initialPrice.toFixed(2),
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2026-12-31",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": 8.00,
-                "currency": "USD"
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '10'
+            },
+            offers: {
+              '@type': 'Offer',
+              url: 'https://store.843teez.com/',
+              priceCurrency: 'USD',
+              price: initialPrice.toFixed(2),
+              availability: 'https://schema.org/InStock',
+              priceValidUntil: '2026-12-31',
+              shippingDetails: {
+                '@type': 'OfferShippingDetails',
+                shippingRate: {
+                  '@type': 'MonetaryAmount',
+                  value: 8.0,
+                  currency: 'USD'
+                }
               }
             }
-          }
-        });
+          });
 
-        return `
-          <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-            <div class="product-image-container relative group cursor-pointer rounded-lg mb-4" onclick="cycleImage(this)">
-              <img
-                id="img-${product.id}"
-                src="${product.imageUrls[0]}"
-                alt="${product.name} ${initialType} Design (View 1 of ${imageCount})"
-                class="w-full h-auto object-cover rounded-lg transition-transform duration-300"
-                onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';"
-                data-image-urls='${JSON.stringify(product.imageUrls)}'
-                data-current-index="0"
-              />
-              <div class="image-overlay">
-                ${imageCount > 1 ? `CLICK to see next view (${imageCount} total)` : 'No additional views'}
+          return `
+            <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="product-image-container relative group cursor-pointer rounded-lg mb-4" onclick="cycleImage(this)">
+                <img
+                  id="img-${product.id}"
+                  src="${product.imageUrls[0]}"
+                  alt="${product.name} ${initialType} Design (View 1 of ${imageCount})"
+                  class="w-full h-auto object-cover rounded-lg transition-transform duration-300"
+                  onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';"
+                  data-image-urls='${JSON.stringify(product.imageUrls)}'
+                  data-current-index="0"
+                />
+                <div class="image-overlay">
+                  ${imageCount > 1 ? `CLICK to see next view (${imageCount} total)` : 'No additional views'}
+                </div>
               </div>
+
+              <h3 class="text-lg font-bold text-[#003466] mb-1">${product.name}</h3>
+              <p class="text-xl font-extrabold text-[#007c9e] mb-3">Starting at ${formatCurrency(startingPrice)}</p>
+
+              <div class="mb-3">
+                <label for="type-${product.id}" class="block text-sm font-medium text-gray-700">Select Product Type</label>
+                <select id="type-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
+                  <option value="" disabled selected>Choose type...</option>
+                  ${typeOptionsHTML}
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="color-${product.id}" class="block text-sm font-medium text-gray-700">Select Color</label>
+                <select id="color-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
+                  <option value="" disabled selected>Choose color...</option>
+                  ${colorOptions}
+                </select>
+              </div>
+
+              <div class="mb-4 ${sizeSelectorHiddenClass}">
+                <label for="size-${product.id}" class="block text-sm font-medium text-gray-700">Select Size</label>
+                <select id="size-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
+                  <option value="" disabled selected>Choose size...</option>
+                  ${sizeOptionsHTML}
+                </select>
+              </div>
+              ${!needsSize ? `<input type="hidden" id="size-${product.id}" value="OS">` : ''}
+
+              <button
+                onclick="addToCart('${product.id}')"
+                class="w-full text-white font-semibold py-2 rounded-lg transition-colors duration-200 btn-primary"
+              >
+                Add to Cart
+              </button>
             </div>
+          `;
+        })
+        .join('');
 
-            <h3 class="text-lg font-bold text-[#003466] mb-1">${product.name}</h3>
-            <p class="text-xl font-extrabold text-[#007c9e] mb-3">Starting at ${formatCurrency(startingPrice)}</p>
-
-            <div class="mb-3">
-              <label for="type-${product.id}" class="block text-sm font-medium text-gray-700">Select Product Type</label>
-              <select id="type-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
-                <option value="" disabled selected>Choose type...</option>
-                ${typeOptionsHTML}
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="color-${product.id}" class="block text-sm font-medium text-gray-700">Select Color</label>
-              <select id="color-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
-                <option value="" disabled selected>Choose color...</option>
-                ${colorOptions}
-              </select>
-            </div>
-
-            <div class="mb-4 ${sizeSelectorHiddenClass}">
-              <label for="size-${product.id}" class="block text-sm font-medium text-gray-700">Select Size</label>
-              <select id="size-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
-                <option value="" disabled selected>Choose size...</option>
-                ${sizeOptionsHTML}
-              </select>
-            </div>
-            ${!needsSize ? `<input type="hidden" id="size-${product.id}" value="OS">` : ''}
-
-            <button
-              onclick="addToCart('${product.id}')"
-              class="w-full text-white font-semibold py-2 rounded-lg transition-colors duration-200 btn-primary"
-            >
-              Add to Cart
-            </button>
-          </div>
-        `;
-      }).join('');
-
-      // Inject Product Schema into the head (replace old one if present)
       const existing = document.querySelector('script[data-843teez-products-schema]');
       if (existing) existing.remove();
-
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.setAttribute('data-843teez-products-schema', 'true');
-      script.textContent = JSON.stringify(productSchema);
-      document.head.appendChild(script);
+      if (productSchema.length > 0) {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.setAttribute('data-843teez-products-schema', 'true');
+        script.textContent = JSON.stringify(productSchema);
+        document.head.appendChild(script);
+      }
     };
 
     const renderCartDetails = () => {
       const cartItemsDiv = document.getElementById('cart-items');
 
       if (cart.length === 0) {
-        cartItemsDiv.innerHTML = '<p class="text-gray-500 text-base text-center italic py-4">Your cart is empty.</p>';
+        cartItemsDiv.innerHTML =
+          '<p class="text-gray-500 text-base text-center italic py-4">Your cart is empty.</p>';
         document.getElementById('goto-checkout-button').disabled = true;
         return;
       }
 
       document.getElementById('goto-checkout-button').disabled = false;
 
-      cartItemsDiv.innerHTML = cart.map(item => {
-        const uniqueId = item.id + '-' + item.type + '-' + item.size + '-' + item.color;
-        const itemTotal = item.price * item.quantity;
+      cartItemsDiv.innerHTML = cart
+        .map(item => {
+          const uniqueId = item.id + '-' + item.type + '-' + item.size + '-' + item.color;
+          const itemTotal = item.price * item.quantity;
 
-        return `
-          <div class="flex items-start justify-between text-base border-b border-gray-100 pb-3">
-            <div class="flex-grow pr-4">
-              <span class="font-semibold text-[#003466]">${item.name} (${item.type})</span>
-              <div class="text-sm text-gray-600">
-                Size: ${item.size === 'OS' ? 'One Size' : item.size}, Color: ${item.color}
+          return `
+            <div class="flex items-start justify-between text-base border-b border-gray-100 pb-3">
+              <div class="flex-grow pr-4">
+                <span class="font-semibold text-[#003466]">${item.name} (${item.type})</span>
+                <div class="text-sm text-gray-600">
+                  Size: ${item.size === 'OS' ? 'One Size' : item.size}, Color: ${item.color}
+                </div>
+                <div class="text-sm text-gray-500">
+                  ${formatCurrency(item.price)} x ${item.quantity}
+                </div>
               </div>
-              <div class="text-sm text-gray-500">
-                ${formatCurrency(item.price)} x ${item.quantity}
+              <div class="flex flex-col items-end">
+                <span class="font-bold text-lg text-red-500 mb-1">${formatCurrency(itemTotal)}</span>
+                <button
+                  onclick="removeFromCart('${uniqueId}')"
+                  class="text-sm text-gray-500 hover:text-red-700 leading-none transition-colors underline"
+                >
+                  Remove
+                </button>
               </div>
             </div>
-            <div class="flex flex-col items-end">
-              <span class="font-bold text-lg text-red-500 mb-1">${formatCurrency(itemTotal)}</span>
-              <button
-                onclick="removeFromCart('${uniqueId}')"
-                class="text-sm text-gray-500 hover:text-red-700 leading-none transition-colors underline"
-              >
-                Remove
-              </button>
-            </div>
-          </div>
-        `;
-      }).join('');
+          `;
+        })
+        .join('');
     };
 
     const updateCartSummary = () => {
@@ -977,9 +1000,7 @@
       globalViewCartButton.disabled = false;
     };
 
-    // --- 4. CART LOGIC ---
-
-    const addToCart = (productId) => {
+    const addToCart = productId => {
       const product = products.find(p => p.id === productId);
       if (!product) return;
 
@@ -999,11 +1020,11 @@
         showMessage('Please select a Product Type.', 'error');
         return;
       }
-      if (selectedColor === '') {
+      if (!selectedColor) {
         showMessage('Please select a Color.', 'error');
         return;
       }
-      if (needsSizeValidation && selectedSize === '') {
+      if (needsSizeValidation && !selectedSize) {
         showMessage('Please select a Size.', 'error');
         return;
       }
@@ -1011,11 +1032,12 @@
       const basePrice = parseFloat(basePriceElement.dataset.basePrice);
       const finalPrice = getProductPriceWithSize(basePrice, selectedSize);
 
-      const cartItemIndex = cart.findIndex(item =>
-        item.id === productId &&
-        item.type === selectedType &&
-        item.size === selectedSize &&
-        item.color === selectedColor
+      const cartItemIndex = cart.findIndex(
+        item =>
+          item.id === productId &&
+          item.type === selectedType &&
+          item.size === selectedSize &&
+          item.color === selectedColor
       );
 
       if (cartItemIndex > -1) {
@@ -1037,21 +1059,24 @@
       if (currentView !== 'shop') {
         updateCheckoutSummary(currentView === 'checkout');
       }
-      showMessage(`${selectedColor} ${product.name} (${selectedType} / ${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`);
+      showMessage(
+        `${selectedColor} ${product.name} (${selectedType} / ${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`
+      );
     };
 
-    const removeFromCart = (uniqueId) => {
+    const removeFromCart = uniqueId => {
       const parts = uniqueId.split('-');
       const productId = parts[0];
       const selectedType = parts[1];
       const selectedSize = parts[2];
       const selectedColor = parts[3];
 
-      const cartItemIndex = cart.findIndex(item =>
-        item.id === productId &&
-        item.type === selectedType &&
-        item.size === selectedSize &&
-        item.color === selectedColor
+      const cartItemIndex = cart.findIndex(
+        item =>
+          item.id === productId &&
+          item.type === selectedType &&
+          item.size === selectedSize &&
+          item.color === selectedColor
       );
 
       if (cartItemIndex > -1) {
@@ -1092,33 +1117,30 @@
       }, 3000);
     };
 
-    // --- 5. CHECKOUT FORM LOGIC ---
-
     const calculateTotals = (currentCart, includeShipping) => {
-      const subtotal = currentCart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-      let shippingCost = 0.00;
+      const subtotal = currentCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      let shippingCost = 0.0;
       let selectedShippingId = '';
 
       if (includeShipping) {
         selectedShippingId = document.getElementById('shipping_method')?.value || '';
-        shippingCost = SHIPPING_OPTIONS[selectedShippingId]?.cost || 0.00;
+        shippingCost = SHIPPING_OPTIONS[selectedShippingId]?.cost || 0.0;
       }
 
       const taxAmount = subtotal * SALES_TAX_RATE;
       const finalTotal = subtotal + taxAmount + shippingCost;
 
       return {
-        subtotal: subtotal,
-        taxAmount: taxAmount,
-        shippingCost: shippingCost,
-        finalTotal: finalTotal,
+        subtotal,
+        taxAmount,
+        shippingCost,
+        finalTotal,
         shippingMethod: selectedShippingId,
         shippingName: SHIPPING_OPTIONS[selectedShippingId]?.name || 'Not Selected'
       };
     };
 
-    const updateCheckoutSummary = (includeShippingInTotal) => {
+    const updateCheckoutSummary = includeShippingInTotal => {
       if (cart.length === 0) return;
 
       renderCartDetails();
@@ -1127,10 +1149,10 @@
 
       document.getElementById('cart-subtotal').textContent = formatCurrency(totals.subtotal);
       document.getElementById('cart-tax').textContent = formatCurrency(totals.taxAmount);
-      document.getElementById('cart-shipping').textContent = "TBD";
+      document.getElementById('cart-shipping').textContent = 'TBD';
       document.getElementById('cart-total').textContent = formatCurrency(totals.subtotal + totals.taxAmount);
 
-      if (document.getElementById('checkout-view').classList.contains('hidden') === false) {
+      if (!document.getElementById('checkout-view').classList.contains('hidden')) {
         document.getElementById('form-subtotal-display').textContent = formatCurrency(totals.subtotal);
         document.getElementById('form-tax-display').textContent = formatCurrency(totals.taxAmount);
         document.getElementById('form-shipping-display').textContent = formatCurrency(totals.shippingCost);
@@ -1149,7 +1171,7 @@
       document.getElementById('cart-data-json').value = JSON.stringify(orderSummary);
     };
 
-    const handleFormSubmission = async (event) => {
+    const handleFormSubmission = async event => {
       event.preventDefault();
 
       const shippingMethod = document.getElementById('shipping_method').value;
@@ -1168,24 +1190,20 @@
       try {
         const response = await fetch(form.action || '/', {
           method: form.method || 'POST',
-          body: new FormData(form),
+          body: new FormData(form)
         });
 
         if (response.ok) {
           showMessage('Order request submitted! An invoice will be emailed to you shortly.', 'success');
-
           cart = [];
           saveCart();
           updateCartSummary();
           document.getElementById('shipping_method').value = '';
           changeView('shop');
         } else {
-          const errorText = await response.text();
-          console.error('Netlify Form Submission Error:', errorText);
           showMessage('Error submitting order. Please try again or call us.', 'error');
         }
       } catch (error) {
-        console.error('Network Error during submission:', error);
         showMessage('A network error occurred. Please check your connection.', 'error');
       } finally {
         submitButton.disabled = false;
@@ -1193,14 +1211,17 @@
       }
     };
 
-    // --- 6. INITIALIZATION ---
-    window.onload = () => {
+    window.addEventListener('DOMContentLoaded', () => {
       renderProducts();
       updateCartSummary();
-
       document.getElementById('checkout-form').addEventListener('submit', handleFormSubmission);
       changeView('shop');
-    };
+      window.filterProducts = filterProducts;
+      window.changeView = changeView;
+      window.cycleImage = cycleImage;
+      window.addToCart = addToCart;
+      window.removeFromCart = removeFromCart;
+    });
   </script>
 </body>
 </html>
