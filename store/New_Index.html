@@ -87,6 +87,297 @@
     .category-btn.active:hover {
       background: #003466;
     }
+
+    /* Slide-down animation */
+    @keyframes slideDown {
+      0% { transform: translateY(-100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .banner-animate {
+      animation: slideDown 0.6s ease-out forwards;
+    }
+
+    /* Hide/show on scroll */
+    #construction-banner {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    #construction-banner.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  </style>
+  <!-- Store-level structured data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "843 Teez",
+      "telephone": "843-350-1943",
+      "url": "https://store.843teez.com",
+      "description": "Custom tees, hoodies, and sweatshirts printed by a veteran-owned local apparel shop in Conway, Horry County, South Carolina."
+    }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMQ6GLJGHK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WMQ6GLJGHK');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', 'tr3lwvejev');
+  </script>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8">
+
+  <!-- Animated + scroll-hide construction banner -->
+  <div
+    id="construction-banner"
+    class="banner-animate w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base z-40"
+  >
+    <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+    <p>
+      We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
+      <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
+      <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
+    </p>
+  </div>
+
+  <div
+    id="main-content"
+    class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl"
+  >
+    <header class="text-center mb-8">
+      <img
+        src="https://843teez.com/843teezlogo.png"
+        alt="843 Teez Logo"
+        class="max-w-xs mx-auto mb-4 w-5/6"
+      />
+      <div class="flex items-center justify-center space-x-4 mb-2">
+        <h1 id="page-title" class="text-3xl font-extrabold text-[#007c9e]">Online Shop</h1>
+        <button
+          onclick="changeView('cart')"
+          id="global-view-cart-button"
+          class="flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full transition-colors duration-200 shadow-md hover:bg-red-700 disabled:opacity-50"
+          disabled
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M3 1a1 1 0 000 2h1.22l.305 1.25H16a1 1 0 001-1V5a1 1 0 00-1-1h-1.23l-1.041-4.168A1 1 0 0013.78 0H6.22a1 1 0 00-.989.832L4.11 4.25H3a1 1 0 000 2h1.22l1.246 5.003A2 2 0 007.467 13H15a1 1 0 00.95-.684l.75-3A1 1 0 0016 9H7.467L6.5 6.25H16l.192-.768A1 1 0 0016 5H4.11L3.5 2.5H3zM7 17a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"
+            />
+          </svg>
+          Cart (<span id="global-item-count">0</span>)
+        </button>
+      </div>
+      <p id="page-subtitle" class="text-sm text-gray-600">
+        Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re
+        nearby or across the map, we offer convenient local delivery and fast shipping.
+      </p>
+      <div id="back-to-shop-button" class="hidden mt-4">
+        <button
+          onclick="changeView('shop')"
+          class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              fill-rule="evenodd"
+              d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Back to Shop
+        </button>
+      </div>
+    </header>
+
+    <!-- SHOP VIEW -->
+    <div id="shop-view" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-3">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">Featured Apparel</h2>
+
+        <div
+          id="category-filter"
+          class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4"
+        >
+          <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
+          <button onclick="filterProducts('Originals')" class="category-btn px-4">843 Teez Originals</button>
+          <button onclick="filterProducts('Christmas')" class="category-btn px-4">Christmas</button>
+          <button onclick="filterProducts('Fall')" class="category-btn px-4">Fall &amp; Halloween</button>
+        </div>
+
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+
+        <div class="mt-12 text-center pt-8 border-t border-gray-200">
+          <p class="text-gray-700 font-medium mb-4">
+            For custom apparel and large orders, please contact us directly:
+          </p>
+
+          <a
+            href="tel:8433501943"
+            class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mr-2 mb-2 sm:mr-4"
+          >
+            📞 Call: 843-350-1943
+          </a>
+          <a
+            href="mailto:Sales@843Teez.com"
+            class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mb-2"
+          >
+            📧 Email: Sales@843Teez.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating / sticky cart summary -->
+      <div class="lg:col-span-1">
+        <div
+          id="cart-summary-sticky"
+          class="sticky top-24 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center"
+        >
+          <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
+          <p class="text-sm text-gray-600 mb-2">
+            Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
+          </p>
+          <p class="text-xl font-extrabold text-[#003466] mb-4">
+            Est. Total: <span id="summary-cart-total">$0.00</span>
+          </p>
+
+          <button
+            onclick="changeView('cart')"
+            id="view-cart-button"
+            class="w-full text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md disabled:opacity-50 btn-primary"
+            disabled
+          >
+            Review &amp; Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CART VIEW -->
+    <div id="cart-view" class="hidden max-w-3xl mx-auto py-6">
+      <div id="cart-items-display" class="bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg mb-8">
+        <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">Review Your Order</h2>
+        <div id="cart-items" class="space-y-4"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind via CDN (kept for utility classes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <title>843 Teez Store | Custom Tees, Hoodies &amp; Sweatshirts in Conway SC</title>
+  <meta
+    name="description"
+    content="Shop the official 843 Teez online store. Custom tees, hoodies, and sweatshirts printed and pressed locally in Conway, South Carolina."
+  />
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #f8fcff;
+      background-image: url('https://843teez.com/surf-texture.png');
+      background-repeat: repeat;
+      background-size: 300px;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #007c9e;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: #f0f0f0;
+    }
+    .btn-primary {
+      background-color: #003466;
+    }
+    .btn-primary:hover {
+      background-color: #007c9e;
+    }
+    #main-content {
+      min-height: calc(100vh - 80px);
+    }
+    .product-image-container {
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+    .product-image-container .image-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .product-image-container:hover .image-overlay {
+      opacity: 1;
+    }
+    .category-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      color: #374151;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .category-btn:hover {
+      background: #f3f4f6;
+    }
+    .category-btn.active {
+      background: #007c9e;
+      color: #ffffff;
+      border-color: #007c9e;
+    }
+    .category-btn.active:hover {
+      background: #003466;
+    }
+
+    /* Banner slide-down, then hide on scroll */
+    #construction-banner {
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+    #construction-banner.banner-visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    #construction-banner.banner-hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
   </style>
 
   <!-- Store-level structured data -->
@@ -1221,7 +1512,30 @@
       window.cycleImage = cycleImage;
       window.addToCart = addToCart;
       window.removeFromCart = removeFromCart;
+
+      // Banner slide-down on load, disappear on scroll
+      const banner = document.getElementById('construction-banner');
+      if (banner) {
+        // Slide down shortly after load
+        requestAnimationFrame(() => {
+          banner.classList.add('banner-visible');
+        });
+
+        let bannerDismissed = false;
+        const onScroll = () => {
+          if (bannerDismissed) return;
+          if (window.scrollY > 40) {
+            banner.classList.remove('banner-visible');
+            banner.classList.add('banner-hidden');
+            bannerDismissed = true;
+            window.removeEventListener('scroll', onScroll);
+          }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
     });
   </script>
 </body>
 </html>
+
