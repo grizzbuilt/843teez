@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom style for the specific background texture and font */
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #f8fcff;
+            background-image: url('https://843teez.com/surf-texture.png');
+            background-repeat: repeat;
+            background-size: 300px;
+        }
+
+        /* Custom scrollbar for better visual */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+
+        /* Key brand colors */
+        .btn-primary {
+            background-color: #003466; /* Deep Navy */
+        }
+        .btn-primary:hover {
+            background-color: #007c9e; /* Teal Blue */
+        }
+
+        /* Ensure the main container grows to fill the page height */
+        #main-content {
+            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
+        }
+    </style>
+
+    <title>843 Teez | Order Confirmed!</title>
+    <meta name="description" content="Thank you for your order request! Please check your email for the final invoice." />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMQ6GLJGHK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WMQ6GLJGHK');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tr3lwvejev");
+    </script>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8 pt-16">
+    <div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base fixed top-0 z-50">
+        <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+        <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
+            <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
+            <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
+        </p>
+    </div>
+
+    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+
+        <header class="text-center mb-8">
+            <img
+                src="https://843teez.com/843teezlogo.png"
+                alt="843 Teez Logo"
+                class="max-w-xs mx-auto mb-4 w-5/6"
+            />
+            <div class="flex items-center justify-center space-x-4 mb-2">
+                <h1 class="text-3xl font-extrabold text-[#007c9e]">
+                    Order Request Received!
+                </h1>
+            </div>
+            <p class="text-sm text-gray-600">
+                We've successfully received your order details and are preparing your invoice.
+            </p>
+        </header>
+
+        <div class="max-w-3xl mx-auto py-6">
+            <div class="bg-white p-8 rounded-xl border-2 border-green-500 shadow-lg text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-green-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2 class="text-3xl font-bold text-green-600 mb-3">
+                    Thank You!
+                </h2>
+                
+                <p class="text-lg text-gray-700 mb-6">
+                    Your order request is complete. We will review your items and generate a **digital invoice** shortly.
+                </p>
+
+                <h3 class="text-xl font-semibold text-[#003466] mb-2">
+                    What Happens Next?
+                </h3>
+                <ul class="list-disc list-inside text-left text-gray-700 max-w-sm mx-auto mb-8 space-y-2">
+                    <li>We will send the **final invoice** (including shipping and tax) to the email address you provided.</li>
+                    <li>The email will contain a **secure link** for payment.</li>
+                    <li>Once payment is confirmed, we begin printing your custom apparel!</li>
+                </ul>
+
+                <a href="index.html" class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary">
+                    Start a New Order or Continue Shopping
+                </a>
+            </div>
+        </div>
+        
+        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
+            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+            <p>Woman & Veteran-owned local apparel.</p>
+            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+        </footer>
+    </div>
+</body>
+</html>
