@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom style for the specific background texture and font */
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #f8fcff;
+            background-image: url('https://843teez.com/surf-texture.png');
+            background-repeat: repeat;
+            background-size: 300px;
+        }
+
+        /* Custom scrollbar for better visual */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+
+        /* Key brand colors */
+        .btn-primary {
+            background-color: #003466; /* Deep Navy */
+        }
+        .btn-primary:hover {
+            background-color: #007c9e; /* Teal Blue */
+        }
+
+        /* Ensure the main container grows to fill the page height */
+        #main-content {
+            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
+        }
+        /* Style for blog post cards */
+        .blog-card {
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .blog-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 52, 102, 0.15);
+            transform: translateY(-3px);
+        }
+    </style>
+
+    <title>843 Teez | Blog - Custom Printing Tips & Local News</title>
+    <meta name="description" content="Read the latest blog posts from 843 Teez. Get tips on custom t-shirt design, learn about DTF printing, and catch up on Conway SC local news." />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMQ6GLJGHK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WMQ6GLJGHK');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tr3lwvejev");
+    </script>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8 pt-16">
+
+    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+
+        <header class="text-center mb-8">
+            <img
+                src="https://843teez.com/843teezlogo.png"
+                alt="843 Teez Logo"
+                class="max-w-xs mx-auto mb-4 w-5/6"
+            />
+            <div class="flex items-center justify-center space-x-4 mb-2">
+                <h1 class="text-3xl font-extrabold text-[#007c9e]">
+                    The 843 Teez Blog
+                </h1>
+                <a
+                    href="cart.html"
+                    id="global-view-cart-button"
+                    class="flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full shadow-md hover:bg-red-700"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.25H16a1 1 0 001-1V5a1 1 0 00-1-1h-1.23l-1.041-4.168A1 1 0 0013.78 0H6.22a1 1 0 00-.989.832L4.11 4.25H3a1 1 0 000 2h1.22l1.246 5.003A2 2 0 007.467 13H15a1 1 0 00.95-.684l.75-3A1 1 0 0016 9H7.467L6.5 6.25H16l.192-.768A1 1 0 0016 5H4.11L3.5 2.5H3zM7 17a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                    </svg>
+                    Cart (<span id="global-item-count">0</span>)
+                </a>
+            </div>
+            <p class="text-sm text-gray-600">
+                Custom printing tips, design spotlights, and news from our Conway, SC shop.
+            </p>
+            <div class="mt-4">
+                <a href="index.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Back to Shop
+                </a>
+            </div>
+        </header>
+
+        <div class="max-w-5xl mx-auto py-6">
+            <h2 class="text-2xl font-bold text-[#003466] mb-6 border-b pb-2">
+                Latest Articles
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <a href="blog-dtf-vs-screen.html" class="blog-card block bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500 font-semibold text-center overflow-hidden">
+                        <img src="https://placehold.co/400x200/003466/FFFFFF?text=DTF+vs+Screen" alt="DTF vs Screen Printing Comparison" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-red-600 font-semibold mb-1">Printing Tips</p>
+                    <h3 class="text-xl font-bold text-[#003466] mb-2 hover:text-[#007c9e]">
+                        DTF vs. Screen Printing: Which is Right for Your Order?
+                    </h3>
+                    <p class="text-sm text-gray-600 line-clamp-3">
+                        Trying to decide between the vibrant detail of Direct-to-Film and the durability of traditional screen printing? We break down the pros and cons for small and large apparel orders.
+                    </p>
+                    <p class="text-xs text-gray-500 mt-3">Read More &rarr;</p>
+                </a>
+
+                <a href="blog-local-spotlight.html" class="blog-card block bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500 font-semibold text-center overflow-hidden">
+                        <img src="https://placehold.co/400x200/007c9e/FFFFFF?text=Local+Business" alt="Local Business Spotlight" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-red-600 font-semibold mb-1">Local News</p>
+                    <h3 class="text-xl font-bold text-[#003466] mb-2 hover:text-[#007c9e]">
+                        Conway Business Spotlight: Mystic Brew Coffee's Custom Tees
+                    </h3>
+                    <p class="text-sm text-gray-600 line-clamp-3">
+                        We sat down with our friends at Mystic Brew to talk about their custom uniform needs, local collaborations, and how they keep their brand fresh with custom apparel.
+                    </p>
+                    <p class="text-xs text-gray-500 mt-3">Read More &rarr;</p>
+                </a>
+
+                <a href="blog-design-file-prep.html" class="blog-card block bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500 font-semibold text-center overflow-hidden">
+                        <img src="https://placehold.co/400x200/333333/FFFFFF?text=Design+File" alt="T-Shirt Design File Prep Guide" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-red-600 font-semibold mb-1">Design Guide</p>
+                    <h3 class="text-xl font-bold text-[#003466] mb-2 hover:text-[#007c9e]">
+                        How to Prep Your Design File for a Perfect Custom Shirt
+                    </h3>
+                    <p class="text-sm text-gray-600 line-clamp-3">
+                        Avoid common errors! Learn the difference between vector and raster files and discover the best resolution settings for the highest quality custom apparel print.
+                    </p>
+                    <p class="text-xs text-gray-500 mt-3">Read More &rarr;</p>
+                </a>
+                
+            </div>
+            
+            <div class="text-center mt-10 p-6 bg-gray-100/50 rounded-lg border border-gray-200">
+                <p class="text-gray-600 font-medium mb-3">
+                    Don't miss a post! Follow us on social media for new article alerts and daily printing updates.
+                </p>
+                <a href="https://www.instagram.com/843teez" target="_blank" class="inline-block px-6 py-3 text-white font-bold bg-[#007c9e] rounded-lg transition-colors duration-200 hover:bg-[#003466] shadow-md">
+                    Follow 843 Teez on Instagram
+                </a>
+            </div>
+        </div>
+        
+
+        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
+            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+            <p>Woman & Veteran-owned local apparel.</p>
+            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- CART STATE MANAGEMENT (Minimal setup to update header count) ---
+        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
+        
+        // Updates the global cart count (needed for header)
+        const updateGlobalCartSummary = () => {
+            const globalViewCartButton = document.getElementById('global-view-cart-button');
+            
+            let totalItems = 0;
+
+            cart.forEach(item => {
+                totalItems += item.quantity;
+            });
+
+            document.getElementById('global-item-count').textContent = totalItems;
+            globalViewCartButton.classList.toggle('disabled:opacity-50', totalItems === 0);
+            globalViewCartButton.disabled = totalItems === 0;
+        };
+
+        // --- INITIALIZATION ---
+        window.onload = () => {
+            updateGlobalCartSummary();
+        };
+    </script>
+</body>
+</html>
