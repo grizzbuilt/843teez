@@ -98,9 +98,9 @@
     </script>
     <script>
       // Store redirect script (kept for functionality)
-      if (window.location.hostname === "store.843teez.com") {
-        window.location.replace("/store/index.html");
-      }
+      // NOTE: This script may need adjustment if you are moving the shop files
+      // to the root domain. For now, we will assume the shop logic is
+      // contained within the new index.html file you are currently viewing.
     </script>
 </head>
 
@@ -111,10 +111,13 @@
                 <li><a href="/" class="logo-link"><img src="843teezLogo.png" alt="843 Teez Logo - Custom T-shirts and DTF Transfers in Conway SC" class="logo"></a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="originals.html">843 Originals</a></li>
+                <li><a href="clothing.html">Shop Apparel</a></li>
                 <li><a href="#samples">Samples</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://store.843teez.com" target="_blank" class="cta-link">Shop Store</a></li>
+                <li><a href="index.html" class="cta-link">Shop Store</a></li>
+                <li><a href="cart.html" class="cta-link">🛒 Cart</a></li>
             </ul>
         </nav>
 
@@ -207,10 +210,12 @@
                     We’ve got a growing lineup of local Conway and Myrtle Beach-themed designs ready to print just for you.
                     Each tee is made on demand and shipped straight to your door, keeping costs low and creativity cranked up.
                 </p>
-                <p class="store-link-wrapper">
-                    <a href="http://store.843teez.com" target="_blank" class="contact-button">🛒 Shop Our Custom Designs</a>
-                </p>
-            </section>
+                <div class="store-link-wrapper" style="display: flex; gap: 20px; justify-content: center;">
+                    <a href="originals.html" class="contact-button">843 Original Designs</a>
+                    <a href="clothing.html" class="contact-button">Seasonal & Holiday Tees</a>
+                    <a href="index.html" class="contact-button">🛒 Shop All Apparel</a>
+                </div>
+                </section>
             
             <section id="custom-pricing">
                 <h2>Custom T-Shirt Pricing & Bulk Orders</h2>
@@ -253,45 +258,4 @@
                 <input type="hidden" name="form-location" value="843Teez Contact" />
                 <input type="hidden" name="subject" value="843 Teez Custom Quote Request" />
                 <p hidden>
-                    <label>Don’t fill this out: <input name="bot-field" /></label>
-                </p>
-
-                <label for="name">Name</label>
-                <input type="text" name="name" required class="form-input">
-
-                <label for="email">Email</label>
-                <input type="email" name="email" required class="form-input">
-
-                <label for="shirt-details">Custom Printing Details (Quantity, Colors, Deadline)</label>
-                <textarea name="shirt-details" rows="5" required class="form-textarea"></textarea>
-                
-                <div data-netlify-recaptcha="true"></div>
-                
-                <div class="form-button-wrapper">
-                    <button type="submit" class="form-button">Send Quote Request</button>
-                </div>
-            </form>
-        </section>
-
-        <section id="socials" class="section">
-            <h2>Follow Our Custom T-Shirt Journey</h2>
-            
-            <div class="social-links">
-                <a href="https://www.facebook.com/843teez" target="_blank" aria-label="Follow 843 Teez on Facebook">
-                    <img alt="843 Teez Facebook" class="footer-social-img" src="fb.png"/>
-                </a>
-                <a href="https://www.instagram.com/843teez" target="_blank" aria-label="Follow 843 Teez on Instagram">
-                    <img alt="843 Teez Instagram" class="footer-social-img" src="insta.png"/>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank">GrizzBuilt™</a> brand.</p>
-        <p>&copy; 2025 843 Teez™ . All rights reserved. Locally printed in Conway, SC.</p>
-        <p>Contact: <a href="mailto:info@843teez.com">info@843teez.com</a> | (843) 350-1943</p>
-    </footer>
-
-</body>
-</html>
+                    <label>Don’t fill this out: <input name="bot-field"
