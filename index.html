@@ -98,9 +98,6 @@
     </script>
     <script>
       // Store redirect script (kept for functionality)
-      if (window.location.hostname === "store.843teez.com") {
-        window.location.replace("/store/index.html");
-      }
     </script>
 </head>
 
@@ -114,8 +111,8 @@
                 <li><a href="#samples">Samples</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://store.843teez.com" target="_blank" class="cta-link">Shop Store</a></li>
-            </ul>
+                <li><a href="https://store.843teez.com" class="cta-link">Shop Store</a></li>
+                </ul>
         </nav>
 
         <section class="hero-section">
@@ -207,10 +204,12 @@
                     We’ve got a growing lineup of local Conway and Myrtle Beach-themed designs ready to print just for you.
                     Each tee is made on demand and shipped straight to your door, keeping costs low and creativity cranked up.
                 </p>
-                <p class="store-link-wrapper">
-                    <a href="http://store.843teez.com" target="_blank" class="contact-button">🛒 Shop Our Custom Designs</a>
-                </p>
-            </section>
+                <div class="store-link-wrapper" style="display: flex; gap: 20px; justify-content: center;">
+                    <a href="originals.html" class="contact-button">843 Original Designs</a>
+                    <a href="clothing.html" class="contact-button">Seasonal & Holiday Tees</a>
+                    <a href="index.html" class="contact-button">🛒 Shop All Apparel</a>
+                </div>
+                </section>
             
             <section id="custom-pricing">
                 <h2>Custom T-Shirt Pricing & Bulk Orders</h2>
@@ -291,7 +290,13 @@
         <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank">GrizzBuilt™</a> brand.</p>
         <p>&copy; 2025 843 Teez™ . All rights reserved. Locally printed in Conway, SC.</p>
         <p>Contact: <a href="mailto:info@843teez.com">info@843teez.com</a> | (843) 350-1943</p>
-    </footer>
+        <p class="utility-links">
+            <a href="returns.html">Returns Policy</a> |
+            <a href="shipping.html">Shipping Policy</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="tos.html">Terms of Service</a>
+        </p>
+        </footer>
 
 </body>
 </html>
