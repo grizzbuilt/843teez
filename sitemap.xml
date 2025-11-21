@@ -53,7 +53,7 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://843teez.com/returns.html</loc>
+        <loc>https://843teez.com/return.html</loc>
         <lastmod>2025-11-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -92,5 +92,6 @@
     </url>
     
 </urlset>
+
 
 
