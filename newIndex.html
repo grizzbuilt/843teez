@@ -98,9 +98,6 @@
     </script>
     <script>
       // Store redirect script (kept for functionality)
-      // NOTE: This script may need adjustment if you are moving the shop files
-      // to the root domain. For now, we will assume the shop logic is
-      // contained within the new index.html file you are currently viewing.
     </script>
 </head>
 
@@ -117,8 +114,7 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="index.html" class="cta-link">Shop Store</a></li>
-                <li><a href="cart.html" class="cta-link">🛒 Cart</a></li>
-            </ul>
+                </ul>
         </nav>
 
         <section class="hero-section">
@@ -258,4 +254,51 @@
                 <input type="hidden" name="form-location" value="843Teez Contact" />
                 <input type="hidden" name="subject" value="843 Teez Custom Quote Request" />
                 <p hidden>
-                    <label>Don’t fill this out: <input name="bot-field"
+                    <label>Don’t fill this out: <input name="bot-field" /></label>
+                </p>
+
+                <label for="name">Name</label>
+                <input type="text" name="name" required class="form-input">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" required class="form-input">
+
+                <label for="shirt-details">Custom Printing Details (Quantity, Colors, Deadline)</label>
+                <textarea name="shirt-details" rows="5" required class="form-textarea"></textarea>
+                
+                <div data-netlify-recaptcha="true"></div>
+                
+                <div class="form-button-wrapper">
+                    <button type="submit" class="form-button">Send Quote Request</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="socials" class="section">
+            <h2>Follow Our Custom T-Shirt Journey</h2>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/843teez" target="_blank" aria-label="Follow 843 Teez on Facebook">
+                    <img alt="843 Teez Facebook" class="footer-social-img" src="fb.png"/>
+                </a>
+                <a href="https://www.instagram.com/843teez" target="_blank" aria-label="Follow 843 Teez on Instagram">
+                    <img alt="843 Teez Instagram" class="footer-social-img" src="insta.png"/>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank">GrizzBuilt™</a> brand.</p>
+        <p>&copy; 2025 843 Teez™ . All rights reserved. Locally printed in Conway, SC.</p>
+        <p>Contact: <a href="mailto:info@843teez.com">info@843teez.com</a> | (843) 350-1943</p>
+        <p class="utility-links">
+            <a href="returns.html">Returns Policy</a> |
+            <a href="shipping.html">Shipping Policy</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="tos.html">Terms of Service</a>
+        </p>
+        </footer>
+
+</body>
+</html>
