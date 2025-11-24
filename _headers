@@ -1,0 +1,3 @@
+/admin/config.yml
+  Content-Type: text/yaml
+  X-Content-Type-Options: nosniff
