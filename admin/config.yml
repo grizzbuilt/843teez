@@ -1,21 +1,26 @@
-backend:
+ackend:
   name: git-gateway
-  branch: main # Verify this matches your GitHub/GitLab branch name
+  branch: main # Confirmed branch name
   
-publish_mode: editorial_workflow
+# Set deployment environment for Netlify
+publish_mode: editorial_workflow 
 
-media_folder: "/store" # This should point to your image upload folder
-public_folder: "/store"
+# === Media Configuration: Uploads go directly to /store/ folder ===
+media_folder: "store"
+public_folder: "/store" # Tells the CMS the public URL for new uploads is /store/
+# NOTE: Existing image paths in products.json must start with "../store/" 
+# for the shop pages to display them correctly from the /data/ folder's perspective.
 
-# === COLLECTIONS DEFINITION (Your Products) ===
+# === Store Data Collection ===
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
-    folder: "data" # Correct folder location
-    file: "products.json" # Correct file name
+    # CRITICAL: This is the file the CMS will manage (located at project root /data/products.json)
+    folder: "data" 
+    file: "products.json" 
 
     editor:
-      preview: false
+      preview: false # Disables live preview for complex dynamic rendering
 
     fields:
       - label: "Product List"
@@ -24,8 +29,29 @@ collections:
         summary: "{{fields.name}} (ID: {{fields.id}})"
         
         fields:
-          # Your schema follows here, ensuring correct widget names and options
-          - {label: "Product ID (Unique)", name: "id", widget: "string", required: true}
+          # Product Identification and Core Details
+          - {label: "Product ID (Unique)", name: "id", widget: "string", hint: "Example: C101 or O105.", required: true}
           - {label: "Product Name", name: "name", widget: "string", required: true}
-          - {label: "Category Tag", name: "category", widget: "select", options: ["Originals", "Fall", "Christmas", "LE"], required: true}
-          # ... rest of the fields
+          - label: "Category Tag"
+            name: "category"
+            widget: "select"
+            options: ["Originals", "Fall", "Christmas", "LE"]
+            required: true
+          
+          # Apparel Types (List)
+          - label: "Apparel Types",
+            name: "product_options",
+            widget: "list",
+            field: {label: "Type Name", widget: "select", options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]}
+          
+          # Color Options (List)
+          - label: "Available Colors", 
+            name: "colors", 
+            widget: "list", 
+            field: {label: "Color Name", widget: "string"}
+          
+          # Image URLs (List)
+          - label: "Image URLs", 
+            name: "imageUrls", 
+            widget: "list", 
+            field: {label: "Image URL", widget: "string", hint: "The path to the image, usually starting with /store/ or ../store/"}
