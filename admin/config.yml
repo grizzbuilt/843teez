@@ -20,23 +20,13 @@ collections:
 
         fields:
           - label: "Product List"
-            name: ""
+            name: "products"
             widget: "list"
-            allow_add: true
             summary: "{{fields.name}} (ID: {{fields.id}})"
 
             fields:
-              - label: "Product ID (Unique)"
-                name: "id"
-                widget: "string"
-                required: true
-                hint: "Example: C101, O105, LE101"
-
-              - label: "Product Name"
-                name: "name"
-                widget: "string"
-                required: true
-
+              - { label: "Product ID", name: "id", widget: "string", required: true }
+              - { label: "Product Name", name: "name", widget: "string", required: true }
               - label: "Category"
                 name: "category"
                 widget: "select"
@@ -45,8 +35,6 @@ collections:
                   - Fall
                   - Christmas
                   - LE
-                required: true
-
               - label: "Apparel Types"
                 name: "product_options"
                 widget: "list"
@@ -54,12 +42,7 @@ collections:
                   label: "Type"
                   name: "type"
                   widget: "select"
-                  options:
-                    - Tee_Shirt
-                    - Sweatshirt
-                    - Hoodie
-                    - Baseball_Tee
-
+                  options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]
               - label: "Available Colors"
                 name: "colors"
                 widget: "list"
@@ -67,9 +50,10 @@ collections:
                   label: "Color"
                   name: "color"
                   widget: "string"
-
               - label: "Image URLs"
                 name: "imageUrls"
                 widget: "list"
                 field:
                   label: "Image URL"
+                  name: "url"
+                  widget: "string"
