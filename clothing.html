@@ -250,7 +250,7 @@
         const initStore = async () => {
             try {
                 // Fetch ALL products from the new JSON file (../ goes up one directory from /store/)
-                const response = await fetch('../data/products.json'); 
+                const response = await fetch('/data/products.json'); 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -330,7 +330,7 @@
                     },
                     "offers": {
                         "@type": "Offer",
-                        "url": "https://843teez.com/store/originals.html",
+                        "url": "https://843teez.com/originals.html",
                         "priceCurrency": "USD",
                         "price": initialPrice.toFixed(2),
                         "availability": "https://schema.org/InStock",
