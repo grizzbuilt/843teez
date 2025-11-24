@@ -5,32 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>843 Teez Admin Panel</title>
 
-  <!-- Required Decap CMS stylesheet -->
-  <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/cms.css" />
+  <!-- Decap CMS Stylesheet (required) -->
+  <link rel="stylesheet" href="https://unpkg.com/decap-cms@3.9.0/dist/cms.css" />
 </head>
 <body>
 
-  <!-- Required root mount point -->
+  <!-- CMS Root Mount -->
   <div id="nc-root"></div>
 
-  <!-- Netlify Identity (login popup) -->
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  <!-- Decap CMS main script -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Decap CMS Script -->
+  <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
 
+  <!-- Initialize CMS only AFTER page and CMS fully load -->
   <script>
     window.CMS_MANUAL_INIT = true;
-    CMS.init();
 
-    // Auto-open login window if not logged in
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.open();
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+    document.addEventListener("DOMContentLoaded", function () {
+      CMS.init();
+
+      // Optional: auto-open login
+      if (window.netlifyI
