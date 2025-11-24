@@ -259,12 +259,13 @@
         const initStore = async () => {
             try {
                 // Fetch ALL products from the new JSON file (../ goes up one directory from /store/)
-                const response = await fetch('../data/products.json'); 
+                const response = await fetch('/data/products.json'); 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                allProducts = await response.json(); // Load data into the global array
-
+                 // Load data into the global array
+const data = await response.json();
+allProducts = data.products || [];
                 // Now that data is loaded, render the initial view
                 renderProducts(); 
                 updateCartSummary(); 
