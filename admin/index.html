@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>843 Teez Admin Panel</title>
 </head>
 <body>
+  <!-- Netlify Identity Widget (login UI) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/browser/decap-cms.js"></script>
 
+  <!-- Decap CMS core -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Root element for CMS -->
+  <div id="nc-root"></div>
+
+  <!-- Init CMS -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+    CMS.init();
+
+    // Optional: Automatically show login popup when not logged in
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.open();
+        }
+      });
+    }
+  </script>
 </body>
 </html>
