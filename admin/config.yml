@@ -10,62 +10,65 @@ public_folder: "/store"
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
-    type: "file"
     format: "json"
-    file: "data/products.json"   # Path to your JSON file
 
-    fields:
-      - label: "Products"
-        name: ""                 # IMPORTANT — empty name means the JSON is a top-level array
-        widget: "list"
+    files:
+      - name: "product_data"
+        label: "Products List"
+        file: "data/products.json"
 
         fields:
-          - label: "Product ID"
-            name: "id"
-            widget: "string"
-            required: true
-
-          - label: "Product Name"
-            name: "name"
-            widget: "string"
-            required: true
-
-          - label: "Category"
-            name: "category"
-            widget: "select"
-            options:
-              - "Originals"
-              - "Fall"
-              - "Christmas"
-              - "LE"
-            required: true
-
-          - label: "Product Types"
-            name: "product_options"
+          - label: "Products"
+            name: ""        # IMPORTANT: JSON is a top-level array
             widget: "list"
-            field:
-              label: "Type"
-              name: "type"
-              widget: "select"
-              options:
-                - "Tee_Shirt"
-                - "Sweatshirt"
-                - "Hoodie"
-                - "Baseball_Tee"
 
-          - label: "Colors"
-            name: "colors"
-            widget: "list"
-            field:
-              label: "Color"
-              name: "color"
-              widget: "string"
+            fields:
+              - label: "Product ID"
+                name: "id"
+                widget: "string"
+                required: true
 
-          - label: "Image URLs"
-            name: "imageUrls"
-            widget: "list"
-            field:
-              label: "Image URL"
-              name: "url"
-              widget: "string"
-              hint: "Use /store/filename.png or full URL"
+              - label: "Product Name"
+                name: "name"
+                widget: "string"
+                required: true
+
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - "Originals"
+                  - "Fall"
+                  - "Christmas"
+                  - "LE"
+                required: true
+
+              - label: "Product Types"
+                name: "product_options"
+                widget: "list"
+                field:
+                  label: "Type"
+                  name: "type"
+                  widget: "select"
+                  options:
+                    - "Tee_Shirt"
+                    - "Sweatshirt"
+                    - "Hoodie"
+                    - "Baseball_Tee"
+
+              - label: "Colors"
+                name: "colors"
+                widget: "list"
+                field:
+                  label: "Color"
+                  name: "color"
+                  widget: "string"
+
+              - label: "Image URLs"
+                name: "imageUrls"
+                widget: "list"
+                field:
+                  label: "Image URL"
+                  name: "url"
+                  widget: "string"
+                  hint: "Use /store/image.png or full URL"
