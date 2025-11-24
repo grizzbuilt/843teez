@@ -258,7 +258,7 @@
         const initStore = async () => {
             try {
                 // Fetch ALL products from the new JSON file 
-                const response = await fetch('../data/products.json'); 
+                const response = await fetch('/data/products.json'); 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
