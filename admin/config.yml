@@ -11,7 +11,7 @@ collections:
   - name: "store_products"
     label: "🛒 Store Products"
     files:
-      - label: "Products"
+      - label: "Product Catalog"
         name: "products_file"
         file: "data/products.json"
 
@@ -20,8 +20,9 @@ collections:
 
         fields:
           - label: "Product List"
-            name: "products"
+            name: ""
             widget: "list"
+            allow_add: true
             summary: "{{fields.name}} (ID: {{fields.id}})"
 
             fields:
@@ -29,32 +30,46 @@ collections:
                 name: "id"
                 widget: "string"
                 required: true
-                hint: "Example: C101 or O105."
+                hint: "Example: C101, O105, LE101"
 
               - label: "Product Name"
                 name: "name"
                 widget: "string"
                 required: true
 
-              - label: "Category Tag"
+              - label: "Category"
                 name: "category"
                 widget: "select"
-                options: ["Originals", "Fall", "Christmas", "LE"]
+                options:
+                  - Originals
+                  - Fall
+                  - Christmas
+                  - LE
                 required: true
 
               - label: "Apparel Types"
                 name: "product_options"
                 widget: "list"
                 field:
-                  label: "Type Name"
+                  label: "Type"
                   name: "type"
                   widget: "select"
-                  options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]
+                  options:
+                    - Tee_Shirt
+                    - Sweatshirt
+                    - Hoodie
+                    - Baseball_Tee
 
               - label: "Available Colors"
                 name: "colors"
                 widget: "list"
                 field:
-                  label: "Color Name"
+                  label: "Color"
                   name: "color"
                   widget: "string"
+
+              - label: "Image URLs"
+                name: "imageUrls"
+                widget: "list"
+                field:
+                  label: "Image URL"
