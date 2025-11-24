@@ -17,10 +17,9 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Header bar */
     .admin-header {
       width: 100%;
-      background: #008bba; /* 843 Teez coastal teal */
+      background: #008bba;
       color: white;
       padding: 15px 20px;
       display: flex;
@@ -54,7 +53,6 @@
       background: rgba(255,255,255,0.2);
     }
 
-    /* CMS container spacing */
     #nc-root {
       margin-top: 20px;
     }
@@ -65,7 +63,7 @@
 
   <!-- Custom Branded Header -->
   <div class="admin-header">
-    <img src="/store/843teez-logo.png" alt="843 Teez Logo" />
+    <img src="/843teezlogo.png" alt="843 Teez Logo" />
     <span class="admin-header-title">843 Teez — Admin Panel</span>
     <a class="return-link" href="https://843teez.com" target="_blank">Return to Store →</a>
   </div>
@@ -76,13 +74,16 @@
   <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+  <!-- MUST COME BEFORE CMS SCRIPT — prevents auto-init -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+
   <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
 
-  <!-- Initialize CMS -->
+  <!-- Initialize CMS AFTER it loads -->
   <script>
-    window.CMS_MANUAL_INIT = true;
-
     document.addEventListener("DOMContentLoaded", function () {
       CMS.init();
 
@@ -93,5 +94,6 @@
       }
     });
   </script>
+
 </body>
 </html>
