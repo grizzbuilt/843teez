@@ -1,57 +1,60 @@
 backend:
   name: git-gateway
-  branch: main # Confirmed branch name
-  
-# Set deployment environment for Netlify
-publish_mode: editorial_workflow 
+  branch: main
 
-# === Media Configuration: Uploads go directly to /store/ folder ===
+publish_mode: editorial_workflow
+
 media_folder: "store"
-public_folder: "/store" # Tells the CMS the public URL for new uploads is /store/
+public_folder: "/store"
 
-# === Store Data Collection ===
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
-    # CRITICAL: This is the file the CMS will manage (located at project root /data/products.json)
-    folder: "data" 
-    file: "products.json" 
+    files:
+      - label: "Products"
+        name: "products_file"
+        file: "data/products.json"
 
-    editor:
-      preview: false # Disables live preview for complex dynamic rendering
+        editor:
+          preview: false
 
-    fields:
-      - label: "Product List"
-        name: "products"
-        widget: "list"
-        summary: "{{fields.name}} (ID: {{fields.id}})"
-        
         fields:
-          # Product Identification and Core Details
-          - {label: "Product ID (Unique)", name: "id", widget: "string", hint: "Example: C101 or O105.", required: true}
-          - {label: "Product Name", name: "name", widget: "string", required: true}
-          
-          # FIX APPLIED HERE: Nests the options list correctly.
-          - label: "Category Tag"
-            name: "category"
-            widget: "select"
-            options: ["Originals", "Fall", "Christmas", "LE"]
-            required: true
-          
-          # Apparel Types (List)
-          - label: "Apparel Types",
-            name: "product_options",
-            widget: "list",
-            field: {label: "Type Name", widget: "select", options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]}
-          
-          # Color Options (List)
-          - label: "Available Colors", 
-            name: "colors", 
-            widget: "list", 
-            field: {label: "Color Name", widget: "string"}
-          
-          # Image URLs (List)
-          - label: "Image URLs", 
-            name: "imageUrls", 
-            widget: "list", 
-            field: {label: "Image URL", widget: "string", hint: "The path to the image, usually starting with /store/ or ../store/"}
+          - label: "Product List"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} (ID: {{fields.id}})"
+
+            fields:
+              - label: "Product ID (Unique)"
+                name: "id"
+                widget: "string"
+                required: true
+                hint: "Example: C101 or O105."
+
+              - label: "Product Name"
+                name: "name"
+                widget: "string"
+                required: true
+
+              - label: "Category Tag"
+                name: "category"
+                widget: "select"
+                options: ["Originals", "Fall", "Christmas", "LE"]
+                required: true
+
+              - label: "Apparel Types"
+                name: "product_options"
+                widget: "list"
+                field:
+                  label: "Type Name"
+                  name: "type"
+                  widget: "select"
+                  options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]
+
+              - label: "Available Colors"
+                name: "colors"
+                widget: "list"
+                field:
+                  label: "Color Name"
+                  name: "color"
+                  widget: "string"
