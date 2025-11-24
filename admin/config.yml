@@ -8,8 +8,6 @@ publish_mode: editorial_workflow
 # === Media Configuration: Uploads go directly to /store/ folder ===
 media_folder: "store"
 public_folder: "/store" # Tells the CMS the public URL for new uploads is /store/
-# NOTE: Existing image paths in products.json must start with "../store/" 
-# for the shop pages to display them correctly from the /data/ folder's perspective.
 
 # === Store Data Collection ===
 collections:
@@ -32,6 +30,8 @@ collections:
           # Product Identification and Core Details
           - {label: "Product ID (Unique)", name: "id", widget: "string", hint: "Example: C101 or O105.", required: true}
           - {label: "Product Name", name: "name", widget: "string", required: true}
+          
+          # FIX APPLIED HERE: Nests the options list correctly.
           - label: "Category Tag"
             name: "category"
             widget: "select"
