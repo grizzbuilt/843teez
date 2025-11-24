@@ -1,0 +1,7 @@
+/
+  _redirects
+  admin/
+    index.html
+    config.yml
+  data/
+    products.json
