@@ -262,7 +262,10 @@
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                allProducts = await response.json(); 
+            
+                const data = await response.json();
+                allProducts = data.products || [];
+
 
                 // Now that data is loaded, render the initial view
                 renderProducts(); 
