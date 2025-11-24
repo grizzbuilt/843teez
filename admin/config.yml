@@ -19,8 +19,10 @@ collections:
 
         fields:
           - label: "Products"
-            name: ""        # IMPORTANT: JSON is a top-level array
+            name: "items"         # REQUIRED for Decap to bind array
             widget: "list"
+            allow_add: true
+            collapsed: false
 
             fields:
               - label: "Product ID"
