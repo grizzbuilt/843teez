@@ -81,15 +81,45 @@
     </div>
 </header>
 
-<!-- PRODUCT GRID -->
-<h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
-    All Apparel Designs
-</h2>
+<!-- GRID WRAPPER -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-<div id="product-grid"
-     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <p class="col-span-3 text-center text-gray-500 pt-8">Loading products...</p>
-</div>
+    <!-- LEFT: PRODUCTS (3 COLUMNS) -->
+    <div class="lg:col-span-3">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
+            All Apparel Designs
+        </h2>
+
+        <div id="product-grid"
+             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <p class="col-span-3 text-center text-gray-500 pt-8">Loading products...</p>
+        </div>
+    </div>
+
+    <!-- RIGHT: FLOATING CART SUMMARY -->
+    <!-- ADDED CART SUMMARY -->
+    <div class="lg:col-span-1">
+        <div id="cart-summary-sticky"
+             class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+            <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
+            <p class="text-sm text-gray-600 mb-2">
+                Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
+            </p>
+            <p class="text-xl font-extrabold text-[#003466] mb-4">
+                Est. Total: <span id="summary-cart-total">$0.00</span>
+            </p>
+
+            <a href="cart.html"
+               id="view-cart-button"
+               class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md disabled:opacity-50 btn-primary text-center"
+               disabled>
+                Review & Checkout
+            </a>
+        </div>
+    </div>
+    <!-- END CART SUMMARY -->
+
+</div><!-- END GRID -->
 
 <!-- FOOTER -->
 <footer class="text-center mt-12 pt-6 border-t text-[#003466] text-xs space-y-1">
@@ -133,19 +163,38 @@ const cycleImage = el => {
 };
 
 /* ---------------------------------------------
-   CART SUMMARY
+   UPDATE CART SUMMARY
 ------------------------------------------------ */
 const updateCartSummary = () => {
-    const total = cart.reduce((sum, i) => sum + i.quantity, 0);
-    document.getElementById("global-item-count").textContent = total;
+    let subtotal = 0;
+    let totalItems = 0;
 
-    const btn = document.getElementById("global-view-cart-button");
-    if (total === 0) btn.setAttribute("disabled", "true");
-    else btn.removeAttribute("disabled");
+    cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+        totalItems += item.quantity;
+    });
+
+    document.getElementById("summary-item-count").textContent = totalItems;
+    document.getElementById("global-item-count").textContent = totalItems;
+
+    const taxAmount = subtotal * 0.08;
+    document.getElementById("summary-cart-total").textContent =
+        formatCurrency(subtotal + taxAmount);
+
+    const btn = document.getElementById("view-cart-button");
+    const globalBtn = document.getElementById("global-view-cart-button");
+
+    if (totalItems === 0) {
+        btn.setAttribute("disabled", "true");
+        globalBtn.setAttribute("disabled", "true");
+    } else {
+        btn.removeAttribute("disabled");
+        globalBtn.removeAttribute("disabled");
+    }
 };
 
 /* ---------------------------------------------
-   LOAD PRODUCT DATA
+   LOAD PRODUCTS
 ------------------------------------------------ */
 const initStore = async () => {
     try {
@@ -161,7 +210,7 @@ const initStore = async () => {
 };
 
 /* ---------------------------------------------
-   RENDER ALL PRODUCTS
+   RENDER PRODUCTS
 ------------------------------------------------ */
 const renderProducts = () => {
     const grid = document.getElementById("product-grid");
@@ -202,3 +251,4 @@ window.onload = initStore;
 
 </body>
 </html>
+
