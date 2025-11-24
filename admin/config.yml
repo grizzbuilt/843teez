@@ -5,8 +5,8 @@ backend:
   
 publish_mode: editorial_workflow # Recommended for review before publishing
 
-media_folder: "public/images" # Where Decap CMS should upload images (You might need to adjust this path)
-public_folder: "/images"
+media_folder: "/store" # Where Decap CMS should upload images (You might need to adjust this path)
+public_folder: "/store"
 
 # === DEFINE COLLECTIONS (Your Store Data) ===
 collections:
