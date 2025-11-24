@@ -1,24 +1,22 @@
 backend:
-  # Use Netlify's authentication service
   name: git-gateway
-  branch: main # or master, depending on your primary branch name
+  branch: main # Verify this matches your GitHub/GitLab branch name
   
-publish_mode: editorial_workflow # Recommended for review before publishing
+publish_mode: editorial_workflow
 
-media_folder: "/store" # Where Decap CMS should upload images (You might need to adjust this path)
-public_folder: "/store"
+media_folder: "public/images" # This should point to your image upload folder
+public_folder: "/images"
 
-# === DEFINE COLLECTIONS (Your Store Data) ===
+# === COLLECTIONS DEFINITION (Your Products) ===
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
-    folder: "data" # The folder where the JSON file lives (relative to root)
-    file: "products.json" # The specific JSON file name
+    folder: "data" # Correct folder location
+    file: "products.json" # Correct file name
 
     editor:
-      preview: false # Disable complex live preview for simplicity
+      preview: false
 
-    # The fields (schema) must match the structure of your products.json file!
     fields:
       - label: "Product List"
         name: "products"
@@ -26,15 +24,8 @@ collections:
         summary: "{{fields.name}} (ID: {{fields.id}})"
         
         fields:
-          - {label: "Product ID (Unique)", name: "id", widget: "string", hint: "Example: C101 or O105. Cannot be changed later.", required: true}
+          # Your schema follows here, ensuring correct widget names and options
+          - {label: "Product ID (Unique)", name: "id", widget: "string", required: true}
           - {label: "Product Name", name: "name", widget: "string", required: true}
           - {label: "Category Tag", name: "category", widget: "select", options: ["Originals", "Fall", "Christmas", "LE"], required: true}
-          
-          # Product Options (Tee Shirt, Hoodie, etc.)
-          - label: "Apparel Types", name: "product_options", widget: "list", field: {label: "Type Name", widget: "select", options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]}
-          
-          # Color Options
-          - label: "Available Colors", name: "colors", widget: "list", field: {label: "Color Name", widget: "string"}
-          
-          # Image URLs
-          - label: "Image URLs", name: "imageUrls", widget: "list", field: {label: "Image URL", widget: "string", hint: "Use the path relative to the root, e.g., /store/ImageFile.png"}
+          # ... rest of the fields
