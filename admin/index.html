@@ -5,12 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>843 Teez Admin Panel</title>
 
-  <!-- Decap CMS Stylesheet (required) -->
+  <!-- Decap CMS Stylesheet -->
   <link rel="stylesheet" href="https://unpkg.com/decap-cms@3.9.0/dist/cms.css" />
+
+  <!-- Branding Styles -->
+  <style>
+    body {
+      background: #f3f9fc;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Header bar */
+    .admin-header {
+      width: 100%;
+      background: #008bba; /* 843 Teez coastal teal */
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .admin-header img {
+      height: 42px;
+    }
+
+    .admin-header-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .return-link {
+      margin-left: auto;
+      font-size: 0.95rem;
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.6);
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all .2s ease-in-out;
+    }
+
+    .return-link:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* CMS container spacing */
+    #nc-root {
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- CMS Root Mount -->
+  <!-- Custom Branded Header -->
+  <div class="admin-header">
+    <img src="/store/843teez-logo.png" alt="843 Teez Logo" />
+    <span class="admin-header-title">843 Teez — Admin Panel</span>
+    <a class="return-link" href="https://843teez.com" target="_blank">Return to Store →</a>
+  </div>
+
+  <!-- CMS Mount Point -->
   <div id="nc-root"></div>
 
   <!-- Netlify Identity Widget -->
@@ -19,14 +79,13 @@
   <!-- Decap CMS Script -->
   <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
 
-  <!-- Initialize CMS only AFTER page and CMS fully load -->
+  <!-- Initialize CMS -->
   <script>
     window.CMS_MANUAL_INIT = true;
 
     document.addEventListener("DOMContentLoaded", function () {
       CMS.init();
 
-      // Optional: auto-open login
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) window.netlifyIdentity.open();
@@ -34,6 +93,5 @@
       }
     });
   </script>
-
 </body>
 </html>
