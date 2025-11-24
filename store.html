@@ -255,26 +255,31 @@
 
         // --- 4. DATA FETCHING AND RENDERING ---
         
-        const initStore = async () => {
-            try {
-                // Fetch ALL products from the new JSON file 
-                const response = await fetch('/data/products.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-            
-                const data = await response.json();
-                allProducts = data.products || [];
+const initStore = async () => {
+    try {
+        // Fetch JSON file
+        const response = await fetch('../data/products.json');
 
-
-                // Now that data is loaded, render the initial view
-                renderProducts(); 
-                updateCartSummary(); 
-            } catch (e) {
-                console.error("Could not load products:", e);
-                document.getElementById('product-grid').innerHTML = '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists and is valid.</p>';
-            }
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+
+        // Parse wrapped JSON
+        const jsonData = await response.json();
+
+        // Decap CMS now wraps the array like { products: [...] }
+        allProducts = jsonData.products || [];
+
+        // After loading, render products and update cart
+        renderProducts();
+        updateCartSummary();
+
+    } catch (e) {
+        console.error("Could not load products:", e);
+        document.getElementById('product-grid').innerHTML =
+            '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists and is valid.</p>';
+    }
+};
 
         const filterProducts = (category) => {
             // NOTE: This function is now only used for the 'All Designs' button on this page.
