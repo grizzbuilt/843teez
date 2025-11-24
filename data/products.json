@@ -1,20 +1,21 @@
-[
+{
+  "products": [
     {
-        "id": "O101",
-        "name": "City of Conway",
-        "category": "Originals",
-        "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-        "colors": ["Heather_Gray", "Yellow"],
-        "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"]
+      "id": "O101",
+      "name": "City of Conway",
+      "category": "Originals",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Heather_Gray", "Yellow"],
+      "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"]
     },
     {
-        "id": "O102",
-        "name": "Conway SC Tiger",
-        "category": "Originals",
-        "product_options": ["Baseball_Tee"],
-        "colors": ["Black/White"],
-        "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"]
-    },
+      "id": "O102",
+      "name": "Conway SC Tiger",
+      "category": "Originals",
+      "product_options": ["Baseball_Tee"],
+      "colors": ["Black/White"],
+      "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"]
+    }
     {
         "id": "O103",
         "name": "Historic Conway SC",
