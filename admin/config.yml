@@ -4,8 +4,8 @@ backend:
   
 publish_mode: editorial_workflow
 
-media_folder: "public/images" # This should point to your image upload folder
-public_folder: "/images"
+media_folder: "/store" # This should point to your image upload folder
+public_folder: "/store"
 
 # === COLLECTIONS DEFINITION (Your Products) ===
 collections:
