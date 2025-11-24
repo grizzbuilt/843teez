@@ -10,34 +10,62 @@ public_folder: "/store"
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
-    file: "data/products.json"      # <-- SINGLE FILE, not a folder
-    editor:
-      preview: false
+    type: "file"
+    format: "json"
+    file: "data/products.json"   # Path to your JSON file
+
     fields:
-      - label: "Product List"
-        name: "products"
+      - label: "Products"
+        name: ""                 # IMPORTANT — empty name means the JSON is a top-level array
         widget: "list"
-        summary: "{{fields.name}} (ID: {{fields.id}})"
+
         fields:
-          - {label: "Product ID (Unique)", name: "id", widget: "string", required: true}
-          - {label: "Product Name", name: "name", widget: "string", required: true}
-          - label: "Category Tag"
-            name: "category"
-            widget: "select"
-            options: ["Originals", "Fall", "Christmas", "LE"]
+          - label: "Product ID"
+            name: "id"
+            widget: "string"
             required: true
 
-          - label: "Apparel Types"
+          - label: "Product Name"
+            name: "name"
+            widget: "string"
+            required: true
+
+          - label: "Category"
+            name: "category"
+            widget: "select"
+            options:
+              - "Originals"
+              - "Fall"
+              - "Christmas"
+              - "LE"
+            required: true
+
+          - label: "Product Types"
             name: "product_options"
             widget: "list"
-            field: {label: "Type", widget: "string"}
+            field:
+              label: "Type"
+              name: "type"
+              widget: "select"
+              options:
+                - "Tee_Shirt"
+                - "Sweatshirt"
+                - "Hoodie"
+                - "Baseball_Tee"
 
-          - label: "Available Colors"
+          - label: "Colors"
             name: "colors"
             widget: "list"
-            field: {label: "Color", widget: "string"}
+            field:
+              label: "Color"
+              name: "color"
+              widget: "string"
 
           - label: "Image URLs"
             name: "imageUrls"
             widget: "list"
-            field: {label: "Image URL", widget: "string"}
+            field:
+              label: "Image URL"
+              name: "url"
+              widget: "string"
+              hint: "Use /store/filename.png or full URL"
