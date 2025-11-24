@@ -4,16 +4,16 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "store"
-public_folder: "/store"
+media_folder: "store"        # Where uploaded images are saved (relative to repo root)
+public_folder: "/store"      # Public URL path
 
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
     files:
-      - label: "Product Catalog"
-        name: "products_file"
-        file: "data/products.json"
+      - label: "Products"
+        name: "products"
+        file: "store/data/products.json"   # IMPORTANT: products.json MUST be inside /store/data
 
         editor:
           preview: false
@@ -25,8 +25,16 @@ collections:
             summary: "{{fields.name}} (ID: {{fields.id}})"
 
             fields:
-              - { label: "Product ID", name: "id", widget: "string", required: true }
-              - { label: "Product Name", name: "name", widget: "string", required: true }
+              - label: "Product ID"
+                name: "id"
+                widget: "string"
+                required: true
+
+              - label: "Product Name"
+                name: "name"
+                widget: "string"
+                required: true
+
               - label: "Category"
                 name: "category"
                 widget: "select"
@@ -35,6 +43,7 @@ collections:
                   - Fall
                   - Christmas
                   - LE
+
               - label: "Apparel Types"
                 name: "product_options"
                 widget: "list"
@@ -42,7 +51,12 @@ collections:
                   label: "Type"
                   name: "type"
                   widget: "select"
-                  options: ["Tee_Shirt", "Sweatshirt", "Hoodie", "Baseball_Tee"]
+                  options:
+                    - Tee_Shirt
+                    - Sweatshirt
+                    - Hoodie
+                    - Baseball_Tee
+
               - label: "Available Colors"
                 name: "colors"
                 widget: "list"
@@ -50,6 +64,7 @@ collections:
                   label: "Color"
                   name: "color"
                   widget: "string"
+
               - label: "Image URLs"
                 name: "imageUrls"
                 widget: "list"
@@ -57,3 +72,4 @@ collections:
                   label: "Image URL"
                   name: "url"
                   widget: "string"
+                  hint: "Path to image (ex: ../store/filename.png)"
