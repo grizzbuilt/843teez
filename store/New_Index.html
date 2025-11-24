@@ -147,10 +147,11 @@
 
                 <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
                     <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
-                    <button onclick="filterProducts('Originals')" class="category-btn px-4">843 Teez Originals</button>
-                    <button onclick="filterProducts('Christmas')" class="category-btn px-4">Christmas</button>
-                    <button onclick="filterProducts('Fall')" class="category-btn px-4">Fall & Halloween</button>
-                    <button onclick="filterProducts('LE')" class="category-btn px-4">Limited Edition Teez</button>
+                    
+                    <button onclick="window.location.href='originals.html'" class="category-btn px-4">843 Teez Originals</button>
+                    <button onclick="window.location.href='christmas.html'" class="category-btn px-4">Christmas</button>
+                    <button onclick="window.location.href='fall.html'" class="category-btn px-4">Fall & Halloween</button>
+                    <button onclick="window.location.href='limited_edition.html'" class="category-btn px-4">Limited Edition Teez</button>
                     </div>
 
                 <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -212,7 +213,7 @@
 
         // --- 2. GLOBAL STATE ---
         let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        let allProducts = []; // <-- Will hold the fetched data
+        let allProducts = []; 
         let activeFilter = 'all';
 
         // --- 3. CORE HELPER FUNCTIONS (UNCHANGED) ---
@@ -256,46 +257,39 @@
         
         const initStore = async () => {
             try {
-                // *** CRITICAL CHANGE: Fetch the JSON data from the root data directory ***
-                // Path is ../data/products.json because /store/index.html is one directory deeper than /data/products.json
+                // Fetch ALL products from the new JSON file 
                 const response = await fetch('../data/products.json'); 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                allProducts = await response.json(); // Load data into the global array
+                allProducts = await response.json(); 
 
                 // Now that data is loaded, render the initial view
                 renderProducts(); 
                 updateCartSummary(); 
             } catch (e) {
                 console.error("Could not load products:", e);
-                document.getElementById('product-grid').innerHTML = '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists.</p>';
+                document.getElementById('product-grid').innerHTML = '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists and is valid.</p>';
             }
         }
 
         const filterProducts = (category) => {
+            // NOTE: This function is now only used for the 'All Designs' button on this page.
             activeFilter = category;
             renderProducts();
 
-            // Update button states
-            document.querySelectorAll('.category-btn').forEach(btn => {
+            // Visually activate the 'All Designs' button
+            document.querySelectorAll('#category-filter button').forEach(btn => {
                 btn.classList.remove('active');
             });
-            // Find the button that was clicked
-            const clickedButton = Array.from(document.querySelectorAll('.category-btn')).find(btn => btn.textContent.toLowerCase().includes(category.toLowerCase()));
-            if (clickedButton) {
-                 clickedButton.classList.add('active');
-            } else {
-                 // Re-select 'All Designs' if the filter button isn't found (for pages that don't use buttons)
-                 document.querySelector('.category-btn').classList.add('active');
-            }
+            document.querySelector('#category-filter button:first-child').classList.add('active');
         };
 
         const renderProducts = () => {
             const grid = document.getElementById('product-grid');
             let productSchema = []; 
 
-            // Filter against the globally loaded 'allProducts' array
+            // Filter against the globally loaded 'allProducts' array 
             const filteredProducts = activeFilter === 'all'
                 ? allProducts
                 : allProducts.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
@@ -309,7 +303,6 @@
             grid.innerHTML = filteredProducts.map(product => {
                 const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
                 
-                // --- Product Type Options ---
                 const typeOptionsHTML = product.product_options.map(type => {
                     const basePrice = APPAREL_BASE_PRICES[type] || product.price || 0.00;
                     const priceText = basePrice > 0 ? ` - ${formatCurrency(basePrice)}` : '';
@@ -321,7 +314,6 @@
                         startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.00;
                 }
 
-                // --- Size Options ---
                 let sizeOptionsHTML = '';
                 let sizeSelectorHiddenClass = 'hidden';
 
@@ -336,23 +328,22 @@
                     sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
                 }
 
-                // --- Color Options ---
                 const colorOptions = product.colors.map(color => {
                     return `<option value="${color}">${color}</option>`;
                 }).join('');
 
                 const imageCount = product.imageUrls.length;
                 
-                // --- Dynamic Product Schema Generation ---
                 const initialType = product.product_options[0];
                 const initialPrice = APPAREL_BASE_PRICES[initialType] || product.price || 0.00;
 
+                // --- Schema Generation adjusted for the main index page ---
                 productSchema.push({
                     "@context": "https://schema.org",
                     "@type": "Product",
                     "name": product.name,
                     "image": product.imageUrls[0],
-                    "description": `Custom ${initialType} with the ${product.name} design. Available in sizes S-${ALL_SIZES[ALL_SIZES.length - 1]}. Printed locally in Conway, SC.`,
+                    "description": `Custom ${initialType} with the ${product.name} design. Printed locally in Conway, SC.`,
                     "brand": {
                         "@type": "Brand", "name": "843 Teez"
                     },
@@ -362,14 +353,6 @@
                         "priceCurrency": "USD",
                         "price": initialPrice.toFixed(2),
                         "availability": "https://schema.org/InStock",
-                        "shippingDetails": {
-                            "@type": "ShippingDeliveryOptions",
-                            "shippingRate": {
-                                "@type": "MonetaryAmount",
-                                "value": 8.00,
-                                "currency": "USD"
-                            }
-                        }
                     }
                 });
 
@@ -474,7 +457,6 @@
         };
 
         const addToCart = (productId) => {
-            // Find the product in the globally loaded array
             const product = allProducts.find(p => p.id === productId); 
             if (!product) return;
 
@@ -486,7 +468,6 @@
             const colorSelector = document.getElementById(`color-${productId}`);
             const selectedColor = colorSelector.value;
 
-            // Validation (unchanged)
             const needsSizeValidation = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
 
             if (!selectedType) { showMessage('Please select a Product Type.', 'error'); return; }
@@ -496,7 +477,6 @@
             const basePrice = parseFloat(basePriceElement.dataset.basePrice);
             const finalPrice = getProductPriceWithSize(basePrice, selectedSize);
 
-            // Cart Logic (unchanged)
             const cartItemIndex = cart.findIndex(item =>
                 item.id === productId && item.type === selectedType &&
                 item.size === selectedSize && item.color === selectedColor
@@ -519,23 +499,7 @@
 
         // --- 5. INITIALIZATION ---
         window.onload = () => {
-            // *** CRITICAL CHANGE: Now calling initStore instead of renderProducts directly ***
             initStore(); 
-            
-            // Re-bind click handlers for the category buttons to the JS filter function
-            document.querySelector('.category-btn.active').classList.remove('active');
-            document.querySelector('.category-btn').classList.add('active'); // Set 'All Designs' as active
-            
-            document.querySelector('#category-filter').addEventListener('click', (e) => {
-                const target = e.target;
-                if (target.tagName === 'BUTTON') {
-                    // Prevent button click from immediately navigating away if it's the ALL button
-                    if (target.textContent.toLowerCase().includes('all designs')) {
-                        e.preventDefault(); 
-                        filterProducts('all');
-                    }
-                }
-            });
         };
     </script>
 </body>
