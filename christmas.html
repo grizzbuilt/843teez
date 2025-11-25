@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4PVF756J01');
+        gtag('js', new Date()); gtag('config', 'G-4PVF756J01');
     </script>
 
     <meta charset="UTF-8" />
@@ -16,28 +16,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <title>843 Teez | Christmas Collection</title>
-    <meta name="description" content="Shop the official 843 Teez Christmas collection, including holiday-themed tees, sweatshirts, and hoodies." />
 
     <style>
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #f8fcff;
             background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
             background-size: 300px;
+            background-repeat: repeat;
         }
-        .btn-primary { background-color: #003466; }
-        .btn-primary:hover { background-color: #007c9e; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-
-        .product-image-container { position: relative; cursor: pointer; user-select: none; }
-        .product-image-container .image-overlay {
-            position: absolute; inset: 0; background-color: rgba(0,0,0,0.4);
-            opacity: 0; transition: opacity 0.3s;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-weight: bold; border-radius: 0.5rem;
-            text-align: center; padding: 1rem;
+        .btn-primary { background: #003466; }
+        .btn-primary:hover { background: #007c9e; }
+        .product-image-container { position: relative; cursor: pointer; }
+        .image-overlay {
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,0.4);
+            opacity: 0; transition: .3s;
+            color: white; font-weight: bold;
+            display:flex;align-items:center;justify-content:center;
         }
         .product-image-container:hover .image-overlay { opacity: 1; }
     </style>
@@ -46,43 +42,52 @@
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
 <!-- Banner -->
-<div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base z-50">
-    <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
-    <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
-        <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
-        <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
-    </p>
+<div class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md fixed top-0 z-50">
+    <p class="font-bold mb-1">Big things are happening! New 843 Teez online store is under construction.</p>
 </div>
-<!-- MAIN WRAPPER -->
-<div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
 
+<!-- Main -->
+<div class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
+
+    <!-- Header -->
     <header class="text-center mb-8">
-        <img src="../843teezlogo.png" alt="843 Teez Logo" class="max-w-xs mx-auto mb-4 w-5/6" />
+        <img src="/843teezlogo.png" class="max-w-xs mx-auto mb-4" />
 
         <h1 class="text-3xl font-extrabold text-[#007c9e]">Christmas Collection</h1>
 
         <p class="text-sm text-gray-600">Festive holiday tees & hoodies printed locally in Conway, SC.</p>
 
-        <!-- NAV -->
-        <nav class="mt-4 pt-3 border-t border-gray-300">
-            <a href="store.html" class="mx-2 text-[#003466] hover:text-red-500 font-bold">🛒 All Designs</a> |
-            <a href="originals.html" class="mx-2 text-[#003466] hover:text-red-500 font-bold">843 Teez Originals</a> |
-            <a href="christmas.html" class="mx-2 text-red-500 underline font-bold">Christmas</a> |
-            <a href="fall.html" class="mx-2 text-[#003466] hover:text-red-500 font-bold">Fall</a> |
-            <a href="limited_edition.html" class="mx-2 text-[#003466] hover:text-red-500 font-bold">Limited Edition</a>
+        <a href="cart.html"
+           id="global-view-cart-button"
+           class="inline-flex bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
+           disabled>
+            Cart (<span id="global-item-count">0</span>)
+        </a>
+
+        <nav class="mt-6 pt-4 border-t border-gray-300 font-bold text-[#003466]">
+            <a href="store.html">🛒 All Designs</a> |
+            <a href="originals.html">843 Teez Originals</a> |
+            <a href="christmas.html" class="text-red-600 underline">Christmas</a> |
+            <a href="fall.html">Fall</a> |
+            <a href="limited_edition.html">Limited Edition</a>
         </nav>
 
         <div class="mt-4">
-            <a href="../index.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center w-fit mx-auto">
+            <a href="/index.html"
+               class="text-[#007c9e] hover:text-[#003466] font-semibold block">
                 ← Back to Main Site
             </a>
         </div>
     </header>
 
-    <div id="shop-view" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+        <!-- PRODUCTS -->
         <div class="lg:col-span-3">
 
-            <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">Apparel Designs</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
+                Apparel Designs
+            </h2>
 
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <p class="text-gray-500 text-center col-span-3 pt-8">Loading Christmas products...</p>
@@ -91,15 +96,33 @@
 
         <!-- CART SUMMARY -->
         <div class="lg:col-span-1">
-            <div id="cart-summary-sticky" class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+            <div class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+
                 <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
-                <p class="text-sm text-gray-600">Total Items: <span id="summary-item-count">0</span></p>
-                <p class="text-xl font-bold text-[#003466] mb-4">Est. Total: <span id="summary-cart-total">$0.00</span></p>
+
+                <p class="text-sm text-gray-600 mb-2">
+                    Total Items:
+                    <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
+                </p>
+
+                <p class="text-xl font-extrabold text-[#003466] mb-4">
+                    Est. Total:
+                    <span id="summary-cart-total">$0.00</span>
+                </p>
+
+                <a href="cart.html"
+                   id="view-cart-button"
+                   class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all btn-primary disabled:opacity-50"
+                   disabled>
+                    Review & Checkout
+                </a>
             </div>
         </div>
+
     </div>
 
-    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold">
+    <!-- FOOTER -->
+    <footer class="text-center mt-12 pt-6 border-t text-[#003466] text-xs font-semibold">
         <p>843 Teez™ is a <a href="https://grizzbuilt.com" class="text-[#007c9e] hover:underline" target="_blank">GrizzBuilt™</a> brand.</p>
         <p>Woman & Veteran-owned.</p>
         <p>&copy; 2025 843 Teez™</p>
@@ -108,24 +131,86 @@
 
 <!-- JS -->
 <script>
-const CATEGORY_FILTER = "christmas";  // 💥 FIXED
+/* CATEGORY */
+const CATEGORY_FILTER = "christmas";
+
+/* STATE */
 let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 let allProducts = [];
 
-const initStore = async () => {
-    try {
-        const response = await fetch('/data/products.json');
-        const json = await response.json();
-        allProducts = json.products || [];
+/* Helpers */
+const formatCurrency = amt => `$${amt.toFixed(2)}`;
 
-        renderProducts();
-    } catch (e) {
-        console.error(e);
-        document.getElementById("product-grid").innerHTML =
-            '<p class="text-red-600 text-center col-span-3">Error loading products.</p>';
+const computePrice = (product, type, size) => {
+    const base = product.base_prices?.[type] ?? 0;
+    const add  = product.size_upcharges?.[size] ?? 0;
+    return base + add;
+};
+
+const cycleImage = el => {
+    const img = el.querySelector("img");
+    const urls = JSON.parse(img.dataset.imageUrls);
+    let i = parseInt(img.dataset.currentIndex);
+    i = (i + 1) % urls.length;
+    img.src = urls[i];
+    img.dataset.currentIndex = i;
+};
+
+/* Cart Summary */
+const updateCartSummary = () => {
+    let totalItems = 0;
+    let subtotal = 0;
+
+    cart.forEach(it => {
+        subtotal += it.price * it.qty;
+        totalItems += it.qty;
+    });
+
+    const tax = subtotal * 0.08;
+
+    document.getElementById("summary-item-count").textContent = totalItems;
+    document.getElementById("global-item-count").textContent = totalItems;
+    document.getElementById("summary-cart-total").textContent =
+        formatCurrency(subtotal + tax);
+
+    const btn = document.getElementById("view-cart-button");
+    const headerBtn = document.getElementById("global-view-cart-button");
+
+    if (totalItems === 0) {
+        btn.setAttribute("disabled","true");
+        headerBtn.setAttribute("disabled","true");
+    } else {
+        btn.removeAttribute("disabled");
+        headerBtn.removeAttribute("disabled");
     }
 };
 
+/* Add to Cart */
+const addToCart = item => {
+    const existing = cart.find(
+        c => c.id === item.id &&
+             c.apparelType === item.apparelType &&
+             c.color === item.color &&
+             c.size === item.size
+    );
+
+    if (existing) existing.qty++;
+    else cart.push(item);
+
+    localStorage.setItem("843teez_cart", JSON.stringify(cart));
+    updateCartSummary();
+};
+
+/* Load products */
+const initStore = async () => {
+    const res = await fetch("/data/products.json");
+    const json = await res.json();
+    allProducts = json.products || [];
+    renderProducts();
+    updateCartSummary();
+};
+
+/* Render */
 const renderProducts = () => {
     const grid = document.getElementById("product-grid");
 
@@ -135,27 +220,89 @@ const renderProducts = () => {
 
     if (filtered.length === 0) {
         grid.innerHTML =
-            `<p class="text-center text-gray-600 col-span-3">No Christmas products yet!</p>`;
+            `<p class="text-center col-span-3 pt-8 text-gray-600">No Christmas products yet!</p>`;
         return;
     }
 
-    grid.innerHTML = filtered.map(product => `
-        <div class="bg-white p-4 rounded-xl shadow-lg">
+    grid.innerHTML = filtered.map(product => {
+        const lowest = Math.min(...Object.values(product.base_prices));
+
+        return `
+        <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+
             <div class="product-image-container mb-4" onclick="cycleImage(this)">
-                <img src="${product.imageUrls[0]}" 
-                     alt="${product.name}"
+                <img src="${product.thumbnail || product.imageUrls[0]}"
+                     class="rounded-lg w-full"
                      data-image-urls='${JSON.stringify(product.imageUrls)}'
-                     data-current-index="0"
-                     class="rounded-lg w-full" />
-                <div class="image-overlay">${product.imageUrls.length > 1 ? "Click for more" : ""}</div>
+                     data-current-index="0">
+                <div class="image-overlay">Click for more</div>
             </div>
+
             <h3 class="font-bold text-[#003466]">${product.name}</h3>
-            <p class="text-[#007c9e] font-bold">Starting at $${product.price.toFixed(2)}</p>
+            <p class="text-xs text-gray-500">${product.category}</p>
+
+            <p class="text-[#007c9e] font-extrabold mb-2">
+                Starting at ${formatCurrency(lowest)}
+            </p>
+
+            <label class="block text-xs font-bold mt-2">Style</label>
+            <select class="w-full border rounded px-2 py-1 apparel-type">
+                ${product.product_options.map(o =>
+                    `<option value="${o}">${o.replace(/_/g," ")}</option>`
+                ).join("")}
+            </select>
+
+            <label class="block text-xs font-bold mt-2">Color</label>
+            <select class="w-full border rounded px-2 py-1 apparel-color">
+                ${product.colors.map(c =>
+                    `<option value="${c}">${c.replace(/_/g," ")}</option>`
+                ).join("")}
+            </select>
+
+            <label class="block text-xs font-bold mt-2">Size</label>
+            <select class="w-full border rounded px-2 py-1 apparel-size">
+                ${["S","M","L","XL","2XL","3XL","4XL","5XL"]
+                    .map(s => `<option value="${s}">${s}</option>`).join("")}
+            </select>
+
+            <button class="mt-4 w-full py-2 rounded-lg font-semibold text-white btn-primary add-to-cart">
+                Add to Cart
+            </button>
         </div>
-    `).join('');
+        `;
+    }).join("");
+
+    attachCardEvents(filtered);
+};
+
+/* Card Events */
+const attachCardEvents = (products) => {
+    document.querySelectorAll(".bg-white").forEach((card, i) => {
+        const product = products[i];
+        if (!product) return;
+
+        const typeSel = card.querySelector(".apparel-type");
+        const colorSel = card.querySelector(".apparel-color");
+        const sizeSel  = card.querySelector(".apparel-size");
+        const addBtn  = card.querySelector(".add-to-cart");
+
+        addBtn.addEventListener("click", () => {
+            const price = computePrice(product, typeSel.value, sizeSel.value);
+            addToCart({
+                id: product.id,
+                name: product.name,
+                apparelType: typeSel.value,
+                color: colorSel.value,
+                size: sizeSel.value,
+                price,
+                qty: 1
+            });
+        });
+    });
 };
 
 window.onload = initStore;
 </script>
+
 </body>
 </html>
