@@ -249,15 +249,27 @@ const addToCart = (item) => {
              c.size === item.size
     );
 
+    // PRICE IS NOW REQUIRED
+    const price = Number(item.price);
+
     if (existing) {
         existing.qty += 1;
     } else {
-        cart.push({ ...item, qty: 1 });
+        cart.push({
+            id: item.id,
+            name: item.name,
+            apparelType: item.apparelType,
+            color: item.color,
+            size: item.size,
+            price: price,     // ← REQUIRED FOR CHECKOUT CALCULATIONS
+            qty: 1
+        });
     }
 
     localStorage.setItem("843teez_cart", JSON.stringify(cart));
     updateCartSummary();
 };
+
 
 /* ---------------------------------------------
    QUICK VIEW
