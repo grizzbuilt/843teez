@@ -10,21 +10,25 @@ public_folder: "/store"
 collections:
   - name: "store_products"
     label: "🛒 Store Products"
-    format: "json"
+    editor:
+      preview: false
 
     files:
       - name: "product_data"
         label: "Products List"
         file: "data/products.json"
+        format: "json"
 
         fields:
           - label: "Products"
-            name: "products"      # MUST MATCH JSON KEY
+            name: "products"
             widget: "list"
             allow_add: true
-            collapsed: false
+            collapsed: true
+            summary: "<img src='{{fields.thumbnail}}' style='width:40px;height:40px;object-fit:cover;border-radius:6px;margin-right:8px;vertical-align:middle;'/> {{fields.name}} — {{fields.category}}"
 
             fields:
+
               - label: "Product ID"
                 name: "id"
                 widget: "string"
@@ -49,28 +53,27 @@ collections:
                 name: "product_options"
                 widget: "list"
                 field:
-                  label: "Type"
-                  name: "type"
-                  widget: "select"
-                  options:
-                    - "Tee_Shirt"
-                    - "Sweatshirt"
-                    - "Hoodie"
-                    - "Baseball_Tee"
+                  label: ""
+                  name: ""
+                  widget: "string"
 
               - label: "Colors"
                 name: "colors"
                 widget: "list"
                 field:
-                  label: "Color"
-                  name: "color"
+                  label: ""
+                  name: ""
                   widget: "string"
+
+              - label: "Thumbnail"
+                name: "thumbnail"
+                widget: "image"
+                hint: "Main product preview image"
 
               - label: "Image URLs"
                 name: "imageUrls"
                 widget: "list"
                 field:
-                  label: "Image URL"
-                  name: "url"
+                  label: ""
+                  name: ""
                   widget: "string"
-                  hint: "Use /store/image.png or full URL"
