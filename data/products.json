@@ -6,7 +6,8 @@
       "category": "Originals",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Yellow"],
-      "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"]
+      "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"],
+      "thumbnail": "../store/ConwayModel.png"
     },
     {
       "id": "O102",
@@ -14,7 +15,8 @@
       "category": "Originals",
       "product_options": ["Baseball_Tee"],
       "colors": ["Black/White"],
-      "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"]
+      "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"],
+      "thumbnail": "../store/ConwaySTModel.png"
     },
     {
       "id": "O103",
@@ -22,7 +24,8 @@
       "category": "Originals",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Forest Green"],
-      "imageUrls": ["../store/HstConwayModel.png", "../store/HstConway.jpg"]
+      "imageUrls": ["../store/HstConwayModel.png", "../store/HstConway.jpg"],
+      "thumbnail": "../store/HstConwayModel.png"
     },
     {
       "id": "F101",
@@ -38,7 +41,8 @@
         "../../store/FallCandlePink.jpg",
         "../store/FallCandleSand.jpg",
         "../store/FallCandleOrange.jpg"
-      ]
+      ],
+      "thumbnail": "../store/FallCandleModel.png"
     },
     {
       "id": "C101",
@@ -54,7 +58,8 @@
         "../store/MiserBroNatural.jpg",
         "../store/MiserBroLightBlue.jpg",
         "../store/MiserBroLightPink.jpg"
-      ]
+      ],
+      "thumbnail": "../store/MiserBroFrontModel.png"
     },
     {
       "id": "C102",
@@ -68,7 +73,8 @@
         "../store/BuddyRed.jpg",
         "../store/BuddyGray.jpg",
         "../store/BuddyPurple.jpg"
-      ]
+      ],
+      "thumbnail": "../store/BuddyModel.png"
     },
     {
       "id": "C103",
@@ -82,7 +88,8 @@
         "../store/BanditGray.jpg",
         "../store/BanditPink.jpg",
         "../store/BanditBlue.jpg"
-      ]
+      ],
+      "thumbnail": "../store/wetbanditModel.png"
     },
     {
       "id": "F102",
@@ -90,7 +97,8 @@
       "category": "Fall",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Sand", "Heliconia"],
-      "imageUrls": ["../store/SweetModel.png", "../store/SweetGray.jpg", "../store/SweetSand.jpg", "../store/SweetHeliconia.jpg"]
+      "imageUrls": ["../store/SweetModel.png", "../store/SweetGray.jpg", "../store/SweetSand.jpg", "../store/SweetHeliconia.jpg"],
+      "thumbnail": "../store/SweetModel.png"
     },
     {
       "id": "F103",
@@ -98,7 +106,8 @@
       "category": "Fall",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Sand", "Carolina_Blue"],
-      "imageUrls": ["../store/GrouchyModel.png", "../store/GrouchyGray.jpg", "../store/GrouchySand.jpg", "../store/GrouchyCaroBlue.jpg"]
+      "imageUrls": ["../store/GrouchyModel.png", "../store/GrouchyGray.jpg", "../store/GrouchySand.jpg", "../store/GrouchyCaroBlue.jpg"],
+      "thumbnail": "../store/GrouchyModel.png"
     },
     {
       "id": "O104",
@@ -112,7 +121,8 @@
         "../store/BeardNavy.jpg",
         "../store/BeardNeon.jpg",
         "../store/BeardGarnet.jpg"
-      ]
+      ],
+      "thumbnail": "../store/BeardLengthModel.png"
     },
     {
       "id": "C104",
@@ -126,7 +136,8 @@
         "../store/CCNavy.jpg",
         "../store/CCForest.jpg",
         "../store/CCRed.jpg"
-      ]
+      ],
+      "thumbnail": "../store/CCModel.png"
     },
     {
       "id": "F104",
@@ -134,7 +145,8 @@
       "category": "Fall",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Green", "Red", "Light_Pink", "Gray", "Mint"],
-      "imageUrls": ["../store/StuffingModel.png", "../store/SuffingOrange.jpg"]
+      "imageUrls": ["../store/StuffingModel.png", "../store/SuffingOrange.jpg"],
+      "thumbnail": "../store/StuffingModel.png"
     },
     {
       "id": "C105",
@@ -149,7 +161,8 @@
         "https://843teez.com/store/SleighPink.jpg",
         "https://843teez.com/store/SleighGray.jpg",
         "https://843teez.com/store/SleighMint.jpg"
-      ]
+      ],
+      "thumbnail": "../store/SleightModel.png"
     },
     {
       "id": "C106",
@@ -163,7 +176,8 @@
         "../store/ScaryModel_2.png",
         "../store/ScaryRed.jpg",
         "../store/ScaryGrey.jpg"
-      ]
+      ],
+      "thumbnail": "../store/ScaryModel.png"
     },
     {
       "id": "LE101",
@@ -171,7 +185,8 @@
       "category": "LE",
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
-      "imageUrls": ["../store/fightmemodel.png", "../store/FIGTMETEE.png"]
+      "imageUrls": ["../store/fightmemodel.png", "../store/FIGTMETEE.png"],
+      "thumbnail": "../store/fightmemodel.png"
     },
     {
       "id": "LE102",
@@ -179,7 +194,8 @@
       "category": "LE",
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
-      "imageUrls": ["../store/DunCrawlerModel.png", "../store/DungeonCrawlersTee.jpg"]
+      "imageUrls": ["../store/DunCrawlerModel.png", "../store/DungeonCrawlersTee.jpg"],
+      "thumbnail": "../store/DunCrawlerModel.png"
     },
     {
       "id": "LE103",
@@ -187,7 +203,8 @@
       "category": "LE",
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
-      "imageUrls": ["../store/certnpcmodel.png", "../store/CertNPCtee.jpg"]
+      "imageUrls": ["../store/certnpcmodel.png", "../store/CertNPCtee.jpg"],
+      "thumbnail": "../store/certnpcmodel.png"
     },
     {
       "id": "LE104",
@@ -195,7 +212,8 @@
       "category": "LE",
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
-      "imageUrls": ["../store/certweirdmodel.png", "../store/CertWeirdtee.jpg"]
+      "imageUrls": ["../store/certweirdmodel.png", "../store/CertWeirdtee.jpg"],
+      "thumbnail": "../store/certweirdmodel.png"
     },
     {
       "id": "C107",
@@ -210,7 +228,8 @@
         "../store/SaltyLightPink.jpg",
         "../store/SaltyMint.jpg",
         "../store/SaltyViolet.jpg"
-      ]
+      ],
+      "thumbnail": "../store/SaltyModel (1).png"
     },
     {
       "id": "C108",
@@ -225,7 +244,8 @@
         "../store/BellsShellsWhite.jpg",
         "../store/BellsShellsNatural.jpg",
         "../store/BellsShelsNBlue.jpg"
-      ]
+      ],
+      "thumbnail": "../store/BellsShellsModel.png"
     }
   ]
 }
