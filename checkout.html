@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,9 +12,6 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>843 Teez | Finalize Order Request</title>
-    <meta name="description" content="Enter your contact and shipping details to receive an invoice for your 843 Teez order." />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,344 +26,159 @@
         }
         .btn-primary { background-color: #003466; }
         .btn-primary:hover { background-color: #007c9e; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
     </style>
 
-    <!-- Clarity (optional) -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "tr3lwvejev");
-    </script>
+    <title>843 Teez | Finalize Order</title>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
+    <!-- Banner -->
+    <div class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base fixed top-0 z-50">
+        <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+    </div>
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl mt-10">
+    <div class="max-w-6xl mx-auto p-6 sm:p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
 
-        <!-- HEADER -->
+        <!-- Header -->
         <header class="text-center mb-8">
-            <img src="https://843teez.com/843teezlogo.png"
-                 alt="843 Teez Logo"
-                 class="max-w-xs mx-auto mb-4 w-5/6" />
-
+            <img src="https://843teez.com/843teezlogo.png" class="max-w-xs mx-auto mb-4 w-5/6">
             <h1 class="text-3xl font-extrabold text-[#007c9e]">Finalize Order Request</h1>
-
-            <a href="cart.html"
-               id="global-view-cart-button"
-               class="inline-flex items-center bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
-               disabled>
-                Cart (<span id="global-item-count">0</span>)
-            </a>
-
-            <p class="text-sm text-gray-600 mt-3">
-                Enter your contact and shipping details. We’ll email you an invoice—no payment is collected on this page.
-            </p>
-
-            <div class="mt-4">
-                <a href="cart.html"
-                   class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center justify-center">
-                    ← Back to Cart Review
-                </a>
-            </div>
+            <p class="text-sm text-gray-600">Provide shipping/contact details and we’ll email the invoice.</p>
         </header>
 
-        <!-- CHECKOUT WRAPPER -->
-        <div id="checkout-view" class="max-w-3xl mx-auto py-6">
-            <div class="bg-white p-6 rounded-xl border-2 border-red-500 shadow-lg">
+        <!-- Checkout Form -->
+        <div class="max-w-3xl mx-auto">
 
-                <h2 class="text-2xl font-bold text-red-500 border-b pb-2 mb-4">
-                    Shipping & Contact Details
-                </h2>
+            <form 
+                name="843Teez_Order"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/confirmation.html"
+                class="space-y-4 bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg"
+            >
 
-                <p class="text-sm text-gray-700 mb-4">
-                    <strong>Important:</strong> This is an <em>order request</em>. We’ll review your order, confirm stock,
-                    and send you a secure invoice to pay.
-                </p>
+                <!-- Required hidden fields -->
+                <input type="hidden" name="form-name" value="843Teez_Order">
+                <input type="hidden" name="cart_data_json" id="cart-data-json">
 
-                <!-- NETLIFY FORM -->
-                <form
-                    name="843Teez_Order"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    id="checkout-form"
-                    class="space-y-4"
-                >
-                    <!-- Required for Netlify -->
-                    <input type="hidden" name="form-name" value="843Teez_Order" />
-                    <!-- Honeypot -->
-                    <p class="hidden">
-                        <label>Don’t fill this out: <input name="bot-field" /></label>
-                    </p>
-                    <!-- Cart JSON -->
-                    <input type="hidden" name="cart_data_json" id="cart-data-json" />
+                <!-- Honeypot -->
+                <input type="hidden" name="bot-field">
 
-                    <!-- CONTACT INFO -->
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 text-left">Full Name</label>
-                        <input type="text" id="name" name="name" required
-                               class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-[#007c9e] focus:border-[#007c9e]">
+                <!-- Contact Fields -->
+                <div>
+                    <label class="block text-sm font-medium">Full Name</label>
+                    <input type="text" name="name" required class="w-full p-2 border rounded-lg">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium">Email (Invoice Sent Here)</label>
+                    <input type="email" name="email" required class="w-full p-2 border rounded-lg">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium">Phone Number</label>
+                    <input type="tel" name="phone" class="w-full p-2 border rounded-lg">
+                </div>
+
+                <!-- Shipping Selection -->
+                <div>
+                    <label class="block text-sm font-medium">Shipping Method</label>
+                    <select name="shipping_method" id="shipping_method" required class="w-full p-2 border rounded-lg" onchange="toggleAddressFields(); updateTotals();">
+                        <option value="" disabled selected>Select an option…</option>
+                        <option value="local_pickup">Local Pickup (FREE)</option>
+                        <option value="standard_shipping">Standard Shipping — $8.00</option>
+                    </select>
+                </div>
+
+                <!-- Shipping Address -->
+                <div id="shipping-fields" class="hidden space-y-3 border-l-4 border-red-200 pl-4">
+                    <input type="text" name="full_address" id="full_address" placeholder="Street Address" class="w-full p-2 border rounded-lg">
+                    <div class="grid grid-cols-3 gap-3">
+                        <input type="text" name="city" id="city" placeholder="City" class="p-2 border rounded-lg">
+                        <input type="text" name="state" id="state" placeholder="State" maxlength="2" class="p-2 border rounded-lg">
+                        <input type="text" name="zip_code" id="zip_code" placeholder="Zip Code" maxlength="10" class="p-2 border rounded-lg">
                     </div>
+                </div>
 
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 text-left">Email for Invoice</label>
-                        <input type="email" id="email" name="email" required
-                               class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-[#007c9e] focus:border-[#007c9e]">
+                <!-- Order Summary -->
+                <div class="mt-6 pt-4 border-t">
+                    <h3 class="text-xl font-bold text-[#003466] mb-2">Order Summary</h3>
+
+                    <div class="flex justify-between">
+                        <span>Subtotal:</span>
+                        <span id="subtotal-display">$0.00</span>
                     </div>
-
-                    <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700 text-left">Phone Number</label>
-                        <input type="tel" id="phone" name="phone"
-                               class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-[#007c9e] focus:border-[#007c9e]">
+                    <div class="flex justify-between text-red-600">
+                        <span>Tax (8%):</span>
+                        <span id="tax-display">$0.00</span>
                     </div>
-
-                    <!-- SHIPPING METHOD -->
-                    <div>
-                        <label for="shipping_method" class="block text-sm font-medium text-gray-700 text-left">
-                            Shipping Method
-                        </label>
-                        <select id="shipping_method" name="shipping_method" required
-                                class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-[#007c9e] focus:border-[#007c9e]">
-                            <option value="" disabled selected>Select an option…</option>
-                            <option value="local_pickup">Local Pickup (Conway) — FREE</option>
-                            <option value="standard_shipping">Standard Shipping — $8.00</option>
-                        </select>
+                    <div class="flex justify-between">
+                        <span>Shipping:</span>
+                        <span id="shipping-display">$0.00</span>
                     </div>
-
-                    <!-- SHIPPING ADDRESS (shown only if shipping) -->
-                    <div id="shipping-address-group"
-                         class="hidden space-y-4 pt-2 border-l-4 border-red-200 pl-4">
-                        <h4 class="text-base font-semibold text-red-500">Shipping Address</h4>
-
-                        <div>
-                            <label for="full_address" class="block text-sm font-medium text-gray-700 text-left">Street Address</label>
-                            <input type="text" id="full_address" name="full_address"
-                                   class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500">
-                        </div>
-
-                        <div class="grid grid-cols-3 gap-3">
-                            <div>
-                                <label for="city" class="block text-sm font-medium text-gray-700 text-left">City</label>
-                                <input type="text" id="city" name="city"
-                                       class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500">
-                            </div>
-                            <div>
-                                <label for="state" class="block text-sm font-medium text-gray-700 text-left">State</label>
-                                <input type="text" id="state" name="state" maxlength="2"
-                                       class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500">
-                            </div>
-                            <div>
-                                <label for="zip_code" class="block text-sm font-medium text-gray-700 text-left">Zip</label>
-                                <input type="text" id="zip_code" name="zip_code" maxlength="10"
-                                       class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500">
-                            </div>
-                        </div>
+                    <div class="flex justify-between text-xl font-bold text-red-500 border-t pt-2 mt-2">
+                        <span>Total:</span>
+                        <span id="total-display">$0.00</span>
                     </div>
+                </div>
 
-                    <!-- LOCAL PICKUP NOTE -->
-                    <div id="pickup-note-group"
-                         class="hidden space-y-4 pt-2 border-l-4 border-green-200 pl-4">
-                        <h4 class="text-base font-semibold text-green-600">Local Pickup Details</h4>
-                        <div>
-                            <label for="pickup_note" class="block text-sm font-medium text-gray-700 text-left">
-                                Best way to contact you about pickup
-                            </label>
-                            <textarea id="pickup_note" name="pickup_note" rows="3"
-                                      class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-green-600 focus:border-green-600"
-                                      placeholder="Example: Please text me at 843-555-1234 when the order is ready."></textarea>
-                        </div>
-                    </div>
+                <!-- Submit Button -->
+                <button type="submit" class="w-full mt-6 text-white font-bold py-3 rounded-xl btn-primary">
+                    Confirm Order & Request Invoice
+                </button>
 
-                    <!-- ORDER SUMMARY -->
-                    <div class="mt-6 pt-4 border-t border-gray-200">
-                        <h3 class="text-xl font-bold text-[#003466] mb-2">Order Summary</h3>
-
-                        <div class="flex justify-between text-sm text-gray-700">
-                            <span>Subtotal:</span>
-                            <span id="form-subtotal-display">$0.00</span>
-                        </div>
-                        <div class="flex justify-between text-sm text-red-600">
-                            <span>SC &amp; Horry Tax (8%):</span>
-                            <span id="form-tax-display">$0.00</span>
-                        </div>
-                        <div class="flex justify-between text-sm text-gray-700 mb-2">
-                            <span>Shipping:</span>
-                            <span id="form-shipping-display">$0.00</span>
-                        </div>
-                        <div class="flex justify-between font-bold text-xl text-red-500 border-t pt-2">
-                            <span>Grand Total:</span>
-                            <span id="form-total-display">$0.00</span>
-                        </div>
-
-                        <p class="text-xs text-gray-700 text-center mt-3 p-2 bg-yellow-50 rounded-lg border border-yellow-200">
-                            No payment is processed on this page. We’ll email you an invoice with final totals and a payment link.
-                        </p>
-
-                        <!-- REAL SUBMIT BUTTON -->
-                        <button
-                            type="submit"
-                            id="submit-order-btn"
-                            class="w-full mt-6 text-white font-bold py-3 rounded-xl btn-primary shadow-md transition-all duration-200"
-                        >
-                            Confirm Order &amp; Request Invoice
-                        </button>
-
-                        <a href="cart.html"
-                           class="w-full mt-2 text-[#003466] bg-gray-100 font-semibold py-2 rounded-xl border border-gray-300 hover:bg-gray-200 block text-center">
-                            ← Back to Cart Review
-                        </a>
-                    </div>
-
-                </form>
-            </div>
+            </form>
         </div>
 
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-            <p>843 Teez™ is a <a href="https://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-            <p>Woman &amp; Veteran-owned local apparel. Made in Conway, SC.</p>
-            <p>&copy; 2025 843 Teez™. All rights reserved.</p>
+        <footer class="text-center mt-12 pt-6 text-[#003466] text-xs font-semibold">
+            <p>843 Teez™ • A GrizzBuilt™ Brand • Conway, SC</p>
         </footer>
     </div>
 
+    <!-- Cart & Calculation Logic -->
     <script>
-        // --- CONFIG ---
-        const SALES_TAX_RATE = 0.08;
-        const SHIPPING_OPTIONS = {
-            local_pickup: { name: "Local Pickup (Conway)", cost: 0 },
-            standard_shipping: { name: "Standard Shipping", cost: 8 }
-        };
+        const TAX_RATE = 0.08;
+        const SHIPPING = { local_pickup: 0, standard_shipping: 8 };
 
-        // --- CART STATE ---
         let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 
-        const formatCurrency = (amount) => `$${amount.toFixed(2)}`;
-        const saveCart = () => localStorage.setItem("843teez_cart", JSON.stringify(cart));
+        const format = x => `$${x.toFixed(2)}`;
 
-        // --- TOGGLE SHIPPING / PICKUP UI ---
         function toggleAddressFields() {
             const method = document.getElementById("shipping_method").value;
-            const addressGroup = document.getElementById("shipping-address-group");
-            const pickupGroup = document.getElementById("pickup-note-group");
-
-            const isShipping = method === "standard_shipping";
-            const isPickup = method === "local_pickup";
-
-            addressGroup.classList.toggle("hidden", !isShipping);
-            pickupGroup.classList.toggle("hidden", !isPickup);
-
-            document.getElementById("full_address").required = isShipping;
-            document.getElementById("city").required = isShipping;
-            document.getElementById("state").required = isShipping;
-            document.getElementById("zip_code").required = isShipping;
-
-            document.getElementById("pickup_note").required = isPickup;
+            const fields = document.getElementById("shipping-fields");
+            fields.classList.toggle("hidden", method !== "standard_shipping");
         }
 
-        // --- CALCULATE TOTALS ---
-        function calculateTotals(includeShipping) {
-            const subtotal = cart.reduce((sum, item) => {
-                return sum + (item.price * item.qty); // uses qty from your cart items
-            }, 0);
+        function updateTotals() {
+            let subtotal = 0;
+            cart.forEach(item => subtotal += item.price * item.quantity);
 
-            const methodSelect = document.getElementById("shipping_method");
-            const method = methodSelect ? methodSelect.value : "";
-            const shippingCost = includeShipping && SHIPPING_OPTIONS[method]
-                ? SHIPPING_OPTIONS[method].cost
-                : 0;
-
-            const taxAmount = subtotal * SALES_TAX_RATE;
-            const grandTotal = subtotal + taxAmount + shippingCost;
-
-            return {
-                subtotal,
-                taxAmount,
-                shippingCost,
-                grandTotal,
-                shippingMethodKey: method,
-                shippingMethodName: SHIPPING_OPTIONS[method]?.name || ""
-            };
-        }
-
-        // --- UPDATE SUMMARY DISPLAY + HIDDEN JSON ---
-        function updateCheckoutSummary(includeShipping) {
-            if (!cart || cart.length === 0) return;
-
-            const totals = calculateTotals(includeShipping);
-
-            document.getElementById("form-subtotal-display").textContent = formatCurrency(totals.subtotal);
-            document.getElementById("form-tax-display").textContent = formatCurrency(totals.taxAmount);
-            document.getElementById("form-shipping-display").textContent = formatCurrency(totals.shippingCost);
-            document.getElementById("form-total-display").textContent = formatCurrency(totals.grandTotal);
-
-            // Prepare JSON payload for Netlify
-            const payload = {
-                subtotal: totals.subtotal.toFixed(2),
-                tax: totals.taxAmount.toFixed(2),
-                shipping: totals.shippingCost.toFixed(2),
-                total: totals.grandTotal.toFixed(2),
-                shipping_method: totals.shippingMethodName || "Not selected",
-                items: cart
-            };
-
-            document.getElementById("cart-data-json").value = JSON.stringify(payload);
-        }
-
-        // --- UPDATE HEADER CART BUTTON ---
-        function updateGlobalCartSummary() {
-            const btn = document.getElementById("global-view-cart-button");
-            const countSpan = document.getElementById("global-item-count");
-
-            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
-
-            countSpan.textContent = totalItems;
-
-            if (totalItems === 0) {
-                btn.setAttribute("disabled", "true");
-                // If no items, kick them back to the store
-                window.location.href = "store.html";
-            } else {
-                btn.removeAttribute("disabled");
-            }
-        }
-
-        // --- FORM SUBMIT (JUST SYNC JSON, LET NETLIFY HANDLE POST) ---
-        function handleCheckoutSubmit(event) {
             const method = document.getElementById("shipping_method").value;
-            if (!method) {
-                event.preventDefault();
-                alert("Please select a shipping method.");
-                return;
-            }
-            // Sync totals one last time before Netlify receives the form
-            updateCheckoutSummary(true);
-            // do NOT preventDefault: let Netlify do its thing
+            const shipping = SHIPPING[method] || 0;
+
+            const tax = subtotal * TAX_RATE;
+            const total = subtotal + tax + shipping;
+
+            document.getElementById("subtotal-display").textContent = format(subtotal);
+            document.getElementById("tax-display").textContent = format(tax);
+            document.getElementById("shipping-display").textContent = format(shipping);
+            document.getElementById("total-display").textContent = format(total);
+
+            // store JSON for Netlify submission
+            document.getElementById("cart-data-json").value = JSON.stringify({
+                items: cart,
+                subtotal,
+                tax,
+                shipping,
+                total
+            });
         }
 
-        // --- INIT ---
-        window.addEventListener("load", () => {
-            if (!cart || cart.length === 0) {
-                window.location.href = "store.html";
-                return;
-            }
-
-            updateGlobalCartSummary();
-            toggleAddressFields();
-            updateCheckoutSummary(true);
-
-            const shippingSelect = document.getElementById("shipping_method");
-            shippingSelect.addEventListener("change", () => {
-                toggleAddressFields();
-                updateCheckoutSummary(true);
-            });
-
-            const form = document.getElementById("checkout-form");
-            form.addEventListener("submit", handleCheckoutSubmit);
-        });
+        window.onload = updateTotals;
     </script>
+
 </body>
 </html>
