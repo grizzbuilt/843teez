@@ -19,7 +19,7 @@ collections:
 
         fields:
           - label: "Products"
-            name: "items"         # REQUIRED for Decap to bind array
+            name: "products"      # MUST MATCH JSON KEY
             widget: "list"
             allow_add: true
             collapsed: false
