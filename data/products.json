@@ -7,7 +7,22 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Yellow"],
       "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"],
-      "thumbnail": "../store/ConwayModel.png"
+      "thumbnail": "../store/ConwayModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "O102",
@@ -16,7 +31,20 @@
       "product_options": ["Baseball_Tee"],
       "colors": ["Black/White"],
       "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"],
-      "thumbnail": "../store/ConwaySTModel.png"
+      "thumbnail": "../store/ConwaySTModel.png",
+      "base_prices": {
+        "Baseball_Tee": 28
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "O103",
@@ -25,7 +53,22 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Forest Green"],
       "imageUrls": ["../store/HstConwayModel.png", "../store/HstConway.jpg"],
-      "thumbnail": "../store/HstConwayModel.png"
+      "thumbnail": "../store/HstConwayModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "F101",
@@ -42,7 +85,21 @@
         "../store/FallCandleSand.jpg",
         "../store/FallCandleOrange.jpg"
       ],
-      "thumbnail": "../store/FallCandleModel.png"
+      "thumbnail": "../store/FallCandleModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "C101",
@@ -59,7 +116,21 @@
         "../store/MiserBroLightBlue.jpg",
         "../store/MiserBroLightPink.jpg"
       ],
-      "thumbnail": "../store/MiserBroFrontModel.png"
+      "thumbnail": "../store/MiserBroFrontModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "C102",
@@ -74,7 +145,22 @@
         "../store/BuddyGray.jpg",
         "../store/BuddyPurple.jpg"
       ],
-      "thumbnail": "../store/BuddyModel.png"
+      "thumbnail": "../store/BuddyModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "C103",
@@ -89,7 +175,22 @@
         "../store/BanditPink.jpg",
         "../store/BanditBlue.jpg"
       ],
-      "thumbnail": "../store/wetbanditModel.png"
+      "thumbnail": "../store/wetbanditModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
     {
       "id": "F102",
@@ -98,8 +199,24 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Sand", "Heliconia"],
       "imageUrls": ["../store/SweetModel.png", "../store/SweetGray.jpg", "../store/SweetSand.jpg", "../store/SweetHeliconia.jpg"],
-      "thumbnail": "../store/SweetModel.png"
+      "thumbnail": "../store/SweetModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "F103",
       "name": "Grouchy Potato",
@@ -107,8 +224,24 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Sand", "Carolina_Blue"],
       "imageUrls": ["../store/GrouchyModel.png", "../store/GrouchyGray.jpg", "../store/GrouchySand.jpg", "../store/GrouchyCaroBlue.jpg"],
-      "thumbnail": "../store/GrouchyModel.png"
+      "thumbnail": "../store/GrouchyModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "O104",
       "name": "Beard Gauge",
@@ -122,8 +255,24 @@
         "../store/BeardNeon.jpg",
         "../store/BeardGarnet.jpg"
       ],
-      "thumbnail": "../store/BeardLengthModel.png"
+      "thumbnail": "../store/BeardLengthModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "C104",
       "name": "Coastal Christmas Myrtle Beach",
@@ -137,8 +286,24 @@
         "../store/CCForest.jpg",
         "../store/CCRed.jpg"
       ],
-      "thumbnail": "../store/CCModel.png"
+      "thumbnail": "../store/CCModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "F104",
       "name": "Suffing is my Safe Word",
@@ -146,8 +311,24 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Green", "Red", "Light_Pink", "Gray", "Mint"],
       "imageUrls": ["../store/StuffingModel.png", "../store/SuffingOrange.jpg"],
-      "thumbnail": "../store/StuffingModel.png"
+      "thumbnail": "../store/StuffingModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "C105",
       "name": "Sleigh All Day",
@@ -162,8 +343,24 @@
         "https://843teez.com/store/SleighGray.jpg",
         "https://843teez.com/store/SleighMint.jpg"
       ],
-      "thumbnail": "../store/SleightModel.png"
+      "thumbnail": "../store/SleightModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "C106",
       "name": "A Scary little Christmas",
@@ -177,8 +374,24 @@
         "../store/ScaryRed.jpg",
         "../store/ScaryGrey.jpg"
       ],
-      "thumbnail": "../store/ScaryModel.png"
+      "thumbnail": "../store/ScaryModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "LE101",
       "name": "Fight Me - Only 8 Left",
@@ -186,17 +399,45 @@
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
       "imageUrls": ["../store/fightmemodel.png", "../store/FIGTMETEE.png"],
-      "thumbnail": "../store/fightmemodel.png"
+      "thumbnail": "../store/fightmemodel.png",
+      "base_prices": {
+        "Tee_Shirt": 20
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "LE102",
       "name": "Dungeon Crawler - Only 25 Left",
       "category": "LE",
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
-      "imageUrls": ["../store/DunCrawlerModel.png", "../store/DungeonCrawlersTee.jpg"],
-      "thumbnail": "../store/DunCrawlerModel.png"
+      "imageUrls": ["../store/DunCrawlerModel.png", "../store/DungeonCrawlersTtee.jpg"],
+      "thumbnail": "../store/DunCrawlerModel.png",
+      "base_prices": {
+        "Tee_Shirt": 20
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "LE103",
       "name": "Certififed NPC - Only 27 Left",
@@ -204,8 +445,22 @@
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
       "imageUrls": ["../store/certnpcmodel.png", "../store/CertNPCtee.jpg"],
-      "thumbnail": "../store/certnpcmodel.png"
+      "thumbnail": "../store/certnpcmodel.png",
+      "base_prices": {
+        "Tee_Shirt": 20
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "LE104",
       "name": "Certififed Weird - Only 13 Left",
@@ -213,8 +468,22 @@
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
       "imageUrls": ["../store/certweirdmodel.png", "../store/CertWeirdtee.jpg"],
-      "thumbnail": "../store/certweirdmodel.png"
+      "thumbnail": "../store/certweirdmodel.png",
+      "base_prices": {
+        "Tee_Shirt": 20
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "C107",
       "name": "Salty and Bright",
@@ -229,8 +498,24 @@
         "../store/SaltyMint.jpg",
         "../store/SaltyViolet.jpg"
       ],
-      "thumbnail": "../store/SaltyModel (1).png"
+      "thumbnail": "../store/SaltyModel (1).png",
+      "base_prices": {
+        "Tee_Shirt": 20,
+        "Sweatshirt": 37,
+        "Hoodie": 39
+      },
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 2,
+        "2XL": 4,
+        "3XL": 5,
+        "4XL": 6,
+        "5XL": 7
+      }
     },
+
     {
       "id": "C108",
       "name": "Sleigh Bells & SeaShells",
@@ -245,7 +530,19 @@
         "../store/BellsShellsNatural.jpg",
         "../store/BellsShelsNBlue.jpg"
       ],
-      "thumbnail": "../store/BellsShellsModel.png"
-    }
-  ]
+      "thumbnail": "../store/BellsShellsModel.png",
+       "base_prices": {
+       "Tee_Shirt": 20,
+       "Sweatshirt": 37,
+       "Hoodie": 39
+       },
+       "size_upcharges": {
+       "S": 0,
+  "M": 0,
+  "L": 0,
+  "XL": 2,
+  "2XL": 4,
+  "3XL": 5,
+  "4XL": 6,
+  "5XL": 7
 }
