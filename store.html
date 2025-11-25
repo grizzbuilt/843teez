@@ -40,13 +40,22 @@
             transition: .3s;
         }
         .product-image-container:hover .image-overlay { opacity: 1; }
+
+        /* QUICK VIEW MODAL */
+        .modal-hidden { display: none; }
+        .modal-visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
 <!-- CONSTRUCTION BANNER -->
-<div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base z-50">
+<div id="construction-banner"
+     class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base z-50">
     <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
     <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
         <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
@@ -88,7 +97,7 @@
 <!-- GRID WRAPPER -->
 <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-    <!-- LEFT: PRODUCTS (3 COLUMNS) -->
+    <!-- LEFT: PRODUCTS -->
     <div class="lg:col-span-3">
         <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
             All Apparel Designs
@@ -100,8 +109,7 @@
         </div>
     </div>
 
-    <!-- RIGHT: FLOATING CART SUMMARY -->
-    <!-- ADDED CART SUMMARY -->
+    <!-- RIGHT: CART SUMMARY -->
     <div class="lg:col-span-1">
         <div id="cart-summary-sticky"
              class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
@@ -121,7 +129,6 @@
             </a>
         </div>
     </div>
-    <!-- END CART SUMMARY -->
 
 </div><!-- END GRID -->
 
@@ -134,28 +141,61 @@
 
 </div>
 
+<!-- QUICK VIEW MODAL -->
+<div id="quickViewModal"
+     class="modal-hidden fixed inset-0 bg-black/60 z-50 p-4">
+    <div class="bg-white rounded-xl max-w-2xl mx-auto p-6 shadow-2xl relative">
+
+        <button class="close-modal absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <img id="modalMainImage" src="" class="rounded-lg w-full">
+                <div id="modalGallery" class="flex gap-2 mt-3"></div>
+            </div>
+
+            <div>
+                <h2 id="modalName" class="text-xl font-bold text-[#003466]"></h2>
+                <p id="modalCategory" class="text-sm text-gray-500 mb-4"></p>
+
+                <h3 class="font-semibold mt-2">Available Styles</h3>
+                <ul id="modalTypes" class="list-disc ml-5 text-sm"></ul>
+
+                <h3 class="font-semibold mt-4">Available Colors</h3>
+                <ul id="modalColors" class="list-disc ml-5 text-sm"></ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
 <script>
 /* ---------------------------------------------
-   GLOBAL CONFIG
+   GLOBAL CONSTANTS
 ------------------------------------------------ */
-const APPAREL_BASE_PRICES = {
-    Tee_Shirt: 20,
-    Sweatshirt: 37,
-    Hoodie: 39,
-    Baseball_Tee: 28
-};
+const CATEGORY_FILTER = "ALL";
 
-const SIZE_UPCHARGES = {
-    S: 0, M: 0, L: 0,
-    XL: 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7
-};
-
-const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
+const ALL_SIZES = ["S","M","L","XL","2XL","3XL","4XL","5XL"];
 
 let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 let allProducts = [];
 
-const formatCurrency = a => `$${a.toFixed(2)}`;
+/* ---------------------------------------------
+   HELPERS
+------------------------------------------------ */
+const formatCurrency = amount => `$${amount.toFixed(2)}`;
+
+const computePrice = (product, type, size) => {
+    const base = product.base_prices?.[type] ?? 0;
+    const up = product.size_upcharges?.[size] ?? 0;
+    return base + up;
+};
+
+const getLowestBasePrice = (product) => {
+    const prices = Object.values(product.base_prices || {});
+    return prices.length ? Math.min(...prices) : 0;
+};
 
 const cycleImage = el => {
     const img = el.querySelector("img");
@@ -167,34 +207,95 @@ const cycleImage = el => {
 };
 
 /* ---------------------------------------------
-   UPDATE CART SUMMARY
+   CART SUMMARY
 ------------------------------------------------ */
 const updateCartSummary = () => {
-    let subtotal = 0;
     let totalItems = 0;
+    let subtotal = 0;
 
     cart.forEach(item => {
-        subtotal += item.price * item.quantity;
-        totalItems += item.quantity;
+        subtotal += item.price * item.qty;
+        totalItems += item.qty;
     });
+
+    const taxAmount = subtotal * 0.08;
 
     document.getElementById("summary-item-count").textContent = totalItems;
     document.getElementById("global-item-count").textContent = totalItems;
 
-    const taxAmount = subtotal * 0.08;
     document.getElementById("summary-cart-total").textContent =
         formatCurrency(subtotal + taxAmount);
 
-    const btn = document.getElementById("view-cart-button");
-    const globalBtn = document.getElementById("global-view-cart-button");
+    const checkoutBtn = document.getElementById("view-cart-button");
+    const headerCartBtn = document.getElementById("global-view-cart-button");
 
     if (totalItems === 0) {
-        btn.setAttribute("disabled", "true");
-        globalBtn.setAttribute("disabled", "true");
+        checkoutBtn.setAttribute("disabled", "true");
+        headerCartBtn.setAttribute("disabled","true");
     } else {
-        btn.removeAttribute("disabled");
-        globalBtn.removeAttribute("disabled");
+        checkoutBtn.removeAttribute("disabled");
+        headerCartBtn.removeAttribute("disabled");
     }
+};
+
+/* ---------------------------------------------
+   ADD TO CART
+------------------------------------------------ */
+const addToCart = (item) => {
+    const existing = cart.find(
+        c => c.id === item.id &&
+             c.apparelType === item.apparelType &&
+             c.color === item.color &&
+             c.size === item.size
+    );
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({ ...item, qty: 1 });
+    }
+
+    localStorage.setItem("843teez_cart", JSON.stringify(cart));
+    updateCartSummary();
+};
+
+/* ---------------------------------------------
+   QUICK VIEW
+------------------------------------------------ */
+const openQuickView = (product) => {
+    const modal = document.getElementById("quickViewModal");
+
+    document.getElementById("modalMainImage").src =
+        product.thumbnail || product.imageUrls[0];
+
+    document.getElementById("modalName").textContent = product.name;
+    document.getElementById("modalCategory").textContent = product.category;
+
+    document.getElementById("modalTypes").innerHTML =
+        product.product_options.map(t => `<li>${t.replace(/_/g," ")}</li>`).join("");
+
+    document.getElementById("modalColors").innerHTML =
+        product.colors.map(c => `<li>${c.replace(/_/g," ")}</li>`).join("");
+
+    const gallery = document.getElementById("modalGallery");
+    gallery.innerHTML = product.imageUrls
+        .map(url => `<img src="${url}" class="w-16 h-16 rounded cursor-pointer">`)
+        .join("");
+
+    gallery.querySelectorAll("img").forEach(img => {
+        img.addEventListener("click", () => {
+            document.getElementById("modalMainImage").src = img.src;
+        });
+    });
+
+    modal.classList.remove("modal-hidden");
+    modal.classList.add("modal-visible");
+};
+
+const closeQuickView = () => {
+    const modal = document.getElementById("quickViewModal");
+    modal.classList.remove("modal-visible");
+    modal.classList.add("modal-hidden");
 };
 
 /* ---------------------------------------------
@@ -205,54 +306,147 @@ const initStore = async () => {
         const res = await fetch("/data/products.json");
         const json = await res.json();
         allProducts = json.products || [];
+
         renderProducts();
         updateCartSummary();
     } catch (err) {
+        console.error(err);
         document.getElementById("product-grid").innerHTML =
-            `<p class="text-red-600 text-center col-span-3">Error loading products.</p>`;
+            `<p class="col-span-3 text-center text-red-600">Error loading products.</p>`;
     }
 };
 
 /* ---------------------------------------------
-   RENDER PRODUCTS
+   FILTER & RENDER
 ------------------------------------------------ */
-const renderProducts = () => {
-    const grid = document.getElementById("product-grid");
-
-    if (allProducts.length === 0) {
-        grid.innerHTML =
-            `<p class="text-center col-span-3 pt-8 text-gray-600">
-                No products available yet.
-            </p>`;
-        return;
-    }
-
-    grid.innerHTML = allProducts.map(product => {
-        const startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 20;
-
-        return `
-        <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100">
-            <div class="product-image-container mb-4" onclick="cycleImage(this)">
-                <img src="${product.imageUrls[0]}"
-                     class="rounded-lg w-full"
-                     data-image-urls='${JSON.stringify(product.imageUrls)}'
-                     data-current-index="0"
-                     alt="${product.name}">
-                <div class="image-overlay">
-                    ${product.imageUrls.length > 1 ? "Click to cycle" : ""}
-                </div>
-            </div>
-
-            <h3 class="font-bold text-[#003466]">${product.name}</h3>
-            <p class="text-[#007c9e] font-extrabold">Starting at ${formatCurrency(startingPrice)}</p>
-        </div>
-        `;
-    }).join('');
+const getFilteredProducts = () => {
+    if (CATEGORY_FILTER === "ALL") return allProducts;
+    return allProducts.filter(
+        p => p.category.toLowerCase() === CATEGORY_FILTER.toLowerCase()
+    );
 };
 
-window.onload = initStore;
+const renderProducts = () => {
+    const grid = document.getElementById("product-grid");
+    const products = getFilteredProducts();
+
+    grid.innerHTML = products.map(product => {
+        const lowest = getLowestBasePrice(product);
+
+        return `
+        <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100 product-card"
+             data-product-id="${product.id}">
+
+            <!-- IMAGE -->
+            <div class="product-image-container mb-4 quick-view-trigger">
+                <img src="${product.thumbnail || product.imageUrls[0]}"
+                     data-image-urls='${JSON.stringify(product.imageUrls)}'
+                     data-current-index="0"
+                     alt="${product.name}"
+                     class="rounded-lg w-full">
+                <div class="image-overlay">Quick View</div>
+            </div>
+
+            <!-- NAME -->
+            <h3 class="font-bold text-[#003466]">${product.name}</h3>
+            <p class="text-xs text-gray-500">${product.category}</p>
+
+            <!-- DYNAMIC PRICE -->
+            <p class="text-[#007c9e] font-extrabold mb-2 price-line">
+                Starting at ${formatCurrency(lowest)}
+            </p>
+
+            <!-- STYLE -->
+            <label class="block text-xs font-bold mt-2">Style</label>
+            <select class="w-full border rounded px-2 py-1 apparel-type">
+                ${product.product_options.map(o =>
+                    `<option value="${o}">${o.replace(/_/g," ")}</option>`
+                ).join("")}
+            </select>
+
+            <!-- COLOR -->
+            <label class="block text-xs font-bold mt-2">Color</label>
+            <select class="w-full border rounded px-2 py-1 apparel-color">
+                ${product.colors.map(c =>
+                    `<option value="${c}">${c.replace(/_/g," ")}</option>`
+                ).join("")}
+            </select>
+
+            <!-- SIZE -->
+            <label class="block text-xs font-bold mt-2">Size</label>
+            <select class="w-full border rounded px-2 py-1 apparel-size">
+                ${ALL_SIZES.map(s =>
+                    `<option value="${s}" ${s==="M" ? "selected":""}>${s}</option>`
+                ).join("")}
+            </select>
+
+            <!-- ADD TO CART -->
+            <button class="mt-4 w-full py-2 rounded-lg font-semibold text-white btn-primary add-to-cart">
+                Add to Cart
+            </button>
+        </div>
+        `;
+    }).join("");
+
+    attachCardBehavior(products);
+};
+
+/* ---------------------------------------------
+   ATTACH BEHAVIOR
+------------------------------------------------ */
+const attachCardBehavior = (products) => {
+    document.querySelectorAll(".product-card").forEach(card => {
+        const id = card.dataset.productId;
+        const product = products.find(p => p.id === id);
+        if (!product) return;
+
+        const typeSel = card.querySelector(".apparel-type");
+        const colorSel = card.querySelector(".apparel-color");
+        const sizeSel = card.querySelector(".apparel-size");
+        const priceLine = card.querySelector(".price-line");
+        const addBtn = card.querySelector(".add-to-cart");
+
+        const updatePrice = () => {
+            const p = computePrice(product, typeSel.value, sizeSel.value);
+            priceLine.textContent = formatCurrency(p);
+        };
+
+        typeSel.addEventListener("change", updatePrice);
+        sizeSel.addEventListener("change", updatePrice);
+
+        addBtn.addEventListener("click", () => {
+            addToCart({
+                id: product.id,
+                name: product.name,
+                apparelType: typeSel.value,
+                color: colorSel.value,
+                size: sizeSel.value,
+                price: computePrice(product, typeSel.value, sizeSel.value)
+            });
+        });
+
+        card.querySelector(".quick-view-trigger")
+            .addEventListener("click", () => openQuickView(product));
+
+        updatePrice();
+    });
+};
+
+/* ---------------------------------------------
+   INIT
+------------------------------------------------ */
+window.onload = () => {
+    initStore();
+
+    const modal = document.getElementById("quickViewModal");
+    if (modal) {
+        modal.querySelector(".close-modal").addEventListener("click", closeQuickView);
+        modal.addEventListener("click", e => {
+            if (e.target.id === "quickViewModal") closeQuickView();
+        });
+    }
+};
 </script>
 
 </body>
 </html>
-
