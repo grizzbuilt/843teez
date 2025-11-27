@@ -7,7 +7,7 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Yellow"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/ConwayModel.png",
       "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"]
     },
@@ -19,7 +19,7 @@
       "product_options": ["Baseball_Tee"],
       "colors": ["Black/White"],
       "base_prices": { "Baseball_Tee": 28 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/ConwaySTModel.png",
       "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"]
     },
@@ -31,21 +31,21 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Forest Green"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/HstConwayModel.png",
       "imageUrls": ["../store/HstConwayModel.png", "../store/HstConway.jpg"]
     },
 
     {
       "id": "F101",
-      "name": "Fall CandLimited Edition",
+      "name": "Fall Candle",
       "category": "Fall",
       "product_options": ["Tee_Shirt", "Sweatshirt"],
-      "colors": ["Texas Orang", "Heather_Gray", "Gold", "Light_Pink", "Sand", "Orange"],
+      "colors": ["Texas_Orange", "Heather_Gray", "Gold", "Light_Pink", "Sand", "Orange"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "../store/FallCandLimited EditionModel.png",
-      "imageUrls": ["../store/FallCandLimited EditionModel.png", "../store/FallCandLimited EditionTexOrg.jpg", "../store/FallCandLimited EditionGray.jpg", "../store/FallCandLimited EditionGold.jpg", "../store/FallCandLimited EditionPink.jpg", "../store/FallCandLimited EditionSand.jpg", "../store/FallCandLimited EditionOrange.jpg"]
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/FallCandleModel.png",
+      "imageUrls": ["../store/FallCandleModel.png", "../store/FallCandleTexOrg.jpg", "../store/FallCandleGray.jpg", "../store/FallCandleGold.jpg", "../store/FallCandlePink.jpg", "../store/FallCandleSand.jpg", "../store/FallCandleOrange.jpg"]
     },
 
     {
@@ -55,21 +55,57 @@
       "product_options": ["Tee_Shirt", "Sweatshirt"],
       "colors": ["Heather_Gray", "Carolina_Blue", "Natural", "Light_Blue", "Light_Pink"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/MiserBroFrontModel.png",
       "imageUrls": ["../store/MiserBroFrontModel.png", "../store/MiserBroBackModel.png", "../store/MiserBroGray.jpg", "../store/MiserBroCaroBlue.jpg", "../store/MiserBroNatural.jpg", "../store/MiserBroLightBlue.jpg", "../store/MiserBroLightPink.jpg"]
     },
 
     {
-      "id": "C201",
-      "name": "YuLimited Editiontide Riptide",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Hoodie", "Sweatshirt"],
-      "colors": ["Royal_Blue", "Light_Blue", "Light_Pink", "Daisey"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "/store/yuLimited Editionmodel.png",
-      "imageUrls": ["../store/YuLimited EditionModel.png", "../store/YuLimited EditionRoyal.jpg", "../store/YuLimited EditionLBlue.jpg", "../store/YuLimited EditionLPink.jpg", "../store/YuLimited EditionDaisey.jpg"]
+      "id": "LE101",
+      "name": "Fight Me - Only 8 Left",
+      "category": "Limited Edition",
+      "product_options": ["Tee_Shirt"],
+      "colors": ["Black"],
+      "base_prices": { "Tee_Shirt": 20 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/fightmemodel.png",
+      "imageUrls": ["../store/fightmemodel.png", "../store/FIGTMETEE.png"]
+    },
+
+    {
+      "id": "LE102",
+      "name": "Dungeon Crawler - Only 25 Left",
+      "category": "Limited Edition",
+      "product_options": ["Tee_Shirt"],
+      "colors": ["Black"],
+      "base_prices": { "Tee_Shirt": 20 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/DunCrawlerModel.png",
+      "imageUrls": ["../store/DunCrawlerModel.png", "../store/DungeonCrawlersTtee.jpg"]
+    },
+
+    {
+      "id": "LE103",
+      "name": "Certififed NPC - Only 27 Left",
+      "category": "Limited Edition",
+      "product_options": ["Tee_Shirt"],
+      "colors": ["Black"],
+      "base_prices": { "Tee_Shirt": 20 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/certnpcmodel.png",
+      "imageUrls": ["../store/certnpcmodel.png", "../store/CertNPCtee.jpg"]
+    },
+
+    {
+      "id": "LE104",
+      "name": "Certififed Weird - Only 13 Left",
+      "category": "Limited Edition",
+      "product_options": ["Tee_Shirt"],
+      "colors": ["Black"],
+      "base_prices": { "Tee_Shirt": 20 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/certweirdmodel.png",
+      "imageUrls": ["../store/certweirdmodel.png", "../store/CertWeirdtee.jpg"]
     }
   ]
 }
