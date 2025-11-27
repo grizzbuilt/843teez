@@ -242,7 +242,11 @@ const attachEvents = (products) => {
     });
 };
 
-window.onload = initStore;
+window.onload = () => {
+    initStore();
+    updateCartSummary();
+};
+
 </script>
 
 </body>
