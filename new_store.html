@@ -488,8 +488,13 @@ const attachCardBehavior = (products) => {
 /* ---------------------------------------------
    INIT
 ------------------------------------------------ */
-window.onload = () => {
-    initStore();
+window.onload = async () => {
+  const storeIsOpen = await loadStoreSettings();
+  if (!storeIsOpen) return;
+
+  initStore();
+};
+
 
     const modal = document.getElementById("quickViewModal");
     if (modal) {
