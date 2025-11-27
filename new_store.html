@@ -485,16 +485,17 @@ async function loadStoreSettings() {
 }
 </script>
 
+<script>
 /* ---------------------------------------------
-   INIT
------------------------------------------------- */
+   Init
+-------------------------------------------- */
+    
 window.onload = async () => {
   const storeIsOpen = await loadStoreSettings();
   if (!storeIsOpen) return;
 
   initStore();
 
-  // MODAL EVENTS
   const modal = document.getElementById("quickViewModal");
   if (modal) {
       modal.querySelector(".close-modal").addEventListener("click", closeQuickView);
@@ -503,6 +504,7 @@ window.onload = async () => {
       });
   }
 };
+
 
 </script>
 
