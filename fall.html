@@ -8,7 +8,8 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date()); gtag('config', 'G-4PVF756J01');
     </script>
-<meta name="robots" content="noindex, follow">
+
+    <meta name="robots" content="noindex, follow">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -40,120 +41,103 @@
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
-
-<!-- MAIN -->
 <div class="max-w-6xl mx-auto p-6 sm:p-10 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
 
-    <!-- HEADER -->
-    <header class="text-center mb-8">
-        <img src="/843teezlogo.png" class="max-w-xs mx-auto mb-4" />
-        <h1 class="text-3xl font-extrabold text-[#007c9e]">Fall & Halloween Collection</h1>
+<header class="text-center mb-8">
+    <img src="/843teezlogo.png" class="max-w-xs mx-auto mb-4" />
+    <h1 class="text-3xl font-extrabold text-[#007c9e]">Fall & Halloween Collection</h1>
 
-        <p class="text-sm text-gray-600">Spooky, cozy, fun seasonal tees & hoodies printed locally in Conway, SC.</p>
+    <p class="text-sm text-gray-600">
+        Spooky, cozy, fun seasonal tees & hoodies printed locally in Conway, SC.
+    </p>
 
-        <a href="cart.html"
-           id="global-view-cart-button"
-           class="inline-flex bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
-           disabled>
-            Cart (<span id="global-item-count">0</span>)
-        </a>
+    <a href="cart.html"
+       id="global-view-cart-button"
+       class="inline-flex bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
+       disabled>
+        Cart (<span id="global-item-count">0</span>)
+    </a>
 
-        <nav class="mt-6 pt-4 border-t border-gray-300 font-bold text-[#003466]">
-            <a href="store.html">🛒 All Designs</a> |
-            <a href="originals.html">843 Teez Originals</a> |
-            <a href="christmas.html">Christmas</a> |
-            <a href="fall.html" class="text-red-500 underline">Fall</a> |
-            <a href="limited_edition.html">Limited Edition</a>
-        </nav>
+    <nav class="mt-6 pt-4 border-t border-gray-300 font-bold text-[#003466]">
+        <a href="store.html">🛒 All Designs</a> |
+        <a href="originals.html">843 Teez Originals</a> |
+        <a href="christmas.html">Christmas</a> |
+        <a href="fall.html" class="text-red-500 underline">Fall</a> |
+        <a href="limited_edition.html">Limited Edition</a>
+    </nav>
 
-        <a href="/index.html"
-           class="mt-4 text-[#007c9e] hover:text-[#003466] font-semibold block">
-            ← Back to Main Site
-        </a>
-    </header>
+    <a href="/index.html"
+       class="mt-4 text-[#007c9e] hover:text-[#003466] font-semibold block">
+        ← Back to Main Site
+    </a>
+</header>
 
-    <!-- GRID -->
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-        <!-- PRODUCTS -->
-        <div class="lg:col-span-3">
-            <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
-                Fall Apparel Designs
-            </h2>
+<div class="lg:col-span-3">
+    <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
+        Fall Apparel Designs
+    </h2>
 
-            <div id="product-grid"
-                 class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <p class="text-gray-500 text-center col-span-3 pt-8">Loading Fall Products...</p>
-            </div>
-        </div>
-
-        <!-- SIDEBAR CART -->
-        <div class="lg:col-span-1">
-            <div class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
-
-                <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
-
-                <p class="text-sm text-gray-600 mb-2">
-                    Total Items:
-                    <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
-                </p>
-
-                <p class="text-xl font-extrabold text-[#003466] mb-4">
-                    Est. Total:
-                    <span id="summary-cart-total">$0.00</span>
-                </p>
-
-                <a href="cart.html"
-                   id="view-cart-button"
-                   class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all btn-primary disabled:opacity-50"
-                   disabled>
-                    Review & Checkout
-                </a>
-
-            </div>
-        </div>
-
+    <div id="product-grid"
+         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <p class="text-gray-500 text-center col-span-3 pt-8">
+            Loading Fall Products...
+        </p>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="text-center mt-12 pt-6 border-t text-[#003466] text-xs font-semibold">
-        <p>843 Teez™ is a <a class="text-[#007c9e]" target="_blank" href="https://grizzbuilt.com">GrizzBuilt™</a> brand.</p>
-        <p>Woman & Veteran-owned.</p>
-        <p>&copy; 2025 843 Teez™</p>
-    </footer>
 </div>
 
-<!-- JS LOGIC -->
-<script>
-/* CATEGORY */
-const CATEGORY_FILTER = "fall";
+<div class="lg:col-span-1">
+    <div class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
 
-/* GLOBAL STATE */
+        <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
+
+        <p class="text-sm text-gray-600 mb-2">
+            Total Items:
+            <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
+        </p>
+
+        <p class="text-xl font-extrabold text-[#003466] mb-4">
+            Est. Total:
+            <span id="summary-cart-total">$0.00</span>
+        </p>
+
+        <a href="cart.html"
+           id="view-cart-button"
+           class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all btn-primary disabled:opacity-50"
+           disabled>
+            Review & Checkout
+        </a>
+
+    </div>
+</div>
+
+</div>
+
+<footer class="text-center mt-12 pt-6 border-t text-[#003466] text-xs font-semibold">
+    <p>843 Teez™ is a <a class="text-[#007c9e]" target="_blank" href="https://grizzbuilt.com">GrizzBuilt™</a> brand.</p>
+    <p>Woman & Veteran-owned.</p>
+    <p>&copy; 2025 843 Teez™</p>
+</footer>
+</div>
+
+<script>
+const CATEGORY_FILTER = "Fall";
+const SIZES = ["S","M","L","XL","2XL","3XL","4XL","5XL"];
+
 let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 let allProducts = [];
 
-/* HELPERS */
 const formatCurrency = amt => `$${amt.toFixed(2)}`;
 
 const computePrice = (product, type, size) => {
-    const base = product.base_prices?.[type] ?? 0;
-    const up = product.size_upcharges?.[size] ?? 0;
+    const base = product.base_prices[type] || 0;
+    const up   = product.size_upcharges[size] || 0;
     return base + up;
 };
 
-const cycleImage = el => {
-    const img = el.querySelector("img");
-    const urls = JSON.parse(img.dataset.imageUrls);
-    let idx = Number(img.dataset.currentIndex);
-    idx = (idx + 1) % urls.length;
-    img.src = urls[idx];
-    img.dataset.currentIndex = idx;
-};
-
-/* CART SUMMARY */
 const updateCartSummary = () => {
-    let totalItems = 0;
-    let subtotal = 0;
+    let totalItems = 0, subtotal = 0;
 
     cart.forEach(item => {
         subtotal += item.price * item.qty;
@@ -179,7 +163,6 @@ const updateCartSummary = () => {
     }
 };
 
-/* ADD TO CART */
 const addToCart = item => {
     const existing = cart.find(
         c => c.id === item.id &&
@@ -195,11 +178,9 @@ const addToCart = item => {
     updateCartSummary();
 };
 
-/* LOAD & RENDER */
 const initStore = async () => {
-    const res = await fetch("/data/products.json");
+    const res = await fetch("/data/products.json?v=" + Date.now());
     const json = await res.json();
-
     allProducts = json.products || [];
 
     renderProducts();
@@ -210,12 +191,14 @@ const renderProducts = () => {
     const grid = document.getElementById("product-grid");
 
     const filtered = allProducts.filter(
-        p => p.category.toLowerCase() === CATEGORY_FILTER
+        p => p.category.toLowerCase() === CATEGORY_FILTER.toLowerCase()
     );
 
     if (filtered.length === 0) {
         grid.innerHTML =
-            `<p class="text-center col-span-3 pt-8 text-gray-600">No Fall products yet!</p>`;
+            `<p class="text-center col-span-3 pt-8 text-gray-600">
+                No Fall products yet!
+            </p>`;
         return;
     }
 
@@ -225,23 +208,21 @@ const renderProducts = () => {
         return `
         <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100">
 
-            <div class="product-image-container mb-4" onclick="cycleImage(this)">
-                <img src="${product.thumbnail || product.imageUrls[0]}"
-                     class="rounded-lg w-full"
-                     data-current-index="0"
-                     data-image-urls='${JSON.stringify(product.imageUrls)}'>
-                <div class="image-overlay">Click to cycle</div>
-            </div>
+            <img src="${product.thumbnail || product.imageUrls[0]}"
+                 class="rounded-lg w-full mb-3">
 
             <h3 class="font-bold text-[#003466]">${product.name}</h3>
-            <p class="text-xs text-gray-500">${product.category}</p>
 
-            <p class="text-[#007c9e] font-extrabold mb-2">Starting at ${formatCurrency(lowest)}</p>
+            <p class="text-[#007c9e] font-extrabold mb-2">
+                Starting at ${formatCurrency(lowest)}
+            </p>
 
             <label class="block text-xs font-bold mt-2">Style</label>
             <select class="w-full border rounded px-2 py-1 apparel-type">
                 ${product.product_options.map(o =>
-                    `<option value="${o}">${o.replace(/_/g," ")}</option>`
+                    `<option value="${o}">
+                        ${o.replace(/_/g," ")} — ${formatCurrency(product.base_prices[o])}
+                    </option>`
                 ).join("")}
             </select>
 
@@ -253,10 +234,7 @@ const renderProducts = () => {
             </select>
 
             <label class="block text-xs font-bold mt-2">Size</label>
-            <select class="w-full border rounded px-2 py-1 apparel-size">
-                ${["S","M","L","XL","2XL","3XL","4XL","5XL"]
-                    .map(s => `<option value="${s}">${s}</option>`).join("")}
-            </select>
+            <select class="w-full border rounded px-2 py-1 apparel-size"></select>
 
             <button class="mt-4 w-full py-2 rounded-lg font-semibold text-white btn-primary add-to-cart">
                 Add to Cart
@@ -268,7 +246,6 @@ const renderProducts = () => {
     attachCardEvents(filtered);
 };
 
-/* CARD EVENTS */
 const attachCardEvents = (products) => {
     document.querySelectorAll(".bg-white").forEach((card, i) => {
         const product = products[i];
@@ -276,8 +253,23 @@ const attachCardEvents = (products) => {
 
         const typeSel = card.querySelector(".apparel-type");
         const colorSel = card.querySelector(".apparel-color");
-        const sizeSel = card.querySelector(".apparel-size");
-        const addBtn = card.querySelector(".add-to-cart");
+        const sizeSel  = card.querySelector(".apparel-size");
+        const addBtn   = card.querySelector(".add-to-cart");
+
+        const updateSizes = () => {
+            const type = typeSel.value;
+            sizeSel.innerHTML = SIZES.map(size => {
+                const base = product.base_prices[type];
+                const up   = product.size_upcharges[size] || 0;
+                const price = base + up;
+                return `<option value="${size}">
+                    ${size}${up ? " (+$"+up+")" : ""} — ${formatCurrency(price)}
+                </option>`;
+            }).join("");
+        };
+
+        typeSel.addEventListener("change", updateSizes);
+        updateSizes();
 
         addBtn.addEventListener("click", () => {
             const price = computePrice(product, typeSel.value, sizeSel.value);
@@ -287,7 +279,7 @@ const attachCardEvents = (products) => {
                 apparelType: typeSel.value,
                 color: colorSel.value,
                 size: sizeSel.value,
-                price: price,
+                price,
                 qty: 1
             });
         });
