@@ -10,45 +10,42 @@
       gtag('config', 'G-4PVF756J01');
     </script>
 
-    <meta name="robots" content="noindex, follow">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <title>843 Teez | Finalize Order</title>
+<title>843 Teez | Finalize Order</title>
 
-    <style>
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: #f8fcff;
-            background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
-            background-size: 300px;
-        }
-        .btn-primary { background-color: #003466; }
-        .btn-primary:hover { background-color: #007c9e; }
-    </style>
+<style>
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background-color: #f8fcff;
+        background-image: url('https://843teez.com/surf-texture.png');
+        background-repeat: repeat;
+        background-size: 300px;
+    }
+    .btn-primary { background-color: #003466; }
+    .btn-primary:hover { background-color: #007c9e; }
+</style>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
-<!-- Banner -->
-<div class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base fixed top-0 z-50">
-    <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+<div class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md fixed top-0 z-50">
+    <p class="font-bold mb-1">843 Teez Online Store — Final Invoice Request</p>
 </div>
 
 <div class="max-w-6xl mx-auto p-6 sm:p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
 
-<!-- Header -->
 <header class="text-center mb-8">
     <img src="https://843teez.com/843teezlogo.png" class="max-w-xs mx-auto mb-4 w-5/6">
     <h1 class="text-3xl font-extrabold text-[#007c9e]">Finalize Order Request</h1>
-    <p class="text-sm text-gray-600">Provide shipping/contact details and we’ll email the invoice.</p>
+    <p class="text-sm text-gray-600">Provide pickup or shipping details and receive your invoice.</p>
 </header>
 
-<!-- Checkout Form -->
 <div class="max-w-3xl mx-auto">
 
 <form
@@ -57,21 +54,20 @@
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     action="/confirmation.html"
-    class="space-y-4 bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg"
->
+    class="space-y-4 bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg">
 
 <input type="hidden" name="form-name" value="843Teez_Order">
 <input type="hidden" name="cart_data_json" id="cart-data-json">
 <input type="hidden" name="bot-field">
 
-<!-- Contact -->
+<!-- CONTACT -->
 <div>
     <label class="block text-sm font-medium">Full Name</label>
     <input type="text" name="name" required class="w-full p-2 border rounded-lg">
 </div>
 
 <div>
-    <label class="block text-sm font-medium">Email (Invoice Sent Here)</label>
+    <label class="block text-sm font-medium">Email (Invoice Goes Here)</label>
     <input type="email" name="email" required class="w-full p-2 border rounded-lg">
 </div>
 
@@ -80,10 +76,11 @@
     <input type="tel" name="phone" class="w-full p-2 border rounded-lg">
 </div>
 
-<!-- Shipping -->
+<!-- SHIPPING METHOD -->
 <div>
     <label class="block text-sm font-medium">Shipping Method</label>
-    <select name="shipping_method" id="shipping_method" required
+    <select name="shipping_method" id="shipping_method"
+            required
             class="w-full p-2 border rounded-lg">
         <option value="" disabled selected>Select an option…</option>
         <option value="local_pickup">Local Pickup (FREE)</option>
@@ -91,7 +88,19 @@
     </select>
 </div>
 
-<!-- Address -->
+<!-- PICKUP INSTRUCTIONS -->
+<div id="pickup-fields" class="hidden space-y-3 border-l-4 border-green-200 pl-4">
+    <label class="block text-sm font-medium">Local Pickup Instructions</label>
+    <textarea
+        name="pickup_instructions"
+        id="pickup_instructions"
+        class="w-full p-2 border rounded-lg"
+        placeholder="Best way to contact you to arrange pickup (call/text/email)…"
+        rows="3">
+    </textarea>
+</div>
+
+<!-- SHIPPING ADDRESS -->
 <div id="shipping-fields" class="hidden space-y-3 border-l-4 border-red-200 pl-4">
     <input type="text" name="full_address" placeholder="Street Address" class="w-full p-2 border rounded-lg">
     <div class="grid grid-cols-3 gap-3">
@@ -101,7 +110,7 @@
     </div>
 </div>
 
-<!-- Summary -->
+<!-- ORDER SUMMARY -->
 <div class="mt-6 pt-4 border-t">
     <h3 class="text-xl font-bold text-[#003466] mb-2">Order Summary</h3>
 
@@ -109,23 +118,24 @@
         <span>Subtotal:</span>
         <span id="subtotal-display">$0.00</span>
     </div>
+
     <div class="flex justify-between text-red-600">
         <span>Tax (8%):</span>
         <span id="tax-display">$0.00</span>
     </div>
+
     <div class="flex justify-between">
         <span>Shipping:</span>
         <span id="shipping-display">$0.00</span>
     </div>
+
     <div class="flex justify-between text-xl font-bold text-red-500 border-t pt-2 mt-2">
         <span>Total:</span>
         <span id="total-display">$0.00</span>
     </div>
 </div>
 
-<button type="submit"
-        id="submit-order"
-        class="w-full mt-6 text-white font-bold py-3 rounded-xl btn-primary">
+<button type="submit" class="w-full mt-6 text-white font-bold py-3 rounded-xl btn-primary">
     Confirm Order & Request Invoice
 </button>
 
@@ -139,50 +149,38 @@
 </div>
 
 <script>
-/* ------------------------------
-   CONSTANTS
------------------------------- */
 const TAX_RATE = 0.08;
 const SHIPPING = { local_pickup: 0, standard_shipping: 8 };
 
-/* ------------------------------
-   CART LOAD
------------------------------- */
 let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 
-/* Redirect if cart empty */
-if (!cart.length) {
-    window.location.href = "store.html";
-}
+const format = x => `$${x.toFixed(2)}`;
 
-/* ------------------------------
-   HELPERS
------------------------------- */
-const format = x => `$${Number(x).toFixed(2)}`;
-
-/* ------------------------------
-   TOGGLE ADDRESS
------------------------------- */
 function toggleAddressFields() {
     const method = document.getElementById("shipping_method").value;
-    document.getElementById("shipping-fields")
-        .classList.toggle("hidden", method !== "standard_shipping");
+
+    const shipBox = document.getElementById("shipping-fields");
+    const pickupBox = document.getElementById("pickup-fields");
+    const pickupInput = document.getElementById("pickup_instructions");
+
+    if (method === "standard_shipping") {
+        shipBox.classList.remove("hidden");
+        pickupBox.classList.add("hidden");
+        pickupInput.removeAttribute("required");
+    }
+
+    if (method === "local_pickup") {
+        shipBox.classList.add("hidden");
+        pickupBox.classList.remove("hidden");
+        pickupInput.setAttribute("required", "true");
+    }
 
     updateTotals();
 }
 
-document.getElementById("shipping_method")
-    .addEventListener("change", toggleAddressFields);
-
-/* ------------------------------
-   TOTAL CALCULATION
------------------------------- */
 function updateTotals() {
     let subtotal = 0;
-
-    cart.forEach(item => {
-        subtotal += Number(item.price) * Number(item.qty);
-    });
+    cart.forEach(item => subtotal += item.price * item.qty);
 
     const method = document.getElementById("shipping_method").value;
     const shipping = SHIPPING[method] || 0;
@@ -203,25 +201,10 @@ function updateTotals() {
     });
 }
 
-/* ------------------------------
-   FORM SUBMIT SAFETY
------------------------------- */
-document.querySelector("form").addEventListener("submit", e => {
-    updateTotals();
+document.getElementById("shipping_method")
+    .addEventListener("change", toggleAddressFields);
 
-    if (!cart.length) {
-        alert("Your cart is empty.");
-        e.preventDefault();
-        return;
-    }
-});
-
-/* ------------------------------
-   INIT
------------------------------- */
-window.onload = () => {
-    updateTotals();
-};
+window.onload = updateTotals;
 </script>
 
 </body>
