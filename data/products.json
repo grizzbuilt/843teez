@@ -38,14 +38,14 @@
 
     {
       "id": "F101",
-      "name": "Fall Candle",
+      "name": "Fall CandLimited Edition",
       "category": "Fall",
       "product_options": ["Tee_Shirt", "Sweatshirt"],
       "colors": ["Texas Orang", "Heather_Gray", "Gold", "Light_Pink", "Sand", "Orange"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
       "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "../store/FallCandleModel.png",
-      "imageUrls": ["../store/FallCandleModel.png", "../store/FallCandleTexOrg.jpg", "../store/FallCandleGray.jpg", "../store/FallCandleGold.jpg", "../store/FallCandlePink.jpg", "../store/FallCandleSand.jpg", "../store/FallCandleOrange.jpg"]
+      "thumbnail": "../store/FallCandLimited EditionModel.png",
+      "imageUrls": ["../store/FallCandLimited EditionModel.png", "../store/FallCandLimited EditionTexOrg.jpg", "../store/FallCandLimited EditionGray.jpg", "../store/FallCandLimited EditionGold.jpg", "../store/FallCandLimited EditionPink.jpg", "../store/FallCandLimited EditionSand.jpg", "../store/FallCandLimited EditionOrange.jpg"]
     },
 
     {
@@ -62,14 +62,14 @@
 
     {
       "id": "C201",
-      "name": "Yuletide Riptide",
+      "name": "YuLimited Editiontide Riptide",
       "category": "Christmas",
       "product_options": ["Tee_Shirt", "Hoodie", "Sweatshirt"],
       "colors": ["Royal_Blue", "Light_Blue", "Light_Pink", "Daisey"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
       "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "/store/yulemodel.png",
-      "imageUrls": ["../store/YuleModel.png", "../store/YuleRoyal.jpg", "../store/YuleLBlue.jpg", "../store/YuleLPink.jpg", "../store/YuleDaisey.jpg"]
+      "thumbnail": "/store/yuLimited Editionmodel.png",
+      "imageUrls": ["../store/YuLimited EditionModel.png", "../store/YuLimited EditionRoyal.jpg", "../store/YuLimited EditionLBlue.jpg", "../store/YuLimited EditionLPink.jpg", "../store/YuLimited EditionDaisey.jpg"]
     }
   ]
 }
