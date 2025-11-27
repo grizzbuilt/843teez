@@ -200,7 +200,7 @@
       "name": "Sleigh All Day",
       "category": "Christmas",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Orange"],
+      "colors": ["Green", "Red", "Pink", "Gray","Mint"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
       "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "/store/SleighModel.png",
