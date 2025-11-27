@@ -93,6 +93,41 @@
             </a>
         </div>
     </header>
+<script>
+let STORE_SETTINGS = {
+  store_open: true,
+  tax_rate: 0.08,
+  shipping_standard: 8
+};
+
+async function loadStoreSettings() {
+  try {
+    const res = await fetch("/data/settings.json?t=" + Date.now());
+    const data = await res.json();
+    STORE_SETTINGS = data;
+
+    // STORE CLOSED LOCK
+    if (!STORE_SETTINGS.store_open) {
+      document.body.innerHTML = `
+        <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+          <div>
+            <img src="/843teezlogo.png" style="max-width:240px;margin-bottom:1rem;">
+            <h1 style="font-size:2rem;font-weight:bold;">Store Temporarily Closed</h1>
+            <p style="margin-top:1rem;">${STORE_SETTINGS.store_message || "Please check back soon."}</p>
+          </div>
+        </div>
+      `;
+      return false;
+    }
+
+    return true;
+
+  } catch (err) {
+    console.error("Settings load failed:", err);
+    return true; // fail-open for safety
+  }
+}
+</script>
 
     <!-- GRID WRAPPER -->
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
