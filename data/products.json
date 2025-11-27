@@ -54,12 +54,12 @@
       "thumbnail": "/store/FallCandleModel.png",
       "imageUrls": [
         "/store/FallCandleModel.png",
-        "/store/FallCandleTexOrg.jpg",
+        "/store/FallCandelTexOrg.jpg",
         "/store/FallCandleGray.jpg",
         "/store/FallCandleGold.jpg",
         "/store/FallCandlePink.jpg",
         "/store/FallCandleSand.jpg",
-        "/store/FallCandleOrange.jpg"
+        "/store/FallCandleOrg.jpg"
       ]
     },
     {
@@ -143,8 +143,8 @@
       "imageUrls": [
         "/store/GrouchyModel.png",
         "/store/GrouchyGray.jpg",
-        "/store/GrouchySand.jpg",
-        "/store/GrouchyCaroBlue.jpg"
+        "/store/GroucySand.jpg",
+        "/store/GroucyCaroBlue.jpg"
       ]
     },
     {
@@ -186,7 +186,7 @@
       "name": "Stuffing is my Safe Word",
       "category": "Fall",
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Green", "Red", "Light_Pink", "Gray", "Mint"],
+      "colors": ["Orange"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
       "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "/store/StuffingModel.png",
@@ -255,7 +255,7 @@
       "thumbnail": "/store/DunCrawlerModel.png",
       "imageUrls": [
         "/store/DunCrawlerModel.png",
-        "/store/DungeonCrawlersTtee.jpg"
+        "/store/DungeonCrawlersTee.jpg"
       ]
     },
     {
@@ -335,7 +335,7 @@
         "/store/YuleModel.png",
         "/store/YuleRoyal.jpg",
         "/store/YuleLBlue.jpg",
-        "/store/YuleLPink.jpg",
+        "/store/YuleLpint.jpg",
         "/store/YuleDaisy.jpg"
       ]
     }
