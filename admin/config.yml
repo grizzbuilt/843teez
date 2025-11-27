@@ -8,6 +8,9 @@ media_folder: "store"
 public_folder: "/store"
 
 collections:
+  #
+  # MAIN PRODUCT COLLECTION
+  #
   - name: "store_products"
     label: "🛒 Store Products"
     editor:
@@ -25,13 +28,29 @@ collections:
             widget: "list"
             allow_add: true
             collapsed: true
-            summary: "{{fields.name}} — {{fields.category}}"
+            sortable: true
+            summary: "{{fields.id}} — {{fields.name}} ({{fields.category}})"
 
             fields:
+              #
+              # BASIC INFO
+              #
+              - label: "Product ID"
+                name: "id"
+                widget: "string"
+                required: true
+                hint: "Short code like O101, F101, C201, LE101."
 
-              - { label: "Product ID", name: "id", widget: "string", required: true }
+              - label: "SKU (optional)"
+                name: "sku"
+                widget: "string"
+                required: false
+                hint: "If blank, front-end can just use ID. Suggested: match the Product ID."
 
-              - { label: "Product Name", name: "name", widget: "string", required: true }
+              - label: "Product Name"
+                name: "name"
+                widget: "string"
+                required: true
 
               - label: "Category"
                 name: "category"
@@ -43,6 +62,23 @@ collections:
                   - "Christmas"
                   - "LE"
 
+              - label: "Active / Visible"
+                name: "is_active"
+                widget: "boolean"
+                required: false
+                default: true
+                hint: "Uncheck to hide this product from the storefront without deleting it."
+
+              - label: "Sort Priority"
+                name: "sort_order"
+                widget: "number"
+                required: false
+                default: 0
+                hint: "Lower numbers show first. If left at 0, list order controls position."
+
+              #
+              # PRODUCT OPTIONS
+              #
               - label: "Product Types"
                 name: "product_options"
                 widget: "select"
@@ -52,6 +88,7 @@ collections:
                   - "Baseball_Tee"
                   - "Sweatshirt"
                   - "Hoodie"
+                hint: "Select all garment types this design is available on."
 
               - label: "Colors"
                 name: "colors"
@@ -81,38 +118,118 @@ collections:
                   - Purple
                   - Burgandy
                   - Burgundy
+                hint: "Use underscores instead of spaces. Match what the front-end expects."
 
+              #
+              # PRICING
+              #
               - label: "Base Prices"
                 name: "base_prices"
                 widget: "object"
+                hint: "Set only the product types you actually use for this design."
                 fields:
-                  - { label: "Tee Shirt", name: "Tee_Shirt", widget: "number", required: false }
-                  - { label: "Baseball Tee", name: "Baseball_Tee", widget: "number", required: false }
-                  - { label: "Sweatshirt", name: "Sweatshirt", widget: "number", required: false }
-                  - { label: "Hoodie", name: "Hoodie", widget: "number", required: false }
+                  - label: "Tee Shirt"
+                    name: "Tee_Shirt"
+                    widget: "number"
+                    required: false
+                  - label: "Baseball Tee"
+                    name: "Baseball_Tee"
+                    widget: "number"
+                    required: false
+                  - label: "Sweatshirt"
+                    name: "Sweatshirt"
+                    widget: "number"
+                    required: false
+                  - label: "Hoodie"
+                    name: "Hoodie"
+                    widget: "number"
+                    required: false
 
               - label: "Size Upcharges"
                 name: "size_upcharges"
                 widget: "object"
+                hint: "Defaults based on your current pricing. You can tweak per product."
                 fields:
-                  - { label: "S", name: "S", widget: "number", default: 0 }
-                  - { label: "M", name: "M", widget: "number", default: 0 }
-                  - { label: "L", name: "L", widget: "number", default: 0 }
-                  - { label: "XL", name: "XL", widget: "number", default: 0 }
+                  - { label: "S",   name: "S",   widget: "number", default: 0 }
+                  - { label: "M",   name: "M",   widget: "number", default: 0 }
+                  - { label: "L",   name: "L",   widget: "number", default: 0 }
+                  - { label: "XL",  name: "XL",  widget: "number", default: 0 }
                   - { label: "2XL", name: "2XL", widget: "number", default: 2 }
                   - { label: "3XL", name: "3XL", widget: "number", default: 3 }
                   - { label: "4XL", name: "4XL", widget: "number", default: 5 }
                   - { label: "5XL", name: "5XL", widget: "number", default: 6 }
 
+              #
+              # MEDIA
+              #
               - label: "Thumbnail"
                 name: "thumbnail"
                 widget: "image"
-                hint: "Main product preview image"
+                required: true
+                hint: "Main product preview image shown in grids."
 
               - label: "Gallery Images"
                 name: "imageUrls"
                 widget: "list"
+                min: 1
+                hint: "At least 1 image. First image is used as the main gallery image."
                 field:
                   label: "Image"
                   name: "image"
                   widget: "image"
+
+  #
+  # GLOBAL STORE SETTINGS (for close toggle, tax, etc.)
+  #
+  - name: "store_settings"
+    label: "⚙️ Store Settings"
+    editor:
+      preview: false
+
+    files:
+      - name: "general_settings"
+        label: "General Store Settings"
+        file: "data/settings.json"
+        format: "json"
+
+        fields:
+          - label: "Store Open"
+            name: "store_open"
+            widget: "boolean"
+            default: true
+            hint: "Turn OFF to temporarily close online ordering."
+
+          - label: "Store Closed Message"
+            name: "store_closed_message"
+            widget: "string"
+            required: false
+            default: "Online ordering is temporarily closed. Please check back soon or contact us to order."
+            hint: "Shown on the storefront when the store is closed (once wired in)."
+
+          - label: "Sales Tax Rate"
+            name: "tax_rate"
+            widget: "number"
+            value_type: "float"
+            default: 0.08
+            step: 0.01
+            hint: "Current: 0.08 for 8%."
+
+          - label: "Global Price Multiplier"
+            name: "price_multiplier"
+            widget: "number"
+            value_type: "float"
+            default: 1
+            step: 0.01
+            hint: "Optional. Set to 1.05 for 5% bump across all base prices (once wired in)."
+
+          - label: "Default Shipping - Local Pickup"
+            name: "shipping_local_pickup"
+            widget: "number"
+            value_type: "float"
+            default: 0
+
+          - label: "Default Shipping - Standard"
+            name: "shipping_standard"
+            widget: "number"
+            value_type: "float"
+            default: 8
