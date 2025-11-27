@@ -8,7 +8,8 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date()); gtag('config', 'G-4PVF756J01');
     </script>
-<meta name="robots" content="noindex, follow">
+
+    <meta name="robots" content="noindex, follow">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -41,99 +42,81 @@
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
-<!-- Main -->
 <div class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
 
-    <!-- Header -->
-    <header class="text-center mb-8">
-        <img src="/843teezlogo.png" class="max-w-xs mx-auto mb-4" />
+<header class="text-center mb-8">
+    <img src="/843teezlogo.png" class="max-w-xs mx-auto mb-4" />
+    <h1 class="text-3xl font-extrabold text-[#007c9e]">Christmas Collection</h1>
 
-        <h1 class="text-3xl font-extrabold text-[#007c9e]">Christmas Collection</h1>
+    <a href="cart.html"
+       id="global-view-cart-button"
+       class="inline-flex bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
+       disabled>
+        Cart (<span id="global-item-count">0</span>)
+    </a>
+
+    <nav class="mt-6 pt-4 border-t border-gray-300 font-bold text-[#003466]">
+        <a href="store.html">🛒 All Designs</a> |
+        <a href="originals.html">843 Teez Originals</a> |
+        <a href="christmas.html" class="text-red-600 underline">Christmas</a> |
+        <a href="fall.html">Fall</a> |
+        <a href="limited_edition.html">Limited Edition</a>
+    </nav>
+
+    <div class="mt-4">
+        <a href="/index.html" class="text-[#007c9e] hover:text-[#003466] font-semibold block">← Back to Main Site</a>
+    </div>
+</header>
+
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+<div class="lg:col-span-3">
+    <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">Apparel Designs</h2>
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <p class="text-gray-500 text-center col-span-3 pt-8">Loading Christmas products...</p>
+    </div>
+</div>
+
+<div class="lg:col-span-1">
+    <div class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+        <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
+        <p class="text-sm text-gray-600 mb-2">
+            Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
+        </p>
+        <p class="text-xl font-extrabold text-[#003466] mb-4">
+            Est. Total: <span id="summary-cart-total">$0.00</span>
+        </p>
 
         <a href="cart.html"
-           id="global-view-cart-button"
-           class="inline-flex bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
+           id="view-cart-button"
+           class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all btn-primary disabled:opacity-50"
            disabled>
-            Cart (<span id="global-item-count">0</span>)
+            Review & Checkout
         </a>
-
-        <nav class="mt-6 pt-4 border-t border-gray-300 font-bold text-[#003466]">
-            <a href="store.html">🛒 All Designs</a> |
-            <a href="originals.html">843 Teez Originals</a> |
-            <a href="christmas.html" class="text-red-600 underline">Christmas</a> |
-            <a href="fall.html">Fall</a> |
-            <a href="limited_edition.html">Limited Edition</a>
-        </nav>
-
-        <div class="mt-4">
-            <a href="/index.html" class="text-[#007c9e] hover:text-[#003466] font-semibold block">← Back to Main Site</a>
-        </div>
-    </header>
-
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-
-        <!-- PRODUCTS -->
-        <div class="lg:col-span-3">
-            <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">Apparel Designs</h2>
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <p class="text-gray-500 text-center col-span-3 pt-8">Loading Christmas products...</p>
-            </div>
-        </div>
-
-        <!-- CART SUMMARY -->
-        <div class="lg:col-span-1">
-            <div class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
-
-                <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
-
-                <p class="text-sm text-gray-600 mb-2">
-                    Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
-                </p>
-
-                <p class="text-xl font-extrabold text-[#003466] mb-4">
-                    Est. Total: <span id="summary-cart-total">$0.00</span>
-                </p>
-
-                <a href="cart.html"
-                   id="view-cart-button"
-                   class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all btn-primary disabled:opacity-50"
-                   disabled>
-                    Review & Checkout
-                </a>
-            </div>
-        </div>
-
     </div>
+</div>
 
-<!-- FOOTER -->
+</div>
+
 <footer class="text-center mt-12 pt-6 border-t text-[#003466] text-xs font-semibold">
     <p>843 Teez™ is a <a href="https://grizzbuilt.com" class="text-[#007c9e] hover:underline" target="_blank">GrizzBuilt™</a> brand.</p>
 </footer>
+
 </div>
 
-<!-- JS -->
 <script>
 const CATEGORY_FILTER = "christmas";
+const SIZES = ["S","M","L","XL","2XL","3XL","4XL","5XL"];
+
 let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 let allProducts = [];
-
-const SIZES = ["S","M","L","XL","2XL","3XL","4XL","5XL"];
 
 const formatCurrency = x => `$${x.toFixed(2)}`;
 
 const computePrice = (product, type, size) => {
-    const base = product.base_prices?.[type] ?? 0;
-    const up   = product.size_upcharges?.[size] ?? 0;
+    const base = product.base_prices[type] || 0;
+    const up   = product.size_upcharges[size] || 0;
     return base + up;
-};
-
-const cycleImage = el => {
-    const img = el.querySelector("img");
-    const urls = JSON.parse(img.dataset.imageUrls);
-    let i = parseInt(img.dataset.currentIndex);
-    i = (i + 1) % urls.length;
-    img.src = urls[i];
-    img.dataset.currentIndex = i;
 };
 
 const updateCartSummary = () => {
@@ -149,8 +132,13 @@ const updateCartSummary = () => {
     const btn = document.getElementById("view-cart-button");
     const headBtn = document.getElementById("global-view-cart-button");
 
-    if (totalItems === 0) { btn.setAttribute("disabled","true"); headBtn.setAttribute("disabled","true"); }
-    else { btn.removeAttribute("disabled"); headBtn.removeAttribute("disabled"); }
+    if (totalItems === 0) {
+        btn.setAttribute("disabled","true");
+        headBtn.setAttribute("disabled","true");
+    } else {
+        btn.removeAttribute("disabled");
+        headBtn.removeAttribute("disabled");
+    }
 };
 
 const addToCart = item => {
@@ -168,7 +156,7 @@ const addToCart = item => {
 };
 
 const initStore = async () => {
-    const res = await fetch("/data/products.json");
+    const res = await fetch("/data/products.json?v=" + Date.now());
     const json = await res.json();
     allProducts = json.products || [];
     renderProducts();
@@ -185,18 +173,11 @@ const renderProducts = () => {
         return `
         <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100">
 
-            <div class="product-image-container mb-4" onclick="cycleImage(this)">
-                <img src="${product.thumbnail || product.imageUrls[0]}"
-                     class="rounded-lg w-full"
-                     data-image-urls='${JSON.stringify(product.imageUrls)}'
-                     data-current-index="0">
-                <div class="image-overlay">Click for more</div>
-            </div>
+            <img src="${product.thumbnail || product.imageUrls[0]}" class="rounded-lg w-full mb-3">
 
             <h3 class="font-bold text-[#003466]">${product.name}</h3>
             <p class="text-[#007c9e] font-extrabold mb-2">Starting at ${formatCurrency(lowest)}</p>
 
-            <!-- STYLE -->
             <label class="block text-xs font-bold mt-2">Style</label>
             <select class="w-full border rounded px-2 py-1 apparel-type">
                 ${product.product_options.map(opt =>
@@ -205,13 +186,13 @@ const renderProducts = () => {
                     </option>`).join("")}
             </select>
 
-            <!-- COLOR -->
             <label class="block text-xs font-bold mt-2">Color</label>
             <select class="w-full border rounded px-2 py-1 apparel-color">
-                ${product.colors.map(c => `<option value="${c}">${c.replace(/_/g," ")}</option>`).join("")}
+                ${product.colors.map(c =>
+                    `<option value="${c}">${c.replace(/_/g," ")}</option>`
+                ).join("")}
             </select>
 
-            <!-- SIZE -->
             <label class="block text-xs font-bold mt-2">Size</label>
             <select class="w-full border rounded px-2 py-1 apparel-size"></select>
 
@@ -227,25 +208,24 @@ const renderProducts = () => {
 const attachEvents = (products) => {
     document.querySelectorAll(".bg-white").forEach((card, i) => {
         const product = products[i];
-        if (!product) return;
-
         const typeSel = card.querySelector(".apparel-type");
+        const sizeSel = card.querySelector(".apparel-size");
         const colorSel = card.querySelector(".apparel-color");
-        const sizeSel  = card.querySelector(".apparel-size");
-        const addBtn   = card.querySelector(".add-to-cart");
+        const addBtn = card.querySelector(".add-to-cart");
 
         const updateSizes = () => {
             const type = typeSel.value;
             sizeSel.innerHTML = SIZES.map(size => {
                 const price = computePrice(product, type, size);
+                const up = product.size_upcharges[size] || 0;
                 return `<option value="${size}">
-                    ${size} — ${formatCurrency(price)}
+                    ${size}${up ? " (+$"+up+")" : ""} — ${formatCurrency(price)}
                 </option>`;
             }).join("");
         };
 
         typeSel.addEventListener("change", updateSizes);
-        updateSizes(); // initial load
+        updateSizes();
 
         addBtn.addEventListener("click", () => {
             const price = computePrice(product, typeSel.value, sizeSel.value);
