@@ -1,343 +1,470 @@
-{
-  "products": [
-    {
-      "id": "O101",
-      "name": "City of Conway",
-      "category": "Originals",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Heather_Gray", "Yellow"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/ConwayModel.png",
-      "imageUrls": [
-        "../store/ConwayModel.png",
-        "../store/ConwayGrey.jpg",
-        "../store/ConwayYellow.jpg"
-      ]
-    },
-    {
-      "id": "O102",
-      "name": "Conway SC Tiger",
-      "category": "Originals",
-      "product_options": ["Baseball_Tee"],
-      "colors": ["Black/White"],
-      "base_prices": { "Baseball_Tee": 28 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/ConwaySTModel.png",
-      "imageUrls": [
-        "../store/ConwaySTModel.png",
-        "../store/ConwayST.jpg"
-      ]
-    },
-    {
-      "id": "O103",
-      "name": "Historic Conway SC",
-      "category": "Originals",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Forest Green"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/HstConwayModel.png",
-      "imageUrls": [
-        "../store/HstConwayModel.png",
-        "../store/HstConway.jpg"
-      ]
-    },
-    {
-      "id": "F101",
-      "name": "Fall Candle",
-      "category": "Fall",
-      "product_options": ["Tee_Shirt", "Sweatshirt"],
-      "colors": ["Texas Orang", "Heather_Gray", "Gold", "Light_Pink", "Sand", "Orange"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/FallCandleModel.png",
-      "imageUrls": [
-        "../store/FallCandleModel.png",
-        "../store/FallCandleTexOrg.jpg",
-        "../store/FallCandleGray.jpg",
-        "../store/FallCandleGold.jpg",
-        "../store/FallCandlePink.jpg",
-        "../store/FallCandleSand.jpg",
-        "../store/FallCandleOrange.jpg"
-      ]
-    },
-    {
-      "id": "C101",
-      "name": "Miser Brothers Heating & Cooling",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt"],
-      "colors": ["Heather_Gray", "Carolina_Blue", "Natural", "Light_Blue", "Light_Pink"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/MiserBroFrontModel.png",
-      "imageUrls": [
-        "../store/MiserBroFrontModel.png",
-        "../store/MiserBroBackModel.png",
-        "../store/MiserBroGray.jpg",
-        "../store/MiserBroCaroBlue.jpg",
-        "../store/MiserBroNatural.jpg",
-        "../store/MiserBroLightBlue.jpg",
-        "../store/MiserBroLightPink.jpg"
-      ]
-    },
-    {
-      "id": "C102",
-      "name": "Buddys Syrup Supply",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Green", "Red", "Heather_Gray", "Purple"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/BuddyModel.png",
-      "imageUrls": [
-        "../store/BuddyModel.png",
-        "../store/BuddyGreen.jpg",
-        "../store/BuddyRed.jpg",
-        "../store/BuddyGray.jpg",
-        "../store/BuddyPurple.jpg"
-      ]
-    },
-    {
-      "id": "C103",
-      "name": "Wet Bandit Plumbing",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Natural", "Heather_Gray", "Light_Pink", "Light_Blue"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/wetbanditModel.png",
-      "imageUrls": [
-        "../store/wetbanditModel.png",
-        "../store/BanditNatural.jpg",
-        "../store/BanditGray.jpg",
-        "../store/BanditPink.jpg",
-        "../store/BanditBlue.jpg"
-      ]
-    },
-    {
-      "id": "F102",
-      "name": "Sweet Potato",
-      "category": "Fall",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Heather_Gray", "Sand", "Heliconia"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/SweetModel.png",
-      "imageUrls": [
-        "../store/SweetModel.png",
-        "../store/SweetGray.jpg",
-        "../store/SweetSand.jpg",
-        "../store/SweetHeliconia.jpg"
-      ]
-    },
-    {
-      "id": "F103",
-      "name": "Grouchy Potato",
-      "category": "Fall",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Heather_Gray", "Sand", "Carolina_Blue"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/GrouchyModel.png",
-      "imageUrls": [
-        "../store/GrouchyModel.png",
-        "../store/GrouchyGray.jpg",
-        "../store/GrouchySand.jpg",
-        "../store/GrouchyCaroBlue.jpg"
-      ]
-    },
-    {
-      "id": "O104",
-      "name": "Beard Gauge",
-      "category": "Originals",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Black", "Navy", "Neon_Blue", "Garnet"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/BeardLengthModel.png",
-      "imageUrls": [
-        "../store/BeardLengthModel.png",
-        "../store/BeardBlack.jpg",
-        "../store/BeardNavy.jpg",
-        "../store/BeardNeon.jpg",
-        "../store/BeardGarnet.jpg"
-      ]
-    },
-    {
-      "id": "C104",
-      "name": "Coastal Christmas Myrtle Beach",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Burgandy", "Navy_Blue", "Forest_Green", "Red"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/CCModel.png",
-      "imageUrls": [
-        "../store/CCModel.png",
-        "../store/CCBurg.jpg",
-        "../store/CCNavy.jpg",
-        "../store/CCForest.jpg",
-        "../store/CCRed.jpg"
-      ]
-    },
-    {
-      "id": "F104",
-      "name": "Suffing is my Safe Word",
-      "category": "Fall",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Green", "Red", "Light_Pink", "Gray", "Mint"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/StuffingModel.png",
-      "imageUrls": [
-        "../store/StuffingModel.png",
-        "../store/SuffingOrange.jpg"
-      ]
-    },
-    {
-      "id": "C105",
-      "name": "Sleigh All Day",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Orange"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/SleightModel.png",
-      "imageUrls": [
-        "../store/SleightModel.png",
-        "../store/SleighGreen.jpg",
-        "https://843teez.com/store/SleighRed.jpg",
-        "https://843teez.com/store/SleighPink.jpg",
-        "https://843teez.com/store/SleighGray.jpg",
-        "https://843teez.com/store/SleighMint.jpg"
-      ]
-    },
-    {
-      "id": "C106",
-      "name": "A Scary little Christmas",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Black", "Red", "Grey"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/ScaryModel.png",
-      "imageUrls": [
-        "../store/ScaryModel.png",
-        "../store/ScaryBlack.jpg",
-        "../store/ScaryModel_2.png",
-        "../store/ScaryRed.jpg",
-        "../store/ScaryGrey.jpg"
-      ]
-    },
-    {
-      "id": "LE101",
-      "name": "Fight Me - Only 8 Left",
-      "category": "LE",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/fightmemodel.png",
-      "imageUrls": [
-        "../store/fightmemodel.png",
-        "../store/FIGTMETEE.png"
-      ]
-    },
-    {
-      "id": "LE102",
-      "name": "Dungeon Crawler - Only 25 Left",
-      "category": "LE",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/DunCrawlerModel.png",
-      "imageUrls": [
-        "../store/DunCrawlerModel.png",
-        "../store/DungeonCrawlersTtee.jpg"
-      ]
-    },
-    {
-      "id": "LE103",
-      "name": "Certififed NPC - Only 27 Left",
-      "category": "LE",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/certnpcmodel.png",
-      "imageUrls": [
-        "../store/certnpcmodel.png",
-        "../store/CertNPCtee.jpg"
-      ]
-    },
-    {
-      "id": "LE104",
-      "name": "Certififed Weird - Only 13 Left",
-      "category": "LE",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/certweirdmodel.png",
-      "imageUrls": [
-        "../store/certweirdmodel.png",
-        "../store/CertWeirdtee.jpg"
-      ]
-    },
-    {
-      "id": "C107",
-      "name": "Salty and Bright",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Carolina_Blue", "Light_Blue", "Light_Pink", "Mint", "Violet"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/SaltyModel (1).png",
-      "imageUrls": [
-        "../store/SaltyModel (1).png",
-        "../store/SaltyCaroBlue.jpg",
-        "../store/SaltyLightBlue.jpg",
-        "../store/SaltyLightPink.jpg",
-        "../store/SaltyMint.jpg",
-        "../store/SaltyViolet.jpg"
-      ]
-    },
-    {
-      "id": "C108",
-      "name": "Sleigh Bells & SeaShells",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
-      "colors": ["Mint", "Light_Blue", "White", "Natural", "Navy_Blue"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "../store/BellsShellsModel.png",
-      "imageUrls": [
-        "../store/BellsShellsModel.png",
-        "../store/BellsShellsMint.jpg",
-        "../store/BellsShellsLBlue.jpg",
-        "../store/BellsShellsWhite.jpg",
-        "../store/BellsShellsNatural.jpg",
-        "../store/BellsShelsNBlue.jpg"
-      ]
-    },
-    {
-      "id": "C201",
-      "name": "Yuletide Riptide",
-      "category": "Christmas",
-      "product_options": ["Tee_Shirt", "Hoodie", "Sweatshirt"],
-      "colors": ["Royal_Blue", "Light_Blue", "Light_Pink", "Daisey"],
-      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL + $4": 4, "3XL + $5": 5, "4XL + $6": 6, "5XL + $7": 7 },
-      "thumbnail": "/store/yulemodel.png",
-      "imageUrls": [
-        "../store/YuleModel.png",
-        "../store/YuleRoyal.jpg",
-        "../store/YuleLBlue.jpg",
-        "../store/YuleLPink.jpg",
-        "../store/YuleDaisey.jpg"
-      ]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-4PVF756J01');
+    </script>
+    <meta name="robots" content="noindex, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>843 Teez | All Designs</title>
+    <meta name="description"
+          content="Browse all 843 Teez custom designs — Conway SC inspired apparel, printed in-house.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #f8fcff;
+            background-image: url('https://843teez.com/surf-texture.png');
+            background-size: 300px;
+            background-repeat: repeat;
+        }
+        .btn-primary { background: #003466; }
+        .btn-primary:hover { background: #007c9e; }
+
+        .product-image-container { position: relative; cursor: pointer; }
+        .image-overlay {
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(0,0,0,0.4);
+            opacity: 0; color: #fff; font-weight: bold;
+            transition: .3s;
+        }
+        .product-image-container:hover .image-overlay { opacity: 1; }
+
+        /* QUICK VIEW MODAL */
+        .modal-hidden { display: none; }
+        .modal-visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8 pt-16">
+
+<!-- CONSTRUCTION BANNER -->
+<div id="construction-banner"
+     class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base z-50">
+    <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
+    <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
+        <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
+        <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
+    </p>
+</div>
+
+<div class="max-w-6xl mx-auto p-6 sm:p-10 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
+
+    <!-- HEADER -->
+    <header class="text-center mb-8">
+        <img src="/843teezlogo.png" alt="843 Teez Logo" class="max-w-xs mx-auto mb-4 w-5/6">
+
+        <h1 class="text-3xl font-extrabold text-[#007c9e]">All 843 Teez Designs</h1>
+
+        <a href="cart.html"
+           id="global-view-cart-button"
+           class="inline-flex bg-red-600 text-white font-bold px-3 py-1 mt-3 rounded-full shadow-md disabled:opacity-50"
+           disabled>
+            Cart (<span id="global-item-count">0</span>)
+        </a>
+
+        <nav class="mt-6 pt-4 border-t border-gray-300 text-[#003466] font-bold space-x-2">
+            <a href="store.html" class="underline text-red-600">🛒 All Designs</a> |
+            <a href="originals.html">843 Teez Originals</a> |
+            <a href="christmas.html">Christmas</a> |
+            <a href="fall.html">Fall</a> |
+            <a href="limited_edition.html">Limited Edition</a>
+        </nav>
+
+        <div class="mt-4">
+            <a href="/index.html"
+               class="text-[#007c9e] hover:text-[#003466] font-semibold">
+                ← Back to Main Site
+            </a>
+        </div>
+    </header>
+
+    <!-- GRID WRAPPER -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+        <!-- LEFT: PRODUCTS -->
+        <div class="lg:col-span-3">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
+                All Apparel Designs
+            </h2>
+
+            <div id="product-grid"
+                 class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <p class="col-span-3 text-center text-gray-500 pt-8">Loading products...</p>
+            </div>
+        </div>
+
+        <!-- RIGHT: CART SUMMARY -->
+        <div class="lg:col-span-1">
+            <div id="cart-summary-sticky"
+                 class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
+                <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
+                <p class="text-sm text-gray-600 mb-2">
+                    Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span>
+                </p>
+                <p class="text-xl font-extrabold text-[#003466] mb-4">
+                    Est. Total: <span id="summary-cart-total">$0.00</span>
+                </p>
+
+                <a href="cart.html"
+                   id="view-cart-button"
+                   class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md disabled:opacity-50 btn-primary text-center"
+                   disabled>
+                    Review & Checkout
+                </a>
+            </div>
+        </div>
+
+    </div><!-- END GRID -->
+
+    <!-- FOOTER -->
+    <footer class="text-center mt-12 pt-6 border-t text-[#003466] text-xs space-y-1">
+        <p>843 Teez™ is a <a href="https://grizzbuilt.com" class="underline text-[#007c9e]" target="_blank">GrizzBuilt™</a> brand.</p>
+        <p>Woman & Veteran-Owned • Made in Conway, SC</p>
+        <p>&copy; 2025 843 Teez™. All rights reserved.</p>
+    </footer>
+
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div id="quickViewModal"
+     class="modal-hidden fixed inset-0 bg-black/60 z-50 p-4">
+    <div class="bg-white rounded-xl max-w-2xl mx-auto p-6 shadow-2xl relative">
+
+        <button class="close-modal absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <img id="modalMainImage" src="" class="rounded-lg w-full">
+                <div id="modalGallery" class="flex gap-2 mt-3"></div>
+            </div>
+
+            <div>
+                <h2 id="modalName" class="text-xl font-bold text-[#003466]"></h2>
+                <p id="modalCategory" class="text-sm text-gray-500 mb-4"></p>
+
+                <h3 class="font-semibold mt-2">Available Styles</h3>
+                <ul id="modalTypes" class="list-disc ml-5 text-sm"></ul>
+
+                <h3 class="font-semibold mt-4">Available Colors</h3>
+                <ul id="modalColors" class="list-disc ml-5 text-sm"></ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- JS -->
+<script>
+/* ---------------------------------------------
+   GLOBAL CONSTANTS
+------------------------------------------------ */
+const CATEGORY_FILTER = "ALL";
+
+const ALL_SIZES = ["S","M","L","XL","2XL","3XL","4XL","5XL"];
+
+let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
+let allProducts = [];
+
+/* ---------------------------------------------
+   HELPERS
+------------------------------------------------ */
+const formatCurrency = amount => `$${Number(amount).toFixed(2)}`;
+
+const computePrice = (product, type, size) => {
+    const base = Number(product.base_prices?.[type] ?? 0);
+    const up   = Number(product.size_upcharges?.[size] ?? 0);
+    return base + up;
+};
+
+const getLowestBasePrice = (product) => {
+    const prices = Object.values(product.base_prices || {}).map(Number);
+    return prices.length ? Math.min(...prices) : 0;
+};
+
+const cycleImage = el => {
+    const img = el.querySelector("img");
+    const urls = JSON.parse(img.dataset.imageUrls);
+    let index = parseInt(img.dataset.currentIndex);
+    index = (index + 1) % urls.length;
+    img.src = urls[index];
+    img.dataset.currentIndex = index;
+};
+
+/* ---------------------------------------------
+   CART SUMMARY
+------------------------------------------------ */
+const updateCartSummary = () => {
+    let totalItems = 0;
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.qty;
+        totalItems += item.qty;
+    });
+
+    const taxAmount = subtotal * 0.08;
+
+    document.getElementById("summary-item-count").textContent = totalItems;
+    document.getElementById("global-item-count").textContent = totalItems;
+
+    document.getElementById("summary-cart-total").textContent =
+        formatCurrency(subtotal + taxAmount);
+
+    const checkoutBtn = document.getElementById("view-cart-button");
+    const headerCartBtn = document.getElementById("global-view-cart-button");
+
+    if (totalItems === 0) {
+        checkoutBtn.setAttribute("disabled", "true");
+        headerCartBtn.setAttribute("disabled","true");
+    } else {
+        checkoutBtn.removeAttribute("disabled");
+        headerCartBtn.removeAttribute("disabled");
     }
-  ]
-}
+};
+
+/* ---------------------------------------------
+   ADD TO CART
+------------------------------------------------ */
+const addToCart = (item) => {
+    const existing = cart.find(
+        c => c.id === item.id &&
+             c.apparelType === item.apparelType &&
+             c.color === item.color &&
+             c.size === item.size
+    );
+
+    const price = Number(item.price);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            id: item.id,
+            name: item.name,
+            apparelType: item.apparelType,
+            color: item.color,
+            size: item.size,
+            price: price,
+            qty: 1
+        });
+    }
+
+    localStorage.setItem("843teez_cart", JSON.stringify(cart));
+    updateCartSummary();
+};
+
+
+/* ---------------------------------------------
+   QUICK VIEW
+------------------------------------------------ */
+const openQuickView = (product) => {
+    const modal = document.getElementById("quickViewModal");
+
+    document.getElementById("modalMainImage").src =
+        product.thumbnail || product.imageUrls[0];
+
+    document.getElementById("modalName").textContent = product.name;
+    document.getElementById("modalCategory").textContent = product.category;
+
+    document.getElementById("modalTypes").innerHTML =
+        product.product_options.map(t => `<li>${t.replace(/_/g," ")}</li>`).join("");
+
+    document.getElementById("modalColors").innerHTML =
+        product.colors.map(c => `<li>${c.replace(/_/g," ")}</li>`).join("");
+
+    const gallery = document.getElementById("modalGallery");
+    gallery.innerHTML = product.imageUrls
+        .map(url => `<img src="${url}" class="w-16 h-16 rounded cursor-pointer">`)
+        .join("");
+
+    gallery.querySelectorAll("img").forEach(img => {
+        img.addEventListener("click", () => {
+            document.getElementById("modalMainImage").src = img.src;
+        });
+    });
+
+    modal.classList.remove("modal-hidden");
+    modal.classList.add("modal-visible");
+};
+
+const closeQuickView = () => {
+    const modal = document.getElementById("quickViewModal");
+    modal.classList.remove("modal-visible");
+    modal.classList.add("modal-hidden");
+};
+
+/* ---------------------------------------------
+   LOAD PRODUCTS
+------------------------------------------------ */
+const initStore = async () => {
+    try {
+        const res = await fetch("/data/products.json");
+        const json = await res.json();
+        allProducts = json.products || [];
+
+        renderProducts();
+        updateCartSummary();
+    } catch (err) {
+        console.error(err);
+        document.getElementById("product-grid").innerHTML =
+            `<p class="col-span-3 text-center text-red-600">Error loading products.</p>`;
+    }
+};
+
+/* ---------------------------------------------
+   FILTER & RENDER
+------------------------------------------------ */
+const getFilteredProducts = () => {
+    if (CATEGORY_FILTER === "ALL") return allProducts;
+    return allProducts.filter(
+        p => p.category.toLowerCase() === CATEGORY_FILTER.toLowerCase()
+    );
+};
+
+const renderProducts = () => {
+    const grid = document.getElementById("product-grid");
+    const products = getFilteredProducts();
+
+    grid.innerHTML = products.map(product => {
+        const lowest = getLowestBasePrice(product);
+
+        return `
+        <div class="bg-white p-4 rounded-xl shadow-lg border border-gray-100 product-card"
+             data-product-id="${product.id}">
+
+            <!-- IMAGE -->
+            <div class="product-image-container mb-4 quick-view-trigger">
+                <img src="${product.thumbnail || product.imageUrls[0]}"
+                     data-image-urls='${JSON.stringify(product.imageUrls)}'
+                     data-current-index="0"
+                     alt="${product.name}"
+                     class="rounded-lg w-full">
+                <div class="image-overlay">Quick View</div>
+            </div>
+
+            <!-- NAME -->
+            <h3 class="font-bold text-[#003466]">${product.name}</h3>
+            <p class="text-xs text-gray-500">${product.category}</p>
+
+            <!-- DYNAMIC PRICE -->
+            <p class="text-[#007c9e] font-extrabold mb-2 price-line">
+                Starting at ${formatCurrency(lowest)}
+            </p>
+
+            <!-- STYLE -->
+            <label class="block text-xs font-bold mt-2">Style</label>
+            <select class="w-full border rounded px-2 py-1 apparel-type">
+                ${product.product_options.map(o => {
+                    const base = Number(product.base_prices?.[o] ?? 0);
+                    return `<option value="${o}">
+                        ${o.replace(/_/g," ")} — ${formatCurrency(base)}
+                    </option>`;
+                }).join("")}
+            </select>
+
+            <!-- COLOR -->
+            <label class="block text-xs font-bold mt-2">Color</label>
+            <select class="w-full border rounded px-2 py-1 apparel-color">
+                ${product.colors.map(c =>
+                    `<option value="${c}">${c.replace(/_/g," ")}</option>`
+                ).join("")}
+            </select>
+
+            <!-- SIZE -->
+            <label class="block text-xs font-bold mt-2">Size</label>
+            <select class="w-full border rounded px-2 py-1 apparel-size">
+                ${ALL_SIZES.map(s => {
+                    const up = Number(product.size_upcharges?.[s] ?? 0);
+                    const label = up > 0
+                        ? `${s} (+${formatCurrency(up)})`
+                        : s;
+                    return `<option value="${s}" ${s==="M" ? "selected":""}>${label}</option>`;
+                }).join("")}
+            </select>
+
+            <!-- ADD TO CART -->
+            <button class="mt-4 w-full py-2 rounded-lg font-semibold text-white btn-primary add-to-cart">
+                Add to Cart
+            </button>
+        </div>
+        `;
+    }).join("");
+
+    attachCardBehavior(products);
+};
+
+/* ---------------------------------------------
+   ATTACH BEHAVIOR
+------------------------------------------------ */
+const attachCardBehavior = (products) => {
+    document.querySelectorAll(".product-card").forEach(card => {
+        const id = card.dataset.productId;
+        const product = products.find(p => p.id === id);
+        if (!product) return;
+
+        const typeSel = card.querySelector(".apparel-type");
+        const colorSel = card.querySelector(".apparel-color");
+        const sizeSel = card.querySelector(".apparel-size");
+        const priceLine = card.querySelector(".price-line");
+        const addBtn = card.querySelector(".add-to-cart");
+
+        const updatePrice = () => {
+            const p = computePrice(product, typeSel.value, sizeSel.value);
+            priceLine.textContent = formatCurrency(p);
+        };
+
+        typeSel.addEventListener("change", updatePrice);
+        sizeSel.addEventListener("change", updatePrice);
+
+        addBtn.addEventListener("click", () => {
+            addToCart({
+                id: product.id,
+                name: product.name,
+                apparelType: typeSel.value,
+                color: colorSel.value,
+                size: sizeSel.value,
+                price: computePrice(product, typeSel.value, sizeSel.value)
+            });
+        });
+
+        card.querySelector(".quick-view-trigger")
+            .addEventListener("click", () => openQuickView(product));
+
+        updatePrice();
+    });
+};
+
+/* ---------------------------------------------
+   INIT
+------------------------------------------------ */
+window.onload = () => {
+    initStore();
+
+    const modal = document.getElementById("quickViewModal");
+    if (modal) {
+        modal.querySelector(".close-modal").addEventListener("click", closeQuickView);
+        modal.addEventListener("click", e => {
+            if (e.target.id === "quickViewModal") closeQuickView();
+        });
+    }
+};
+</script>
+
+</body>
+</html>
