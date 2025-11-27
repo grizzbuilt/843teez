@@ -1,5 +1,5 @@
 {
-  "store_open": true,
+  "store_open": false,
   "store_closed_message": "Online ordering is temporarily closed. Please check back soon or contact us to order.",
   "tax_rate": 0.08,
   "price_multiplier": 1,
