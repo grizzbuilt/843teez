@@ -9,7 +9,8 @@
       gtag('js', new Date());
       gtag('config', 'G-4PVF756J01');
     </script>
-<meta name="robots" content="noindex, follow">
+
+    <meta name="robots" content="noindex, follow">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -35,116 +36,122 @@
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
+<div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
 
-        <header class="text-center mb-8">
-            <img src="https://843teez.com/843teezlogo.png" class="max-w-xs mx-auto mb-4">
+<header class="text-center mb-8">
+    <img src="https://843teez.com/843teezlogo.png" class="max-w-xs mx-auto mb-4">
 
-            <h1 class="text-3xl font-extrabold text-[#007c9e]">
-                Review Your Cart
-            </h1>
+    <h1 class="text-3xl font-extrabold text-[#007c9e]">
+        Review Your Cart
+    </h1>
 
-            <a href="cart.html"
-               id="global-view-cart-button"
-               class="inline-flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full shadow-md mt-3 disabled:opacity-50"
-               disabled>
-                Cart (<span id="global-item-count">0</span>)
-            </a>
+    <a href="cart.html"
+       id="global-view-cart-button"
+       class="inline-flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full shadow-md mt-3 disabled:opacity-50"
+       disabled>
+        Cart (<span id="global-item-count">0</span>)
+    </a>
 
-            <div class="mt-4">
-                <a href="store.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center justify-center">
-                    ← Back to Shop
-                </a>
-            </div>
-        </header>
+    <div class="mt-4">
+        <a href="store.html"
+           class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center justify-center">
+            ← Back to Shop
+        </a>
+    </div>
+</header>
 
-        <!-- CART AREA -->
-        <div id="cart-view" class="max-w-3xl mx-auto">
+<!-- CART AREA -->
+<div id="cart-view" class="max-w-3xl mx-auto">
 
-            <div id="cart-items-display" class="bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg mb-8">
-                <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-                    Items in Your Cart
-                </h2>
+<div id="cart-items-display" class="bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg mb-8">
 
-                <div id="cart-items" class="space-y-4">
-                    <p class="text-gray-500 text-base text-center italic py-4">Loading cart...</p>
-                </div>
+<h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
+    Items in Your Cart
+</h2>
 
-                <!-- TOTALS -->
-                <div class="mt-6 pt-4 border-t border-gray-200">
-                    <div class="flex justify-between text-base text-gray-600">
-                        <span>Subtotal:</span>
-                        <span id="cart-subtotal">$0.00</span>
-                    </div>
+<div id="cart-items" class="space-y-4">
+    <p class="text-gray-500 text-base text-center italic py-4">Loading cart...</p>
+</div>
 
-                    <div class="flex justify-between text-base text-red-600">
-                        <span>Tax (8%):</span>
-                        <span id="cart-tax">$0.00</span>
-                    </div>
-
-                    <div class="flex justify-between text-base text-gray-600 mb-2">
-                        <span>Shipping:</span>
-                        <span>TBD at checkout</span>
-                    </div>
-
-                    <div class="flex justify-between font-bold text-xl text-[#003466] border-t pt-2">
-                        <span>Total:</span>
-                        <span id="cart-total">$0.00</span>
-                    </div>
-
-                    <a href="checkout.html"
-                       id="goto-checkout-button"
-                       class="w-full mt-6 text-white font-bold py-3 rounded-xl shadow-md btn-primary text-center inline-block disabled:opacity-50"
-                       disabled>
-                        Continue to Checkout
-                    </a>
-                </div>
-            </div>
-
-            <a href="store.html" class="text-[#007c9e] hover:text-[#003466] font-semibold block text-center mt-4">
-                ← Continue Shopping
-            </a>
-        </div>
-
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold">
-            <p>843 Teez™ is a <a href="https://grizzbuilt.com" class="underline text-[#007c9e]" target="_blank">GrizzBuilt™</a> brand.</p>
-            <p>Woman & Veteran-owned • Made in Conway, SC</p>
-            <p>© 2025 843 Teez™</p>
-        </footer>
+<!-- TOTALS -->
+<div class="mt-6 pt-4 border-t border-gray-200">
+    <div class="flex justify-between text-base text-gray-600">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal">$0.00</span>
     </div>
 
+    <div class="flex justify-between text-base text-red-600">
+        <span>Tax (8%):</span>
+        <span id="cart-tax">$0.00</span>
+    </div>
+
+    <div class="flex justify-between text-base text-gray-600 mb-2">
+        <span>Shipping:</span>
+        <span>TBD at checkout</span>
+    </div>
+
+    <div class="flex justify-between font-bold text-xl text-[#003466] border-t pt-2">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+    </div>
+
+    <a href="checkout.html"
+       id="goto-checkout-button"
+       class="w-full mt-6 text-white font-bold py-3 rounded-xl shadow-md btn-primary text-center inline-block disabled:opacity-50"
+       disabled>
+        Continue to Checkout
+    </a>
+</div>
+</div>
+
+<a href="store.html"
+   class="text-[#007c9e] hover:text-[#003466] font-semibold block text-center mt-4">
+    ← Continue Shopping
+</a>
+
+</div>
+
+<footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold">
+    <p>843 Teez™ is a <a href="https://grizzbuilt.com" class="underline text-[#007c9e]" target="_blank">GrizzBuilt™</a> brand.</p>
+    <p>Woman & Veteran-owned • Made in Conway, SC</p>
+    <p>&copy; 2025 843 Teez™</p>
+</footer>
+
+</div>
+
 <script>
-/* -------------------------------------------------
-   VARIABLES & HELPERS
-------------------------------------------------- */
+/* -------------------------------
+   GLOBAL STATE
+--------------------------------*/
 const SALES_TAX_RATE = 0.08;
 let cart = JSON.parse(localStorage.getItem("843teez_cart")) || [];
 
-const formatCurrency = (amt) => `$${amt.toFixed(2)}`;
+const formatCurrency = amt => `$${amt.toFixed(2)}`;
 
 const saveCart = () => {
     localStorage.setItem("843teez_cart", JSON.stringify(cart));
 };
 
-/* -------------------------------------------------
-   REMOVE ITEM (ONE UNIT)
-------------------------------------------------- */
+/* -------------------------------
+   REMOVE ONE ITEM
+--------------------------------*/
 const removeFromCart = (index) => {
     if (!cart[index]) return;
 
-    cart[index].qty -= 1;
+    cart[index].qty--;
 
-    // Remove item if quantity hits zero
-    if (cart[index].qty <= 0) cart.splice(index, 1);
+    if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+    }
 
     saveCart();
     updateCartSummary();
     renderCart();
 };
 
-/* -------------------------------------------------
-   RENDER CART
-------------------------------------------------- */
+/* -------------------------------
+   RENDER CART ITEMS
+--------------------------------*/
 const renderCart = () => {
     const container = document.getElementById("cart-items");
     const checkoutBtn = document.getElementById("goto-checkout-button");
@@ -188,14 +195,13 @@ const renderCart = () => {
                     Remove One
                 </button>
             </div>
-        </div>
-        `;
+        </div>`;
     }).join("");
 };
 
-/* -------------------------------------------------
+/* -------------------------------
    UPDATE TOTALS
-------------------------------------------------- */
+--------------------------------*/
 const updateCartSummary = () => {
     let subtotal = 0;
     let totalItems = 0;
@@ -213,14 +219,13 @@ const updateCartSummary = () => {
     document.getElementById("cart-tax").textContent = formatCurrency(tax);
     document.getElementById("cart-total").textContent = formatCurrency(total);
 
-    // Disable header cart if empty
     const headerBtn = document.getElementById("global-view-cart-button");
     headerBtn.disabled = totalItems === 0;
 };
 
-/* -------------------------------------------------
+/* -------------------------------
    INIT
-------------------------------------------------- */
+--------------------------------*/
 window.onload = () => {
     updateCartSummary();
     renderCart();
