@@ -218,7 +218,8 @@ const updateCartSummary = () => {
         totalItems += item.qty;
     });
 
-    const taxAmount = subtotal * 0.08;
+
+    const taxAmount = subtotal * (STORE_SETTINGS?.tax_rate || 0.08);
 
     document.getElementById("summary-item-count").textContent = totalItems;
     document.getElementById("global-item-count").textContent = totalItems;
@@ -448,11 +449,12 @@ const attachCardBehavior = (products) => {
 
         updatePrice();
     });
-};
+<script>
 let STORE_SETTINGS = {
   store_open: true,
   tax_rate: 0.08,
-  shipping_standard: 8
+  shipping_standard: 8,
+  store_message: ""
 };
 
 async function loadStoreSettings() {
@@ -475,11 +477,13 @@ async function loadStoreSettings() {
     }
 
     return true;
+
   } catch (err) {
     console.error("Settings load failed:", err);
     return true; // fail-open
   }
 }
+</script>
 
 /* ---------------------------------------------
    INIT
