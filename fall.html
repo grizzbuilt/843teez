@@ -286,7 +286,11 @@ const attachCardEvents = (products) => {
     });
 };
 
-window.onload = initStore;
+window.onload = () => {
+    initStore();
+    updateCartSummary();
+};
+
 </script>
 
 </body>
