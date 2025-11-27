@@ -7,11 +7,10 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Heather_Gray", "Yellow"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/ConwayModel.png",
       "imageUrls": ["../store/ConwayModel.png", "../store/ConwayGrey.jpg", "../store/ConwayYellow.jpg"]
     },
-
     {
       "id": "O102",
       "name": "Conway SC Tiger",
@@ -19,11 +18,10 @@
       "product_options": ["Baseball_Tee"],
       "colors": ["Black/White"],
       "base_prices": { "Baseball_Tee": 28 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/ConwaySTModel.png",
       "imageUrls": ["../store/ConwaySTModel.png", "../store/ConwayST.jpg"]
     },
-
     {
       "id": "O103",
       "name": "Historic Conway SC",
@@ -31,11 +29,10 @@
       "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
       "colors": ["Forest Green"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/HstConwayModel.png",
       "imageUrls": ["../store/HstConwayModel.png", "../store/HstConway.jpg"]
     },
-
     {
       "id": "F101",
       "name": "Fall Candle",
@@ -43,11 +40,10 @@
       "product_options": ["Tee_Shirt", "Sweatshirt"],
       "colors": ["Texas_Orange", "Heather_Gray", "Gold", "Light_Pink", "Sand", "Orange"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/FallCandleModel.png",
       "imageUrls": ["../store/FallCandleModel.png", "../store/FallCandleTexOrg.jpg", "../store/FallCandleGray.jpg", "../store/FallCandleGold.jpg", "../store/FallCandlePink.jpg", "../store/FallCandleSand.jpg", "../store/FallCandleOrange.jpg"]
     },
-
     {
       "id": "C101",
       "name": "Miser Brothers Heating & Cooling",
@@ -55,11 +51,76 @@
       "product_options": ["Tee_Shirt", "Sweatshirt"],
       "colors": ["Heather_Gray", "Carolina_Blue", "Natural", "Light_Blue", "Light_Pink"],
       "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/MiserBroFrontModel.png",
       "imageUrls": ["../store/MiserBroFrontModel.png", "../store/MiserBroBackModel.png", "../store/MiserBroGray.jpg", "../store/MiserBroCaroBlue.jpg", "../store/MiserBroNatural.jpg", "../store/MiserBroLightBlue.jpg", "../store/MiserBroLightPink.jpg"]
     },
-
+    {
+      "id": "C102",
+      "name": "Buddys Syrup Supply",
+      "category": "Christmas",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Green", "Red", "Heather_Gray", "Purple"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/BuddyModel.png",
+      "imageUrls": ["../store/BuddyModel.png", "../store/BuddyGreen.jpg", "../store/BuddyRed.jpg", "../store/BuddyGray.jpg", "../store/BuddyPurple.jpg"]
+    },
+    {
+      "id": "C103",
+      "name": "Wet Bandit Plumbing",
+      "category": "Christmas",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Natural", "Heather_Gray", "Light_Pink", "Light_Blue"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/wetbanditModel.png",
+      "imageUrls": ["../store/wetbanditModel.png", "../store/BanditNatural.jpg", "../store/BanditGray.jpg", "../store/BanditPink.jpg", "../store/BanditBlue.jpg"]
+    },
+    {
+      "id": "F102",
+      "name": "Sweet Potato",
+      "category": "Fall",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Heather_Gray", "Sand", "Heliconia"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/SweetModel.png",
+      "imageUrls": ["../store/SweetModel.png", "../store/SweetGray.jpg", "../store/SweetSand.jpg", "../store/SweetHeliconia.jpg"]
+    },
+    {
+      "id": "F103",
+      "name": "Grouchy Potato",
+      "category": "Fall",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Heather_Gray", "Sand", "Carolina_Blue"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/GrouchyModel.png",
+      "imageUrls": ["../store/GrouchyModel.png", "../store/GrouchyGray.jpg", "../store/GrouchySand.jpg", "../store/GrouchyCaroBlue.jpg"]
+    },
+    {
+      "id": "O104",
+      "name": "Beard Gauge",
+      "category": "Originals",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Black", "Navy", "Neon_Blue", "Garnet"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/BeardLengthModel.png",
+      "imageUrls": ["../store/BeardLengthModel.png", "../store/BeardBlack.jpg", "../store/BeardNavy.jpg", "../store/BeardNeon.jpg", "../store/BeardGarnet.jpg"]
+    },
+    {
+      "id": "C104",
+      "name": "Coastal Christmas Myrtle Beach",
+      "category": "Christmas",
+      "product_options": ["Tee_Shirt", "Sweatshirt", "Hoodie"],
+      "colors": ["Burgundy", "Navy_Blue", "Forest_Green", "Red"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "../store/CCModel.png",
+      "imageUrls": ["../store/CCModel.png", "../store/CCBurg.jpg", "../store/CCNavy.jpg", "../store/CCForest.jpg", "../store/CCRed.jpg"]
+    },
     {
       "id": "LE101",
       "name": "Fight Me - Only 8 Left",
@@ -67,46 +128,20 @@
       "product_options": ["Tee_Shirt"],
       "colors": ["Black"],
       "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
       "thumbnail": "../store/fightmemodel.png",
       "imageUrls": ["../store/fightmemodel.png", "../store/FIGTMETEE.png"]
     },
-
     {
-      "id": "LE102",
-      "name": "Dungeon Crawler - Only 25 Left",
-      "category": "Limited Edition",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "../store/DunCrawlerModel.png",
-      "imageUrls": ["../store/DunCrawlerModel.png", "../store/DungeonCrawlersTtee.jpg"]
-    },
-
-    {
-      "id": "LE103",
-      "name": "Certififed NPC - Only 27 Left",
-      "category": "Limited Edition",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "../store/certnpcmodel.png",
-      "imageUrls": ["../store/certnpcmodel.png", "../store/CertNPCtee.jpg"]
-    },
-
-    {
-      "id": "LE104",
-      "name": "Certififed Weird - Only 13 Left",
-      "category": "Limited Edition",
-      "product_options": ["Tee_Shirt"],
-      "colors": ["Black"],
-      "base_prices": { "Tee_Shirt": 20 },
-      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 0, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
-      "thumbnail": "../store/certweirdmodel.png",
-      "imageUrls": ["../store/certweirdmodel.png", "../store/CertWeirdtee.jpg"]
+      "id": "C201",
+      "name": "Yuletide Riptide",
+      "category": "Christmas",
+      "product_options": ["Tee_Shirt", "Hoodie", "Sweatshirt"],
+      "colors": ["Royal_Blue", "Light_Blue", "Light_Pink", "Daisy"],
+      "base_prices": { "Tee_Shirt": 20, "Sweatshirt": 37, "Hoodie": 39 },
+      "size_upcharges": { "S": 0, "M": 0, "L": 0, "XL": 2, "2XL": 4, "3XL": 5, "4XL": 6, "5XL": 7 },
+      "thumbnail": "/store/yulemodel.png",
+      "imageUrls": ["../store/YuleModel.png", "../store/YuleRoyal.jpg", "../store/YuleLBlue.jpg", "../store/YuleLPink.jpg", "../store/YuleDaisy.jpg"]
     }
   ]
 }
-
