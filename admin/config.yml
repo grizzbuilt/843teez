@@ -25,55 +25,94 @@ collections:
             widget: "list"
             allow_add: true
             collapsed: true
-            summary: "<img src='{{fields.thumbnail}}' style='width:40px;height:40px;object-fit:cover;border-radius:6px;margin-right:8px;vertical-align:middle;'/> {{fields.name}} — {{fields.category}}"
+            summary: "{{fields.name}} — {{fields.category}}"
 
             fields:
 
-              - label: "Product ID"
-                name: "id"
-                widget: "string"
-                required: true
+              - { label: "Product ID", name: "id", widget: "string", required: true }
 
-              - label: "Product Name"
-                name: "name"
-                widget: "string"
-                required: true
+              - { label: "Product Name", name: "name", widget: "string", required: true }
 
               - label: "Category"
                 name: "category"
                 widget: "select"
+                required: true
                 options:
                   - "Originals"
                   - "Fall"
                   - "Christmas"
                   - "LE"
-                required: true
 
               - label: "Product Types"
                 name: "product_options"
-                widget: "list"
-                field:
-                  label: ""
-                  name: ""
-                  widget: "string"
+                widget: "select"
+                multiple: true
+                options:
+                  - "Tee_Shirt"
+                  - "Baseball_Tee"
+                  - "Sweatshirt"
+                  - "Hoodie"
 
               - label: "Colors"
                 name: "colors"
-                widget: "list"
-                field:
-                  label: ""
-                  name: ""
-                  widget: "string"
+                widget: "select"
+                multiple: true
+                options:
+                  - Black
+                  - Gray
+                  - Heather_Gray
+                  - White
+                  - Natural
+                  - Navy_Blue
+                  - Carolina_Blue
+                  - Royal_Blue
+                  - Light_Blue
+                  - Red
+                  - Green
+                  - Forest_Green
+                  - Mint
+                  - Pink
+                  - Light_Pink
+                  - Sand
+                  - Gold
+                  - Garnet
+                  - Violet
+                  - Orange
+                  - Purple
+                  - Burgandy
+                  - Burgundy
+
+              - label: "Base Prices"
+                name: "base_prices"
+                widget: "object"
+                fields:
+                  - { label: "Tee Shirt", name: "Tee_Shirt", widget: "number", required: false }
+                  - { label: "Baseball Tee", name: "Baseball_Tee", widget: "number", required: false }
+                  - { label: "Sweatshirt", name: "Sweatshirt", widget: "number", required: false }
+                  - { label: "Hoodie", name: "Hoodie", widget: "number", required: false }
+
+              - label: "Size Upcharges"
+                name: "size_upcharges"
+                widget: "object"
+                fields:
+                  - { label: "S", name: "S", widget: "number", default: 0 }
+                  - { label: "M", name: "M", widget: "number", default: 0 }
+                  - { label: "L", name: "L", widget: "number", default: 0 }
+                  - { label: "XL", name: "XL", widget: "number", default: 0 }
+                  - { label: "2XL", name: "2XL", widget: "number", default: 2 }
+                  - { label: "3XL", name: "3XL", widget: "number", default: 3 }
+                  - { label: "4XL", name: "4XL", widget: "number", default: 5 }
+                  - { label: "5XL", name: "5XL", widget: "number", default: 6 }
 
               - label: "Thumbnail"
                 name: "thumbnail"
                 widget: "image"
                 hint: "Main product preview image"
 
-              - label: "Image URLs"
+              - label: "Gallery Images"
                 name: "imageUrls"
                 widget: "list"
                 field:
-                  label: ""
-                  name: ""
-                  widget: "string"
+                  label: "Image"
+                  name: "image"
+                  widget: "image"
