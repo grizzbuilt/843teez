@@ -772,13 +772,17 @@
       "thumbnail": "/store/marycreepmasmodel.png",
       "sort_order": 0,
       "product_options": [
-        "Tee_Shirt"
+        "Tee_Shirt",
+        "Sweatshirt",
+        "Hoodie"
       ],
       "colors": [
         "Black"
       ],
       "base_prices": {
-        "Tee_Shirt": 20
+        "Tee_Shirt": 20,
+        "Sweatshirt": 34,
+        "Hoodie": 37
       },
       "id": "C202",
       "is_active": true,
