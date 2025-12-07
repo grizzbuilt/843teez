@@ -11,6 +11,39 @@
         "4XL": 5,
         "5XL": 6
       },
+      "name": "Sgt Chris Stone Memorial Tee",
+      "thumbnail": "/store/ChrisFF.png",
+      "product_options": [
+        "Tee_Shirt"
+      ],
+      "colors": [
+        "Black"
+   
+      ],
+      "base_prices": {
+        "Tee_Shirt": 20
+      },
+      "id": "O601",
+      "category": "Originals",
+      "imageUrls": [
+        "/store/InstaFront.png",
+        "/store/ChrisMemorrialChetstInsta.jpg",
+        "/store/InstaBack.jpg",
+        "/store/ChrisMemBackInsta.jpg",
+      ]
+    },
+    
+    {
+      "size_upcharges": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "2XL": 2,
+        "3XL": 3,
+        "4XL": 5,
+        "5XL": 6
+      },
       "name": "City of Conway",
       "thumbnail": "/store/ConwayModel.png",
       "product_options": [
