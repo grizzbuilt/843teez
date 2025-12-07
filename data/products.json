@@ -12,7 +12,7 @@
         "5XL": 6
       },
       "name": "Sgt Chris Stone Memorial Tee",
-      "thumbnail": "/store/ChrisFF.png",
+      "thumbnail": "/store/ChrisFF.jpg",
       "product_options": [
         "Tee_Shirt"
       ],
@@ -27,9 +27,9 @@
       "category": "Originals",
       "imageUrls": [
         "/store/InstaFront.png",
-        "/store/ChrisMemorrialChetstInsta.jpg",
-        "/store/InstaBack.jpg",
-        "/store/ChrisMemBackInsta.jpg"
+        "/store/ChrisMemorialChestInsta.png",
+        "/store/InstaBack.png",
+        "/store/ChrisMemBackInsta.png"
       ]
     },
     
