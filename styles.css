@@ -390,3 +390,45 @@ h1, h2, h3 {
         gap: 1rem;
     }
 }
+/* ============================
+   Mobile-safe PATCHES ONLY
+   (keeps your current look)
+   ============================ */
+
+/* 1) Make sure any image can't blow out mobile width */
+img { max-width: 100%; height: auto; }
+
+/* 2) Sticky nav can cover anchor jump targets */
+section { scroll-margin-top: 90px; }
+
+/* 3) Fix founder image styling (your HTML image is missing the class)
+   Option A (preferred): add class="about-founder-img" in HTML
+   Option B: also style the image inside about-image-column as a fallback */
+.about-image-column img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 0 auto;
+}
+
+/* 4) iOS Safari zooms forms when font-size < 16px */
+.form-input, .form-textarea { font-size: 16px; }
+
+/* 5) Nav: on small screens, keep it readable without changing style */
+@media (max-width: 600px) {
+  .top-nav ul {
+    justify-content: center;     /* prevents uneven spacing wrap weirdness */
+    gap: 0.75rem;                /* slightly tighter so it wraps cleaner */
+  }
+  .top-nav a {
+    white-space: nowrap;         /* prevents ugly link breaks */
+  }
+}
+
+/* 6) Prevent hover-scale from causing edge overflow/jitter */
+.gallery { overflow: hidden; }
+
+/* Optional: stop hover zoom on touch sizes (keeps desktop hover effect) */
+@media (max-width: 768px) {
+  .gallery img:hover { transform: none; }
+}
