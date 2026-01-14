@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4PVF756J01');
+    </script>
 
-    gtag('config', 'G-4PVF756J01');
-</script>
-<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -94,10 +93,10 @@
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            y=l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "tr3lwvejev");
     </script>
-
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
@@ -137,7 +136,7 @@
             <p id="page-subtitle" class="text-sm text-gray-600">
                 Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re nearby or across the map, we offer convenient local delivery and fast shipping.
             </p>
-            </header>
+        </header>
 
         <div id="shop-view" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div class="lg:col-span-3">
@@ -145,28 +144,32 @@
                     Featured Apparel
                 </h2>
 
-<div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
-    <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
-    
-    <button onclick="window.location.href='originals.html'" class="category-btn px-4">843 Teez Originals</button>
-    <button onclick="window.location.href='christmas.html'" class="category-btn px-4">Christmas</button>
-    <button onclick="window.location.href='fall.html'" class="category-btn px-4">Fall & Halloween</button>
-    <button onclick="window.location.href='limited_edition.html'" class="category-btn px-4">Limited Edition Teez</button>
-</div>
+                <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
+                    <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
+
+                    <button onclick="window.location.href='originals.html'" class="category-btn px-4">843 Teez Originals</button>
+
+                    <!-- OPTIONAL: Seasonal buttons hidden on main index page
+                    <button onclick="window.location.href='christmas.html'" class="category-btn px-4">Christmas</button>
+                    <button onclick="window.location.href='fall.html'" class="category-btn px-4">Fall & Halloween</button>
+                    -->
+
+                    <button onclick="window.location.href='limited_edition.html'" class="category-btn px-4">Limited Edition Teez</button>
+                </div>
 
                 <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <p class="text-gray-500 text-center col-span-3 pt-8">Loading all products...</p>
-                    </div>
+                </div>
 
                 <div class="mt-12 text-center pt-8 border-t border-gray-200">
                     <p class="text-gray-700 font-medium mb-4">For custom apparel and large orders, please contact us directly:</p>
 
                     <a href="tel:8433501943"
-                        class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mr-2 mb-2 sm:mr-4">
+                       class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mr-2 mb-2 sm:mr-4">
                         📞 Call: 843-350-1943
                     </a>
                     <a href="mailto:Sales@843Teez.com"
-                        class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mb-2">
+                       class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mb-2">
                         📧 Email: Sales@843Teez.com
                     </a>
                 </div>
@@ -211,9 +214,12 @@
         };
         const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
+        // Hide seasonal categories on the main index page
+        const HIDDEN_CATEGORIES_ON_INDEX = ["Christmas", "Fall"];
+
         // --- 2. GLOBAL STATE ---
         let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        let allProducts = []; 
+        let allProducts = [];
         let activeFilter = 'all';
 
         // --- 3. CORE HELPER FUNCTIONS (UNCHANGED) ---
@@ -226,7 +232,7 @@
         const saveCart = () => {
             localStorage.setItem('843teez_cart', JSON.stringify(cart));
         };
-        
+
         const showMessage = (message, type = 'success') => {
             let msgBox = document.getElementById('temp-message-box');
             if (!msgBox) {
@@ -240,7 +246,7 @@
             msgBox.style.opacity = '1';
             setTimeout(() => { msgBox.style.opacity = '0'; }, 3000);
         };
-        
+
         const cycleImage = (element) => {
             const imgElement = element.querySelector('img');
             const urls = JSON.parse(imgElement.dataset.imageUrls);
@@ -252,21 +258,28 @@
             imgElement.alt = imgElement.alt.replace(/\(View \d+ of \d+\)/, `(View ${currentIndex + 1} of ${urls.length})`);
         };
 
-
         // --- 4. DATA FETCHING AND RENDERING ---
-        
+
         const initStore = async () => {
             try {
-                // Fetch ALL products from the new JSON file 
-                const response = await fetch('../data/products.json'); 
+                // Fetch ALL products from the new JSON file
+                const response = await fetch('../data/products.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                allProducts = await response.json(); 
+
+                const data = await response.json();
+
+                // Your JSON is either { products: [...] } OR already an array.
+                // Handle both safely.
+                const loadedProducts = Array.isArray(data) ? data : (data.products || []);
+
+                // Hide seasonal categories on the main index page
+                allProducts = loadedProducts.filter(p => !HIDDEN_CATEGORIES_ON_INDEX.includes(p.category));
 
                 // Now that data is loaded, render the initial view
-                renderProducts(); 
-                updateCartSummary(); 
+                renderProducts();
+                updateCartSummary();
             } catch (e) {
                 console.error("Could not load products:", e);
                 document.getElementById('product-grid').innerHTML = '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists and is valid.</p>';
@@ -287,22 +300,22 @@
 
         const renderProducts = () => {
             const grid = document.getElementById('product-grid');
-            let productSchema = []; 
+            let productSchema = [];
 
-            // Filter against the globally loaded 'allProducts' array 
+            // Filter against the globally loaded 'allProducts' array
             const filteredProducts = activeFilter === 'all'
                 ? allProducts
                 : allProducts.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
 
             if (filteredProducts.length === 0) {
-                 grid.innerHTML = `<p class="text-gray-600 text-center col-span-3 pt-8">No products found in the "${activeFilter}" category yet.</p>`;
-                 return;
+                grid.innerHTML = `<p class="text-gray-600 text-center col-span-3 pt-8">No products found in the "${activeFilter}" category yet.</p>`;
+                return;
             }
 
             // --- REST OF renderProducts() FUNCTION (Mapping logic remains the same) ---
             grid.innerHTML = filteredProducts.map(product => {
                 const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
-                
+
                 const typeOptionsHTML = product.product_options.map(type => {
                     const basePrice = APPAREL_BASE_PRICES[type] || product.price || 0.00;
                     const priceText = basePrice > 0 ? ` - ${formatCurrency(basePrice)}` : '';
@@ -311,7 +324,7 @@
 
                 let startingPrice = 0.00;
                 if (product.product_options.length > 0) {
-                        startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.00;
+                    startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.00;
                 }
 
                 let sizeOptionsHTML = '';
@@ -333,7 +346,7 @@
                 }).join('');
 
                 const imageCount = product.imageUrls.length;
-                
+
                 const initialType = product.product_options[0];
                 const initialPrice = APPAREL_BASE_PRICES[initialType] || product.price || 0.00;
 
@@ -410,10 +423,10 @@
                     </div>
                 `;
             }).join('');
-            
+
             const existingSchema = document.querySelector('script[type="application/ld+json"][data-dynamic]');
             if (existingSchema) existingSchema.remove();
-            
+
             const script = document.createElement('script');
             script.type = 'application/ld+json';
             script.setAttribute('data-dynamic', 'true');
@@ -457,7 +470,7 @@
         };
 
         const addToCart = (productId) => {
-            const product = allProducts.find(p => p.id === productId); 
+            const product = allProducts.find(p => p.id === productId);
             if (!product) return;
 
             const typeSelector = document.getElementById(`type-${productId}`);
@@ -496,11 +509,11 @@
             showMessage(`${selectedColor} ${product.name} (${selectedType} / ${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`);
         };
 
-
         // --- 5. INITIALIZATION ---
         window.onload = () => {
-            initStore(); 
+            initStore();
         };
     </script>
 </body>
 </html>
+
