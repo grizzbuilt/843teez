@@ -214,8 +214,14 @@
         };
         const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
-        // Hide seasonal categories on the main index page
-        const HIDDEN_CATEGORIES_ON_INDEX = ["Christmas", "Fall"];
+       // Hide seasonal categories on the main index page (robust: trim + lowercase)
+          const HIDDEN_CATEGORIES_ON_INDEX = new Set(["christmas", "fall"]);
+  
+          const isHiddenOnIndex = (category) => {
+          const cat = String(category || "").trim().toLowerCase();
+          return HIDDEN_CATEGORIES_ON_INDEX.has(cat);
+      };
+
 
         // --- 2. GLOBAL STATE ---
         let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
@@ -260,35 +266,29 @@
 
         // --- 4. DATA FETCHING AND RENDERING ---
 
-        const initStore = async () => {
-            try {
-                // Fetch ALL products from the new JSON file (cache-busted)
-                const response = await fetch(`../data/products.json?v=${Date.now()}`, { cache: "no-store" });
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+ const initStore = async () => {
+  try {
+    // Fetch ALL products (cache-busted so Netlify/browser doesn't serve stale JSON)
+    const response = await fetch(`../data/products.json?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-                const data = await response.json();
+    const data = await response.json();
 
-                // Your JSON is either { products: [...] } OR already an array.
-                // Handle both safely.
-                const loadedProducts = Array.isArray(data) ? data : (data.products || []);
+    // Your JSON is either [{...}] OR { products: [...] }
+    const loadedProducts = Array.isArray(data) ? data : (data.products || []);
 
-                // Hide seasonal categories on the main index page
-                allProducts = loadedProducts.filter(p => !HIDDEN_CATEGORIES_ON_INDEX.includes(p.category));
+    // Filter seasonal out for the index page
+    allProducts = loadedProducts.filter(p => !isHiddenOnIndex(p.category));
 
-                // DEBUG (optional): verify filtering in the console
-                console.log("Loaded:", loadedProducts.length, "After hide:", allProducts.length);
-                console.log("After hide categories:", [...new Set(allProducts.map(p => p.category))]);
+    renderProducts();
+    updateCartSummary();
+  } catch (e) {
+    console.error("Could not load products:", e);
+    document.getElementById('product-grid').innerHTML =
+      '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists and is valid.</p>';
+  }
+};
 
-                // Now that data is loaded, render the initial view
-                renderProducts();
-                updateCartSummary();
-            } catch (e) {
-                console.error("Could not load products:", e);
-                document.getElementById('product-grid').innerHTML = '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists and is valid.</p>';
-            }
-        }
 
         const filterProducts = (category) => {
             // NOTE: This function is now only used for the 'All Designs' button on this page.
@@ -307,9 +307,12 @@
             let productSchema = [];
 
             // Filter against the globally loaded 'allProducts' array
-            const filteredProducts = activeFilter === 'all'
-                ? allProducts
-                : allProducts.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
+            // Always hide seasonal items on index (even if allProducts gets overwritten somehow)
+const baseList = allProducts.filter(p => !isHiddenOnIndex(p.category));
+
+const filteredProducts = activeFilter === 'all'
+  ? baseList
+  : baseList.filter(p => String(p.category || "").trim().toLowerCase() === String(activeFilter).trim().toLowerCase());
 
             if (filteredProducts.length === 0) {
                 grid.innerHTML = `<p class="text-gray-600 text-center col-span-3 pt-8">No products found in the "${activeFilter}" category yet.</p>`;
