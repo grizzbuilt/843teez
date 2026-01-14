@@ -262,8 +262,8 @@
 
         const initStore = async () => {
             try {
-                // Fetch ALL products from the new JSON file
-                const response = await fetch('../data/products.json');
+                // Fetch ALL products from the new JSON file (cache-busted)
+                const response = await fetch(`../data/products.json?v=${Date.now()}`, { cache: "no-store" });
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -276,6 +276,10 @@
 
                 // Hide seasonal categories on the main index page
                 allProducts = loadedProducts.filter(p => !HIDDEN_CATEGORIES_ON_INDEX.includes(p.category));
+
+                // DEBUG (optional): verify filtering in the console
+                console.log("Loaded:", loadedProducts.length, "After hide:", allProducts.length);
+                console.log("After hide categories:", [...new Set(allProducts.map(p => p.category))]);
 
                 // Now that data is loaded, render the initial view
                 renderProducts();
@@ -516,4 +520,3 @@
     </script>
 </body>
 </html>
-
