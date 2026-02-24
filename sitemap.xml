@@ -5,7 +5,7 @@
 
     <url>
         <loc>https://843teez.com/</loc>
-        <lastmod>2025-11-21</lastmod>
+        <lastmod>2026-02-21</lastmod>
         <priority>1.0</priority>
         <image:image>
             <image:loc>https://843teez.com/843teezLogo.png</image:loc>
@@ -22,11 +22,16 @@
     
     <url>
         <loc>https://843teez.com/blog.html</loc>
-        <lastmod>2025-11-21</lastmod>
+        <lastmod>2026-02-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+        <url>
+        <loc>https://843teez.com/blog-built-not-dabbled</loc>
+        <lastmod>2026-02-2</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://843teez.com/blog-grand-opening.html</loc>
         <lastmod>2025-11-21</lastmod>
@@ -69,3 +74,4 @@
     </url>
     
     </urlset>
+
