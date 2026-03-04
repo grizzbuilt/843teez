@@ -20,6 +20,13 @@
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
+
+  <url>
+  <loc>https://843teez.com/beach-trip-shirts-myrtle-beach.html</loc>
+  <lastmod>2026-03-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
   
 <url>
   <loc>https://843teez.com/custom-business-shirts-myrtle-beach.html</loc>
@@ -115,5 +122,6 @@
   </url>
 
 </urlset>
+
 
 
