@@ -71,6 +71,21 @@
       margin-top: 1rem;
       font-size: .95rem;
     }
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
+      padding: .75rem 1rem;
+      background: #fff;
+      border: 2px solid #007c9e;
+      border-radius: .75rem;
+      display: inline-block;
+    }
   </style>
 
   <title>843 Teez | Custom T-Shirts Conway SC & Myrtle Beach | DTF & Screen Printing</title>
@@ -111,6 +126,10 @@
     "areaServed": [
       { "@type": "City", "name": "Conway" },
       { "@type": "City", "name": "Myrtle Beach" },
+      { "@type": "City", "name": "Surfside Beach" },
+      { "@type": "City", "name": "North Myrtle Beach" },
+      { "@type": "City", "name": "Carolina Forest" },
+      { "@type": "City", "name": "Socastee" },
       { "@type": "AdministrativeArea", "name": "Horry County" },
       { "@type": "AdministrativeArea", "name": "Grand Strand" }
     ],
@@ -129,6 +148,57 @@
   }
   </script>
 
+  <!-- Site + FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://843teez.com/#website",
+        "url":"https://843teez.com/",
+        "name":"843 Teez",
+        "publisher":{"@type":"Organization","name":"843 Teez"},
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://843teez.com/store/?s={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://843teez.com/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Do you offer t-shirt printing near me in Conway or Myrtle Beach?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Yes. 843 Teez is based in Conway, SC and serves Myrtle Beach and the Grand Strand with custom t-shirt printing, including DTF (no minimums) and screen printing for bulk orders."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Do you have minimum order requirements?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. We can print single shirts and small runs using DTF printing. For larger quantities, screen printing is often the most cost-effective option."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"What’s best for 25+ shirts?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"For 25+ shirts with simple 1–2 color designs, screen printing is typically the best value. For full-color or highly detailed art, DTF can still be a great option at larger quantities."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -140,6 +210,7 @@
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
   <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
 
@@ -157,6 +228,14 @@
       <h1 class="text-3xl sm:text-4xl font-extrabold text-[#007c9e]">
         Custom T-Shirts, DTF & Screen Printing
       </h1>
+
+      <!-- ✅ Near-me booster line (this is the “one-liner” improvement) -->
+      <p class="mt-2 text-base font-semibold text-[#003466] max-w-3xl mx-auto">
+        Looking for <strong>t-shirt printing near you</strong>? We’re a local Conway shop serving
+        <strong>Myrtle Beach</strong>, <strong>Carolina Forest</strong>, <strong>Surfside Beach</strong>,
+        <strong>Socastee</strong>, and the entire <strong>Grand Strand</strong>.
+      </p>
+
       <p class="mt-2 text-sm text-gray-600 max-w-2xl mx-auto">
         Local, woman & veteran-owned custom apparel printing in <strong>Conway, SC</strong> serving
         <strong>Myrtle Beach</strong> and the <strong>Grand Strand</strong>. <strong>No minimum orders</strong>.
@@ -173,18 +252,25 @@
         </a>
       </div>
 
-      <div class="mt-5">
+      <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
         <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
            href="/custom-tshirts-conway-sc.html">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-          </svg>
-          Looking for Custom T-Shirts in Conway, SC? Start here →
+          Custom T-Shirts Conway, SC →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="/dtf-printing-conway-sc.html">
+          DTF Printing Conway, SC →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="/screen-printing-myrtle-beach-sc.html">
+          Screen Printing Myrtle Beach →
         </a>
       </div>
     </header>
 
-    <div class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
+    <main id="main" class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
 
       <!-- Quick nav -->
       <div class="flex flex-wrap gap-3 justify-center mb-8">
@@ -237,7 +323,7 @@
           <a href="/custom-tshirts-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
             <h3 class="mt-0">Custom T-Shirts (Conway, SC)</h3>
             <p class="text-sm mb-0">
-              Our main local service page—best place to start if you’re searching custom shirts in Conway.
+              The best place to start for local orders—custom shirts, quick quotes, and clear options.
             </p>
             <p class="text-sm font-bold text-[#007c9e] mt-3">Open page →</p>
           </a>
@@ -245,7 +331,7 @@
           <a href="/dtf-printing-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
             <h3 class="mt-0">DTF Printing (No Minimums)</h3>
             <p class="text-sm mb-0">
-              Full color, detailed prints. Best for 1–24 shirts, one-offs, and vibrant designs.
+              Full color, detailed prints. Great for 1–24 shirts, one-offs, and vibrant designs.
             </p>
             <p class="text-sm font-bold text-[#007c9e] mt-3">Learn more →</p>
           </a>
@@ -253,7 +339,7 @@
           <a href="/screen-printing-myrtle-beach-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
             <h3 class="mt-0">Screen Printing (Bulk Orders)</h3>
             <p class="text-sm mb-0">
-              Best for 25+ shirts and 1–2 solid colors. Durable and cost-effective for teams & events.
+              Best for 25+ shirts and 1–2 solid colors. Durable + cost-effective for teams & events.
             </p>
             <p class="text-sm font-bold text-[#007c9e] mt-3">Learn more →</p>
           </a>
@@ -315,7 +401,7 @@
               <li><strong>Garment color</strong> (or “help us choose”)</li>
               <li><strong>Design placement</strong> (left chest / full front / back / sleeve)</li>
               <li><strong>Deadline / event date</strong></li>
-              <li><strong>Artwork</strong> (upload later by email if needed)</li>
+              <li><strong>Artwork</strong> (send later by email if needed)</li>
             </ul>
 
             <div class="mt-5 flex flex-col sm:flex-row gap-3">
@@ -388,7 +474,7 @@
         </div>
       </section>
 
-    </div>
+    </main>
 
     <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
       <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
