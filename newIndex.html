@@ -1,543 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
-<script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-4PVF756J01');
-</script>
-<head>
-    <meta name="robots" content="noindex, follow">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom style for the specific background texture and font */
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: #f8fcff;
-            background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
-            background-size: 300px;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        /* Custom scrollbar for better visual */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{
+      font-family:'Inter',system-ui,sans-serif;
+      background-color:#f8fcff;
+      background-image:url('https://843teez.com/surf-texture.png');
+      background-repeat:repeat;
+      background-size:300px;
+    }
+    ::-webkit-scrollbar{width:8px;}
+    ::-webkit-scrollbar-thumb{background-color:#007c9e;border-radius:4px;}
+    ::-webkit-scrollbar-track{background-color:#f0f0f0;}
 
-        /* Key brand colors */
-        .btn-primary {
-            background-color: #003466; /* Deep Navy */
-        }
-        .btn-primary:hover {
-            background-color: #007c9e; /* Teal Blue */
-        }
+    .btn-primary{background-color:#003466;}
+    .btn-primary:hover{background-color:#007c9e;}
 
-        /* Ensure the main container grows to fill the page height */
-        #main-content {
-            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
-        }
-        /* Styles for the click-to-cycle image */
-        .product-image-container {
-            position: relative;
-            cursor: pointer;
-            user-select: none;
-        }
-        .product-image-container .image-overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            transition: opacity 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            border-radius: 0.5rem;
-            text-align: center;
-            padding: 1rem;
-        }
-        .product-image-container:hover .image-overlay {
-            opacity: 1;
-        }
-        /* Style for category filter buttons */
-        .category-btn {
-            @apply px-4 py-2 text-sm font-semibold rounded-full border border-gray-300 transition-colors duration-200;
-            @apply bg-white text-gray-700 hover:bg-gray-100;
-        }
-        .category-btn.active {
-            @apply bg-[#007c9e] text-white border-[#007c9e] hover:bg-[#003466];
-        }
-    </style>
+    #main-content{min-height:calc(100vh - 80px);}
 
-    <title>843 Teez Store | Custom Tees, Hoodies & Sweatshirts in Conway SC</title>
-    <meta name="description" content="Shop the official 843 Teez online store. Custom tees, hoodies, and sweatshirts printed and pressed locally in Conway, South Carolina." />
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Store",
-            "name": "843 Teez",
-            "telephone": "843-350-1943",
-            "url": "https://843teez.com",
-            "description": "Custom tees, hoodies, and sweatshirts printed by a veteran-owned local apparel shop in Conway, Horry County, South Carolina."
+    .content h2{
+      margin-top: 1.5rem;
+      margin-bottom: .75rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 800;
+      color:#003466;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: .25rem;
+    }
+    .content h3{
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      color:#dc2626;
+    }
+    .input{
+      width:100%;
+      border:1px solid #e5e7eb;
+      border-radius: 0.9rem;
+      padding: 0.85rem 1rem;
+      background: rgba(255,255,255,0.92);
+      outline: none;
+    }
+    .input:focus{
+      border-color:#007c9e;
+      box-shadow: 0 0 0 3px rgba(0,124,158,0.15);
+    }
+    .label{
+      display:block;
+      font-weight:700;
+      color:#003466;
+      margin-bottom: .35rem;
+      margin-top: 1rem;
+      font-size: .95rem;
+    }
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
+      padding: .75rem 1rem;
+      background: #fff;
+      border: 2px solid #007c9e;
+      border-radius: .75rem;
+      display: inline-block;
+    }
+  </style>
+
+  <title>843 Teez | Custom T-Shirts Conway SC & Myrtle Beach | DTF & Screen Printing</title>
+  <link rel="canonical" href="https://843teez.com/" />
+
+  <meta name="description" content="843 Teez is a woman & veteran-owned custom t-shirt shop in Conway, SC. Fast quotes, no minimums, DTF and screen printing for Myrtle Beach and the Grand Strand." />
+
+  <meta property="og:title" content="843 Teez | Custom T-Shirts, DTF & Screen Printing in Conway, SC" />
+  <meta property="og:description" content="A local Conway, SC print shop run by Heather and Todd. Custom t-shirts, DTF printing, and screen printing for Myrtle Beach and the Grand Strand." />
+  <meta property="og:url" content="https://843teez.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://843teez.com/843teez.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://843teez.com/843teez.png" />
+  <meta name="twitter:title" content="843 Teez | Custom T-Shirts in Conway, SC" />
+  <meta name="twitter:description" content="Woman & veteran-owned custom t-shirt printing in Conway, SC. Friendly local help, no minimums, DTF and screen printing." />
+
+  <!-- Local SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PrintShop",
+    "name": "843 Teez",
+    "description": "Custom t-shirt printing in Conway, SC offering DTF transfers and screen printing for the Grand Strand.",
+    "url": "https://843teez.com/",
+    "telephone": "+1-843-350-1943",
+    "email": "info@843teez.com",
+    "image": "https://843teez.com/843teez.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Conway",
+      "addressRegion": "SC",
+      "postalCode": "29526",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Conway" },
+      { "@type": "City", "name": "Myrtle Beach" },
+      { "@type": "City", "name": "Surfside Beach" },
+      { "@type": "City", "name": "North Myrtle Beach" },
+      { "@type": "City", "name": "Carolina Forest" },
+      { "@type": "City", "name": "Socastee" },
+      { "@type": "AdministrativeArea", "name": "Horry County" },
+      { "@type": "AdministrativeArea", "name": "Grand Strand" }
+    ],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" }
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/843teez",
+      "https://www.instagram.com/843teez"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DTF Printing", "description": "Full-color DTF printing for custom apparel with no minimums." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screen Printing", "description": "Bulk screen printing for custom apparel orders." } }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Do you offer custom t-shirt printing near Conway and Myrtle Beach?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. 843 Teez is based in Conway, South Carolina and serves Myrtle Beach and the Grand Strand with custom t-shirts, DTF printing, and screen printing."
         }
-    </script>
+      },
+      {
+        "@type":"Question",
+        "name":"Do you have minimum order requirements?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. We can help with one shirt, small runs, and larger bulk orders. DTF is great for no-minimum jobs, while screen printing is often best for bigger quantities."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can you help if I’m not sure what I need yet?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. If you are unsure about quantities, garment type, design placement, or the best print method, just send what you know and we’ll help you sort it out."
+        }
+      }
+    ]
+  }
+  </script>
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "tr3lwvejev");
-    </script>
-
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tr5ljrm18n");
+  </script>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<div id="construction-banner" class="w-full bg-amber-400 text-amber-900 text-center py-3 px-4 shadow-md text-base z-50">
-    <p class="font-bold mb-1">Big things are happening! The new 843 Teez online store is under construction.</p>
-    <p>We're uploading designs as fast as we can. If you’ve spotted something we haven’t posted here yet, hit us up by
-        <a href="tel:8433501943" class="underline hover:text-amber-700">phone (843-350-1943)</a> or
-        <a href="mailto:Sales@843Teez.com" class="underline hover:text-amber-700">email (Sales@843Teez.com)</a> — we’ll make it happen.
-    </p>
-</div>
+  <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+    <!-- Header / Hero -->
+    <header class="text-center mb-10">
+      <img
+        src="https://843teez.com/843teezlogo.png"
+        alt="843 Teez Logo"
+        class="max-w-xs mx-auto mb-4 w-5/6"
+        loading="eager"
+        width="500"
+        height="180"
+      />
 
-        <header class="text-center mb-8">
-            <img
-                src="../843teezlogo.png"
-                alt="843 Teez Logo"
-                class="max-w-xs mx-auto mb-4 w-5/6"
-            />
-            <div class="flex items-center justify-center space-x-4 mb-2">
-                <h1 id="page-title" class="text-3xl font-extrabold text-[#007c9e]">
-                    Online Shop
-                </h1>
-                <a
-                    href="cart.html"
-                    id="global-view-cart-button"
-                    class="flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full transition-colors duration-200 shadow-md hover:bg-red-700 disabled:opacity-50"
-                    disabled
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.25H16a1 1 0 001-1V5a1 1 0 00-1-1h-1.23l-1.041-4.168A1 1 0 0013.78 0H6.22a1 1 0 00-.989.832L4.11 4.25H3a1 1 0 000 2h1.22l1.246 5.003A2 2 0 007.467 13H15a1 1 0 00.95-.684l.75-3A1 1 0 0016 9H7.467L6.5 6.25H16l.192-.768A1 1 0 0016 5H4.11L3.5 2.5H3zM7 17a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                    </svg>
-                    Cart (<span id="global-item-count">0</span>)
-                </a>
-            </div>
-            <p id="page-subtitle" class="text-sm text-gray-600">
-                Shop our collection of premade designs, all designed, printed and pressed locally in Conway, SC. Whether you’re nearby or across the map, we offer convenient local delivery and fast shipping.
+      <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#007c9e]">
+        Custom t-shirt printing in Conway, SC
+      </p>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#003466] leading-tight mt-2 max-w-4xl mx-auto">
+        Friendly, Local Custom Shirts Without the Big-Company Runaround
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+        <strong>843 Teez</strong> is Heather and Todd’s custom t-shirt shop in <strong>Conway, South Carolina</strong>.
+        We help people across <strong>Myrtle Beach</strong> and the <strong>Grand Strand</strong> get shirts made for businesses,
+        events, teams, brands, family trips, and wild ideas—without making the process confusing, cold, or complicated.
+      </p>
+
+      <p class="mt-3 text-sm sm:text-base font-semibold text-[#007c9e] max-w-2xl mx-auto">
+        No minimums on DTF. Bulk options with screen printing. Honest help from real local people.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+           href="#quote">
+          Get a Fast Quote
+        </a>
+        <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+           href="/store/">
+          Shop the Store
+        </a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">One shirt or many</p>
+          <p class="text-sm text-gray-600 mt-1">Small runs, one-offs, or larger orders—we’re here for all of it.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">Real local help</p>
+          <p class="text-sm text-gray-600 mt-1">You’re talking to Heather and Todd, not an anonymous order portal.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">No minimums on DTF</p>
+          <p class="text-sm text-gray-600 mt-1">Perfect when you just need a few shirts and want full-color prints.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">We help you decide</p>
+          <p class="text-sm text-gray-600 mt-1">Not sure what to order? We’ll help you choose what actually fits.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="/custom-tshirts-conway-sc.html">
+          Custom T-Shirts Conway, SC →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="/dtf-printing-conway-sc.html">
+          DTF Printing Conway, SC →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="/screen-printing-myrtle-beach-sc.html">
+          Screen Printing Myrtle Beach →
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
+
+      <!-- Quick nav -->
+      <div class="flex flex-wrap gap-3 justify-center mb-8">
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#why-us">Why Us</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#services">Services</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#samples">Samples</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#pricing">Pricing</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#about">About</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#quote">Quote</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/FAQ.html">FAQ</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/blog.html">Blog</a>
+      </div>
+
+      <section id="why-us">
+        <h2>Why Work With 843 Teez?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because you want the shirts to actually turn out right</h3>
+            <p class="mb-0">
+              A lot of people don’t just need a printer. They need someone who will answer questions,
+              give honest guidance, and care whether the final result looks good. That’s the part we take seriously.
             </p>
-            </header>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because ordering custom shirts can feel weirdly overwhelming</h3>
+            <p class="mb-0">
+              Shirt color, print method, sizes, placement, deadlines, artwork—it adds up fast. We help make it feel simple
+              and human instead of making you figure it all out alone.
+            </p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because small orders matter too</h3>
+            <p class="mb-0">
+              Some shops only care about the big jobs. We’re happy to help with one shirt, ten shirts, or a much larger order.
+              If it matters to you, it matters to us.
+            </p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because local still means something</h3>
+            <p class="mb-0">
+              We’re based in Conway and work with people around Myrtle Beach, Carolina Forest, Surfside, Socastee,
+              and across the Grand Strand. You’re dealing with neighbors, not a faceless brand.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <div id="shop-view" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div class="lg:col-span-3">
-                <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">
-                    Featured Apparel
-                </h2>
+      <section id="services">
+        <h2>What We Print</h2>
+        <p class="mb-4">
+          We help with <strong>custom t-shirts in Conway, SC</strong>, <strong>DTF printing</strong>, and
+          <strong>screen printing</strong> for customers across Myrtle Beach and the Grand Strand.
+          Whether it’s for work, fun, family, or business, we’ll help you find the best route.
+        </p>
 
-                <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
-                    <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
-                    <button onclick="filterProducts('Originals')" class="category-btn px-4">843 Teez Originals</button>
-                    <button onclick="filterProducts('Christmas')" class="category-btn px-4">Christmas</button>
-                    <button onclick="filterProducts('Fall')" class="category-btn px-4">Fall & Halloween</button>
-                    <button onclick="filterProducts('LE')" class="category-btn px-4">Limited Edition Teez</button>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <a href="/custom-tshirts-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
+            <h3 class="mt-0">Custom T-Shirts</h3>
+            <p class="text-sm mb-0">
+              Business shirts, event shirts, family trip shirts, fundraiser shirts, brand merch, and everyday custom ideas.
+            </p>
+            <p class="text-sm font-bold text-[#007c9e] mt-3">Open page →</p>
+          </a>
 
-                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <p class="text-gray-500 text-center col-span-3 pt-8">Loading all products...</p>
-                    </div>
+          <a href="/dtf-printing-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
+            <h3 class="mt-0">DTF Printing</h3>
+            <p class="text-sm mb-0">
+              Great for full-color artwork, detailed designs, one-offs, and smaller runs with no minimum order.
+            </p>
+            <p class="text-sm font-bold text-[#007c9e] mt-3">Learn more →</p>
+          </a>
 
-                <div class="mt-12 text-center pt-8 border-t border-gray-200">
-                    <p class="text-gray-700 font-medium mb-4">For custom apparel and large orders, please contact us directly:</p>
-
-                    <a href="tel:8433501943"
-                        class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mr-2 mb-2 sm:mr-4">
-                        📞 Call: 843-350-1943
-                    </a>
-                    <a href="mailto:Sales@843Teez.com"
-                        class="inline-block px-6 py-3 text-white font-bold bg-[#003466] rounded-lg transition-colors duration-200 hover:bg-[#007c9e] shadow-md mb-2">
-                        📧 Email: Sales@843Teez.com
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-1">
-                <div id="cart-summary-sticky" class="sticky top-20 bg-white p-4 rounded-xl border-2 border-[#007c9e] shadow-lg text-center">
-                    <h3 class="text-lg font-bold text-[#003466] mb-3">Your Cart Summary</h3>
-                    <p class="text-sm text-gray-600 mb-2">Total Items: <span id="summary-item-count" class="font-bold text-[#007c9e]">0</span></p>
-                    <p class="text-xl font-extrabold text-[#003466] mb-4">Est. Total: <span id="summary-cart-total">$0.00</span></p>
-
-                    <a
-                        href="cart.html"
-                        id="view-cart-button"
-                        class="w-full inline-block text-white font-bold py-3 rounded-xl transition-all duration-200 shadow-md disabled:opacity-50 btn-primary text-center"
-                        disabled
-                    >
-                        Review & Checkout
-                    </a>
-                </div>
-            </div>
+          <a href="/screen-printing-myrtle-beach-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
+            <h3 class="mt-0">Screen Printing</h3>
+            <p class="text-sm mb-0">
+              A strong choice for larger quantities, team shirts, company apparel, and simple designs where cost per shirt matters.
+            </p>
+            <p class="text-sm font-bold text-[#007c9e] mt-3">Learn more →</p>
+          </a>
         </div>
 
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-            <p>Woman & Veteran-owned local apparel.</p>
-            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
-        </footer>
-    </div>
+        <div class="p-4 rounded-xl bg-gray-50 border border-gray-200">
+          <p class="text-sm mt-1">
+            Need shirts for your team, company, staff, or crew?
+            <a href="/custom-business-shirts-myrtle-beach.html"
+               class="text-[#007c9e] hover:text-[#003466] font-semibold">
+               Custom business shirts in Myrtle Beach →
+            </a>
+          </p>
 
-    <script>
-        // --- 1. CONFIGURATION DATA (REMAINS) ---
-        const APPAREL_BASE_PRICES = {
-            'Tee_Shirt': 20.00,
-            'Sweatshirt': 37.00,
-            'Hoodie': 39.00,
-            'Baseball_Tee': 28.00
-        };
-        const SALES_TAX_RATE = 0.08;
-        const SIZE_UPCHARGES = {
-            'S': 0.00, 'M': 0.00, 'L': 0.00, 'XL': 2.00, '2XL': 4.00, '3XL': 5.00, '4XL': 6.00, '5XL': 7.00
-        };
-        const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
+          <p class="text-sm mt-2 mb-0">
+            Not sure which print method makes sense? Tell us what you’re trying to do, and we’ll help you pick the one that fits best.
+          </p>
+        </div>
+      </section>
 
-        // --- 2. GLOBAL STATE ---
-        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        let allProducts = []; // <-- Will hold the fetched data
-        let activeFilter = 'all';
+      <section id="samples">
+        <h2>A Few Things We’ve Made</h2>
+        <p class="mb-4">
+          Here’s a small look at the kinds of custom shirts and printed apparel we create for local customers around Conway and Myrtle Beach.
+        </p>
 
-        // --- 3. CORE HELPER FUNCTIONS (UNCHANGED) ---
-        const formatCurrency = (amount) => `$${amount.toFixed(2)}`;
-        const getProductPriceWithSize = (basePrice, size) => {
-            if (size === 'OS') return basePrice;
-            const upcharge = SIZE_UPCHARGES[size] || 0.00;
-            return basePrice + upcharge;
-        }
-        const saveCart = () => {
-            localStorage.setItem('843teez_cart', JSON.stringify(cart));
-        };
-        
-        const showMessage = (message, type = 'success') => {
-            let msgBox = document.getElementById('temp-message-box');
-            if (!msgBox) {
-                msgBox = document.createElement('div');
-                msgBox.id = 'temp-message-box';
-                document.body.appendChild(msgBox);
-            }
-            const color = type === 'success' ? 'bg-green-500' : 'bg-red-500';
-            msgBox.className = `fixed top-4 left-1/2 transform -translate-x-1/2 ${color} text-white px-5 py-3 rounded-xl shadow-2xl opacity-0 transition-opacity duration-500 z-50`;
-            msgBox.textContent = message;
-            msgBox.style.opacity = '1';
-            setTimeout(() => { msgBox.style.opacity = '0'; }, 3000);
-        };
-        
-        const cycleImage = (element) => {
-            const imgElement = element.querySelector('img');
-            const urls = JSON.parse(imgElement.dataset.imageUrls);
-            let currentIndex = parseInt(imgElement.dataset.currentIndex, 10);
-            if (urls.length <= 1) return;
-            currentIndex = (currentIndex + 1) % urls.length;
-            imgElement.src = urls[currentIndex];
-            imgElement.dataset.currentIndex = currentIndex;
-            imgElement.alt = imgElement.alt.replace(/\(View \d+ of \d+\)/, `(View ${currentIndex + 1} of ${urls.length})`);
-        };
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <img src="wcctee.jpg" alt="Custom DTF transfer t-shirt design for Worksman Cycles by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
+          <img src="conway.jpg" alt="Conway South Carolina custom t-shirt design printed locally by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
+          <img src="fightme.jpg" alt="Full color custom DTF shirt printed by 843 Teez near Myrtle Beach" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
+          <img src="StoneTone.jpg" alt="Custom printed shirt for Stonetone Guitars by 843 Teez in Conway South Carolina" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
+        </div>
 
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <p class="text-sm italic text-gray-700 mb-2">“Super easy to work with, and the shirts came out better than I expected.”</p>
+            <p class="text-xs font-bold text-[#003466]">Customer feeling</p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <p class="text-sm italic text-gray-700 mb-2">“They actually helped me figure out what I needed instead of just taking the order.”</p>
+            <p class="text-xs font-bold text-[#003466]">Local order feeling</p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <p class="text-sm italic text-gray-700 mb-2">“Way more personal than ordering from some giant site.”</p>
+            <p class="text-xs font-bold text-[#003466]">Grand Strand customer feeling</p>
+          </div>
+        </div>
+      </section>
 
-        // --- 4. DATA FETCHING AND RENDERING ---
-        
-        const initStore = async () => {
-            try {
-                // *** CRITICAL CHANGE: Fetch the JSON data from the root data directory ***
-                // Path is ../data/products.json because /store/index.html is one directory deeper than /data/products.json
-                const response = await fetch('../data/products.json'); 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                allProducts = await response.json(); // Load data into the global array
+      <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+          <p class="mb-3">
+            Most custom shirts start around <strong>$20+</strong>, depending on the garment, artwork,
+            print size, number of print locations, and quantity.
+          </p>
+          <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
+            <li><strong>Need just a few?</strong> DTF is usually the best fit</li>
+            <li><strong>Need a bigger batch?</strong> Screen printing often gives better value per shirt</li>
+            <li><strong>Not sure yet?</strong> We’ll help you figure out the smartest option before you order</li>
+          </ul>
+          <p class="mt-3 mb-0 text-sm text-gray-600">
+            We’d rather point you in the right direction than push you into the wrong setup.
+          </p>
+        </div>
 
-                // Now that data is loaded, render the initial view
-                renderProducts(); 
-                updateCartSummary(); 
-            } catch (e) {
-                console.error("Could not load products:", e);
-                document.getElementById('product-grid').innerHTML = '<p class="text-red-600 text-center col-span-3">Error loading products. Please ensure /data/products.json exists.</p>';
-            }
-        }
+        <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+          <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+             href="/store/">
+            Browse Store
+          </a>
+          <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+             href="#quote">
+            Get a Quote
+          </a>
+        </div>
+      </section>
 
-        const filterProducts = (category) => {
-            activeFilter = category;
-            renderProducts();
+      <section id="about">
+        <h2>Meet Heather & Todd</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div class="md:col-span-2">
+            <p class="mb-4">
+              <strong>843 Teez</strong> is a local print shop built by <strong>Heather and Todd (“Grizz”)</strong> in
+              <strong>Conway, South Carolina</strong>. We care a lot about making things that feel real, look good,
+              and reflect people well.
+            </p>
+            <p class="mb-4">
+              We know custom shirts are usually attached to something that matters—your business, your crew, your family,
+              your event, your inside joke, your idea. That part matters to us too.
+            </p>
+            <p class="mb-0">
+              So when you reach out, you’re not just sending a form into the void. You’re talking to real people who want
+              to help you make something you’ll feel good handing out, wearing, selling, or showing off.
+            </p>
+          </div>
 
-            // Update button states
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            // Find the button that was clicked
-            const clickedButton = Array.from(document.querySelectorAll('.category-btn')).find(btn => btn.textContent.toLowerCase().includes(category.toLowerCase()));
-            if (clickedButton) {
-                 clickedButton.classList.add('active');
-            } else {
-                 // Re-select 'All Designs' if the filter button isn't found (for pages that don't use buttons)
-                 document.querySelector('.category-btn').classList.add('active');
-            }
-        };
+          <div class="text-center">
+            <img
+              src="HandT.png"
+              alt="Heather and Todd founders of 843 Teez custom t-shirt printing shop in Conway South Carolina"
+              class="rounded-2xl shadow-md border border-gray-200 mx-auto"
+              loading="lazy"
+              width="900"
+              height="900"
+            />
+            <p class="text-xs font-semibold text-[#003466] mt-2">Heather & Todd, Founders of 843 Teez</p>
+          </div>
+        </div>
+      </section>
 
-        const renderProducts = () => {
-            const grid = document.getElementById('product-grid');
-            let productSchema = []; 
+      <section id="quote">
+        <h2>Let’s Talk About Your Shirts</h2>
 
-            // Filter against the globally loaded 'allProducts' array
-            const filteredProducts = activeFilter === 'all'
-                ? allProducts
-                : allProducts.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
+          <div class="p-6 bg-blue-50 border-l-4 border-[#007c9e] rounded-2xl">
+            <p class="text-lg font-extrabold text-[#003466] mb-2">What helps us quote it faster</p>
+            <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
+              <li><strong>How many shirts you need</strong></li>
+              <li><strong>Sizes</strong> if you know them</li>
+              <li><strong>Shirt color</strong> or “help me choose”</li>
+              <li><strong>Where the design goes</strong> (front, back, left chest, sleeve)</li>
+              <li><strong>Your deadline</strong> or event date</li>
+              <li><strong>Your artwork</strong> if you already have it</li>
+            </ul>
 
-            if (filteredProducts.length === 0) {
-                 grid.innerHTML = `<p class="text-gray-600 text-center col-span-3 pt-8">No products found in the "${activeFilter}" category yet.</p>`;
-                 return;
-            }
+            <p class="text-sm text-gray-700 mt-4 mb-0">
+              Don’t have all that figured out yet? That’s okay. Really. Send what you know, and we’ll help with the rest.
+            </p>
 
-            // --- REST OF renderProducts() FUNCTION (Mapping logic remains the same) ---
-            grid.innerHTML = filteredProducts.map(product => {
-                const needsSize = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
-                
-                // --- Product Type Options ---
-                const typeOptionsHTML = product.product_options.map(type => {
-                    const basePrice = APPAREL_BASE_PRICES[type] || product.price || 0.00;
-                    const priceText = basePrice > 0 ? ` - ${formatCurrency(basePrice)}` : '';
-                    return `<option value="${type}" data-base-price="${basePrice.toFixed(2)}">${type}${priceText}</option>`;
-                }).join('');
+            <div class="mt-5 flex flex-col sm:flex-row gap-3">
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700 text-center"
+                 href="tel:8433501943">
+                Call (843) 350-1943
+              </a>
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary text-center"
+                 href="mailto:info@843teez.com?subject=Quote%20Request%20-%20843%20Teez">
+                Email Us
+              </a>
+            </div>
+          </div>
 
-                let startingPrice = 0.00;
-                if (product.product_options.length > 0) {
-                        startingPrice = APPAREL_BASE_PRICES[product.product_options[0]] || product.price || 0.00;
-                }
+          <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm">
+            <p class="text-lg font-extrabold text-[#003466] mb-1">Send a Quote Request</p>
+            <p class="text-sm text-gray-600 mb-4">
+              Tell us what you’ve got so far, and we’ll get back to you as soon as we can.
+            </p>
 
-                // --- Size Options ---
-                let sizeOptionsHTML = '';
-                let sizeSelectorHiddenClass = 'hidden';
+            <form
+              action="/thank-you.html"
+              name="843Teezcontact"
+              method="POST"
+              data-netlify-recaptcha="true"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="843Teezcontact" />
+              <input type="hidden" name="form-location" value="Homepage Quote Form" />
+              <input type="hidden" name="subject" value="843 Teez Custom Quote Request" />
 
-                if (needsSize) {
-                    sizeSelectorHiddenClass = '';
-                    sizeOptionsHTML = ALL_SIZES.map(size => {
-                        const upcharge = SIZE_UPCHARGES[size];
-                        const upchargeText = upcharge > 0 ? ` (+${formatCurrency(upcharge)})` : '';
-                        return `<option value="${size}">${size}${upchargeText}</option>`;
-                    }).join('');
-                } else {
-                    sizeOptionsHTML = `<option value="OS" selected>One Size (OS)</option>`;
-                }
+              <p hidden>
+                <label>Don’t fill this out: <input name="bot-field" /></label>
+              </p>
 
-                // --- Color Options ---
-                const colorOptions = product.colors.map(color => {
-                    return `<option value="${color}">${color}</option>`;
-                }).join('');
+              <label class="label" for="name">Name</label>
+              <input class="input" type="text" name="name" id="name" required />
 
-                const imageCount = product.imageUrls.length;
-                
-                // --- Dynamic Product Schema Generation ---
-                const initialType = product.product_options[0];
-                const initialPrice = APPAREL_BASE_PRICES[initialType] || product.price || 0.00;
+              <label class="label" for="email">Email</label>
+              <input class="input" type="email" name="email" id="email" required />
 
-                productSchema.push({
-                    "@context": "https://schema.org",
-                    "@type": "Product",
-                    "name": product.name,
-                    "image": product.imageUrls[0],
-                    "description": `Custom ${initialType} with the ${product.name} design. Available in sizes S-${ALL_SIZES[ALL_SIZES.length - 1]}. Printed locally in Conway, SC.`,
-                    "brand": {
-                        "@type": "Brand", "name": "843 Teez"
-                    },
-                    "offers": {
-                        "@type": "Offer",
-                        "url": "https://843teez.com/store/index.html",
-                        "priceCurrency": "USD",
-                        "price": initialPrice.toFixed(2),
-                        "availability": "https://schema.org/InStock",
-                        "shippingDetails": {
-                            "@type": "ShippingDeliveryOptions",
-                            "shippingRate": {
-                                "@type": "MonetaryAmount",
-                                "value": 8.00,
-                                "currency": "USD"
-                            }
-                        }
-                    }
-                });
+              <label class="label" for="shirt-details">What are you thinking?</label>
+              <textarea class="input" name="shirt-details" id="shirt-details" rows="6" required placeholder="Example: I need 15 shirts for a work crew, black tees, left chest and full back, sometime next month."></textarea>
 
-                return `
-                    <div class="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                        <div class="product-image-container relative group cursor-pointer rounded-lg mb-4" onclick="cycleImage(this)">
-                            <img
-                                id="img-${product.id}"
-                                src="${product.imageUrls[0]}"
-                                alt="${product.name} ${initialType} Design (View 1 of ${imageCount})"
-                                class="w-full h-auto object-cover rounded-lg transition-transform duration-300"
-                                onerror="this.onerror=null;this.src='https://placehold.co/400x400/D1D5DB/1F2937?text=843+Apparel';"
-                                data-image-urls='${JSON.stringify(product.imageUrls)}'
-                                data-current-index="0"
-                            />
-                            <div class="image-overlay">
-                                ${imageCount > 1 ? `CLICK to see next view (${imageCount} total)` : 'No additional views'}
-                            </div>
-                        </div>
+              <div class="mt-4" data-netlify-recaptcha="true"></div>
 
-                        <h3 class="text-lg font-bold text-[#003466] mb-1">${product.name}</h3>
-                        <p class="text-xl font-extrabold text-[#007c9e] mb-3">Starting at ${formatCurrency(startingPrice)}</p>
+              <button
+                type="submit"
+                class="w-full mt-4 px-6 py-3 text-white font-extrabold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+              >
+                Send Quote Request
+              </button>
+            </form>
+          </div>
+        </div>
 
-                        <div class="mb-3">
-                            <label for="type-${product.id}" class="block text-sm font-medium text-gray-700">Select Product Type</label>
-                            <select id="type-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
-                                <option value="" disabled selected>Choose type...</option>
-                                ${typeOptionsHTML}
-                            </select>
-                        </div>
+        <div class="mt-6 text-center">
+          <p class="text-sm text-gray-600">Follow us:</p>
+          <div class="flex justify-center gap-4 mt-3">
+            <a href="https://www.facebook.com/843teez" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/843teez" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+              Instagram
+            </a>
+          </div>
+        </div>
+      </section>
 
-                        <div class="mb-3">
-                            <label for="color-${product.id}" class="block text-sm font-medium text-gray-700">Select Color</label>
-                            <select id="color-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]" required>
-                                <option value="" disabled selected>Choose color...</option>
-                                ${colorOptions}
-                            </select>
-                        </div>
+    </main>
 
-                        <div class="mb-4 ${sizeSelectorHiddenClass}">
-                            <label for="size-${product.id}" class="block text-sm font-medium text-gray-700">Select Size</label>
-                            <select id="size-${product.id}" class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-[#007c9e] focus:border-[#007c9e]">
-                                <option value="" disabled selected>Choose size...</option>
-                                ${sizeOptionsHTML}
-                            </select>
-                        </div>
-                        ${!needsSize ? `<input type="hidden" id="size-${product.id}" value="OS">` : ''}
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
+      <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+      <p>Woman & veteran-owned local apparel.</p>
+      <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+      <p class="mt-2">
+        <a class="text-[#007c9e] hover:underline" href="/custom-tshirts-conway-sc.html">Custom Tees Conway</a> •
+        <a class="text-[#007c9e] hover:underline" href="/dtf-printing-conway-sc.html">DTF Printing</a> •
+        <a class="text-[#007c9e] hover:underline" href="/screen-printing-myrtle-beach-sc.html">Screen Printing</a>
+      </p>
+      <a href="/beach-trip-shirts-myrtle-beach.html" class="text-[#007c9e] hover:text-[#003466] font-semibold">
+        Beach trip shirts for Myrtle Beach →
+      </a>
+    </footer>
 
-                        <button
-                            onclick="addToCart('${product.id}')"
-                            class="w-full text-white font-semibold py-2 rounded-lg transition-colors duration-200 btn-primary"
-                        >
-                            Add to Cart
-                        </button>
-                    </div>
-                `;
-            }).join('');
-            
-            const existingSchema = document.querySelector('script[type="application/ld+json"][data-dynamic]');
-            if (existingSchema) existingSchema.remove();
-            
-            const script = document.createElement('script');
-            script.type = 'application/ld+json';
-            script.setAttribute('data-dynamic', 'true');
-            script.textContent = JSON.stringify(productSchema);
-            document.head.appendChild(script);
-        };
-
-        const updateCartSummary = () => {
-            const viewCartButton = document.getElementById('view-cart-button');
-            const globalViewCartButton = document.getElementById('global-view-cart-button');
-
-            let subtotal = 0;
-            let totalItems = 0;
-
-            if (cart.length === 0) {
-                document.getElementById('summary-item-count').textContent = 0;
-                document.getElementById('summary-cart-total').textContent = formatCurrency(0);
-                document.getElementById('global-item-count').textContent = 0;
-                viewCartButton.classList.add('disabled:opacity-50');
-                globalViewCartButton.classList.add('disabled:opacity-50');
-                viewCartButton.setAttribute('disabled', 'true');
-                globalViewCartButton.setAttribute('disabled', 'true');
-                return;
-            }
-
-            cart.forEach(item => {
-                subtotal += item.price * item.quantity;
-                totalItems += item.quantity;
-            });
-
-            const taxAmount = subtotal * SALES_TAX_RATE;
-            const totalBeforeShipping = subtotal + taxAmount;
-
-            document.getElementById('summary-item-count').textContent = totalItems;
-            document.getElementById('summary-cart-total').textContent = formatCurrency(totalBeforeShipping);
-            document.getElementById('global-item-count').textContent = totalItems;
-            viewCartButton.classList.remove('disabled:opacity-50');
-            globalViewCartButton.classList.remove('disabled:opacity-50');
-            viewCartButton.removeAttribute('disabled');
-            globalViewCartButton.removeAttribute('disabled');
-        };
-
-        const addToCart = (productId) => {
-            // Find the product in the globally loaded array
-            const product = allProducts.find(p => p.id === productId); 
-            if (!product) return;
-
-            const typeSelector = document.getElementById(`type-${productId}`);
-            const selectedType = typeSelector.value;
-            const basePriceElement = typeSelector.options[typeSelector.selectedIndex];
-            const sizeSelector = document.getElementById(`size-${productId}`);
-            const selectedSize = sizeSelector.value;
-            const colorSelector = document.getElementById(`color-${productId}`);
-            const selectedColor = colorSelector.value;
-
-            // Validation (unchanged)
-            const needsSizeValidation = product.product_options.some(opt => APPAREL_BASE_PRICES[opt] !== undefined);
-
-            if (!selectedType) { showMessage('Please select a Product Type.', 'error'); return; }
-            if (selectedColor === '') { showMessage('Please select a Color.', 'error'); return; }
-            if (needsSizeValidation && selectedSize === '') { showMessage('Please select a Size.', 'error'); return; }
-
-            const basePrice = parseFloat(basePriceElement.dataset.basePrice);
-            const finalPrice = getProductPriceWithSize(basePrice, selectedSize);
-
-            // Cart Logic (unchanged)
-            const cartItemIndex = cart.findIndex(item =>
-                item.id === productId && item.type === selectedType &&
-                item.size === selectedSize && item.color === selectedColor
-            );
-
-            if (cartItemIndex > -1) {
-                cart[cartItemIndex].quantity += 1;
-            } else {
-                cart.push({
-                    id: product.id, name: product.name, type: selectedType,
-                    price: finalPrice, size: selectedSize, color: selectedColor, quantity: 1
-                });
-            }
-
-            saveCart();
-            updateCartSummary();
-            showMessage(`${selectedColor} ${product.name} (${selectedType} / ${selectedSize === 'OS' ? 'One Size' : selectedSize}) added!`);
-        };
-
-
-        // --- 5. INITIALIZATION ---
-        window.onload = () => {
-            // *** CRITICAL CHANGE: Now calling initStore instead of renderProducts directly ***
-            initStore(); 
-            
-            // Re-bind click handlers for the category buttons to the JS filter function
-            document.querySelector('.category-btn.active').classList.remove('active');
-            document.querySelector('.category-btn').classList.add('active'); // Set 'All Designs' as active
-            
-            document.querySelector('#category-filter').addEventListener('click', (e) => {
-                const target = e.target;
-                if (target.tagName === 'BUTTON') {
-                    // Prevent button click from immediately navigating away if it's the ALL button
-                    if (target.textContent.toLowerCase().includes('all designs')) {
-                        e.preventDefault(); 
-                        filterProducts('all');
-                    }
-                }
-            });
-        };
-    </script>
+  </div>
 </body>
 </html>
