@@ -29,7 +29,7 @@
   <link rel="dns-prefetch" href="//www.clarity.ms">
 
   <!-- Preload likely LCP image -->
-  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.webp" fetchpriority="high" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -50,12 +50,17 @@
     body{
       font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background-color:#f8fcff;
-      background-image:url('https://843teez.com/surf-texture.png');
-      background-repeat:repeat;
-      background-size:300px;
       text-rendering:optimizeLegibility;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
+    }
+
+    @media (min-width: 768px){
+      body{
+        background-image:url('https://843teez.com/surf-texture.webp');
+        background-repeat:repeat;
+        background-size:300px;
+      }
     }
 
     img{
@@ -153,7 +158,6 @@
       scroll-margin-top:1rem;
     }
 
-    /* Improve rendering cost for below-the-fold sections */
     .cv-auto{
       content-visibility:auto;
       contain-intrinsic-size:1px 900px;
@@ -170,7 +174,7 @@
     "url": "https://843teez.com/",
     "telephone": "+1-843-350-1943",
     "email": "info@843teez.com",
-    "image": "https://843teez.com/843teez.png",
+    "image": "https://843teez.com/843teez.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Conway",
@@ -278,7 +282,7 @@
     <!-- Header / Hero -->
     <header class="text-center mb-10">
       <img
-        src="https://843teez.com/843teezlogo.png"
+        src="https://843teez.com/843teezlogo.webp"
         alt="843 Teez Logo"
         class="max-w-xs mx-auto mb-4 w-5/6"
         loading="eager"
@@ -463,10 +467,10 @@
         </p>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <img src="wcctee.jpg" alt="Custom DTF transfer t-shirt design for Worksman Cycles by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
-          <img src="conway.jpg" alt="Conway South Carolina custom t-shirt design printed locally by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
-          <img src="heather.jpeg" alt="Full color custom DTF shirt printed by 843 Teez near Myrtle Beach" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
-          <img src="bee.jpg" alt="Custom printed one of a kind tee by 843 Teez in Conway South Carolina" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="wcctee.webp" alt="Custom DTF transfer t-shirt design for Worksman Cycles by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="conway.webp" alt="Conway South Carolina custom t-shirt design printed locally by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="heather.webp" alt="Full color custom DTF shirt printed by 843 Teez near Myrtle Beach" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="bee.webp" alt="Custom printed one of a kind tee by 843 Teez in Conway South Carolina" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
         </div>
 
         <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -535,7 +539,7 @@
 
           <div class="text-center">
             <img
-              src="HandT.png"
+              src="HandT.webp"
               alt="Heather and Todd founders of 843 Teez custom t-shirt printing shop in Conway South Carolina"
               class="rounded-2xl shadow-md border border-gray-200 mx-auto"
               loading="lazy"
