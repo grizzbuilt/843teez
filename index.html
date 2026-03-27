@@ -43,7 +43,7 @@
     gtag('config', 'G-4PVF756J01');
   </script>
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CDN: keep non-deferred for better mobile stability -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -153,7 +153,6 @@
       scroll-margin-top:1rem;
     }
 
-    /* Improve rendering cost for below-the-fold sections */
     .cv-auto{
       content-visibility:auto;
       contain-intrinsic-size:1px 900px;
