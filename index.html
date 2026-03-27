@@ -20,36 +20,23 @@
   <meta name="twitter:image" content="https://843teez.com/843teez.png" />
   <meta name="twitter:title" content="843 Teez | Custom T-Shirts in Conway, SC" />
   <meta name="twitter:description" content="Woman & veteran-owned custom t-shirt printing in Conway, SC. Friendly local help, no minimums, DTF and screen printing." />
-  
-  <!-- Favicon-->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/favicon-32x32.png">
-  
-  <!-- Performance hints -->
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="//www.googletagmanager.com">
   <link rel="dns-prefetch" href="//www.clarity.ms">
 
-  <!-- Preload likely LCP image -->
   <link rel="preload" as="image" href="https://843teez.com/843teezlogo.webp" fetchpriority="high" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
 
-  <!-- Compiled Tailwind CSS -->
   <link rel="stylesheet" href="/assets/css/tailwind.css">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4PVF756J01');
-  </script>
 
   <style>
     body{
@@ -169,7 +156,6 @@
     }
   </style>
 
-  <!-- Local SEO Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -231,7 +217,6 @@
   }
   </script>
 
-  <!-- FAQ Structured Data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -265,7 +250,23 @@
   }
   </script>
 
-  <!-- Load Microsoft Clarity after page load -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01';
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-4PVF756J01');
+      }, 1500);
+    });
+  </script>
+
   <script>
     window.addEventListener('load', function () {
       setTimeout(function () {
@@ -274,7 +275,7 @@
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "tr5ljrm18n");
-      }, 1200);
+      }, 4000);
     });
   </script>
 </head>
@@ -282,9 +283,8 @@
 <body class="min-h-screen p-4 sm:p-8 pt-16">
   <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
-  <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+  <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/90 md:bg-white/80 rounded-2xl shadow-xl">
 
-    <!-- Header / Hero -->
     <header class="text-center mb-10">
       <img
         src="https://843teez.com/843teezlogo.webp"
@@ -318,7 +318,7 @@
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
         <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
-           href="#quote">
+           href="/quote.html">
           Get a Fast Quote
         </a>
         <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
@@ -370,7 +370,6 @@
 
     <main id="main" class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
 
-      <!-- Quick nav -->
       <div class="flex flex-wrap gap-3 justify-center mb-8">
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#why-us">Why Us</a>
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#services">Services</a>
@@ -517,7 +516,7 @@
             Browse Store
           </a>
           <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
-             href="#quote">
+             href="/quote.html">
             Get a Fast Quote
           </a>
         </div>
@@ -588,46 +587,26 @@
             </div>
           </div>
 
-          <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm">
-            <p class="text-lg font-extrabold text-[#003466] mb-1">Send a Fast Quote Request</p>
+          <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm text-center">
+            <p class="text-lg font-extrabold text-[#003466] mb-2">Ready for a fast quote?</p>
             <p class="text-sm text-gray-600 mb-4">
-              Tell us what you’ve got so far, and we’ll get back to you as soon as we can.
+              Use our quote page for the full form with reCAPTCHA, or reach out directly.
             </p>
 
-            <form
-              action="/thank-you.html"
-              name="843Teezcontact"
-              method="POST"
-              data-netlify-recaptcha="true"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="843Teezcontact" />
-              <input type="hidden" name="form-location" value="Homepage Quote Form" />
-              <input type="hidden" name="subject" value="843 Teez Custom Quote Request" />
-
-              <p hidden>
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-              </p>
-
-              <label class="label" for="name">Name</label>
-              <input class="input" type="text" name="name" id="name" autocomplete="name" required />
-
-              <label class="label" for="email">Email</label>
-              <input class="input" type="email" name="email" id="email" autocomplete="email" required />
-
-              <label class="label" for="shirt-details">What are you thinking?</label>
-              <textarea class="input" name="shirt-details" id="shirt-details" rows="6" required placeholder="Example: I need 15 shirts for a work crew, black tees, left chest and full back, sometime next month."></textarea>
-
-              <div class="mt-4" data-netlify-recaptcha="true"></div>
-
-              <button
-                type="submit"
-                class="w-full mt-4 px-6 py-3 text-white font-extrabold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
-              >
-                Send Fast Quote Request
-              </button>
-            </form>
+            <div class="flex flex-col gap-3">
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+                 href="/quote.html">
+                Open Quote Form
+              </a>
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+                 href="mailto:info@843teez.com?subject=Quote%20Request%20-%20843%20Teez">
+                Email Us
+              </a>
+              <a class="inline-block px-6 py-3 text-[#003466] font-bold rounded-xl transition-all duration-200 shadow-sm border border-gray-200 bg-white hover:text-[#007c9e]"
+                 href="tel:8433501943">
+                Call (843) 350-1943
+              </a>
+            </div>
           </div>
         </div>
 
