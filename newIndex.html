@@ -1,92 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4PVF756J01');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body{
-      font-family:'Inter',system-ui,sans-serif;
-      background-color:#f8fcff;
-      background-image:url('https://843teez.com/surf-texture.png');
-      background-repeat:repeat;
-      background-size:300px;
-    }
-    ::-webkit-scrollbar{width:8px;}
-    ::-webkit-scrollbar-thumb{background-color:#007c9e;border-radius:4px;}
-    ::-webkit-scrollbar-track{background-color:#f0f0f0;}
-
-    .btn-primary{background-color:#003466;}
-    .btn-primary:hover{background-color:#007c9e;}
-
-    #main-content{min-height:calc(100vh - 80px);}
-
-    .content h2{
-      margin-top: 1.5rem;
-      margin-bottom: .75rem;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 800;
-      color:#003466;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: .25rem;
-    }
-    .content h3{
-      margin-top: 1rem;
-      margin-bottom: .5rem;
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-      font-weight: 700;
-      color:#dc2626;
-    }
-    .input{
-      width:100%;
-      border:1px solid #e5e7eb;
-      border-radius: 0.9rem;
-      padding: 0.85rem 1rem;
-      background: rgba(255,255,255,0.92);
-      outline: none;
-    }
-    .input:focus{
-      border-color:#007c9e;
-      box-shadow: 0 0 0 3px rgba(0,124,158,0.15);
-    }
-    .label{
-      display:block;
-      font-weight:700;
-      color:#003466;
-      margin-bottom: .35rem;
-      margin-top: 1rem;
-      font-size: .95rem;
-    }
-    .sr-only-focusable:active,
-    .sr-only-focusable:focus{
-      position: static !important;
-      width: auto !important;
-      height: auto !important;
-      margin: 0 !important;
-      overflow: visible !important;
-      clip: auto !important;
-      white-space: normal !important;
-      padding: .75rem 1rem;
-      background: #fff;
-      border: 2px solid #007c9e;
-      border-radius: .75rem;
-      display: inline-block;
-    }
-  </style>
+  <meta name="theme-color" content="#f8fcff" />
 
   <title>843 Teez | Custom T-Shirts Conway SC & Myrtle Beach | DTF & Screen Printing</title>
   <link rel="canonical" href="https://843teez.com/" />
@@ -103,6 +20,344 @@
   <meta name="twitter:image" content="https://843teez.com/843teez.png" />
   <meta name="twitter:title" content="843 Teez | Custom T-Shirts in Conway, SC" />
   <meta name="twitter:description" content="Woman & veteran-owned custom t-shirt printing in Conway, SC. Friendly local help, no minimums, DTF and screen printing." />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//www.clarity.ms">
+
+  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.png" fetchpriority="high">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PVF756J01');
+  </script>
+
+  <style>
+    :root{
+      --blue-dark:#003466;
+      --blue-mid:#007c9e;
+      --red:#dc2626;
+      --red-hover:#b91c1c;
+      --text:#374151;
+      --gray-50:#f9fafb;
+      --gray-100:#f3f4f6;
+      --gray-200:#e5e7eb;
+      --gray-300:#d1d5db;
+      --gray-600:#4b5563;
+      --gray-700:#374151;
+      --white:#ffffff;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:0 4px 10px rgba(0,0,0,.08);
+      --shadow-xl:0 20px 40px rgba(0,0,0,.12);
+      --radius-xl:0.75rem;
+      --radius-2xl:1rem;
+      --container:72rem;
+      --content:56rem;
+    }
+
+    *{box-sizing:border-box;}
+    html{
+      scroll-behavior:smooth;
+    }
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background-color:#f8fcff;
+      background-image:url('https://843teez.com/surf-texture.png');
+      background-repeat:repeat;
+      background-size:300px;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:var(--text);
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+      height:auto;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    ::-webkit-scrollbar{width:8px;}
+    ::-webkit-scrollbar-thumb{background-color:var(--blue-mid);border-radius:4px;}
+    ::-webkit-scrollbar-track{background-color:#f0f0f0;}
+
+    .btn-primary{background-color:var(--blue-dark);}
+    .btn-primary:hover{background-color:var(--blue-mid);}
+
+    #main-content{min-height:calc(100vh - 80px);}
+
+    .content h2{
+      margin-top:1.5rem;
+      margin-bottom:.75rem;
+      font-size:1.5rem;
+      line-height:2rem;
+      font-weight:800;
+      color:var(--blue-dark);
+      border-bottom:1px solid var(--gray-200);
+      padding-bottom:.25rem;
+    }
+    .content h3{
+      margin-top:1rem;
+      margin-bottom:.5rem;
+      font-size:1.25rem;
+      line-height:1.75rem;
+      font-weight:700;
+      color:var(--red);
+    }
+
+    .input{
+      width:100%;
+      border:1px solid var(--gray-200);
+      border-radius:.9rem;
+      padding:.85rem 1rem;
+      background:rgba(255,255,255,0.92);
+      outline:none;
+      font:inherit;
+    }
+    .input:focus{
+      border-color:var(--blue-mid);
+      box-shadow:0 0 0 3px rgba(0,124,158,0.15);
+    }
+    .label{
+      display:block;
+      font-weight:700;
+      color:var(--blue-dark);
+      margin-bottom:.35rem;
+      margin-top:1rem;
+      font-size:.95rem;
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position:static !important;
+      width:auto !important;
+      height:auto !important;
+      margin:0 !important;
+      overflow:visible !important;
+      clip:auto !important;
+      white-space:normal !important;
+      padding:.75rem 1rem;
+      background:#fff;
+      border:2px solid var(--blue-mid);
+      border-radius:.75rem;
+      display:inline-block;
+      z-index:9999;
+    }
+
+    /* Layout utilities */
+    .min-h-screen{min-height:100vh;}
+    .max-w-6xl{max-width:var(--container);}
+    .max-w-4xl{max-width:var(--content);}
+    .max-w-3xl{max-width:48rem;}
+    .max-w-2xl{max-width:42rem;}
+    .max-w-xs{max-width:20rem;}
+    .mx-auto{margin-left:auto;margin-right:auto;}
+    .my-0{margin-top:0;margin-bottom:0;}
+    .mb-0{margin-bottom:0;}
+    .mb-1{margin-bottom:.25rem;}
+    .mb-2{margin-bottom:.5rem;}
+    .mb-3{margin-bottom:.75rem;}
+    .mb-4{margin-bottom:1rem;}
+    .mb-6{margin-bottom:1.5rem;}
+    .mb-8{margin-bottom:2rem;}
+    .mb-10{margin-bottom:2.5rem;}
+    .mt-0{margin-top:0;}
+    .mt-1{margin-top:.25rem;}
+    .mt-2{margin-top:.5rem;}
+    .mt-3{margin-top:.75rem;}
+    .mt-4{margin-top:1rem;}
+    .mt-5{margin-top:1.25rem;}
+    .mt-6{margin-top:1.5rem;}
+    .mt-12{margin-top:3rem;}
+    .pt-6{padding-top:1.5rem;}
+    .pt-16{padding-top:4rem;}
+    .p-4{padding:1rem;}
+    .p-5{padding:1.25rem;}
+    .p-6{padding:1.5rem;}
+    .p-8{padding:2rem;}
+    .p-10{padding:2.5rem;}
+    .p-12{padding:3rem;}
+    .px-4{padding-left:1rem;padding-right:1rem;}
+    .px-6{padding-left:1.5rem;padding-right:1.5rem;}
+    .px-8{padding-left:2rem;padding-right:2rem;}
+    .py-2{padding-top:.5rem;padding-bottom:.5rem;}
+    .py-3{padding-top:.75rem;padding-bottom:.75rem;}
+
+    .w-full{width:100%;}
+    .w-5-6{width:83.333333%;}
+    .block{display:block;}
+    .inline-block{display:inline-block;}
+    .inline-flex{display:inline-flex;}
+    .hidden{display:none;}
+    .flex{display:flex;}
+    .grid{display:grid;}
+    .items-center{align-items:center;}
+    .items-start{align-items:flex-start;}
+    .justify-center{justify-content:center;}
+    .text-left{text-align:left;}
+    .text-center{text-align:center;}
+
+    .flex-col{flex-direction:column;}
+    .flex-wrap{flex-wrap:wrap;}
+    .gap-3{gap:.75rem;}
+    .gap-4{gap:1rem;}
+    .gap-5{gap:1.25rem;}
+    .gap-6{gap:1.5rem;}
+
+    .grid-cols-1{grid-template-columns:1fr;}
+    .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+    .rounded-xl{border-radius:var(--radius-xl);}
+    .rounded-2xl{border-radius:var(--radius-2xl);}
+    .border{border:1px solid var(--gray-200);}
+    .border-t{border-top:1px solid var(--gray-200);}
+    .border-l-4{border-left:4px solid;}
+    .border-gray-200{border-color:var(--gray-200);}
+    .shadow-sm{box-shadow:var(--shadow-sm);}
+    .shadow-md{box-shadow:var(--shadow-md);}
+    .shadow-xl{box-shadow:var(--shadow-xl);}
+
+    .bg-white{background:var(--white);}
+    .bg-white-80{background:rgba(255,255,255,0.8);}
+    .bg-red-600{background:var(--red);}
+    .bg-red-600:hover,
+    .hover-bg-red-700:hover{background:var(--red-hover);}
+    .bg-blue-50{background:#eff6ff;}
+    .bg-gray-50{background:var(--gray-50);}
+
+    .text-white{color:#fff;}
+    .text-gray-300{color:var(--gray-300);}
+    .text-gray-600{color:var(--gray-600);}
+    .text-gray-700{color:var(--gray-700);}
+    .text-blue-dark{color:var(--blue-dark);}
+    .text-blue-mid{color:var(--blue-mid);}
+    .text-red{color:var(--red);}
+
+    .font-semibold{font-weight:600;}
+    .font-bold{font-weight:700;}
+    .font-extrabold{font-weight:800;}
+    .italic{font-style:italic;}
+    .uppercase{text-transform:uppercase;}
+    .tracking-wide{letter-spacing:.04em;}
+
+    .text-xs{font-size:.75rem;line-height:1rem;}
+    .text-sm{font-size:.875rem;line-height:1.25rem;}
+    .text-base{font-size:1rem;line-height:1.5rem;}
+    .text-lg{font-size:1.125rem;line-height:1.75rem;}
+    .text-3xl{font-size:1.875rem;line-height:2.25rem;}
+    .leading-tight{line-height:1.2;}
+    .leading-relaxed{line-height:1.7;}
+
+    .transition{transition:all .2s ease;}
+    .transition-all{transition:all .2s ease;}
+    .duration-200{transition-duration:.2s;}
+
+    .hover-shadow-md:hover{box-shadow:var(--shadow-md);}
+    .hover-text-blue-mid:hover{color:var(--blue-mid);}
+    .hover-text-blue-dark:hover{color:var(--blue-dark);}
+    .hover-underline:hover{text-decoration:underline;}
+
+    .list-disc{list-style:disc;}
+    .list-outside{list-style-position:outside;}
+    .ml-6{margin-left:1.5rem;}
+    .space-y-1 > * + *{margin-top:.25rem;}
+    .space-y-2 > * + *{margin-top:.5rem;}
+
+    .backdrop-blur-sm{
+      -webkit-backdrop-filter:blur(6px);
+      backdrop-filter:blur(6px);
+    }
+
+    .section-auto{
+      content-visibility:auto;
+      contain-intrinsic-size:1px 900px;
+    }
+
+    section[id]{
+      scroll-margin-top:1rem;
+    }
+
+    .anchor-link{
+      color:var(--blue-mid);
+      font-weight:600;
+    }
+    .anchor-link:hover{
+      color:var(--blue-dark);
+    }
+
+    .button-link{
+      display:inline-block;
+      padding:.75rem 2rem;
+      color:#fff;
+      font-weight:700;
+      border-radius:.75rem;
+      transition:all .2s ease;
+      box-shadow:var(--shadow-md);
+    }
+
+    .nav-pill{
+      padding:.5rem 1rem;
+      border-radius:.75rem;
+      background:#fff;
+      border:1px solid var(--gray-200);
+      box-shadow:var(--shadow-sm);
+      font-weight:600;
+      color:var(--blue-dark);
+    }
+    .nav-pill:hover{color:var(--blue-mid);}
+
+    @media (min-width:640px){
+      .sm-p-8{padding:2rem;}
+      .sm-p-10{padding:2.5rem;}
+      .sm-text-base{font-size:1rem;line-height:1.5rem;}
+      .sm-text-lg{font-size:1.125rem;line-height:1.75rem;}
+      .sm-text-5xl{font-size:3rem;line-height:1;}
+      .sm-flex-row{flex-direction:row;}
+      .sm-inline{display:inline;}
+    }
+
+    @media (min-width:768px){
+      .md-p-12{padding:3rem;}
+      .md-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .md-grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+      .md-grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+      .md-col-span-2{grid-column:span 2 / span 2;}
+    }
+
+    @media (min-width:1024px){
+      .lg-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+
+    @media (max-width:639px){
+      body{padding:1rem;}
+    }
+  </style>
 
   <!-- Local SEO Structured Data -->
   <script type="application/ld+json">
@@ -133,7 +388,12 @@
       { "@type": "AdministrativeArea", "name": "Grand Strand" }
     ],
     "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" }
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
     ],
     "priceRange": "$$",
     "sameAs": [
@@ -141,8 +401,22 @@
       "https://www.instagram.com/843teez"
     ],
     "makesOffer": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DTF Printing", "description": "Full-color DTF printing for custom apparel with no minimums." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screen Printing", "description": "Bulk screen printing for custom apparel orders." } }
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DTF Printing",
+          "description": "Full-color DTF printing for custom apparel with no minimums."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Screen Printing",
+          "description": "Bulk screen printing for custom apparel orders."
+        }
+      }
     ]
   }
   </script>
@@ -181,92 +455,102 @@
   }
   </script>
 
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tr5ljrm18n");
+  <!-- Load Microsoft Clarity after page load -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tr5ljrm18n");
+      }, 1200);
+    });
   </script>
 </head>
 
-<body class="min-h-screen p-4 sm:p-8 pt-16">
+<body class="min-h-screen p-4 sm-p-8 pt-16">
   <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
-  <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+  <div id="main-content" class="max-w-6xl mx-auto p-6 sm-p-10 md-p-12 bg-white-80 backdrop-blur-sm rounded-2xl shadow-xl">
 
-    <!-- Header / Hero -->
     <header class="text-center mb-10">
       <img
         src="https://843teez.com/843teezlogo.png"
         alt="843 Teez Logo"
-        class="max-w-xs mx-auto mb-4 w-5/6"
+        class="max-w-xs mx-auto mb-4 w-5-6"
         loading="eager"
+        fetchpriority="high"
+        decoding="async"
         width="500"
         height="180"
       />
 
-      <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#007c9e]">
+      <p class="text-sm sm-text-base font-bold uppercase tracking-wide text-blue-mid">
         Custom t-shirt printing in Conway, SC
       </p>
 
-      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#003466] leading-tight mt-2 max-w-4xl mx-auto">
-        Friendly, Local Custom Shirts Without the Big-Company Runaround
+      <h1 class="text-3xl sm-text-5xl font-extrabold text-blue-dark leading-tight mt-2 max-w-4xl mx-auto">
+        Custom Shirts Without the Confusion
       </h1>
 
-      <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-        <strong>843 Teez</strong> is Heather and Todd’s custom t-shirt shop in <strong>Conway, South Carolina</strong>.
-        We help people across <strong>Myrtle Beach</strong> and the <strong>Grand Strand</strong> get shirts made for businesses,
-        events, teams, brands, family trips, and wild ideas—without making the process confusing, cold, or complicated.
+      <p class="mt-4 text-base sm-text-lg text-gray-700 max-w-3xl mx-auto">
+        <strong>843 Teez</strong> is Heather and Todd’s local custom t-shirt shop in <strong>Conway, South Carolina</strong>,
+        serving <strong>Myrtle Beach</strong> and the <strong>Grand Strand</strong>. We help businesses, teams, events,
+        brands, families, and everyday people get shirts that look right—without the big-company runaround, the confusing print jargon,
+        or the pressure to have everything figured out before you reach out.
       </p>
 
-      <p class="mt-3 text-sm sm:text-base font-semibold text-[#007c9e] max-w-2xl mx-auto">
-        No minimums on DTF. Bulk options with screen printing. Honest help from real local people.
+      <p class="mt-3 text-sm sm-text-base font-semibold text-blue-mid max-w-2xl mx-auto">
+        Real local help. No minimums on DTF. Honest guidance on what actually fits your order.
       </p>
 
-      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+      <div class="mt-6 flex flex-col sm-flex-row gap-3 justify-center">
+        <a class="button-link bg-red-600 hover-bg-red-700"
            href="#quote">
           Get a Fast Quote
         </a>
-        <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+        <a class="button-link btn-primary"
            href="/store/">
           Shop the Store
         </a>
       </div>
 
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+      <p class="mt-4 text-sm text-gray-600 max-w-2xl mx-auto">
+        You do not need perfect artwork, all your sizes, or a full plan before contacting us. Send what you know, and we’ll help with the rest.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 md-grid-cols-4 gap-3 max-w-4xl mx-auto text-left section-auto">
         <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-          <p class="text-sm font-extrabold text-[#003466]">One shirt or many</p>
-          <p class="text-sm text-gray-600 mt-1">Small runs, one-offs, or larger orders—we’re here for all of it.</p>
+          <p class="text-sm font-extrabold text-blue-dark">One shirt or many</p>
+          <p class="text-sm text-gray-600 mt-1">From one-offs and small runs to larger orders for teams, staff, and events.</p>
         </div>
         <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-          <p class="text-sm font-extrabold text-[#003466]">Real local help</p>
-          <p class="text-sm text-gray-600 mt-1">You’re talking to Heather and Todd, not an anonymous order portal.</p>
+          <p class="text-sm font-extrabold text-blue-dark">Real local help</p>
+          <p class="text-sm text-gray-600 mt-1">You’re talking to Heather and Todd, not a faceless ordering system.</p>
         </div>
         <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-          <p class="text-sm font-extrabold text-[#003466]">No minimums on DTF</p>
-          <p class="text-sm text-gray-600 mt-1">Perfect when you just need a few shirts and want full-color prints.</p>
+          <p class="text-sm font-extrabold text-blue-dark">No minimums on DTF</p>
+          <p class="text-sm text-gray-600 mt-1">Perfect for full-color designs, one-offs, and smaller batches.</p>
         </div>
         <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-          <p class="text-sm font-extrabold text-[#003466]">We help you decide</p>
-          <p class="text-sm text-gray-600 mt-1">Not sure what to order? We’ll help you choose what actually fits.</p>
+          <p class="text-sm font-extrabold text-blue-dark">Guidance included</p>
+          <p class="text-sm text-gray-600 mt-1">We’ll help you choose the right method, not just sell you whatever’s easiest.</p>
         </div>
       </div>
 
-      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+      <div class="mt-6 flex flex-col sm-flex-row gap-3 justify-center">
+        <a class="anchor-link inline-flex items-center justify-center"
            href="/custom-tshirts-conway-sc.html">
           Custom T-Shirts Conway, SC →
         </a>
-        <span class="hidden sm:inline text-gray-300">|</span>
-        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+        <span class="hidden sm-inline text-gray-300">|</span>
+        <a class="anchor-link inline-flex items-center justify-center"
            href="/dtf-printing-conway-sc.html">
           DTF Printing Conway, SC →
         </a>
-        <span class="hidden sm:inline text-gray-300">|</span>
-        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+        <span class="hidden sm-inline text-gray-300">|</span>
+        <a class="anchor-link inline-flex items-center justify-center"
            href="/screen-printing-myrtle-beach-sc.html">
           Screen Printing Myrtle Beach →
         </a>
@@ -275,26 +559,25 @@
 
     <main id="main" class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
 
-      <!-- Quick nav -->
-      <div class="flex flex-wrap gap-3 justify-center mb-8">
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#why-us">Why Us</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#services">Services</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#samples">Samples</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#pricing">Pricing</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#about">About</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#quote">Quote</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/FAQ.html">FAQ</a>
-        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/blog.html">Blog</a>
+      <div class="flex flex-wrap gap-3 justify-center mb-8 section-auto">
+        <a class="nav-pill" href="#why-us">Why Us</a>
+        <a class="nav-pill" href="#services">Services</a>
+        <a class="nav-pill" href="#samples">Samples</a>
+        <a class="nav-pill" href="#pricing">Pricing</a>
+        <a class="nav-pill" href="#about">About</a>
+        <a class="nav-pill" href="#quote">Quote</a>
+        <a class="nav-pill" href="/FAQ.html">FAQ</a>
+        <a class="nav-pill" href="/blog.html">Blog</a>
       </div>
 
-      <section id="why-us">
+      <section id="why-us" class="section-auto">
         <h2>Why Work With 843 Teez?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 md-grid-cols-2 gap-5">
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
             <h3 class="mt-0">Because you want the shirts to actually turn out right</h3>
             <p class="mb-0">
-              A lot of people don’t just need a printer. They need someone who will answer questions,
-              give honest guidance, and care whether the final result looks good. That’s the part we take seriously.
+              Most people aren’t just buying a print. They’re trying to avoid wasted money, bad communication,
+              and shirts that don’t match what they pictured. We take that seriously.
             </p>
           </div>
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
@@ -305,10 +588,10 @@
             </p>
           </div>
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
-            <h3 class="mt-0">Because small orders matter too</h3>
+            <h3 class="mt-0">Because you don’t need everything figured out first</h3>
             <p class="mb-0">
-              Some shops only care about the big jobs. We’re happy to help with one shirt, ten shirts, or a much larger order.
-              If it matters to you, it matters to us.
+              A lot of people wait too long to ask because they think they need perfect files, exact quantities, and all the answers.
+              You don’t. Start where you are, and we’ll help you sort through the rest.
             </p>
           </div>
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
@@ -321,85 +604,84 @@
         </div>
       </section>
 
-      <section id="services">
+      <section id="services" class="section-auto">
         <h2>What We Print</h2>
         <p class="mb-4">
           We help with <strong>custom t-shirts in Conway, SC</strong>, <strong>DTF printing</strong>, and
           <strong>screen printing</strong> for customers across Myrtle Beach and the Grand Strand.
-          Whether it’s for work, fun, family, or business, we’ll help you find the best route.
+          Whether it’s for work, fun, family, business, or something a little weird, we’ll help you find the best route.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <a href="/custom-tshirts-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
+        <div class="grid grid-cols-1 md-grid-cols-3 gap-4 mb-6">
+          <a href="/custom-tshirts-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white transition hover-shadow-md">
             <h3 class="mt-0">Custom T-Shirts</h3>
             <p class="text-sm mb-0">
-              Business shirts, event shirts, family trip shirts, fundraiser shirts, brand merch, and everyday custom ideas.
+              Business shirts, event shirts, family trip shirts, fundraiser shirts, brand merch, school designs, and everyday custom ideas.
             </p>
-            <p class="text-sm font-bold text-[#007c9e] mt-3">Open page →</p>
+            <p class="text-sm font-bold text-blue-mid mt-3">Open page →</p>
           </a>
 
-          <a href="/dtf-printing-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
+          <a href="/dtf-printing-conway-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white transition hover-shadow-md">
             <h3 class="mt-0">DTF Printing</h3>
             <p class="text-sm mb-0">
               Great for full-color artwork, detailed designs, one-offs, and smaller runs with no minimum order.
             </p>
-            <p class="text-sm font-bold text-[#007c9e] mt-3">Learn more →</p>
+            <p class="text-sm font-bold text-blue-mid mt-3">Learn more →</p>
           </a>
 
-          <a href="/screen-printing-myrtle-beach-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white hover:shadow-md transition">
+          <a href="/screen-printing-myrtle-beach-sc.html" class="block p-5 border border-gray-200 rounded-2xl bg-white transition hover-shadow-md">
             <h3 class="mt-0">Screen Printing</h3>
             <p class="text-sm mb-0">
-              A strong choice for larger quantities, team shirts, company apparel, and simple designs where cost per shirt matters.
+              A strong choice for larger quantities, team shirts, company apparel, and simpler designs where value per shirt matters.
             </p>
-            <p class="text-sm font-bold text-[#007c9e] mt-3">Learn more →</p>
+            <p class="text-sm font-bold text-blue-mid mt-3">Learn more →</p>
           </a>
         </div>
 
         <div class="p-4 rounded-xl bg-gray-50 border border-gray-200">
           <p class="text-sm mt-1">
             Need shirts for your team, company, staff, or crew?
-            <a href="/custom-business-shirts-myrtle-beach.html"
-               class="text-[#007c9e] hover:text-[#003466] font-semibold">
-               Custom business shirts in Myrtle Beach →
+            <a href="/custom-business-shirts-myrtle-beach.html" class="anchor-link">
+              Custom business shirts in Myrtle Beach →
             </a>
           </p>
 
           <p class="text-sm mt-2 mb-0">
-            Not sure which print method makes sense? Tell us what you’re trying to do, and we’ll help you pick the one that fits best.
+            Not sure which print method makes sense? Tell us what you’re trying to do, what matters most, and when you need it—we’ll help you pick the one that fits.
           </p>
         </div>
       </section>
 
-      <section id="samples">
+      <section id="samples" class="section-auto">
         <h2>A Few Things We’ve Made</h2>
         <p class="mb-4">
           Here’s a small look at the kinds of custom shirts and printed apparel we create for local customers around Conway and Myrtle Beach.
         </p>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <img src="wcctee.jpg" alt="Custom DTF transfer t-shirt design for Worksman Cycles by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
-          <img src="conway.jpg" alt="Conway South Carolina custom t-shirt design printed locally by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
-          <img src="fightme.jpg" alt="Full color custom DTF shirt printed by 843 Teez near Myrtle Beach" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
-          <img src="StoneTone.jpg" alt="Custom printed shirt for Stonetone Guitars by 843 Teez in Conway South Carolina" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" width="900" height="900">
+        <div class="grid grid-cols-2 md-grid-cols-4 gap-3">
+          <img src="wcctee.jpg" alt="Custom DTF transfer t-shirt design for Worksman Cycles by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="conway.jpg" alt="Conway South Carolina custom t-shirt design printed locally by 843 Teez" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="heather.jpeg" alt="Full color custom DTF shirt printed by 843 Teez near Myrtle Beach" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
+          <img src="bee.jpg" alt="Custom printed one of a kind tee by 843 Teez in Conway South Carolina" class="rounded-xl border border-gray-200 shadow-sm" loading="lazy" decoding="async" width="900" height="900">
         </div>
 
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="mt-6 grid grid-cols-1 md-grid-cols-3 gap-4">
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
             <p class="text-sm italic text-gray-700 mb-2">“Super easy to work with, and the shirts came out better than I expected.”</p>
-            <p class="text-xs font-bold text-[#003466]">Customer feeling</p>
+            <p class="text-xs font-bold text-blue-dark">Dennis - Hite Co Home Service</p>
           </div>
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
             <p class="text-sm italic text-gray-700 mb-2">“They actually helped me figure out what I needed instead of just taking the order.”</p>
-            <p class="text-xs font-bold text-[#003466]">Local order feeling</p>
+            <p class="text-xs font-bold text-blue-dark">Heathe - Hammer and Dice</p>
           </div>
           <div class="p-5 border border-gray-200 rounded-2xl bg-white">
             <p class="text-sm italic text-gray-700 mb-2">“Way more personal than ordering from some giant site.”</p>
-            <p class="text-xs font-bold text-[#003466]">Grand Strand customer feeling</p>
+            <p class="text-xs font-bold text-blue-dark">Emma - CCU Student</p>
           </div>
         </div>
       </section>
 
-      <section id="pricing">
+      <section id="pricing" class="section-auto">
         <h2>Pricing</h2>
         <div class="p-5 border border-gray-200 rounded-2xl bg-white">
           <p class="mb-3">
@@ -412,26 +694,24 @@
             <li><strong>Not sure yet?</strong> We’ll help you figure out the smartest option before you order</li>
           </ul>
           <p class="mt-3 mb-0 text-sm text-gray-600">
-            We’d rather point you in the right direction than push you into the wrong setup.
+            We’d rather help you get it right the first time than push you into the wrong setup.
           </p>
         </div>
 
-        <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
-          <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
-             href="/store/">
+        <div class="mt-4 flex flex-col sm-flex-row gap-3 justify-center">
+          <a class="button-link btn-primary" href="/store/">
             Browse Store
           </a>
-          <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
-             href="#quote">
-            Get a Quote
+          <a class="button-link bg-red-600 hover-bg-red-700" href="#quote">
+            Get a Fast Quote
           </a>
         </div>
       </section>
 
-      <section id="about">
+      <section id="about" class="section-auto">
         <h2>Meet Heather & Todd</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-          <div class="md:col-span-2">
+        <div class="grid grid-cols-1 md-grid-cols-3 gap-6 items-start">
+          <div class="md-col-span-2">
             <p class="mb-4">
               <strong>843 Teez</strong> is a local print shop built by <strong>Heather and Todd (“Grizz”)</strong> in
               <strong>Conway, South Carolina</strong>. We care a lot about making things that feel real, look good,
@@ -439,7 +719,7 @@
             </p>
             <p class="mb-4">
               We know custom shirts are usually attached to something that matters—your business, your crew, your family,
-              your event, your inside joke, your idea. That part matters to us too.
+              your event, your inside joke, your fundraiser, your idea. That part matters to us too.
             </p>
             <p class="mb-0">
               So when you reach out, you’re not just sending a form into the void. You’re talking to real people who want
@@ -453,20 +733,21 @@
               alt="Heather and Todd founders of 843 Teez custom t-shirt printing shop in Conway South Carolina"
               class="rounded-2xl shadow-md border border-gray-200 mx-auto"
               loading="lazy"
+              decoding="async"
               width="900"
               height="900"
             />
-            <p class="text-xs font-semibold text-[#003466] mt-2">Heather & Todd, Founders of 843 Teez</p>
+            <p class="text-xs font-semibold text-blue-dark mt-2">Heather & Todd, Founders of 843 Teez</p>
           </div>
         </div>
       </section>
 
-      <section id="quote">
+      <section id="quote" class="section-auto">
         <h2>Let’s Talk About Your Shirts</h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
-          <div class="p-6 bg-blue-50 border-l-4 border-[#007c9e] rounded-2xl">
-            <p class="text-lg font-extrabold text-[#003466] mb-2">What helps us quote it faster</p>
+        <div class="grid grid-cols-1 lg-grid-cols-2 gap-6 mt-4">
+          <div class="p-6 bg-blue-50 border-l-4 rounded-2xl" style="border-left-color:#007c9e;">
+            <p class="text-lg font-extrabold text-blue-dark mb-2">What helps us quote it faster</p>
             <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
               <li><strong>How many shirts you need</strong></li>
               <li><strong>Sizes</strong> if you know them</li>
@@ -480,12 +761,12 @@
               Don’t have all that figured out yet? That’s okay. Really. Send what you know, and we’ll help with the rest.
             </p>
 
-            <div class="mt-5 flex flex-col sm:flex-row gap-3">
-              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700 text-center"
+            <div class="mt-5 flex flex-col sm-flex-row gap-3">
+              <a class="button-link bg-red-600 hover-bg-red-700 text-center"
                  href="tel:8433501943">
                 Call (843) 350-1943
               </a>
-              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary text-center"
+              <a class="button-link btn-primary text-center"
                  href="mailto:info@843teez.com?subject=Quote%20Request%20-%20843%20Teez">
                 Email Us
               </a>
@@ -493,7 +774,7 @@
           </div>
 
           <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm">
-            <p class="text-lg font-extrabold text-[#003466] mb-1">Send a Quote Request</p>
+            <p class="text-lg font-extrabold text-blue-dark mb-1">Send a Fast Quote Request</p>
             <p class="text-sm text-gray-600 mb-4">
               Tell us what you’ve got so far, and we’ll get back to you as soon as we can.
             </p>
@@ -515,10 +796,10 @@
               </p>
 
               <label class="label" for="name">Name</label>
-              <input class="input" type="text" name="name" id="name" required />
+              <input class="input" type="text" name="name" id="name" autocomplete="name" required />
 
               <label class="label" for="email">Email</label>
-              <input class="input" type="email" name="email" id="email" required />
+              <input class="input" type="email" name="email" id="email" autocomplete="email" required />
 
               <label class="label" for="shirt-details">What are you thinking?</label>
               <textarea class="input" name="shirt-details" id="shirt-details" rows="6" required placeholder="Example: I need 15 shirts for a work crew, black tees, left chest and full back, sometime next month."></textarea>
@@ -527,9 +808,10 @@
 
               <button
                 type="submit"
-                class="w-full mt-4 px-6 py-3 text-white font-extrabold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+                class="w-full mt-4 px-6 py-3 text-white font-extrabold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover-bg-red-700"
+                style="border:0;cursor:pointer;"
               >
-                Send Quote Request
+                Send Fast Quote Request
               </button>
             </form>
           </div>
@@ -539,11 +821,11 @@
           <p class="text-sm text-gray-600">Follow us:</p>
           <div class="flex justify-center gap-4 mt-3">
             <a href="https://www.facebook.com/843teez" target="_blank" rel="noopener"
-               class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+               class="nav-pill">
               Facebook
             </a>
             <a href="https://www.instagram.com/843teez" target="_blank" rel="noopener"
-               class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+               class="nav-pill">
               Instagram
             </a>
           </div>
@@ -552,16 +834,16 @@
 
     </main>
 
-    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-      <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-blue-dark text-xs font-semibold space-y-1 section-auto">
+      <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="anchor-link hover-underline">GrizzBuilt™</a> brand.</p>
       <p>Woman & veteran-owned local apparel.</p>
       <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
       <p class="mt-2">
-        <a class="text-[#007c9e] hover:underline" href="/custom-tshirts-conway-sc.html">Custom Tees Conway</a> •
-        <a class="text-[#007c9e] hover:underline" href="/dtf-printing-conway-sc.html">DTF Printing</a> •
-        <a class="text-[#007c9e] hover:underline" href="/screen-printing-myrtle-beach-sc.html">Screen Printing</a>
+        <a class="anchor-link hover-underline" href="/custom-tshirts-conway-sc.html">Custom Tees Conway</a> •
+        <a class="anchor-link hover-underline" href="/dtf-printing-conway-sc.html">DTF Printing</a> •
+        <a class="anchor-link hover-underline" href="/screen-printing-myrtle-beach-sc.html">Screen Printing</a>
       </p>
-      <a href="/beach-trip-shirts-myrtle-beach.html" class="text-[#007c9e] hover:text-[#003466] font-semibold">
+      <a href="/beach-trip-shirts-myrtle-beach.html" class="anchor-link">
         Beach trip shirts for Myrtle Beach →
       </a>
     </footer>
