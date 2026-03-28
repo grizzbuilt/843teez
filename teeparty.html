@@ -3,317 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fcff" />
+
   <title>Heather’s Tee Party | Make Your Own Shirt Party in Conway, SC | 843 Teez</title>
-  <meta
-    name="description"
-    content="Heather’s Tee Party by 843 Teez is a fun, hands-on make your own shirt party in Conway, SC. Great for birthdays, girls' nights, family get-togethers, and private events."
-  />
-  <meta
-    name="keywords"
-    content="make your own shirt party Conway SC, custom shirt party Conway SC, birthday shirt party, t-shirt party Myrtle Beach, Heather's Tee Party, 843 Teez"
-  />
-  <meta name="author" content="843 Teez" />
-  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://843teez.com/heathers-tee-party.html" />
 
-  <meta property="og:title" content="Heather’s Tee Party | 843 Teez" />
+  <meta
+    name="description"
+    content="Heather’s Tee Party by 843 Teez is a fun make your own shirt party in Conway, SC. Great for birthdays, girls' nights, family events, youth groups, and private parties across the Grand Strand."
+  />
+
+  <meta property="og:title" content="Heather’s Tee Party | Make Your Own Shirt Party by 843 Teez" />
   <meta
     property="og:description"
-    content="A fun, hands-on shirt-making party where guests pick a design, place it, press it, and wear it home."
+    content="Press your own tee and wear it home. A hands-on shirt party for birthdays, girls' nights, family get-togethers, and private events in Conway, SC and the Grand Strand."
   />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://843teez.com/heathers-tee-party.html" />
-  <meta property="og:image" content="https://843teez.com/images/heathers-tee-party-og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://843teez.com/843teez.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Heather’s Tee Party | 843 Teez" />
+  <meta name="twitter:image" content="https://843teez.com/843teez.png" />
+  <meta name="twitter:title" content="Heather’s Tee Party | Make Your Own Shirt Party in Conway, SC" />
   <meta
     name="twitter:description"
-    content="Make your own shirt party fun for birthdays, girls' nights, and private events in Conway, SC."
+    content="A fun, hands-on shirt-making party by 843 Teez. Guests choose a design, place it, press it, and leave with a custom tee."
   />
-  <meta name="twitter:image" content="https://843teez.com/images/heathers-tee-party-og.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.clarity.ms">
+
+  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.webp" fetchpriority="high" />
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
 
   <style>
-    :root {
-      --bg: #dfeef2;
-      --panel: rgba(240, 247, 250, 0.94);
-      --text: #16313a;
-      --muted: #4f6b73;
-      --accent: #0f766e;
-      --accent-dark: #0b5e58;
-      --border: rgba(255, 255, 255, 0.35);
-      --shadow: 0 20px 45px rgba(10, 37, 46, 0.14);
-      --radius: 1.25rem;
+    body{
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background-color:#f8fcff;
+      background-image:url('https://843teez.com/surf-texture.webp');
+      background-repeat:repeat;
+      background-size:300px;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
 
-    * {
-      box-sizing: border-box;
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
     }
 
-    html {
-      scroll-behavior: smooth;
+    ::-webkit-scrollbar{width:8px;}
+    ::-webkit-scrollbar-thumb{background-color:#007c9e;border-radius:4px;}
+    ::-webkit-scrollbar-track{background-color:#f0f0f0;}
+
+    .btn-primary{background-color:#003466;}
+    .btn-primary:hover{background-color:#007c9e;}
+
+    #main-content{min-height:calc(100vh - 80px);}
+
+    .content h2{
+      margin-top:1.5rem;
+      margin-bottom:.75rem;
+      font-size:1.5rem;
+      line-height:2rem;
+      font-weight:800;
+      color:#003466;
+      border-bottom:1px solid #e5e7eb;
+      padding-bottom:.25rem;
     }
 
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background:
-        linear-gradient(rgba(223, 238, 242, 0.9), rgba(223, 238, 242, 0.92)),
-        url("images/surf-texture.jpg") center center / cover fixed no-repeat;
-      line-height: 1.6;
+    .content h3{
+      margin-top:1rem;
+      margin-bottom:.5rem;
+      font-size:1.25rem;
+      line-height:1.75rem;
+      font-weight:700;
+      color:#dc2626;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position:static !important;
+      width:auto !important;
+      height:auto !important;
+      margin:0 !important;
+      overflow:visible !important;
+      clip:auto !important;
+      white-space:normal !important;
+      padding:.75rem 1rem;
+      background:#fff;
+      border:2px solid #007c9e;
+      border-radius:.75rem;
+      display:inline-block;
+      z-index:9999;
     }
 
-    .site-wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.5rem;
+    html{
+      scroll-behavior:smooth;
     }
 
-    .main-content {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
+    section[id]{
+      scroll-margin-top:1rem;
     }
 
-    .hero {
-      display: grid;
-      gap: 2rem;
-      align-items: center;
-      padding: 1rem 0 2rem;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 0.75rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(15, 118, 110, 0.12);
-      color: var(--accent-dark);
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.15;
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .lead {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 700px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 1.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.9rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: transform 0.18s ease, opacity 0.18s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      text-decoration: none;
-      opacity: 0.95;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--accent-dark);
-      border: 1px solid rgba(15, 118, 110, 0.18);
-    }
-
-    .section {
-      padding: 2.5rem 0;
-      border-top: 1px solid rgba(22, 49, 58, 0.08);
-    }
-
-    .section:first-of-type {
-      border-top: 0;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1.25rem;
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(22, 49, 58, 0.08);
-      border-radius: 1rem;
-      padding: 1.25rem;
-      box-shadow: 0 10px 25px rgba(10, 37, 46, 0.06);
-    }
-
-    .card p:last-child,
-    .card ul:last-child {
-      margin-bottom: 0;
-    }
-
-    .card strong {
-      color: var(--accent-dark);
-    }
-
-    ul.clean-list {
-      margin: 0.75rem 0 0;
-      padding-left: 1.1rem;
-    }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .step {
-      position: relative;
-      padding: 1.1rem 1.1rem 1.1rem 4rem;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(22, 49, 58, 0.08);
-      border-radius: 1rem;
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 1rem;
-      top: 1rem;
-      width: 2.1rem;
-      height: 2.1rem;
-      border-radius: 50%;
-      background: var(--accent);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-    }
-
-    .highlight {
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(255,255,255,0.7));
-      border: 1px solid rgba(15, 118, 110, 0.14);
-      border-radius: 1rem;
-      padding: 1.25rem;
-    }
-
-    .pricing-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pricing-card .price {
-      font-size: 2rem;
-      font-weight: 800;
-      margin: 0.4rem 0 0.6rem;
-      color: var(--accent-dark);
-    }
-
-    .faq details {
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(22, 49, 58, 0.08);
-      border-radius: 0.9rem;
-      padding: 1rem 1.1rem;
-    }
-
-    .faq details + details {
-      margin-top: 0.9rem;
-    }
-
-    .faq summary {
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .cta-box {
-      text-align: center;
-      padding: 2rem;
-      border-radius: 1.25rem;
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(255,255,255,0.82));
-      border: 1px solid rgba(15, 118, 110, 0.16);
-    }
-
-    footer {
-      padding: 2rem 0 0.5rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-      text-align: center;
-    }
-
-    @media (max-width: 700px) {
-      .main-content {
-        padding: 1.25rem;
-        margin: 1rem auto;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
+    .cv-auto{
+      content-visibility:auto;
+      contain-intrinsic-size:1px 900px;
     }
   </style>
 
@@ -322,13 +142,15 @@
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Heather's Tee Party",
-    "description": "A hands-on make your own shirt party hosted by 843 Teez in Conway, South Carolina. Guests choose a pre-made design, place it, press it with help, and leave with a custom shirt.",
+    "description": "A hands-on make your own shirt party by 843 Teez in Conway, South Carolina. Guests choose from pre-made designs, help place the artwork, press the shirt with guidance, and wear it home.",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
     "organizer": {
       "@type": "Organization",
       "name": "843 Teez",
-      "url": "https://843teez.com"
+      "url": "https://843teez.com/",
+      "telephone": "+1-843-350-1943",
+      "email": "info@843teez.com"
     },
     "location": {
       "@type": "Place",
@@ -337,321 +159,22 @@
         "@type": "PostalAddress",
         "addressLocality": "Conway",
         "addressRegion": "SC",
+        "postalCode": "29526",
         "addressCountry": "US"
       }
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Families, birthday groups, girls' nights, youth groups, and private parties"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://843teez.com/quote.html",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
     }
   }
   </script>
-</head>
-<body>
-  <div class="site-wrap">
-    <main class="main-content">
-      <section class="hero">
-        <div>
-          <span class="eyebrow">Hands-On Shirt Making Fun</span>
-          <h1>Heather’s Tee Party</h1>
-          <p class="lead">
-            A fun, interactive <strong>make your own shirt party</strong> by 843 Teez.
-            Guests choose from pre-made designs, place their print, press it with our help,
-            and leave with a shirt they made themselves.
-          </p>
-          <p class="lead">
-            Perfect for birthdays, girls’ nights, family get-togethers, youth groups,
-            private events, and just-because parties in <strong>Conway, SC</strong> and the
-            surrounding Grand Strand area.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#book">Book a Tee Party</a>
-            <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="what-it-is">
-        <div class="grid grid-2">
-          <div>
-            <h2>What Is a Tee Party?</h2>
-            <p>
-              Heather’s Tee Party is more than just ordering shirts. It is a
-              hands-on shirt-making experience where your group gets to be part
-              of the fun.
-            </p>
-            <p>
-              We bring the shirt-making setup, a selection of party-ready
-              pre-made designs, and the guidance to help everything go smoothly.
-              Your guests get the fun of creating something without needing any
-              experience.
-            </p>
-          </div>
-
-          <div class="highlight">
-            <h3>What guests do</h3>
-            <ul class="clean-list">
-              <li>Choose a design</li>
-              <li>Pick their shirt size</li>
-              <li>Help place the artwork</li>
-              <li>Press the shirt with guidance</li>
-              <li>Wear it home the same day</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="how-it-works">
-        <h2>How It Works</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>Pick your party</h3>
-            <p>
-              Tell us your date, headcount, age group, and the kind of vibe you
-              want. Birthday party, beach trip, girls’ night, family event, or
-              something just for fun.
-            </p>
-          </div>
-
-          <div class="step">
-            <h3>We bring the options</h3>
-            <p>
-              We prepare a selection of pre-made designs that fit your event.
-              This keeps the party moving, keeps things simple, and makes it fun
-              for everyone.
-            </p>
-          </div>
-
-          <div class="step">
-            <h3>Guests make their shirts</h3>
-            <p>
-              Each guest picks a design and shirt, then we help them place and
-              press it. No experience needed. We guide the process so it stays
-              easy and stress-free.
-            </p>
-          </div>
-
-          <div class="step">
-            <h3>Everyone leaves with a custom tee</h3>
-            <p>
-              The best part: they do not just attend the party — they leave with
-              something they made.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="great-for">
-        <h2>Great For</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Birthday Parties</h3>
-            <p>
-              A fun alternative to the usual party setup, with a custom shirt to
-              remember it by.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Girls’ Nights</h3>
-            <p>
-              Relaxed, creative, and way more memorable than just another night out.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Family Get-Togethers</h3>
-            <p>
-              Great for reunions, beach weekends, and family celebrations.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Youth Groups</h3>
-            <p>
-              A hands-on group activity with something fun to take home.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Vacation Groups</h3>
-            <p>
-              Perfect for Conway, Myrtle Beach, and Grand Strand visitors looking
-              for a fun custom experience.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Just Because</h3>
-            <p>
-              You do not need a big reason. Sometimes making shirts with your
-              people is the reason.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="whats-included">
-        <h2>What’s Included</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Included with every party</h3>
-            <ul class="clean-list">
-              <li>Party setup and shirt pressing station</li>
-              <li>Pre-made design choices</li>
-              <li>Shirt blanks in selected sizes</li>
-              <li>Guided placement and pressing help</li>
-              <li>A fun, hands-on experience for your group</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Optional add-ons</h3>
-            <ul class="clean-list">
-              <li>Upgraded shirt styles or colors</li>
-              <li>Event-specific design themes</li>
-              <li>Name or date add-ons</li>
-              <li>Extra shirts for guests or family members</li>
-              <li>Matching group shirts for the host or guest of honor</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="pricing">
-        <h2>Simple Party Pricing</h2>
-        <p>
-          Pricing can vary based on group size, shirt style, and event setup, but
-          here is a simple starting point you can use right now.
-        </p>
-
-        <div class="grid grid-2">
-          <div class="card pricing-card">
-            <h3>Per Person Option</h3>
-            <p class="price">$25–$35 <span style="font-size:1rem;font-weight:600;">per guest</span></p>
-            <ul class="clean-list">
-              <li>One shirt per person</li>
-              <li>Choice from pre-made designs</li>
-              <li>Hands-on pressing experience</li>
-              <li>Great for smaller private groups</li>
-            </ul>
-          </div>
-
-          <div class="card pricing-card">
-            <h3>Party Package Option</h3>
-            <p class="price">$200+ <span style="font-size:1rem;font-weight:600;">minimum</span></p>
-            <ul class="clean-list">
-              <li>Good for birthdays and group events</li>
-              <li>Helps cover setup, time, and materials</li>
-              <li>Can be customized based on guest count</li>
-              <li>Additional guests priced separately as needed</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="highlight" style="margin-top:1rem;">
-          <strong>Note:</strong> Final pricing depends on the number of guests,
-          shirt style, shirt color, and how custom the event setup needs to be.
-          Contact us for a quote and we’ll help you figure out the best fit.
-        </div>
-      </section>
-
-      <section class="section" id="why-843teez">
-        <h2>Why Book with 843 Teez?</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Local & Personal</h3>
-            <p>
-              We are not a faceless online company. We are local, hands-on, and
-              actually care about making the experience fun.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Beginner-Friendly</h3>
-            <p>
-              Nobody has to know what they’re doing. We guide the process so guests
-              can enjoy it without stress.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Memorable</h3>
-            <p>
-              This is not just another party activity. People get to make
-              something and leave with it.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section faq" id="faq">
-        <h2>Frequently Asked Questions</h2>
-
-        <details>
-          <summary>Do guests need experience making shirts?</summary>
-          <p>
-            Not at all. We help with placement and pressing so the process stays
-            easy and fun.
-          </p>
-        </details>
-
-        <details>
-          <summary>Can guests choose their own design?</summary>
-          <p>
-            Guests choose from a set of pre-made designs prepared for the party.
-            That keeps things moving and helps everything stay smooth.
-          </p>
-        </details>
-
-        <details>
-          <summary>Is this only for kids’ birthdays?</summary>
-          <p>
-            Nope. Heather’s Tee Party works for kids, teens, adults, girls’ nights,
-            family events, and private group gatherings.
-          </p>
-        </details>
-
-        <details>
-          <summary>Do you offer Tee Parties in Conway and Myrtle Beach?</summary>
-          <p>
-            Yes, we serve Conway, SC and the surrounding Grand Strand area. Reach
-            out with your location and we’ll let you know what’s possible.
-          </p>
-        </details>
-
-        <details>
-          <summary>Can you do custom themes?</summary>
-          <p>
-            Yes, depending on the event. We can often shape the design selection
-            around the vibe of your party.
-          </p>
-        </details>
-      </section>
-
-      <section class="section" id="book">
-        <div class="cta-box">
-          <h2>Book Heather’s Tee Party</h2>
-          <p>
-            Want to plan a shirt party for a birthday, girls’ night, family event,
-            or private group? Let’s make it happen.
-          </p>
-          <p>
-            Tell us your date, location, group size, and the kind of party you’re
-            planning, and we’ll help you put together the right setup.
-          </p>
-
-          <div class="hero-actions" style="justify-content:center;">
-            <a class="btn btn-primary" href="/contact.html">Request a Quote</a>
-            <a class="btn btn-secondary" href="/index.html">Back to 843 Teez</a>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <p>
-          843 Teez | Custom T-Shirt Printing & Creative Shirt Experiences in Conway, SC
-        </p>
-      </footer>
-    </main>
-  </div>
 
   <script type="application/ld+json">
   {
@@ -660,46 +183,469 @@
     "mainEntity":[
       {
         "@type":"Question",
+        "name":"What is Heather's Tee Party?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Heather's Tee Party is a make your own shirt party by 843 Teez. Guests choose from pre-made designs, help place the print, press the shirt with guidance, and leave with a custom tee."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Is Heather's Tee Party good for birthdays and private events?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Heather's Tee Party is a great fit for birthdays, girls' nights, family gatherings, youth groups, vacation groups, and other private events in Conway, Myrtle Beach, and the Grand Strand."
+        }
+      },
+      {
+        "@type":"Question",
         "name":"Do guests need experience making shirts?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Not at all. We help with placement and pressing so the process stays easy and fun."
+          "text":"No. Guests do not need experience. 843 Teez helps guide placement and pressing so the process stays simple, fun, and beginner-friendly."
         }
       },
       {
         "@type":"Question",
-        "name":"Can guests choose their own design?",
+        "name":"Can the party include themed designs?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Guests choose from a set of pre-made designs prepared for the party. That keeps things moving and helps everything stay smooth."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Is this only for kids' birthdays?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"No. Heather's Tee Party works for kids, teens, adults, girls' nights, family events, and private group gatherings."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Do you offer Tee Parties in Conway and Myrtle Beach?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes, we serve Conway, SC and the surrounding Grand Strand area. Reach out with your location and we'll let you know what's possible."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Can you do custom themes?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes, depending on the event. We can often shape the design selection around the vibe of your party."
+          "text":"Yes. Depending on the event, 843 Teez can prepare pre-made design choices that match the party vibe, age group, or occasion."
         }
       }
     ]
   }
   </script>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01';
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-4PVF756J01');
+      }, 1500);
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tr5ljrm18n");
+      }, 4000);
+    });
+  </script>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8 pt-16">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <div id="main-content"
+       class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 rounded-2xl shadow-xl"
+       style="background: rgba(240,247,250,0.94); border: 1px solid rgba(255,255,255,0.35);">
+
+    <header class="text-center mb-10">
+      <img
+        src="https://843teez.com/843teezlogo.webp"
+        alt="843 Teez Logo"
+        class="max-w-xs mx-auto mb-4 w-5/6"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="500"
+        height="180"
+      />
+
+      <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#007c9e]">
+        Make your own shirt party in Conway, SC
+      </p>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#003466] leading-tight mt-2 max-w-4xl mx-auto">
+        Heather’s Tee Party
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+        <strong>Heather’s Tee Party</strong> is a hands-on shirt-making experience by <strong>843 Teez</strong> in
+        <strong>Conway, South Carolina</strong>. Guests choose from pre-made designs, help place the artwork,
+        press the shirt with guidance, and leave wearing something they made themselves.
+      </p>
+
+      <p class="mt-3 text-sm sm:text-base font-semibold text-[#007c9e] max-w-2xl mx-auto">
+        Perfect for birthdays, girls’ nights, family get-togethers, youth groups, and private parties across Conway, Myrtle Beach, and the Grand Strand.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+           href="/quote.html">
+          Book a Tee Party
+        </a>
+        <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+           href="#how-it-works">
+          How It Works
+        </a>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600 max-w-2xl mx-auto">
+        No experience needed. We keep it fun, simple, and beginner-friendly so your group can enjoy the experience without the stress.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">Hands-on fun</p>
+          <p class="text-sm text-gray-600 mt-1">Guests get to help place and press their own shirts.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">Pre-made designs</p>
+          <p class="text-sm text-gray-600 mt-1">Enough choice to feel personal, without slowing the party down.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">Great for groups</p>
+          <p class="text-sm text-gray-600 mt-1">Birthdays, friend groups, family events, youth groups, and more.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
+          <p class="text-sm font-extrabold text-[#003466]">Wear it home</p>
+          <p class="text-sm text-gray-600 mt-1">Guests leave with a custom tee they helped make.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="#great-for">
+          Great for Parties →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="#pricing">
+          Pricing →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+           href="/quote.html">
+          Request a Quote →
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
+
+      <div class="flex flex-wrap gap-3 justify-center mb-8">
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#why-it-works">Why It Works</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#how-it-works">How It Works</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#great-for">Great For</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#included">What’s Included</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#pricing">Pricing</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#faq">FAQ</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#book">Book</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/FAQ.html">843 Teez FAQ</a>
+      </div>
+
+      <section id="why-it-works" class="cv-auto">
+        <h2>Why Heather’s Tee Party Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because it feels like an experience, not just a product</h3>
+            <p class="mb-0">
+              People are not only getting a shirt. They’re part of making it. That makes the party feel more personal, more fun, and more memorable.
+            </p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because guests do not need to know what they’re doing</h3>
+            <p class="mb-0">
+              We guide the process so nobody has to feel nervous about placement, pressing, or messing something up. It stays simple and beginner-friendly.
+            </p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because it works for more than just birthdays</h3>
+            <p class="mb-0">
+              Heather’s Tee Party fits girls’ nights, family events, youth groups, vacation groups, and private gatherings where you want something more fun than just showing up.
+            </p>
+          </div>
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Because everyone leaves with something real</h3>
+            <p class="mb-0">
+              The party ends with each guest taking home a custom shirt they helped make, which is a lot better than another throwaway party favor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="cv-auto">
+        <h2>How the Tee Party Works</h2>
+        <p class="mb-4">
+          We keep the process easy enough to stay fun and structured enough to keep the party moving. That means your guests get the fun of making their own shirt without things turning chaotic.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">1. Pick your party details</h3>
+            <p class="mb-0">
+              Let us know your date, group size, age range, location, and what kind of vibe you want. Birthday, girls’ night, family event, youth group, or just because.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">2. We prep the design options</h3>
+            <p class="mb-0">
+              We build a set of pre-made design choices that fit the occasion so your guests have fun options without the party getting bogged down.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">3. Guests choose, place, and press</h3>
+            <p class="mb-0">
+              Each guest picks a design, chooses their shirt, helps place the artwork, and presses it with our help. No experience needed.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">4. Everyone wears it home</h3>
+            <p class="mb-0">
+              The best part is that the activity becomes the takeaway. Guests leave with a custom shirt they were part of making.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-gray-50 border border-gray-200">
+          <p class="text-sm mt-1 mb-0">
+            We can also help you shape the design selection around the age group, event type, or overall feel you want for the party.
+          </p>
+        </div>
+      </section>
+
+      <section id="great-for" class="cv-auto">
+        <h2>Great for All Kinds of Parties</h2>
+        <p class="mb-4">
+          Heather’s Tee Party works best when you want something interactive, easy to understand, and actually memorable. It fits a wide range of groups around Conway, Myrtle Beach, and the Grand Strand.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Birthday Parties</h3>
+            <p class="mb-0 text-sm">
+              A fun alternative to the usual party setup, with a custom shirt guests actually want to keep.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Girls’ Nights</h3>
+            <p class="mb-0 text-sm">
+              A relaxed, creative group activity that feels more fun and more personal than just another night out.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Family Get-Togethers</h3>
+            <p class="mb-0 text-sm">
+              Great for reunions, vacation weeks, holiday gatherings, and family celebrations.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Youth Groups</h3>
+            <p class="mb-0 text-sm">
+              A hands-on activity that gives the group something fun to do and something real to take home.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Vacation Groups</h3>
+            <p class="mb-0 text-sm">
+              A cool custom experience for beach groups, friends visiting the area, or family beach-week trips.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Just Because</h3>
+            <p class="mb-0 text-sm">
+              You do not need a big reason. Sometimes making shirts with your people is reason enough.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="included" class="cv-auto">
+        <h2>What’s Included</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Included with the party</h3>
+            <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
+              <li>Shirt pressing setup</li>
+              <li>Pre-made design choices for the group</li>
+              <li>Shirts in selected sizes</li>
+              <li>Guided placement and pressing help</li>
+              <li>A hands-on make your own shirt experience</li>
+            </ul>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Possible add-ons</h3>
+            <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
+              <li>Event-specific themed designs</li>
+              <li>Name or date add-ons</li>
+              <li>Special host or birthday-person shirt</li>
+              <li>Upgraded garment options</li>
+              <li>Extra shirts for family or guests</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="cv-auto">
+        <h2>Simple Party Pricing</h2>
+        <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+          <p class="mb-3">
+            Most <strong>Heather’s Tee Party</strong> events will fall somewhere around <strong>$25–$35 per guest</strong> or a <strong>$200+ party minimum</strong>, depending on group size, shirt style, design setup, and location.
+          </p>
+          <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
+            <li><strong>Smaller groups?</strong> Per-person pricing may make the most sense</li>
+            <li><strong>Larger parties?</strong> A package minimum usually protects setup time and materials better</li>
+            <li><strong>Need something customized?</strong> We can help shape a setup that fits your event</li>
+          </ul>
+          <p class="mt-3 mb-0 text-sm text-gray-600">
+            Final pricing depends on guest count, shirt type, design complexity, and travel/setup needs.
+          </p>
+        </div>
+
+        <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+          <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+             href="/quote.html">
+            Request Party Pricing
+          </a>
+          <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+             href="mailto:info@843teez.com?subject=Heather%27s%20Tee%20Party%20Inquiry">
+            Email About a Party
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="cv-auto">
+        <h2>Heather’s Tee Party FAQ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Do guests need experience?</h3>
+            <p class="mb-0">
+              No. We guide the placement and pressing so it stays easy and fun.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Can guests pick their own design?</h3>
+            <p class="mb-0">
+              Guests choose from a prepared set of pre-made designs for the party. That keeps things moving and keeps the experience smooth.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Is this only for kids?</h3>
+            <p class="mb-0">
+              Not at all. It works for kids, teens, adults, friend groups, families, and private events.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Can the party have a theme?</h3>
+            <p class="mb-0">
+              Yes, in many cases we can prep design options that fit the event type, vibe, or age group.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="book" class="cv-auto">
+        <h2>Book Heather’s Tee Party</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
+          <div class="p-6 bg-blue-50 border-l-4 border-[#007c9e] rounded-2xl">
+            <p class="text-lg font-extrabold text-[#003466] mb-2">What helps us quote it faster</p>
+            <ul class="list-disc list-outside ml-6 space-y-2 text-sm">
+              <li><strong>Your event date</strong></li>
+              <li><strong>Estimated guest count</strong></li>
+              <li><strong>Age group</strong> if it matters for the setup</li>
+              <li><strong>Location</strong> of the party</li>
+              <li><strong>Type of event</strong> such as birthday, girls’ night, or family event</li>
+              <li><strong>Any theme ideas</strong> or “help me figure that out”</li>
+            </ul>
+
+            <p class="text-sm text-gray-700 mt-4 mb-0">
+              You do not need every detail figured out before reaching out. Send what you know, and we’ll help with the rest.
+            </p>
+
+            <div class="mt-5 flex flex-col sm:flex-row gap-3">
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700 text-center"
+                 href="tel:8433501943">
+                Call (843) 350-1943
+              </a>
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary text-center"
+                 href="mailto:info@843teez.com?subject=Heather%27s%20Tee%20Party%20Inquiry">
+                Email Us
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm text-center">
+            <p class="text-lg font-extrabold text-[#003466] mb-2">Ready to plan your party?</p>
+            <p class="text-sm text-gray-600 mb-4">
+              Use our quote page or reach out directly and tell us about your group, your date, and what kind of party you want to create.
+            </p>
+
+            <div class="flex flex-col gap-3">
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+                 href="/quote.html">
+                Open Quote Form
+              </a>
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+                 href="mailto:info@843teez.com?subject=Heather%27s%20Tee%20Party%20Inquiry">
+                Email Us
+              </a>
+              <a class="inline-block px-6 py-3 text-[#003466] font-bold rounded-xl transition-all duration-200 shadow-sm border border-gray-200 bg-white hover:text-[#007c9e]"
+                 href="tel:8433501943">
+                Call (843) 350-1943
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <p class="text-sm text-gray-600">Follow us:</p>
+          <div class="flex justify-center gap-4 mt-3">
+            <a href="https://www.facebook.com/843teez" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/843teez" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+              Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1 cv-auto">
+      <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+      <p>Woman & veteran-owned local apparel.</p>
+      <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+      <p class="mt-2">
+        <a class="text-[#007c9e] hover:underline" href="/custom-tshirts-conway-sc.html">Custom Tees Conway</a> •
+        <a class="text-[#007c9e] hover:underline" href="/dtf-printing-conway-sc.html">DTF Printing</a> •
+        <a class="text-[#007c9e] hover:underline" href="/screen-printing-myrtle-beach-sc.html">Screen Printing</a>
+      </p>
+      <a href="/quote.html" class="text-[#007c9e] hover:text-[#003466] font-semibold">
+        Book a Tee Party →
+      </a>
+    </footer>
+
+  </div>
 </body>
 </html>
