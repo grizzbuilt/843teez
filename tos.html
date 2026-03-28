@@ -1,5 +1,3 @@
-<!-- tos.html -->
-<!-- tos.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https<://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -367,6 +365,29 @@
         </footer>
     </div>
 
-  
+    <script>
+        // --- CART STATE MANAGEMENT (Minimal setup to update header count) ---
+        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
+        
+        // Updates the global cart count (needed for header)
+        const updateGlobalCartSummary = () => {
+            const globalViewCartButton = document.getElementById('global-view-cart-button');
+            
+            let totalItems = 0;
+
+            cart.forEach(item => {
+                totalItems += item.quantity;
+            });
+
+            document.getElementById('global-item-count').textContent = totalItems;
+            globalViewCartButton.classList.toggle('disabled:opacity-50', totalItems === 0);
+            globalViewCartButton.disabled = totalItems === 0;
+        };
+
+        // --- INITIALIZATION ---
+        window.onload = () => {
+            updateGlobalCartSummary();
+        };
+    </script>
 </body>
 </html>
