@@ -1,81 +1,151 @@
+<!-- thank-you.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f8fcff" />
+  <meta name="robots" content="noindex, follow" />
 
   <title>843 Teez | Thanks — Quote Request Received</title>
   <meta name="description" content="Thanks for contacting 843 Teez! We received your quote request and will reply ASAP." />
   <link rel="canonical" href="https://843teez.com/thank-you.html" />
 
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.webp" fetchpriority="high" />
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+
   <style>
     body{
-      font-family:'Inter',system-ui,sans-serif;
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background-color:#f8fcff;
-      background-image:url('https://843teez.com/surf-texture.png');
+      background-image:url('https://843teez.com/surf-texture.webp');
       background-repeat:repeat;
       background-size:300px;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
+
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
+    }
+
     .btn-primary{background-color:#003466;}
     .btn-primary:hover{background-color:#007c9e;}
+
+    #main-content{
+      min-height:calc(100vh - 80px);
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position:static !important;
+      width:auto !important;
+      height:auto !important;
+      margin:0 !important;
+      overflow:visible !important;
+      clip:auto !important;
+      white-space:normal !important;
+      padding:.75rem 1rem;
+      background:#fff;
+      border:2px solid #007c9e;
+      border-radius:.75rem;
+      display:inline-block;
+      z-index:9999;
+    }
   </style>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
-  <div class="max-w-3xl mx-auto p-6 sm:p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl text-center">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <div id="main-content"
+       class="max-w-3xl mx-auto p-6 sm:p-10 rounded-2xl shadow-xl text-center"
+       style="background: rgba(240,247,250,0.94); border: 1px solid rgba(255,255,255,0.35);">
 
     <img
-      src="https://843teez.com/843teezlogo.png"
+      src="https://843teez.com/843teezlogo.webp"
       alt="843 Teez Logo"
       class="max-w-xs mx-auto mb-4 w-5/6"
-      loading="lazy"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
       width="500"
       height="180"
     />
 
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#007c9e]">You’re all set 🎉</h1>
-    <p class="mt-3 text-gray-700">
-      We got your quote request. We’ll reach out as soon as possible with pricing and next steps.
-    </p>
+    <main id="main">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#007c9e]">You’re all set 🎉</h1>
 
-    <div class="mt-6 p-4 rounded-xl bg-blue-50 border-l-4 border-[#007c9e] text-left">
-      <p class="font-extrabold text-[#003466] mb-2">Want to speed it up?</p>
-      <ul class="list-disc ml-6 text-sm text-gray-700 space-y-1">
-        <li>Reply to our email with your artwork/logo (if you didn’t include it).</li>
-        <li>Include quantity + sizes, garment color, and your deadline.</li>
-      </ul>
-    </div>
+      <p class="mt-3 text-gray-700">
+        We got your quote request. We’ll reach out as soon as possible with pricing and next steps.
+      </p>
 
-    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="tel:8433501943" class="px-6 py-3 rounded-xl text-white font-extrabold shadow-md bg-red-600 hover:bg-red-700">
-        Call (843) 350-1943
-      </a>
-      <a href="mailto:info@843teez.com?subject=Quote%20Request%20Follow-Up" class="px-6 py-3 rounded-xl text-white font-extrabold shadow-md btn-primary">
-        Email info@843teez.com
-      </a>
-    </div>
+      <div class="mt-6 p-4 rounded-xl bg-blue-50 border-l-4 border-[#007c9e] text-left">
+        <p class="font-extrabold text-[#003466] mb-2">Want to speed it up?</p>
+        <ul class="list-disc ml-6 text-sm text-gray-700 space-y-1">
+          <li>Reply to our email with your artwork/logo (if you didn’t include it).</li>
+          <li>Include quantity + sizes, garment color, and your deadline.</li>
+        </ul>
+      </div>
 
-    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="/store/" class="px-6 py-3 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
-        Browse the Store
-      </a>
-      <a href="/#quote" class="px-6 py-3 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
-        Submit Another Quote
-      </a></div>
-    <div>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tel:8433501943" class="px-6 py-3 rounded-xl text-white font-extrabold shadow-md bg-red-600 hover:bg-red-700">
+          Call (843) 350-1943
+        </a>
+        <a href="mailto:info@843teez.com?subject=Quote%20Request%20Follow-Up" class="px-6 py-3 rounded-xl text-white font-extrabold shadow-md btn-primary">
+          Email info@843teez.com
+        </a>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/store/" class="px-6 py-3 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+          Browse the Store
+        </a>
+        <a href="/quote.html" class="px-6 py-3 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]">
+          Submit Another Quote
+        </a>
+      </div>
+
       <p class="mt-4 text-sm text-gray-600">
-Looking for more info about our printing methods?
-<a href="/dtf-printing-conway-sc.html" class="text-[#007c9e] font-semibold">DTF printing</a>
-or
-<a href="/screen-printing-myrtle-beach-sc.html" class="text-[#007c9e] font-semibold">screen printing</a>.
-</p>
-    </div>
+        Looking for more info about our printing methods?
+        <a href="/dtf-printing-conway-sc.html" class="text-[#007c9e] font-semibold">DTF printing</a>
+        or
+        <a href="/screen-printing-myrtle-beach-sc.html" class="text-[#007c9e] font-semibold">screen printing</a>.
+      </p>
 
-    <p class="mt-8 text-xs font-semibold text-[#003466]">
-      843 Teez™ • Conway, SC • Serving Myrtle Beach & the Grand Strand
-    </p>
+      <p class="mt-8 text-xs font-semibold text-[#003466]">
+        843 Teez™ • Conway, SC • Serving Myrtle Beach & the Grand Strand
+      </p>
+    </main>
+
   </div>
 </body>
 </html>
