@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4PVF756J01');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fcff" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- IMPORTANT: FAQ SHOULD BE INDEXED (unlike privacy page). Remove noindex. -->
-  <meta name="robots" content="index, follow">
+  <title>843 Teez FAQ | Custom T-Shirts Conway SC | DTF & Screen Printing Questions</title>
+  <meta
+    name="description"
+    content="Answers to common questions about custom t-shirts, DTF printing, screen printing, pricing, turnaround, delivery, and artwork in Conway, SC, Myrtle Beach, and the Grand Strand."
+  />
+  <link rel="canonical" href="https://843teez.com/FAQ.html" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="843 Teez FAQ | Custom T-Shirts, DTF & Screen Printing in Conway, SC" />
+  <meta
+    property="og:description"
+    content="Get quick answers about custom shirt pricing, minimums, turnaround, delivery, artwork, DTF printing, and screen printing from 843 Teez in Conway, SC."
+  />
+  <meta property="og:url" content="https://843teez.com/FAQ.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://843teez.com/843teez.png" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://843teez.com/843teez.png" />
+  <meta name="twitter:title" content="843 Teez FAQ | Custom Shirt Printing in Conway, SC" />
+  <meta
+    name="twitter:description"
+    content="Quick answers about pricing, minimums, turnaround, artwork, DTF printing, and screen printing from 843 Teez."
+  />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/favicon-32x32.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//www.clarity.ms" />
+
+  <link
+    rel="preload"
+    as="image"
+    href="https://843teez.com/843teezlogo.webp"
+    fetchpriority="high"
+  />
+
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
+
   <style>
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: #f8fcff;
-      background-image: url('https://843teez.com/surf-texture.png');
+      background-image: url('https://843teez.com/surf-texture.webp');
       background-repeat: repeat;
       background-size: 300px;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
 
     ::-webkit-scrollbar { width: 8px; }
@@ -36,33 +86,61 @@
     .btn-primary:hover { background-color: #007c9e; }
 
     #main-content { min-height: calc(100vh - 80px); }
+
+    .content h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 800;
+      color: #003466;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.25rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
+      padding: 0.75rem 1rem;
+      background: #fff;
+      border: 2px solid #007c9e;
+      border-radius: 0.75rem;
+      display: inline-block;
+      z-index: 9999;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section[id] {
+      scroll-margin-top: 1rem;
+    }
+
+    .cv-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 900px;
+    }
   </style>
 
-  <title>843 Teez | FAQ</title>
-  <meta name="description" content="843 Teez FAQ: quick answers about custom t-shirt pricing, minimums, turnaround, delivery, artwork, and printing in Conway, SC and the Myrtle Beach / Grand Strand area." />
-  <link rel="canonical" href="https://843teez.com/faq" />
-
-  <meta property="og:title" content="843 Teez | FAQ" />
-  <meta property="og:description" content="Answers to common questions about ordering, pricing, turnaround, delivery, artwork, and printing at 843 Teez." />
-  <meta property="og:url" content="https://843teez.com/faq" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://843teez.com/843teez.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://843teez.com/843teez.png" />
-  <meta name="twitter:title" content="843 Teez | FAQ" />
-  <meta name="twitter:description" content="Pricing, minimums, turnaround, delivery, artwork, and printing answers from 843 Teez in Conway, SC." />
-
-  <!-- Microsoft Clarity (use same tag as your policy pages) -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tr3lwvejev");
-  </script>
-
-  <!-- FAQ Structured Data (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -71,74 +149,202 @@
       {
         "@type": "Question",
         "name": "Do you have a minimum order?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Nope. We’ll print one shirt or one hundred. No minimums." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. 843 Teez can print one shirt or one hundred, with no minimums."
+        }
       },
       {
         "@type": "Question",
         "name": "How do I place an order?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Send your design or your idea, we reply with a quote and mockup, you approve, then we print and arrange pickup or local delivery." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send your design or your idea, and 843 Teez will reply with a quote and mockup. Once approved, the order is printed and arranged for pickup or local delivery."
+        }
       },
       {
         "@type": "Question",
         "name": "How much do custom shirts cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on quantity, garment type, and design placement. Singles often start around $20. Bulk pricing drops per shirt as quantity increases." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on quantity, garment type, and design placement. Single shirts often start around $20, and the price per shirt usually drops on larger orders."
+        }
       },
       {
         "@type": "Question",
         "name": "How long does it take to get my order?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most orders are ready in 3–5 business days after artwork approval. Larger runs or specialty garments may take longer and we’ll confirm timing upfront." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most orders are ready in 3 to 5 business days after artwork approval. Larger runs or specialty garments may take longer."
+        }
       },
       {
         "@type": "Question",
         "name": "Do you deliver locally?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer local delivery in Conway, Myrtle Beach, and the surrounding Grand Strand area. Availability and cost depend on location and order size." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. 843 Teez offers local delivery in Conway, Myrtle Beach, and the surrounding Grand Strand area, depending on location and order size."
+        }
       },
       {
         "@type": "Question",
         "name": "What printing methods do you use?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We use DTF (Direct-to-Film) for full-color prints and screen printing for bold, clean designs—especially for bulk orders." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "843 Teez uses DTF printing for full-color prints and screen printing for bold, clean designs, especially on bulk orders."
+        }
       }
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PrintShop",
+    "name": "843 Teez",
+    "description": "Custom t-shirt printing in Conway, SC offering DTF transfers and screen printing for the Grand Strand.",
+    "url": "https://843teez.com/FAQ.html",
+    "telephone": "+1-843-350-1943",
+    "email": "info@843teez.com",
+    "image": "https://843teez.com/843teez.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Conway",
+      "addressRegion": "SC",
+      "postalCode": "29526",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Conway" },
+      { "@type": "City", "name": "Myrtle Beach" },
+      { "@type": "City", "name": "Surfside Beach" },
+      { "@type": "City", "name": "North Myrtle Beach" },
+      { "@type": "City", "name": "Carolina Forest" },
+      { "@type": "City", "name": "Socastee" },
+      { "@type": "AdministrativeArea", "name": "Horry County" },
+      { "@type": "AdministrativeArea", "name": "Grand Strand" }
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/843teez",
+      "https://www.instagram.com/843teez"
+    ]
+  }
+  </script>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01';
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-4PVF756J01');
+      }, 1500);
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tr5ljrm18n");
+      }, 4000);
+    });
+  </script>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
-  <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
-
-    <header class="text-center mb-8">
+  <div
+    id="main-content"
+    class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 rounded-2xl shadow-xl"
+    style="background: rgba(240,247,250,0.94); border: 1px solid rgba(255,255,255,0.35);"
+  >
+    <header class="text-center mb-10">
       <img
-        src="https://843teez.com/843teezlogo.png"
+        src="https://843teez.com/843teezlogo.webp"
         alt="843 Teez Logo"
         class="max-w-xs mx-auto mb-4 w-5/6"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="500"
+        height="180"
       />
 
-      <div class="flex items-center justify-center space-x-4 mb-2">
-        <h1 class="text-3xl font-extrabold text-[#007c9e]">
-          Frequently Asked Questions (FAQ)
-        </h1>
-      </div>
-
-      <p class="text-sm text-gray-600">
-        Quick answers about custom tees, DTF, and screen printing in Conway, SC (and the Myrtle Beach / Grand Strand area).
+      <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#007c9e]">
+        Custom t-shirt printing FAQ for Conway, SC
       </p>
 
-      <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
-        <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-white btn-primary shadow hover:shadow-md transition"
-           href="/#contact">
-          Get a Custom Quote
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#003466] leading-tight mt-2 max-w-4xl mx-auto">
+        Frequently Asked Questions
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+        Quick answers about <strong>custom t-shirts</strong>, <strong>DTF printing</strong>, and
+        <strong>screen printing</strong> in <strong>Conway, South Carolina</strong>, <strong>Myrtle Beach</strong>,
+        and the <strong>Grand Strand</strong>.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a
+          class="inline-flex items-center justify-center px-8 py-3 rounded-xl font-bold text-white shadow-md transition-all duration-200 bg-red-600 hover:bg-red-700"
+          href="/quote.html"
+        >
+          Get a Fast Quote
         </a>
-        <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-[#003466] bg-white border border-gray-200 shadow hover:shadow-md transition"
-           href="/store/">
+        <a
+          class="inline-flex items-center justify-center px-8 py-3 rounded-xl font-bold text-white shadow-md transition-all duration-200 btn-primary"
+          href="/store/"
+        >
           Shop the Store
         </a>
       </div>
 
+      <p class="mt-4 text-sm text-gray-600 max-w-2xl mx-auto">
+        Good websites should answer the same stuff people normally message us about. If you still need help, reach out and we’ll help you sort it out.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a
+          class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+          href="/custom-tshirts-conway-sc.html"
+        >
+          Custom T-Shirts Conway, SC →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a
+          class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+          href="/dtf-printing-conway-sc.html"
+        >
+          DTF Printing Conway, SC →
+        </a>
+        <span class="hidden sm:inline text-gray-300">|</span>
+        <a
+          class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center justify-center"
+          href="/screen-printing-myrtle-beach-sc.html"
+        >
+          Screen Printing Myrtle Beach →
+        </a>
+      </div>
+
       <div class="mt-5">
-        <a class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center mx-auto"
-           href="/">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <a
+          class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center mx-auto"
+          href="/"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
           </svg>
           Back to Home
@@ -146,333 +352,342 @@
       </div>
     </header>
 
-    <!-- Content -->
-    <div class="max-w-4xl mx-auto py-6 text-gray-700 leading-relaxed">
-
-      <p class="mb-6 border-l-4 border-[#007c9e] pl-4 italic text-lg font-medium text-[#003466] bg-blue-50 p-3 rounded-lg">
-        Real talk: a good website answers the same questions you’d normally DM us — so you can get moving fast. If you don’t see your question here,
-        <a href="/#contact" class="text-[#007c9e] hover:underline font-semibold">send a quote request</a>
-        and we’ll help you out.
-      </p>
-
-      <!-- Category: Ordering -->
-      <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-        Ordering
-      </h2>
-
-      <!-- Accordion container -->
-      <div class="space-y-3 mb-8" id="faq-ordering">
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">How do I place an order?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p><strong>Easy:</strong> Send your design (or your idea), we reply with a quote + mockup, you approve, then we print and arrange pickup or local delivery.</p>
-            <p class="mt-2 text-sm text-gray-600">
-              Don’t have artwork yet? Send a reference pic or describe it — we can help make it print-ready.
-            </p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you have a minimum order?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Nope. We’ll print <strong>one shirt</strong> or <strong>one hundred</strong>. <strong>No minimums.</strong></p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">What info do you need for a quote?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>To quote fast, send:</p>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
-              <li><strong>Quantity</strong> + sizes</li>
-              <li><strong>Garment type</strong> (tee/hoodie/etc.) and shirt color</li>
-              <li><strong>Design placement</strong> (front/back/sleeve)</li>
-              <li><strong>Deadline</strong> (if you have one)</li>
-              <li><strong>Artwork</strong> (PNG/SVG/PDF/etc.) — or a rough idea</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Can I order just one custom shirt?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Absolutely. One-offs are perfect for gifts, birthdays, inside jokes, and “I need this by Saturday” moments.</p>
-          </div>
-        </div>
-
+    <main id="main" class="max-w-4xl mx-auto text-gray-700 leading-relaxed content">
+      <div class="flex flex-wrap gap-3 justify-center mb-8">
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#ordering">Ordering</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#pricing">Pricing</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#turnaround">Turnaround</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#artwork">Artwork</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#policies">Policies</a>
       </div>
 
-      <!-- Category: Pricing -->
-      <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-        Pricing
-      </h2>
-
-      <div class="space-y-3 mb-8" id="faq-pricing">
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">How much do custom shirts cost?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>It depends on quantity, garment type, and print (front-only vs front + back, etc.).</p>
-            <p class="mt-2"><strong>Singles</strong> usually start around <strong>$20</strong>. <strong>Bulk</strong> orders drop per shirt as quantity goes up.</p>
-            <p class="mt-2 text-sm text-gray-600">
-              Want the exact number? Hit the quote form and we’ll send pricing fast.
-            </p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you offer bulk discounts?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Yes. Bulk pricing is where custom tees really shine. Quantity + print size/placement are the biggest drivers.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you provide the shirts, or can I bring my own?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>We can do either.</p>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
-              <li><strong>We provide blanks:</strong> easiest + consistent results</li>
-              <li><strong>You bring your own:</strong> totally fine — we just can’t guarantee how every fabric reacts</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you charge setup fees?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Sometimes — it depends on the job.</p>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
-              <li><strong>DTF</strong> often has minimal setup</li>
-              <li><strong>Screen printing</strong> may include setup because screens have to be made</li>
-            </ul>
-            <p class="mt-2">We’ll always be clear about pricing before we print anything.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Category: Turnaround & Delivery -->
-      <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-        Turnaround & Delivery
-      </h2>
-
-      <div class="space-y-3 mb-8" id="faq-turnaround">
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">How long does it take to get my order?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Most orders are ready in <strong>3–5 business days</strong> after artwork approval.</p>
-            <p class="mt-2 text-sm text-gray-600">
-              Big runs, special garments, or complex design work can take a little longer — we’ll tell you upfront.
-            </p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you offer rush orders?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Sometimes, yes — if our schedule and the order details allow it.</p>
-            <p class="mt-2">If you’re on a deadline, tell us the event date and we’ll be straight with what’s doable.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you deliver locally?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Yes — we offer local delivery in <strong>Conway</strong>, <strong>Myrtle Beach</strong>, and the surrounding <strong>Grand Strand</strong>.</p>
-            <p class="mt-2 text-sm text-gray-600">Availability and cost depend on location and order size.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Can I pick up my order?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Yes — pickup options are available by arrangement. We’ll confirm pickup details when your order is ready.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Category: Artwork & Printing -->
-      <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-        Artwork & Printing
-      </h2>
-
-      <div class="space-y-3 mb-8" id="faq-artwork">
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">What printing methods do you use?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>We use <strong>DTF (Direct-to-Film)</strong> for full-color prints and <strong>screen printing</strong> for bold, clean designs — especially for bulk orders.</p>
-            <p class="mt-2 text-sm text-gray-600">We’ll recommend the best method based on your artwork, budget, and quantity.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Can you help with the design?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Yep. If you’ve got an idea, we can help turn it into something print-ready.</p>
-            <p class="mt-2 text-sm text-gray-600">Some design work may add cost depending on complexity — we’ll always tell you before moving forward.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">What file types do you accept?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p><strong>Best:</strong> SVG, AI, PDF, EPS (vector) or high-res PNG with a transparent background.</p>
-            <p class="mt-2">If all you have is a screenshot or photo, send it anyway — we’ll tell you if it needs cleanup.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Will the print crack or fade?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>With normal care, your prints hold up great.</p>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
-              <li>Wash inside-out</li>
-              <li>Cold water</li>
-              <li>Tumble low or hang dry</li>
-              <li>Avoid ironing directly on the print</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Category: Payments & Policies -->
-      <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-        Payments & Policies
-      </h2>
-
-      <div class="space-y-3 mb-2" id="faq-policies">
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Do you require payment up front?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Typically, yes — especially for custom orders.</p>
-            <p class="mt-2">For larger orders, we can sometimes do a deposit + balance. We’ll discuss what makes sense.</p>
-          </div>
-        </div>
-
-        <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
-          <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false">
-            <span class="font-semibold text-[#003466]">Can I make changes after I approve the mockup?</span>
-            <span class="text-[#007c9e] font-bold text-xl select-none">+</span>
-          </button>
-          <div class="px-4 pb-4 hidden faq-panel">
-            <p>Before we print — yes. Once production starts, changes may not be possible.</p>
-            <p class="mt-2 text-sm text-gray-600">That’s why we send a mockup: so we can get it right before ink hits fabric.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom CTA -->
-      <div class="mt-10 p-5 sm:p-6 rounded-2xl bg-blue-50 border border-blue-100">
-        <h3 class="text-xl font-bold text-[#003466]">Still have a question?</h3>
-        <p class="mt-2 text-gray-700">
-          Send the details and we’ll help you out — fast, friendly, and local.
+      <section class="cv-auto">
+        <p class="mb-6 border-l-4 border-[#007c9e] pl-4 italic text-lg font-medium text-[#003466] bg-blue-50 p-3 rounded-lg">
+          Real talk: a good website answers the same questions you’d normally DM us — so you can get moving fast.
+          If you don’t see your question here,
+          <a href="/quote.html" class="text-[#007c9e] hover:underline font-semibold">send a quote request</a>
+          and we’ll help you out.
         </p>
-        <div class="mt-4 flex flex-col sm:flex-row gap-3">
-          <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-white btn-primary shadow hover:shadow-md transition"
-             href="/#contact">
-            Get a Fast, Free Quote
-          </a>
-          <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-[#003466] bg-white border border-gray-200 shadow hover:shadow-md transition"
-             href="tel:8433501943">
-            Call: (843) 350-1943
-          </a>
-          <a class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-[#003466] bg-white border border-gray-200 shadow hover:shadow-md transition"
-             href="mailto:info@843teez.com">
-            Email: info@843teez.com
-          </a>
+      </section>
+
+      <section id="ordering" class="cv-auto">
+        <h2>Ordering</h2>
+
+        <div class="space-y-3 mb-8" id="faq-ordering">
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-1" id="faq-button-1">
+              <span class="font-semibold text-[#003466]">How do I place an order?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-1" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-1">
+              <p><strong>Easy:</strong> Send your design (or your idea), we reply with a quote + mockup, you approve, then we print and arrange pickup or local delivery.</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Don’t have artwork yet? Send a reference pic or describe it — we can help make it print-ready.
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-2" id="faq-button-2">
+              <span class="font-semibold text-[#003466]">Do you have a minimum order?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-2" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-2">
+              <p>Nope. We’ll print <strong>one shirt</strong> or <strong>one hundred</strong>. <strong>No minimums.</strong></p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-3" id="faq-button-3">
+              <span class="font-semibold text-[#003466]">What info do you need for a quote?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-3" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-3">
+              <p>To quote fast, send:</p>
+              <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
+                <li><strong>Quantity</strong> + sizes</li>
+                <li><strong>Garment type</strong> (tee/hoodie/etc.) and shirt color</li>
+                <li><strong>Design placement</strong> (front/back/sleeve)</li>
+                <li><strong>Deadline</strong> (if you have one)</li>
+                <li><strong>Artwork</strong> (PNG/SVG/PDF/etc.) — or a rough idea</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-4" id="faq-button-4">
+              <span class="font-semibold text-[#003466]">Can I order just one custom shirt?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-4" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-4">
+              <p>Absolutely. One-offs are perfect for gifts, birthdays, inside jokes, and “I need this by Saturday” moments.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-    </div>
+      <section id="pricing" class="cv-auto">
+        <h2>Pricing</h2>
 
-    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-      <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-      <p>Woman & Veteran-owned local apparel.</p>
+        <div class="space-y-3 mb-8" id="faq-pricing">
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-5" id="faq-button-5">
+              <span class="font-semibold text-[#003466]">How much do custom shirts cost?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-5" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-5">
+              <p>It depends on quantity, garment type, and print (front-only vs front + back, etc.).</p>
+              <p class="mt-2"><strong>Singles</strong> usually start around <strong>$20</strong>. <strong>Bulk</strong> orders drop per shirt as quantity goes up.</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Want the exact number? Hit the quote form and we’ll send pricing fast.
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-6" id="faq-button-6">
+              <span class="font-semibold text-[#003466]">Do you offer bulk discounts?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-6" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-6">
+              <p>Yes. Bulk pricing is where custom tees really shine. Quantity + print size/placement are the biggest drivers.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-7" id="faq-button-7">
+              <span class="font-semibold text-[#003466]">Do you provide the shirts, or can I bring my own?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-7" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-7">
+              <p>We can do either.</p>
+              <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
+                <li><strong>We provide blanks:</strong> easiest + consistent results</li>
+                <li><strong>You bring your own:</strong> totally fine — we just can’t guarantee how every fabric reacts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-8" id="faq-button-8">
+              <span class="font-semibold text-[#003466]">Do you charge setup fees?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-8" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-8">
+              <p>Sometimes — it depends on the job.</p>
+              <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
+                <li><strong>DTF</strong> often has minimal setup</li>
+                <li><strong>Screen printing</strong> may include setup because screens have to be made</li>
+              </ul>
+              <p class="mt-2">We’ll always be clear about pricing before we print anything.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="turnaround" class="cv-auto">
+        <h2>Turnaround & Delivery</h2>
+
+        <div class="space-y-3 mb-8" id="faq-turnaround">
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-9" id="faq-button-9">
+              <span class="font-semibold text-[#003466]">How long does it take to get my order?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-9" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-9">
+              <p>Most orders are ready in <strong>3–5 business days</strong> after artwork approval.</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Big runs, special garments, or complex design work can take a little longer — we’ll tell you upfront.
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-10" id="faq-button-10">
+              <span class="font-semibold text-[#003466]">Do you offer rush orders?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-10" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-10">
+              <p>Sometimes, yes — if our schedule and the order details allow it.</p>
+              <p class="mt-2">If you’re on a deadline, tell us the event date and we’ll be straight with what’s doable.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-11" id="faq-button-11">
+              <span class="font-semibold text-[#003466]">Do you deliver locally?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-11" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-11">
+              <p>Yes — we offer local delivery in <strong>Conway</strong>, <strong>Myrtle Beach</strong>, and the surrounding <strong>Grand Strand</strong>.</p>
+              <p class="mt-2 text-sm text-gray-600">Availability and cost depend on location and order size.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-12" id="faq-button-12">
+              <span class="font-semibold text-[#003466]">Can I pick up my order?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-12" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-12">
+              <p>Yes — pickup options are available by arrangement. We’ll confirm pickup details when your order is ready.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="artwork" class="cv-auto">
+        <h2>Artwork & Printing</h2>
+
+        <div class="space-y-3 mb-8" id="faq-artwork">
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-13" id="faq-button-13">
+              <span class="font-semibold text-[#003466]">What printing methods do you use?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-13" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-13">
+              <p>We use <strong>DTF (Direct-to-Film)</strong> for full-color prints and <strong>screen printing</strong> for bold, clean designs — especially for bulk orders.</p>
+              <p class="mt-2 text-sm text-gray-600">We’ll recommend the best method based on your artwork, budget, and quantity.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-14" id="faq-button-14">
+              <span class="font-semibold text-[#003466]">Can you help with the design?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-14" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-14">
+              <p>Yep. If you’ve got an idea, we can help turn it into something print-ready.</p>
+              <p class="mt-2 text-sm text-gray-600">Some design work may add cost depending on complexity — we’ll always tell you before moving forward.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-15" id="faq-button-15">
+              <span class="font-semibold text-[#003466]">What file types do you accept?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-15" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-15">
+              <p><strong>Best:</strong> SVG, AI, PDF, EPS (vector) or high-res PNG with a transparent background.</p>
+              <p class="mt-2">If all you have is a screenshot or photo, send it anyway — we’ll tell you if it needs cleanup.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-16" id="faq-button-16">
+              <span class="font-semibold text-[#003466]">Will the print crack or fade?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-16" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-16">
+              <p>With normal care, your prints hold up great.</p>
+              <ul class="list-disc list-outside ml-6 mt-2 space-y-1">
+                <li>Wash inside-out</li>
+                <li>Cold water</li>
+                <li>Tumble low or hang dry</li>
+                <li>Avoid ironing directly on the print</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="policies" class="cv-auto">
+        <h2>Payments & Policies</h2>
+
+        <div class="space-y-3 mb-2" id="faq-policies">
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-17" id="faq-button-17">
+              <span class="font-semibold text-[#003466]">Do you require payment up front?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-17" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-17">
+              <p>Typically, yes — especially for custom orders.</p>
+              <p class="mt-2">For larger orders, we can sometimes do a deposit + balance. We’ll discuss what makes sense.</p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl bg-white shadow-sm">
+            <button class="w-full text-left p-4 flex items-center justify-between gap-4 faq-toggle" aria-expanded="false" aria-controls="faq-panel-18" id="faq-button-18">
+              <span class="font-semibold text-[#003466]">Can I make changes after I approve the mockup?</span>
+              <span class="text-[#007c9e] font-bold text-xl select-none" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-panel-18" class="px-4 pb-4 hidden faq-panel" role="region" aria-labelledby="faq-button-18">
+              <p>Before we print — yes. Once production starts, changes may not be possible.</p>
+              <p class="mt-2 text-sm text-gray-600">That’s why we send a mockup: so we can get it right before ink hits fabric.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-auto">
+        <div class="mt-10 p-5 sm:p-6 rounded-2xl bg-blue-50 border border-blue-100">
+          <h3 class="text-xl font-bold text-[#003466]">Still have a question?</h3>
+          <p class="mt-2 text-gray-700">
+            Send the details and we’ll help you out — fast, friendly, and local.
+          </p>
+          <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <a
+              class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-white btn-primary shadow hover:shadow-md transition"
+              href="/quote.html"
+            >
+              Get a Fast, Free Quote
+            </a>
+            <a
+              class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-[#003466] bg-white border border-gray-200 shadow hover:shadow-md transition"
+              href="tel:8433501943"
+            >
+              Call: (843) 350-1943
+            </a>
+            <a
+              class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold text-[#003466] bg-white border border-gray-200 shadow hover:shadow-md transition"
+              href="mailto:info@843teez.com?subject=FAQ%20Question%20-%20843%20Teez"
+            >
+              Email: info@843teez.com
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1 cv-auto">
+      <p>843 Teez™ is a <a href="https://grizzbuilt.com/" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+      <p>Woman & veteran-owned local apparel.</p>
       <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+      <p class="mt-2">
+        <a class="text-[#007c9e] hover:underline" href="/custom-tshirts-conway-sc.html">Custom Tees Conway</a> •
+        <a class="text-[#007c9e] hover:underline" href="/dtf-printing-conway-sc.html">DTF Printing</a> •
+        <a class="text-[#007c9e] hover:underline" href="/screen-printing-myrtle-beach-sc.html">Screen Printing</a>
+      </p>
     </footer>
   </div>
 
   <script>
-    // Accordion behavior (Tailwind-friendly, no dependencies)
     (function () {
       const toggles = document.querySelectorAll('.faq-toggle');
+
       toggles.forEach((btn) => {
         btn.addEventListener('click', () => {
           const expanded = btn.getAttribute('aria-expanded') === 'true';
-          const panel = btn.parentElement.querySelector('.faq-panel');
-          const icon = btn.querySelector('span.text-\\[\\#007c9e\\]') || btn.querySelector('span:last-child');
-
-          // Optional: only one open at a time
+          const panelId = btn.getAttribute('aria-controls');
+          const panel = panelId ? document.getElementById(panelId) : null;
+          const icon = btn.querySelector('span:last-child');
           const singleOpen = true;
+
           if (singleOpen) {
             toggles.forEach((other) => {
               if (other === btn) return;
               other.setAttribute('aria-expanded', 'false');
-              const otherPanel = other.parentElement.querySelector('.faq-panel');
-              if (otherPanel) otherPanel.classList.add('hidden');
+
+              const otherPanelId = other.getAttribute('aria-controls');
+              const otherPanel = otherPanelId ? document.getElementById(otherPanelId) : null;
               const otherIcon = other.querySelector('span:last-child');
+
+              if (otherPanel) otherPanel.classList.add('hidden');
               if (otherIcon) otherIcon.textContent = '+';
             });
           }
+
+          if (!panel) return;
 
           if (expanded) {
             btn.setAttribute('aria-expanded', 'false');
