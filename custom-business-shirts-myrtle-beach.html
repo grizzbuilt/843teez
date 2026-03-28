@@ -65,29 +65,6 @@
     .btn-primary{background-color:#003466;}
     .btn-primary:hover{background-color:#007c9e;}
 
-    .input{
-      width:100%;
-      border:1px solid #e5e7eb;
-      border-radius:0.9rem;
-      padding:0.85rem 1rem;
-      background:rgba(255,255,255,0.92);
-      outline:none;
-    }
-
-    .input:focus{
-      border-color:#007c9e;
-      box-shadow:0 0 0 3px rgba(0,124,158,0.15);
-    }
-
-    .label{
-      display:block;
-      font-weight:700;
-      color:#003466;
-      margin-bottom:.35rem;
-      margin-top:1rem;
-      font-size:.95rem;
-    }
-
     #main-content{
       min-height:calc(100vh - 80px);
     }
@@ -252,7 +229,7 @@
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
         <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
-           href="#quote">
+           href="/quote.html">
           Get a Business Quote
         </a>
         <a class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
@@ -356,10 +333,14 @@
               <li><strong>100+</strong> for events, promos, or seasonal pushes</li>
             </ul>
 
+            <p class="mt-4 text-sm text-gray-700">
+              We streamlined this page for speed, so the full request form now lives on our dedicated quote page.
+            </p>
+
             <div class="mt-5 flex flex-col sm:flex-row gap-3">
               <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700 text-center"
-                 href="tel:8433501943">
-                Call (843) 350-1943
+                 href="/quote.html">
+                Open Quote Form
               </a>
               <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary text-center"
                  href="mailto:info@843teez.com?subject=Business%20Shirt%20Quote%20Request">
@@ -368,46 +349,26 @@
             </div>
           </div>
 
-          <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm">
-            <p class="text-lg font-extrabold text-[#003466] mb-1">Send a Quote Request</p>
+          <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm text-center">
+            <p class="text-lg font-extrabold text-[#003466] mb-2">Ready to get pricing?</p>
             <p class="text-sm text-gray-600 mb-4">
-              Tell us what your team needs and we’ll reply ASAP.
+              Use our quote page for the full form, or contact us directly and we’ll help you sort it out.
             </p>
 
-            <form
-              action="/thank-you.html"
-              name="843Teezcontact"
-              method="POST"
-              data-netlify-recaptcha="true"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="843Teezcontact" />
-              <input type="hidden" name="form-location" value="Business Shirts Page" />
-              <input type="hidden" name="subject" value="843 Teez Business Shirt Quote Request" />
-
-              <p hidden>
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-              </p>
-
-              <label class="label" for="name">Name</label>
-              <input class="input" type="text" name="name" id="name" required />
-
-              <label class="label" for="email">Email</label>
-              <input class="input" type="email" name="email" id="email" required />
-
-              <label class="label" for="shirt-details">Business Shirt Details (Quantity, Sizes, Placement, Deadline)</label>
-              <textarea class="input" name="shirt-details" id="shirt-details" rows="6" required></textarea>
-
-              <div class="mt-4" data-netlify-recaptcha="true"></div>
-
-              <button
-                type="submit"
-                class="w-full mt-4 px-6 py-3 text-white font-extrabold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
-              >
-                Send Quote Request
-              </button>
-            </form>
+            <div class="flex flex-col gap-3">
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+                 href="/quote.html">
+                Get a Fast Business Quote
+              </a>
+              <a class="inline-block px-6 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+                 href="mailto:info@843teez.com?subject=Business%20Shirt%20Quote%20Request">
+                Email Us
+              </a>
+              <a class="inline-block px-6 py-3 text-[#003466] font-bold rounded-xl transition-all duration-200 shadow-sm border border-gray-200 bg-white hover:text-[#007c9e]"
+                 href="tel:8433501943">
+                Call (843) 350-1943
+              </a>
+            </div>
           </div>
         </div>
       </section>
