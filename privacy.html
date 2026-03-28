@@ -1,189 +1,256 @@
+<!-- privacy.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fcff" />
+  <meta name="robots" content="noindex, follow" />
 
-  gtag('config', 'G-4PVF756J01');
-</script>
-    <meta name="robots" content="noindex, follow">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>843 Teez | Privacy Policy</title>
+  <meta name="description" content="View the full privacy policy for 843 Teez, including how we collect, use, and store information on 843teez.com." />
+  <link rel="canonical" href="https://843teez.com/privacy.html" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="843 Teez | Privacy Policy" />
+  <meta property="og:description" content="Read the privacy policy for 843teez.com." />
+  <meta property="og:url" content="https://843teez.com/privacy.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://843teez.com/843teez.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom style for the specific background texture and font */
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: #f8fcff;
-            background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
-            background-size: 300px;
-        }
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://843teez.com/843teez.png" />
+  <meta name="twitter:title" content="843 Teez | Privacy Policy" />
+  <meta name="twitter:description" content="Read the privacy policy for 843teez.com." />
 
-        /* Custom scrollbar for better visual */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png">
 
-        /* Key brand colors */
-        .btn-primary {
-            background-color: #003466; /* Deep Navy */
-        }
-        .btn-primary:hover {
-            background-color: #007c9e; /* Teal Blue */
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.clarity.ms">
 
-        /* Ensure the main container grows to fill the page height */
-        #main-content {
-            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
-        }
-    </style>
+  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.webp" fetchpriority="high" />
 
-    <title>843 Teez | Privacy Policy</title>
-    <meta name="description" content="View the full privacy policy for 843 Teez, detailing data collection, usage of local storage for cart, and security measures." />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
 
-    <script type="text/javascript">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+
+  <style>
+    body{
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background-color:#f8fcff;
+      background-image:url('https://843teez.com/surf-texture.webp');
+      background-repeat:repeat;
+      background-size:300px;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
+    }
+
+    ::-webkit-scrollbar{width:8px;}
+    ::-webkit-scrollbar-thumb{background-color:#007c9e;border-radius:4px;}
+    ::-webkit-scrollbar-track{background-color:#f0f0f0;}
+
+    .btn-primary{background-color:#003466;}
+    .btn-primary:hover{background-color:#007c9e;}
+
+    #main-content{
+      min-height:calc(100vh - 80px);
+    }
+
+    .content h2{
+      margin-top:1.5rem;
+      margin-bottom:.75rem;
+      font-size:1.5rem;
+      line-height:2rem;
+      font-weight:800;
+      color:#003466;
+      border-bottom:1px solid #e5e7eb;
+      padding-bottom:.25rem;
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position:static !important;
+      width:auto !important;
+      height:auto !important;
+      margin:0 !important;
+      overflow:visible !important;
+      clip:auto !important;
+      white-space:normal !important;
+      padding:.75rem 1rem;
+      background:#fff;
+      border:2px solid #007c9e;
+      border-radius:.75rem;
+      display:inline-block;
+      z-index:9999;
+    }
+
+    .cv-auto{
+      content-visibility:auto;
+      contain-intrinsic-size:1px 900px;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01';
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-4PVF756J01');
+      }, 1500);
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
         (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "tr3lwvejev");
-    </script>
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tr5ljrm18n");
+      }, 4000);
+    });
+  </script>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+  <div id="main-content"
+       class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 rounded-2xl shadow-xl"
+       style="background: rgba(240,247,250,0.94); border: 1px solid rgba(255,255,255,0.35);">
 
-        <header class="text-center mb-8">
-            <img
-                src="https://843teez.com/843teezlogo.png"
-                alt="843 Teez Logo"
-                class="max-w-xs mx-auto mb-4 w-5/6"
-            />
-            <div class="flex items-center justify-center space-x-4 mb-2">
-                <h1 class="text-3xl font-extrabold text-[#007c9e]">
-                    Privacy Policy
-                </h1>
-    
-            </div>
-            <p class="text-sm text-gray-600">
-                Last Updated: November 21, 2025
-            </p>
-            <div class="mt-4">
-                <a href="index.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                    Back to Shop
-                </a>
-            </div>
-        </header>
+    <header class="text-center mb-8">
+      <img
+        src="https://843teez.com/843teezlogo.webp"
+        alt="843 Teez Logo"
+        class="max-w-xs mx-auto mb-4 w-5/6"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="500"
+        height="180"
+      />
+      <div class="flex items-center justify-center space-x-4 mb-2">
+        <h1 class="text-3xl font-extrabold text-[#007c9e]">
+          Privacy Policy
+        </h1>
+      </div>
+      <p class="text-sm text-gray-600">
+        Last Updated: November 21, 2025
+      </p>
+      <div class="mt-4">
+        <a href="/" class="text-[#007c9e] hover:text-[#003466] font-semibold inline-flex items-center mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </header>
 
-        <div class="max-w-4xl mx-auto py-6 text-gray-700 leading-relaxed">
-            
-            <p class="mb-6 border-l-4 border-[#007c9e] pl-4 italic text-lg font-medium text-[#003466] bg-blue-50 p-3 rounded-lg">
-                This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from 843teez.com.
-            </p>
+    <main id="main" class="max-w-4xl mx-auto py-6 text-gray-700 leading-relaxed content">
 
-            <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-                1. Personal Information We Collect
-            </h2>
-            
-            <p class="mb-4">
-                When you place an order request through the Site (via the Checkout form), we collect certain information from you, including your **name, billing address, shipping address, email address, and phone number**. This is referred to as "Order Information."
-            </p>
-            
-            <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-                2. How We Use Your Personal Information
-            </h2>
-            
-            <p class="mb-4">
-                We use the Order Information that we collect generally to fulfill any orders placed through the Site (e.g., communicating with you, arranging for shipping, and providing invoices). Additionally, we use this Order Information to:
-            </p>
-            <ul class="list-disc list-outside ml-6 space-y-2 mb-6">
-                <li>**Communicate with you** regarding your order or inquiries.</li>
-                <li>**Screen our order requests** for potential risk or fraud.</li>
-                <li>When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</li>
-            </ul>
+      <section class="cv-auto">
+        <p class="mb-6 border-l-4 border-[#007c9e] pl-4 italic text-lg font-medium text-[#003466] bg-blue-50 p-3 rounded-lg">
+          This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from 843teez.com.
+        </p>
+      </section>
 
-            <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-                3. Cart Data and Local Storage
-            </h2>
-            
-            <p class="mb-4">
-                Our website uses **Local Storage** (a web technology similar to cookies) to remember the items you add to your shopping cart. This data is entirely stored on **your device** and is used solely to provide a consistent shopping experience as you move between pages.
-            </p>
-            <p class="mb-6">
-                The cart data stored in Local Storage **does not contain any personally identifiable information** until you submit the checkout form.
-            </p>
+      <section class="cv-auto">
+        <h2>1. Personal Information We Collect</h2>
+        <p class="mb-4">
+          When you place an order request through the Site (via the Checkout form), we collect certain information from you, including your <strong>name, billing address, shipping address, email address, and phone number</strong>. This is referred to as "Order Information."
+        </p>
+      </section>
 
-            <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-                4. Sharing Your Personal Information
-            </h2>
+      <section class="cv-auto">
+        <h2>2. How We Use Your Personal Information</h2>
+        <p class="mb-4">
+          We use the Order Information that we collect generally to fulfill any orders placed through the Site (e.g., communicating with you, arranging for shipping, and providing invoices). Additionally, we use this Order Information to:
+        </p>
+        <ul class="list-disc list-outside ml-6 space-y-2 mb-6">
+          <li><strong>Communicate with you</strong> regarding your order or inquiries.</li>
+          <li><strong>Screen our order requests</strong> for potential risk or fraud.</li>
+          <li>When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</li>
+        </ul>
+      </section>
 
-            <p class="mb-4">
-                We share your Personal Information with third parties to help us use your Personal Information, as described above:
-            </p>
-            <ul class="list-disc list-outside ml-6 space-y-2 mb-6">
-                <li>We use **Google Analytics** to help us understand how our customers use the Site—you can read more about how Google uses your Personal Information <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" class="text-[#007c9e] hover:underline">here</a>.</li>
-                <li>We may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.</li>
-            </ul>
-            
-            <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
-                5. Your Rights & Contact Us
-            </h2>
-            
-            <p class="mb-4">
-                If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the information below.
-            </p>
-            
-            <p class="mt-4 font-semibold text-lg">
-                Contact Information:
-            </p>
-            <p>
-                Email: <a href="mailto:Sales@843Teez.com" class="text-red-500 hover:text-red-700 font-semibold underline">Sales@843Teez.com</a><br>
-                Phone: <a href="tel:8433501943" class="text-red-500 hover:text-red-700 font-semibold underline">843-350-1943</a>
-            </p>
-        </div>
+      <section class="cv-auto">
+        <h2>3. Cart Data and Local Storage</h2>
+        <p class="mb-4">
+          Our website uses <strong>Local Storage</strong> (a web technology similar to cookies) to remember the items you add to your shopping cart. This data is entirely stored on <strong>your device</strong> and is used solely to provide a consistent shopping experience as you move between pages.
+        </p>
+        <p class="mb-6">
+          The cart data stored in Local Storage <strong>does not contain any personally identifiable information</strong> until you submit the checkout form.
+        </p>
+      </section>
 
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-            <p>Woman & Veteran-owned local apparel.</p>
-            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
-        </footer>
-    </div>
+      <section class="cv-auto">
+        <h2>4. Sharing Your Personal Information</h2>
+        <p class="mb-4">
+          We share your Personal Information with third parties to help us use your Personal Information, as described above:
+        </p>
+        <ul class="list-disc list-outside ml-6 space-y-2 mb-6">
+          <li>We use <strong>Google Analytics</strong> to help us understand how our customers use the Site—you can read more about how Google uses your Personal Information <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">here</a>.</li>
+          <li>We may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.</li>
+        </ul>
+      </section>
 
-    <script>
-        // --- CART STATE MANAGEMENT (Minimal setup to update header count) ---
-        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        
-        // Updates the global cart count (needed for header)
-        const updateGlobalCartSummary = () => {
-            const globalViewCartButton = document.getElementById('global-view-cart-button');
-            
-            let totalItems = 0;
+      <section class="cv-auto">
+        <h2>5. Your Rights & Contact Us</h2>
+        <p class="mb-4">
+          If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the information below.
+        </p>
 
-            cart.forEach(item => {
-                totalItems += item.quantity;
-            });
+        <p class="mt-4 font-semibold text-lg">
+          Contact Information:
+        </p>
+        <p>
+          Email: <a href="mailto:Sales@843Teez.com" class="text-red-500 hover:text-red-700 font-semibold underline">Sales@843Teez.com</a><br>
+          Phone: <a href="tel:8433501943" class="text-red-500 hover:text-red-700 font-semibold underline">843-350-1943</a>
+        </p>
+      </section>
 
-            document.getElementById('global-item-count').textContent = totalItems;
-            globalViewCartButton.classList.toggle('disabled:opacity-50', totalItems === 0);
-            globalViewCartButton.disabled = totalItems === 0;
-        };
+    </main>
 
-        // --- INITIALIZATION ---
-        window.onload = () => {
-            updateGlobalCartSummary();
-        };
-    </script>
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
+      <p>843 Teez™ is a <a href="https://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+      <p>Woman & Veteran-owned local apparel.</p>
+      <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+    </footer>
+
+  </div>
 </body>
 </html>
