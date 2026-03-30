@@ -29,7 +29,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="//www.clarity.ms">
 
-  <link rel="preload" as="image" href="https://843teez.com/843teezlogo.webp" fetchpriority="high" />
+  <link
+    rel="preload"
+    as="image"
+    href="https://843teez.com/843teezlogo.webp"
+    imagesrcset="https://843teez.com/843teezlogo-275.webp 275w, https://843teez.com/843teezlogo.webp 550w"
+    imagesizes="(max-width: 640px) 83vw, 320px"
+    fetchpriority="high"
+  />
 
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -288,13 +295,18 @@
     <header class="text-center mb-10">
       <img
         src="https://843teez.com/843teezlogo.webp"
+        srcset="
+          https://843teez.com/843teezlogo-275.webp 275w,
+          https://843teez.com/843teezlogo.webp 550w
+        "
+        sizes="(max-width: 640px) 83vw, 320px"
         alt="843 Teez Logo"
-        class="max-w-xs mx-auto mb-4 w-5/6"
+        class="max-w-xs mx-auto mb-4 w-5/6 h-auto"
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        width="500"
-        height="180"
+        width="550"
+        height="411"
       />
 
       <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#007c9e]">
