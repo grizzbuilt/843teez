@@ -1,1 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fcff" />
 
+  <title>Order Status | 843 Teez</title>
+  <link rel="canonical" href="https://843teez.com/order-status/" />
+  <meta name="description" content="Check your 843 Teez order status. View customer-friendly production updates for current custom apparel orders." />
+
+  <meta property="og:title" content="Order Status | 843 Teez" />
+  <meta property="og:description" content="Check the status of your current 843 Teez custom apparel order." />
+  <meta property="og:url" content="https://843teez.com/order-status/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://843teez.com/843teez.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Order Status | 843 Teez" />
+  <meta name="twitter:description" content="Check the status of your current 843 Teez custom apparel order." />
+  <meta name="twitter:image" content="https://843teez.com/843teez.png" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+
+  <style>
+    body{
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background-color:#f8fcff;
+      background-image:url('https://843teez.com/surf-texture.webp');
+      background-repeat:repeat;
+      background-size:300px;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
+    }
+
+    ::-webkit-scrollbar{width:8px;}
+    ::-webkit-scrollbar-thumb{background-color:#007c9e;border-radius:4px;}
+    ::-webkit-scrollbar-track{background-color:#f0f0f0;}
+
+    .btn-primary{background-color:#003466;}
+    .btn-primary:hover{background-color:#007c9e;}
+
+    #main-content{min-height:calc(100vh - 80px);}
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus{
+      position:static !important;
+      width:auto !important;
+      height:auto !important;
+      margin:0 !important;
+      overflow:visible !important;
+      clip:auto !important;
+      white-space:normal !important;
+      padding:.75rem 1rem;
+      background:#fff;
+      border:2px solid #007c9e;
+      border-radius:.75rem;
+      display:inline-block;
+      z-index:9999;
+    }
+
+    .status-column{
+      min-height: 220px;
+    }
+
+    .order-card{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:1rem;
+      padding:1rem;
+      box-shadow:0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .status-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.35rem .7rem;
+      border-radius:9999px;
+      font-size:.75rem;
+      font-weight:800;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+    }
+
+    .status-order-received{
+      background:#e0f2fe;
+      color:#075985;
+    }
+
+    .status-in-queue{
+      background:#ede9fe;
+      color:#5b21b6;
+    }
+
+    .status-in-production{
+      background:#fef3c7;
+      color:#92400e;
+    }
+
+    .status-ready-for-pickup{
+      background:#dcfce7;
+      color:#166534;
+    }
+
+    .status-completed{
+      background:#e5e7eb;
+      color:#374151;
+    }
+
+    .empty-column{
+      border:1px dashed #cbd5e1;
+      border-radius:1rem;
+      background:rgba(255,255,255,0.55);
+      padding:1rem;
+      color:#64748b;
+      font-size:.95rem;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8 pt-16">
+  <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <div
+    id="main-content"
+    class="max-w-7xl mx-auto p-6 sm:p-10 md:p-12 rounded-2xl shadow-xl"
+    style="background: rgba(240,247,250,0.94); border: 1px solid rgba(255,255,255,0.35);"
+  >
+    <header class="text-center mb-10">
+      <a href="/" class="inline-block">
+        <img
+          src="https://843teez.com/843teezlogo.webp"
+          srcset="
+            https://843teez.com/843teezlogo-275.webp 275w,
+            https://843teez.com/843teezlogo.webp 550w
+          "
+          sizes="(max-width: 640px) 83vw, 320px"
+          alt="843 Teez Logo"
+          class="max-w-xs mx-auto mb-4 w-5/6 h-auto"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          width="550"
+          height="411"
+        />
+      </a>
+
+      <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#007c9e]">
+        843 Teez Order Status
+      </p>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#003466] leading-tight mt-2 max-w-4xl mx-auto">
+        Check Your Order Progress
+      </h1>
+
+      <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
+        This page shows customer-friendly status updates for active 843 Teez orders.
+        Updates are refreshed periodically throughout production.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a
+          class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+          href="/quote.html"
+        >
+          Need Another Order?
+        </a>
+        <a
+          class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+          href="/"
+        >
+          Back to 843 Teez
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="mb-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <p class="text-sm font-extrabold text-[#003466]">How to use this page</p>
+            <p class="text-sm text-gray-600 mt-2">
+              Find your order by order number and customer name. Statuses are simplified to make the production stage easier to understand.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <p class="text-sm font-extrabold text-[#003466]">Need help?</p>
+            <p class="text-sm text-gray-600 mt-2">
+              If you have questions about your order, artwork, pickup timing, or changes, call or email us directly.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+            <p class="text-sm font-extrabold text-[#003466]">Last updated</p>
+            <p id="last-updated" class="text-sm text-gray-600 mt-2">
+              Loading...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 shadow-sm">
+          <div class="flex flex-col lg:flex-row gap-3 lg:items-center lg:justify-between">
+            <div>
+              <h2 class="text-xl font-extrabold text-[#003466]">Find Your Order</h2>
+              <p class="text-sm text-gray-600 mt-1">
+                Search by order number, customer name, or status.
+              </p>
+            </div>
+
+            <div class="w-full lg:max-w-md">
+              <label for="search-input" class="sr-only">Search orders</label>
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Search order number, customer, or status..."
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 bg-white outline-none focus:border-[#007c9e] focus:ring-4 focus:ring-cyan-100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-6">
+        <div class="flex flex-wrap gap-3">
+          <button class="filter-btn px-4 py-2 rounded-xl bg-[#003466] text-white font-bold shadow-sm" data-filter="All">
+            All
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Order Received">
+            Order Received
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="In Queue">
+            In Queue
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="In Production">
+            In Production
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Ready for Pickup">
+            Ready for Pickup
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Completed">
+            Completed
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div id="loading-state" class="text-center py-10 text-gray-600 font-medium">
+          Loading order statuses...
+        </div>
+
+        <div id="error-state" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-2xl p-5">
+          We couldn’t load the order status data right now. Please try again in a little bit, or contact us directly if you need an update.
+        </div>
+
+        <div id="board" class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5">
+          <div class="status-column">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-lg font-extrabold text-[#003466]">Order Received</h3>
+              <span id="count-order-received" class="text-sm font-bold text-[#007c9e]">0</span>
+            </div>
+            <div id="col-order-received" class="space-y-3"></div>
+          </div>
+
+          <div class="status-column">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-lg font-extrabold text-[#003466]">In Queue</h3>
+              <span id="count-in-queue" class="text-sm font-bold text-[#007c9e]">0</span>
+            </div>
+            <div id="col-in-queue" class="space-y-3"></div>
+          </div>
+
+          <div class="status-column">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-lg font-extrabold text-[#003466]">In Production</h3>
+              <span id="count-in-production" class="text-sm font-bold text-[#007c9e]">0</span>
+            </div>
+            <div id="col-in-production" class="space-y-3"></div>
+          </div>
+
+          <div class="status-column">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-lg font-extrabold text-[#003466]">Ready for Pickup</h3>
+              <span id="count-ready-for-pickup" class="text-sm font-bold text-[#007c9e]">0</span>
+            </div>
+            <div id="col-ready-for-pickup" class="space-y-3"></div>
+          </div>
+
+          <div class="status-column">
+            <div class="mb-3 flex items-center justify-between">
+              <h3 class="text-lg font-extrabold text-[#003466]">Completed</h3>
+              <span id="count-completed" class="text-sm font-bold text-[#007c9e]">0</span>
+            </div>
+            <div id="col-completed" class="space-y-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+          <h2 class="text-xl font-extrabold text-[#003466]">What the statuses mean</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 mt-4 text-sm">
+            <div>
+              <p class="font-bold text-[#003466]">Order Received</p>
+              <p class="text-gray-600 mt-1">We have your order and it is in our system.</p>
+            </div>
+            <div>
+              <p class="font-bold text-[#003466]">In Queue</p>
+              <p class="text-gray-600 mt-1">Your order is lined up and getting closer to production.</p>
+            </div>
+            <div>
+              <p class="font-bold text-[#003466]">In Production</p>
+              <p class="text-gray-600 mt-1">We are actively printing, pressing, or finishing your order.</p>
+            </div>
+            <div>
+              <p class="font-bold text-[#003466]">Ready for Pickup</p>
+              <p class="text-gray-600 mt-1">Your order is ready for pickup or final handoff.</p>
+            </div>
+            <div>
+              <p class="font-bold text-[#003466]">Completed</p>
+              <p class="text-gray-600 mt-1">Your order has already been picked up or completed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
+      <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
+      <p>Woman & veteran-owned local apparel.</p>
+      <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
+      <p class="mt-2">
+        <a class="text-[#007c9e] hover:underline" href="/custom-tshirts-conway-sc.html">Custom Tees Conway</a> •
+        <a class="text-[#007c9e] hover:underline" href="/dtf-printing-conway-sc.html">DTF Printing</a> •
+        <a class="text-[#007c9e] hover:underline" href="/screen-printing-myrtle-beach-sc.html">Screen Printing</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    const DATA_URL = "/order-status/data/order-status.json";
+
+    const STATUS_CONFIG = [
+      {
+        name: "Order Received",
+        key: "order-received",
+        className: "status-order-received"
+      },
+      {
+        name: "In Queue",
+        key: "in-queue",
+        className: "status-in-queue"
+      },
+      {
+        name: "In Production",
+        key: "in-production",
+        className: "status-in-production"
+      },
+      {
+        name: "Ready for Pickup",
+        key: "ready-for-pickup",
+        className: "status-ready-for-pickup"
+      },
+      {
+        name: "Completed",
+        key: "completed",
+        className: "status-completed"
+      }
+    ];
+
+    let allOrders = [];
+    let activeFilter = "All";
+    let searchTerm = "";
+
+    function formatDateTime(isoString) {
+      if (!isoString) return "Unavailable";
+
+      const date = new Date(isoString);
+
+      if (Number.isNaN(date.getTime())) {
+        return "Unavailable";
+      }
+
+      return date.toLocaleString([], {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit"
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function getStatusConfig(statusName) {
+      return STATUS_CONFIG.find((status) => status.name === statusName) || STATUS_CONFIG[0];
+    }
+
+    function createOrderCard(order) {
+      const statusInfo = getStatusConfig(order.status);
+
+      return `
+        <article class="order-card">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wide text-[#007c9e]">Order #${escapeHtml(order.orderNumber)}</p>
+              <h4 class="text-lg font-extrabold text-[#003466] mt-1">${escapeHtml(order.customer)}</h4>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="status-pill ${statusInfo.className}">
+              ${escapeHtml(order.status)}
+            </span>
+          </div>
+        </article>
+      `;
+    }
+
+    function matchesFilters(order) {
+      const matchesStatus = activeFilter === "All" || order.status === activeFilter;
+
+      if (!matchesStatus) {
+        return false;
+      }
+
+      if (!searchTerm) {
+        return true;
+      }
+
+      const haystack = [
+        order.orderNumber,
+        order.customer,
+        order.status
+      ].join(" ").toLowerCase();
+
+      return haystack.includes(searchTerm.toLowerCase());
+    }
+
+    function renderBoard() {
+      const filteredOrders = allOrders.filter(matchesFilters);
+
+      STATUS_CONFIG.forEach((status) => {
+        const column = document.getElementById(`col-${status.key}`);
+        const count = document.getElementById(`count-${status.key}`);
+
+        const items = filteredOrders.filter((order) => order.status === status.name);
+
+        count.textContent = items.length;
+
+        if (items.length === 0) {
+          column.innerHTML = `<div class="empty-column">No orders in this stage.</div>`;
+          return;
+        }
+
+        column.innerHTML = items.map(createOrderCard).join("");
+      });
+    }
+
+    function setActiveFilterButton() {
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        const isActive = button.dataset.filter === activeFilter;
+
+        if (isActive) {
+          button.className = "filter-btn px-4 py-2 rounded-xl bg-[#003466] text-white font-bold shadow-sm";
+        } else {
+          button.className = "filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]";
+        }
+      });
+    }
+
+    async function loadOrders() {
+      const loadingState = document.getElementById("loading-state");
+      const errorState = document.getElementById("error-state");
+      const board = document.getElementById("board");
+      const lastUpdated = document.getElementById("last-updated");
+
+      loadingState.classList.remove("hidden");
+      errorState.classList.add("hidden");
+      board.classList.add("hidden");
+
+      try {
+        const response = await fetch(DATA_URL, { cache: "no-store" });
+
+        if (!response.ok) {
+          throw new Error(`Failed to load data: ${response.status}`);
+        }
+
+        const data = await response.json();
+        allOrders = Array.isArray(data.orders) ? data.orders : [];
+        lastUpdated.textContent = formatDateTime(data.generatedAt);
+
+        renderBoard();
+
+        loadingState.classList.add("hidden");
+        board.classList.remove("hidden");
+      } catch (error) {
+        console.error(error);
+        loadingState.classList.add("hidden");
+        errorState.classList.remove("hidden");
+        lastUpdated.textContent = "Unavailable";
+      }
+    }
+
+    document.getElementById("search-input").addEventListener("input", (event) => {
+      searchTerm = event.target.value.trim();
+      renderBoard();
+    });
+
+    document.querySelectorAll(".filter-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        setActiveFilterButton();
+        renderBoard();
+      });
+    });
+
+    setActiveFilterButton();
+    loadOrders();
+  </script>
+</body>
+</html>
