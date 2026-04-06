@@ -305,7 +305,7 @@
           <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="In Production">
             In Production
           </button>
-          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Ready">
+          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Ready for Pickup">
             Ready
           </button>
         </div>
@@ -321,7 +321,7 @@
         </div>
 
         <div id="board" class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-          <div class="status-column">
+          <div class="status-column order-2 xl:order-1">
             <div class="column-header mb-2 flex items-center justify-between">
               <h3 class="column-title text-base sm:text-lg font-extrabold text-[#003466]">Order Received</h3>
               <span id="count-order-received" class="column-count text-sm font-bold text-[#007c9e]">0</span>
@@ -329,7 +329,7 @@
             <div id="col-order-received" class="space-y-2.5"></div>
           </div>
 
-          <div class="status-column">
+          <div class="status-column order-3 xl:order-2">
             <div class="column-header mb-2 flex items-center justify-between">
               <h3 class="column-title text-base sm:text-lg font-extrabold text-[#003466]">In Queue</h3>
               <span id="count-in-queue" class="column-count text-sm font-bold text-[#007c9e]">0</span>
@@ -337,7 +337,7 @@
             <div id="col-in-queue" class="space-y-2.5"></div>
           </div>
 
-          <div class="status-column">
+          <div class="status-column order-4 xl:order-3">
             <div class="column-header mb-2 flex items-center justify-between">
               <h3 class="column-title text-base sm:text-lg font-extrabold text-[#003466]">In Production</h3>
               <span id="count-in-production" class="column-count text-sm font-bold text-[#007c9e]">0</span>
@@ -345,22 +345,24 @@
             <div id="col-in-production" class="space-y-2.5"></div>
           </div>
 
-<div class="status-column status-column-ready">
-  <div class="column-header mb-2">
-    <div class="flex items-center justify-between">
-      <h3 class="column-title text-base sm:text-lg font-extrabold">
-        Ready
-      </h3>
-      <span id="count-ready-for-pickup" class="column-count font-bold">0</span>
-    </div>
+          <div class="status-column status-column-ready order-1 xl:order-4">
+            <div class="column-header mb-2">
+              <div class="flex items-center justify-between">
+                <h3 class="column-title text-base sm:text-lg font-extrabold">
+                  Ready
+                </h3>
+                <span id="count-ready-for-pickup" class="column-count font-bold">0</span>
+              </div>
 
-    <p class="text-xs font-semibold text-green-700 mt-1">
-      Ready? Come grab it 🤘
-    </p>
-  </div>
+              <p class="text-xs font-semibold text-green-700 mt-1">
+                Ready to go 🤘
+              </p>
+            </div>
 
-  <div id="col-ready-for-pickup" class="space-y-2.5"></div>
-</div>
+            <div id="col-ready-for-pickup" class="space-y-2.5"></div>
+          </div>
+        </div>
+      </section>
 
       <section class="mt-8">
         <div class="p-4 border border-gray-200 rounded-2xl bg-white">
@@ -419,9 +421,11 @@
         className: "status-in-production"
       },
       {
-        name: "Ready",
+        name: "Ready for Pickup",
+        display: "Ready",
         key: "ready-for-pickup",
-        className: "status-ready-for-pickup"
+        className: "status-ready-for-pickup",
+        tooltip: "Ready for Pickup / Delivery"
       }
     ];
 
@@ -462,6 +466,8 @@
 
     function createOrderCard(order) {
       const statusInfo = getStatusConfig(order.status);
+      const displayStatus = statusInfo.display || order.status;
+      const tooltip = statusInfo.tooltip ? ` title="${escapeHtml(statusInfo.tooltip)}"` : "";
 
       return `
         <article class="order-card">
@@ -472,8 +478,8 @@
             ${escapeHtml(order.customer)}
           </h4>
           <div class="mt-3">
-            <span class="status-pill ${statusInfo.className}">
-              ${escapeHtml(order.status)}
+            <span class="status-pill ${statusInfo.className}"${tooltip}>
+              ${escapeHtml(displayStatus)}
             </span>
           </div>
         </article>
@@ -500,7 +506,10 @@
       const haystack = [
         order.orderNumber,
         order.customer,
-        order.status
+        order.status,
+        ...(STATUS_CONFIG
+          .filter((status) => status.name === order.status && status.display)
+          .map((status) => status.display))
       ].join(" ").toLowerCase();
 
       return haystack.includes(searchTerm.toLowerCase());
