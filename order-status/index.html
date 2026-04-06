@@ -3,7 +3,7 @@
   Purpose: Public order status dashboard for 843 Teez
   Data: /order-status/data/order-status.json (auto-generated)
   Maintained by: GrizzBuilt LLC
- Last Updated: 2026-04-06
+  Last Updated: 2026-04-06
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -145,6 +145,37 @@
     .status-ready-for-pickup{
       background:#dcfce7;
       color:#166534;
+      box-shadow:0 0 0 2px rgba(34,197,94,0.18) inset;
+    }
+
+    .status-column-ready .column-header{
+      background:linear-gradient(135deg, rgba(220,252,231,0.95), rgba(187,247,208,0.95));
+      border:1px solid rgba(34,197,94,0.28);
+      box-shadow:0 8px 20px rgba(34,197,94,0.12);
+      border-radius:1rem;
+      padding:.8rem .9rem;
+    }
+
+    .status-column-ready .column-title{
+      color:#166534;
+    }
+
+    .status-column-ready .column-count{
+      background:#166534;
+      color:#fff;
+      min-width:1.9rem;
+      height:1.9rem;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:9999px;
+      font-size:.8rem;
+      box-shadow:0 6px 14px rgba(22,101,52,0.2);
+    }
+
+    .status-column-ready .order-card{
+      border-color:#86efac;
+      box-shadow:0 6px 18px rgba(34,197,94,0.12);
     }
 
     .empty-column{
@@ -155,6 +186,21 @@
       color:#64748b;
       font-size:.9rem;
       text-align:center;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .status-column-ready .column-header{
+        animation: readyPulse 2.4s ease-in-out infinite;
+      }
+
+      @keyframes readyPulse {
+        0%, 100% {
+          box-shadow:0 8px 20px rgba(34,197,94,0.10);
+        }
+        50% {
+          box-shadow:0 10px 24px rgba(34,197,94,0.22);
+        }
+      }
     }
   </style>
 </head>
@@ -218,50 +264,29 @@
     </header>
 
     <main id="main">
-      <section class="mb-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
-          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-            <p class="text-sm font-extrabold text-[#003466]">How to use this page</p>
-            <p class="text-sm text-gray-600 mt-1">
-              Find your order by order number and customer name.
-            </p>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-            <p class="text-sm font-extrabold text-[#003466]">Need help?</p>
-            <p class="text-sm text-gray-600 mt-1">
-              Need to ask about your order, pickup, or artwork? Reach out and we’ll help.
-            </p>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-            <p class="text-sm font-extrabold text-[#003466]">Last updated</p>
-            <p id="last-updated" class="text-sm text-gray-600 mt-1">
-              Loading...
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section class="mb-5">
         <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
-          <div class="flex flex-col lg:flex-row gap-3 lg:items-center lg:justify-between">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div>
               <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">Find Your Order</h2>
               <p class="text-sm text-gray-600 mt-1">
-                Search by order number, customer name, or status.
+                Search by order number or name.
               </p>
             </div>
 
-            <div class="w-full lg:max-w-md">
-              <label for="search-input" class="sr-only">Search orders</label>
-              <input
-                id="search-input"
-                type="text"
-                placeholder="Search order number, customer, or status..."
-                class="w-full border border-gray-200 rounded-xl px-4 py-2.5 bg-white outline-none focus:border-[#007c9e] focus:ring-4 focus:ring-cyan-100"
-              />
-            </div>
+            <p class="text-xs text-gray-500 sm:text-right">
+              Updated: <span id="last-updated">Loading...</span>
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <label for="search-input" class="sr-only">Search orders</label>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search order number, customer, or status..."
+              class="w-full border border-gray-200 rounded-xl px-4 py-2.5 bg-white outline-none focus:border-[#007c9e] focus:ring-4 focus:ring-cyan-100"
+            />
           </div>
         </div>
       </section>
@@ -297,33 +322,33 @@
 
         <div id="board" class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           <div class="status-column">
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">Order Received</h3>
-              <span id="count-order-received" class="text-sm font-bold text-[#007c9e]">0</span>
+            <div class="column-header mb-2 flex items-center justify-between">
+              <h3 class="column-title text-base sm:text-lg font-extrabold text-[#003466]">Order Received</h3>
+              <span id="count-order-received" class="column-count text-sm font-bold text-[#007c9e]">0</span>
             </div>
             <div id="col-order-received" class="space-y-2.5"></div>
           </div>
 
           <div class="status-column">
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">In Queue</h3>
-              <span id="count-in-queue" class="text-sm font-bold text-[#007c9e]">0</span>
+            <div class="column-header mb-2 flex items-center justify-between">
+              <h3 class="column-title text-base sm:text-lg font-extrabold text-[#003466]">In Queue</h3>
+              <span id="count-in-queue" class="column-count text-sm font-bold text-[#007c9e]">0</span>
             </div>
             <div id="col-in-queue" class="space-y-2.5"></div>
           </div>
 
           <div class="status-column">
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">In Production</h3>
-              <span id="count-in-production" class="text-sm font-bold text-[#007c9e]">0</span>
+            <div class="column-header mb-2 flex items-center justify-between">
+              <h3 class="column-title text-base sm:text-lg font-extrabold text-[#003466]">In Production</h3>
+              <span id="count-in-production" class="column-count text-sm font-bold text-[#007c9e]">0</span>
             </div>
             <div id="col-in-production" class="space-y-2.5"></div>
           </div>
 
-          <div class="status-column">
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">Ready for Pickup</h3>
-              <span id="count-ready-for-pickup" class="text-sm font-bold text-[#007c9e]">0</span>
+          <div class="status-column status-column-ready">
+            <div class="column-header mb-2 flex items-center justify-between">
+              <h3 class="column-title text-base sm:text-lg font-extrabold">Ready for Pickup</h3>
+              <span id="count-ready-for-pickup" class="column-count font-bold">0</span>
             </div>
             <div id="col-ready-for-pickup" class="space-y-2.5"></div>
           </div>
@@ -347,8 +372,8 @@
               <p class="text-gray-600 mt-1">We’re actively working on it.</p>
             </div>
             <div>
-              <p class="font-bold text-[#003466]">Ready for Pickup</p>
-              <p class="text-gray-600 mt-1">Your order is ready.</p>
+              <p class="font-bold text-[#166534]">Ready for Pickup</p>
+              <p class="text-gray-600 mt-1">Your order is ready and good to go.</p>
             </div>
           </div>
         </div>
