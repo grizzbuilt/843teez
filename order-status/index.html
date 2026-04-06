@@ -1,3 +1,10 @@
+<!--
+  File: order-status/index.html
+  Purpose: Public order status dashboard for 843 Teez
+  Data: /order-status/data/order-status.json (auto-generated)
+  Maintained by: GrizzBuilt LLC
+ Last Updated: 2026-04-06
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +14,17 @@
 
   <title>Order Status | 843 Teez</title>
   <link rel="canonical" href="https://843teez.com/order-status/" />
-  <meta name="description" content="Check your 843 Teez order status. View customer-friendly production updates for current custom apparel orders." />
+  <meta name="description" content="Check your 843 Teez order status and see where your order is in the process." />
 
   <meta property="og:title" content="Order Status | 843 Teez" />
-  <meta property="og:description" content="Check the status of your current 843 Teez custom apparel order." />
+  <meta property="og:description" content="Check where your 843 Teez order is in the process." />
   <meta property="og:url" content="https://843teez.com/order-status/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://843teez.com/843teez.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Order Status | 843 Teez" />
-  <meta name="twitter:description" content="Check the status of your current 843 Teez custom apparel order." />
+  <meta name="twitter:description" content="Check where your 843 Teez order is in the process." />
   <meta name="twitter:image" content="https://843teez.com/843teez.png" />
 
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -96,14 +103,14 @@
     }
 
     .status-column{
-      min-height: 220px;
+      min-height:180px;
     }
 
     .order-card{
       background:#fff;
       border:1px solid #e5e7eb;
       border-radius:1rem;
-      padding:1rem;
+      padding:.85rem .9rem;
       box-shadow:0 1px 3px rgba(0,0,0,0.06);
     }
 
@@ -111,12 +118,13 @@
       display:inline-flex;
       align-items:center;
       gap:.4rem;
-      padding:.35rem .7rem;
+      padding:.32rem .65rem;
       border-radius:9999px;
-      font-size:.75rem;
+      font-size:.7rem;
       font-weight:800;
       letter-spacing:.02em;
       text-transform:uppercase;
+      line-height:1;
     }
 
     .status-order-received{
@@ -139,32 +147,27 @@
       color:#166534;
     }
 
-    .status-completed{
-      background:#e5e7eb;
-      color:#374151;
-    }
-
     .empty-column{
       border:1px dashed #cbd5e1;
       border-radius:1rem;
       background:rgba(255,255,255,0.55);
-      padding:1rem;
+      padding:.9rem;
       color:#64748b;
-      font-size:.95rem;
+      font-size:.9rem;
       text-align:center;
     }
   </style>
 </head>
 
-<body class="min-h-screen p-4 sm:p-8 pt-16">
+<body class="min-h-screen p-4 sm:p-8 pt-10 sm:pt-14">
   <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
 
   <div
     id="main-content"
-    class="max-w-7xl mx-auto p-6 sm:p-10 md:p-12 rounded-2xl shadow-xl"
+    class="max-w-7xl mx-auto p-5 sm:p-8 md:p-10 rounded-2xl shadow-xl"
     style="background: rgba(240,247,250,0.94); border: 1px solid rgba(255,255,255,0.35);"
   >
-    <header class="text-center mb-10">
+    <header class="text-center mb-8">
       <a href="/" class="inline-block">
         <img
           src="https://843teez.com/843teezlogo.webp"
@@ -174,7 +177,7 @@
           "
           sizes="(max-width: 640px) 83vw, 320px"
           alt="843 Teez Logo"
-          class="max-w-xs mx-auto mb-4 w-5/6 h-auto"
+          class="max-w-[220px] sm:max-w-xs mx-auto mb-3 w-5/6 h-auto"
           loading="eager"
           fetchpriority="high"
           decoding="async"
@@ -192,19 +195,21 @@
       </h1>
 
       <p class="mt-4 text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-        This page shows customer-friendly status updates for active 843 Teez orders.
-        Updates are refreshed periodically throughout production.
+        Here’s a simple way to check where your 843 Teez order is in the process.
+      </p>
+      <p class="mt-2 text-sm sm:text-base font-semibold text-[#007c9e] max-w-2xl mx-auto">
+        Updates are posted as your order moves through the shop.
       </p>
 
-      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+      <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
         <a
-          class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
+          class="inline-block px-7 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700"
           href="/quote.html"
         >
           Need Another Order?
         </a>
         <a
-          class="inline-block px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
+          class="inline-block px-7 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md btn-primary"
           href="/"
         >
           Back to 843 Teez
@@ -213,36 +218,36 @@
     </header>
 
     <main id="main">
-      <section class="mb-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+      <section class="mb-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
             <p class="text-sm font-extrabold text-[#003466]">How to use this page</p>
-            <p class="text-sm text-gray-600 mt-2">
-              Find your order by order number and customer name. Statuses are simplified to make the production stage easier to understand.
+            <p class="text-sm text-gray-600 mt-1">
+              Find your order by order number and customer name.
             </p>
           </div>
 
-          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
             <p class="text-sm font-extrabold text-[#003466]">Need help?</p>
-            <p class="text-sm text-gray-600 mt-2">
-              If you have questions about your order, artwork, pickup timing, or changes, call or email us directly.
+            <p class="text-sm text-gray-600 mt-1">
+              Need to ask about your order, pickup, or artwork? Reach out and we’ll help.
             </p>
           </div>
 
-          <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
             <p class="text-sm font-extrabold text-[#003466]">Last updated</p>
-            <p id="last-updated" class="text-sm text-gray-600 mt-2">
+            <p id="last-updated" class="text-sm text-gray-600 mt-1">
               Loading...
             </p>
           </div>
         </div>
       </section>
 
-      <section class="mb-8">
-        <div class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 shadow-sm">
+      <section class="mb-5">
+        <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
           <div class="flex flex-col lg:flex-row gap-3 lg:items-center lg:justify-between">
             <div>
-              <h2 class="text-xl font-extrabold text-[#003466]">Find Your Order</h2>
+              <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">Find Your Order</h2>
               <p class="text-sm text-gray-600 mt-1">
                 Search by order number, customer name, or status.
               </p>
@@ -254,15 +259,15 @@
                 id="search-input"
                 type="text"
                 placeholder="Search order number, customer, or status..."
-                class="w-full border border-gray-200 rounded-xl px-4 py-3 bg-white outline-none focus:border-[#007c9e] focus:ring-4 focus:ring-cyan-100"
+                class="w-full border border-gray-200 rounded-xl px-4 py-2.5 bg-white outline-none focus:border-[#007c9e] focus:ring-4 focus:ring-cyan-100"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="mb-6">
-        <div class="flex flex-wrap gap-3">
+      <section class="mb-5">
+        <div class="flex flex-wrap gap-2.5">
           <button class="filter-btn px-4 py-2 rounded-xl bg-[#003466] text-white font-bold shadow-sm" data-filter="All">
             All
           </button>
@@ -278,94 +283,79 @@
           <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Ready for Pickup">
             Ready for Pickup
           </button>
-          <button class="filter-btn px-4 py-2 rounded-xl bg-white border border-gray-200 text-[#003466] font-bold shadow-sm hover:text-[#007c9e]" data-filter="Completed">
-            Completed
-          </button>
         </div>
       </section>
 
       <section>
-        <div id="loading-state" class="text-center py-10 text-gray-600 font-medium">
+        <div id="loading-state" class="text-center py-8 text-gray-600 font-medium">
           Loading order statuses...
         </div>
 
         <div id="error-state" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-2xl p-5">
-          We couldn’t load the order status data right now. Please try again in a little bit, or contact us directly if you need an update.
+          We couldn’t load the order status right now. Give it a little bit and try again, or reach out if you need help.
         </div>
 
-        <div id="board" class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5">
+        <div id="board" class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           <div class="status-column">
-            <div class="mb-3 flex items-center justify-between">
-              <h3 class="text-lg font-extrabold text-[#003466]">Order Received</h3>
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">Order Received</h3>
               <span id="count-order-received" class="text-sm font-bold text-[#007c9e]">0</span>
             </div>
-            <div id="col-order-received" class="space-y-3"></div>
+            <div id="col-order-received" class="space-y-2.5"></div>
           </div>
 
           <div class="status-column">
-            <div class="mb-3 flex items-center justify-between">
-              <h3 class="text-lg font-extrabold text-[#003466]">In Queue</h3>
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">In Queue</h3>
               <span id="count-in-queue" class="text-sm font-bold text-[#007c9e]">0</span>
             </div>
-            <div id="col-in-queue" class="space-y-3"></div>
+            <div id="col-in-queue" class="space-y-2.5"></div>
           </div>
 
           <div class="status-column">
-            <div class="mb-3 flex items-center justify-between">
-              <h3 class="text-lg font-extrabold text-[#003466]">In Production</h3>
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">In Production</h3>
               <span id="count-in-production" class="text-sm font-bold text-[#007c9e]">0</span>
             </div>
-            <div id="col-in-production" class="space-y-3"></div>
+            <div id="col-in-production" class="space-y-2.5"></div>
           </div>
 
           <div class="status-column">
-            <div class="mb-3 flex items-center justify-between">
-              <h3 class="text-lg font-extrabold text-[#003466]">Ready for Pickup</h3>
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-base sm:text-lg font-extrabold text-[#003466]">Ready for Pickup</h3>
               <span id="count-ready-for-pickup" class="text-sm font-bold text-[#007c9e]">0</span>
             </div>
-            <div id="col-ready-for-pickup" class="space-y-3"></div>
-          </div>
-
-          <div class="status-column">
-            <div class="mb-3 flex items-center justify-between">
-              <h3 class="text-lg font-extrabold text-[#003466]">Completed</h3>
-              <span id="count-completed" class="text-sm font-bold text-[#007c9e]">0</span>
-            </div>
-            <div id="col-completed" class="space-y-3"></div>
+            <div id="col-ready-for-pickup" class="space-y-2.5"></div>
           </div>
         </div>
       </section>
 
-      <section class="mt-10">
-        <div class="p-5 border border-gray-200 rounded-2xl bg-white">
-          <h2 class="text-xl font-extrabold text-[#003466]">What the statuses mean</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 mt-4 text-sm">
+      <section class="mt-8">
+        <div class="p-4 border border-gray-200 rounded-2xl bg-white">
+          <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">What the statuses mean</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-4 text-sm">
             <div>
               <p class="font-bold text-[#003466]">Order Received</p>
-              <p class="text-gray-600 mt-1">We have your order and it is in our system.</p>
+              <p class="text-gray-600 mt-1">We’ve got your order and it’s in the system.</p>
             </div>
             <div>
               <p class="font-bold text-[#003466]">In Queue</p>
-              <p class="text-gray-600 mt-1">Your order is lined up and getting closer to production.</p>
+              <p class="text-gray-600 mt-1">Your order is lined up and waiting its turn in the shop.</p>
             </div>
             <div>
               <p class="font-bold text-[#003466]">In Production</p>
-              <p class="text-gray-600 mt-1">We are actively printing, pressing, or finishing your order.</p>
+              <p class="text-gray-600 mt-1">We’re actively working on it.</p>
             </div>
             <div>
               <p class="font-bold text-[#003466]">Ready for Pickup</p>
-              <p class="text-gray-600 mt-1">Your order is ready for pickup or final handoff.</p>
-            </div>
-            <div>
-              <p class="font-bold text-[#003466]">Completed</p>
-              <p class="text-gray-600 mt-1">Your order has already been picked up or completed.</p>
+              <p class="text-gray-600 mt-1">Your order is ready.</p>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
+    <footer class="text-center mt-10 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
       <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" rel="noopener" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
       <p>Woman & veteran-owned local apparel.</p>
       <p>&copy; 2026 843 Teez™. All rights reserved. Made in Conway, SC.</p>
@@ -400,11 +390,6 @@
         name: "Ready for Pickup",
         key: "ready-for-pickup",
         className: "status-ready-for-pickup"
-      },
-      {
-        name: "Completed",
-        key: "completed",
-        className: "status-completed"
       }
     ];
 
@@ -448,13 +433,13 @@
 
       return `
         <article class="order-card">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <p class="text-xs font-bold uppercase tracking-wide text-[#007c9e]">Order #${escapeHtml(order.orderNumber)}</p>
-              <h4 class="text-lg font-extrabold text-[#003466] mt-1">${escapeHtml(order.customer)}</h4>
-            </div>
-          </div>
-          <div class="mt-4">
+          <p class="text-[11px] font-bold uppercase tracking-wide text-[#007c9e]">
+            Order #${escapeHtml(order.orderNumber)}
+          </p>
+          <h4 class="text-base font-extrabold text-[#003466] mt-1">
+            ${escapeHtml(order.customer)}
+          </h4>
+          <div class="mt-3">
             <span class="status-pill ${statusInfo.className}">
               ${escapeHtml(order.status)}
             </span>
@@ -464,6 +449,12 @@
     }
 
     function matchesFilters(order) {
+      const allowedStatuses = STATUS_CONFIG.map((status) => status.name);
+
+      if (!allowedStatuses.includes(order.status)) {
+        return false;
+      }
+
       const matchesStatus = activeFilter === "All" || order.status === activeFilter;
 
       if (!matchesStatus) {
@@ -495,7 +486,7 @@
         count.textContent = items.length;
 
         if (items.length === 0) {
-          column.innerHTML = `<div class="empty-column">No orders in this stage.</div>`;
+          column.innerHTML = `<div class="empty-column">No orders here right now.</div>`;
           return;
         }
 
