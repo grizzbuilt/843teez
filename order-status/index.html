@@ -188,6 +188,82 @@
       font-size:.92rem;
     }
 
+    .recently-completed-shell{
+      border:1px solid rgba(14,116,144,0.14);
+      border-radius:1.25rem;
+      background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(240,249,255,0.96));
+      box-shadow:0 10px 30px rgba(2,132,199,0.08);
+      overflow:hidden;
+    }
+
+    .recently-completed-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:1rem;
+      padding:1rem 1rem .9rem;
+      border-bottom:1px solid rgba(203,213,225,0.8);
+    }
+
+    .recently-completed-title-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:.3rem;
+    }
+
+    .recently-completed-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:.45rem;
+      width:max-content;
+      padding:.34rem .62rem;
+      border-radius:9999px;
+      background:#dbeafe;
+      color:#1d4ed8;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.03em;
+      text-transform:uppercase;
+    }
+
+    .recently-completed-toggle{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      padding:.72rem .95rem;
+      border:1px solid #cbd5e1;
+      border-radius:.95rem;
+      background:#fff;
+      color:#003466;
+      font-weight:800;
+      box-shadow:0 1px 3px rgba(0,0,0,0.05);
+      transition:background-color .2s ease, border-color .2s ease, transform .2s ease;
+      white-space:nowrap;
+    }
+
+    .recently-completed-toggle:hover{
+      background:#f8fafc;
+      border-color:#94a3b8;
+    }
+
+    .recently-completed-toggle-icon{
+      transition:transform .2s ease;
+      display:inline-block;
+    }
+
+    .recently-completed-toggle[aria-expanded="true"] .recently-completed-toggle-icon{
+      transform:rotate(180deg);
+    }
+
+    .recently-completed-body{
+      padding:1rem;
+    }
+
+    .recently-completed-body.hidden{
+      display:none;
+    }
+
     .status-column-ready .column-header{
       background:linear-gradient(135deg, rgba(220,252,231,0.95), rgba(187,247,208,0.95));
       border:1px solid rgba(34,197,94,0.28);
@@ -226,6 +302,17 @@
       color:#64748b;
       font-size:.9rem;
       text-align:center;
+    }
+
+    @media (max-width: 639px) {
+      .recently-completed-header{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .recently-completed-toggle{
+        width:100%;
+      }
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -418,24 +505,36 @@
       </section>
 
       <section id="recently-completed-section" class="mt-8 hidden">
-        <div class="p-4 border border-gray-200 rounded-2xl bg-white shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div>
-              <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">Recently Completed</h2>
-              <p class="text-sm text-gray-600 mt-1">
-                Finished orders.
-              </p>
-              <p class="trust-booster">
-                Real orders. Real people. Real work getting done.
-              </p>
+        <div class="recently-completed-shell">
+          <div class="recently-completed-header">
+            <div class="recently-completed-title-wrap">
+              <span class="recently-completed-kicker">Recently Completed</span>
+              <div>
+                <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">Freshly finished orders</h2>
+                <p class="text-sm text-gray-600 mt-1">
+                  Finished orders so they don’t just disappear from Ready.
+                </p>
+                <p class="trust-booster">
+                  Real orders. Real people. Real work getting done.
+                </p>
+              </div>
             </div>
 
-            <p class="text-xs text-gray-500 sm:text-right">
-              Showing: <span id="recently-completed-count">0</span>
-            </p>
+            <button
+              id="recently-completed-toggle"
+              type="button"
+              class="recently-completed-toggle"
+              aria-expanded="true"
+              aria-controls="recently-completed-body"
+            >
+              <span>Showing <span id="recently-completed-count">0</span></span>
+              <span class="recently-completed-toggle-icon">⌃</span>
+            </button>
           </div>
 
-          <div id="recently-completed-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4"></div>
+          <div id="recently-completed-body" class="recently-completed-body">
+            <div id="recently-completed-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+          </div>
         </div>
       </section>
 
@@ -511,6 +610,7 @@
     let recentlyCompleted = [];
     let activeFilter = "All";
     let searchTerm = "";
+    let recentlyCompletedCollapsed = false;
 
     function formatDateTime(isoString) {
       if (!isoString) return "Unavailable";
@@ -676,6 +776,38 @@
       return haystack.includes(searchTerm.toLowerCase());
     }
 
+    function syncRecentlyCompletedCollapseUi() {
+      const toggle = document.getElementById("recently-completed-toggle");
+      const body = document.getElementById("recently-completed-body");
+
+      if (!toggle || !body) {
+        return;
+      }
+
+      toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
+
+      if (recentlyCompletedCollapsed) {
+        body.classList.add("hidden");
+      } else {
+        body.classList.remove("hidden");
+      }
+    }
+
+    function bindRecentlyCompletedToggle() {
+      const toggle = document.getElementById("recently-completed-toggle");
+
+      if (!toggle || toggle.dataset.bound === "true") {
+        return;
+      }
+
+      toggle.dataset.bound = "true";
+
+      toggle.addEventListener("click", () => {
+        recentlyCompletedCollapsed = !recentlyCompletedCollapsed;
+        syncRecentlyCompletedCollapseUi();
+      });
+    }
+
     function renderRecentlyCompleted() {
       const section = document.getElementById("recently-completed-section");
       const list = document.getElementById("recently-completed-list");
@@ -693,6 +825,9 @@
 
       section.classList.remove("hidden");
       list.innerHTML = visibleCompleted.map(createCompletedCard).join("");
+
+      bindRecentlyCompletedToggle();
+      syncRecentlyCompletedCollapseUi();
     }
 
     function renderBoard() {
@@ -751,6 +886,7 @@
         recentlyCompleted = Array.isArray(data.recentlyCompleted) ? data.recentlyCompleted : [];
         lastUpdated.textContent = formatDateTime(data.generatedAt);
 
+        recentlyCompletedCollapsed = false;
         renderBoard();
 
         loadingState.classList.add("hidden");
