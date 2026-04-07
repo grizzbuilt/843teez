@@ -1,17 +1,7 @@
 {
-  "generatedAt": "2026-04-07T14:30:01.619Z",
-  "count": 7,
+  "generatedAt": "2026-04-07T15:30:01.628Z",
+  "count": 5,
   "orders": [
-    {
-      "orderNumber": "2",
-      "customer": "C. Young",
-      "status": "Ready for Pickup"
-    },
-    {
-      "orderNumber": "33",
-      "customer": "American Jail Assoc",
-      "status": "Ready for Pickup"
-    },
     {
       "orderNumber": "40- REDO",
       "customer": "Olde Saratoga Stave Drum",
