@@ -149,15 +149,43 @@
     }
 
     .status-completed{
-      background:#dbeafe;
-      color:#1d4ed8;
+      background:#e2e8f0;
+      color:#334155;
     }
 
     .completed-meta{
-      margin-top:.45rem;
-      font-size:.75rem;
+      margin-top:.55rem;
+      font-size:.8rem;
       color:#64748b;
+      font-weight:600;
+    }
+
+    .just-finished-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:.35rem;
+      margin-top:.55rem;
+      padding:.28rem .55rem;
+      border-radius:9999px;
+      font-size:.68rem;
+      font-weight:800;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+      background:linear-gradient(135deg, #fef3c7, #fde68a);
+      color:#92400e;
+      box-shadow:0 0 0 1px rgba(217,119,6,0.12) inset;
+    }
+
+    .completed-card-just-finished{
+      border-color:#fcd34d;
+      box-shadow:0 8px 22px rgba(245,158,11,0.16);
+    }
+
+    .trust-booster{
+      margin-top:.45rem;
+      color:#007c9e;
       font-weight:700;
+      font-size:.92rem;
     }
 
     .status-column-ready .column-header{
@@ -200,164 +228,13 @@
       text-align:center;
     }
 
-    .completed-archive{
-      max-width:880px;
-      margin:0 auto;
-      border:1px solid #cfe1f6;
-      border-radius:1rem;
-      background:linear-gradient(180deg, rgba(235,244,255,0.96), rgba(245,249,255,0.96));
-      box-shadow:0 10px 26px rgba(30,64,175,0.07);
-      overflow:hidden;
-      backdrop-filter:blur(4px);
-    }
-
-    .completed-archive-toggle{
-      width:100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-      text-align:left;
-      padding:.95rem 1rem;
-      background:transparent;
-      border:0;
-      cursor:pointer;
-    }
-
-    .completed-archive-toggle:hover{
-      background:rgba(255,255,255,0.35);
-    }
-
-    .completed-archive-left{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-      min-width:0;
-    }
-
-    .completed-archive-icon{
-      width:2.15rem;
-      height:2.15rem;
-      border-radius:9999px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:#dbeafe;
-      color:#1d4ed8;
-      font-weight:900;
-      font-size:1rem;
-      flex-shrink:0;
-      box-shadow:inset 0 0 0 1px rgba(29,78,216,0.12);
-    }
-
-    .completed-archive-title{
-      color:#1e3a8a;
-      font-size:1rem;
-      font-weight:900;
-      line-height:1.15;
-      letter-spacing:.01em;
-    }
-
-    .completed-archive-subtitle{
-      color:#5b6b84;
-      font-size:.82rem;
-      font-weight:600;
-      margin-top:.15rem;
-    }
-
-    .completed-archive-right{
-      display:flex;
-      align-items:center;
-      gap:.6rem;
-      flex-shrink:0;
-    }
-
-    .completed-archive-count{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:2rem;
-      height:2rem;
-      padding:0 .7rem;
-      border-radius:9999px;
-      background:#1d4ed8;
-      color:#fff;
-      font-size:.8rem;
-      font-weight:800;
-      box-shadow:0 6px 16px rgba(29,78,216,0.18);
-    }
-
-    .completed-archive-label{
-      color:#35507a;
-      font-size:.8rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.06em;
-    }
-
-    .completed-archive-chevron{
-      color:#1d4ed8;
-      font-size:1rem;
-      font-weight:900;
-      transition:transform .2s ease;
-    }
-
-    .completed-archive-toggle[aria-expanded="true"] .completed-archive-chevron{
-      transform:rotate(180deg);
-    }
-
-    .completed-archive-panel{
-      border-top:1px solid rgba(147,197,253,0.45);
-      padding:.85rem;
-      background:rgba(255,255,255,0.42);
-    }
-
-    .completed-archive-list{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:.65rem;
-    }
-
-    .completed-archive .order-card{
-      background:rgba(255,255,255,0.92);
-      border:1px solid #dbe7f5;
-      border-radius:.9rem;
-      padding:.7rem .8rem;
-      box-shadow:none;
-    }
-
-    .completed-archive .order-card h4{
-      font-size:.95rem;
-      line-height:1.2;
-    }
-
-    .completed-archive .order-card .status-pill{
-      font-size:.64rem;
-      padding:.28rem .58rem;
-    }
-
-    .completed-archive-note{
-      margin-top:.25rem;
-      color:#64748b;
-      font-size:.78rem;
-      font-weight:600;
-    }
-
-    @media (min-width: 640px){
-      .completed-archive-list{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (min-width: 1024px){
-      .completed-archive-list{
-        grid-template-columns:repeat(3, minmax(0, 1fr));
-      }
-    }
-
     @media (prefers-reduced-motion: no-preference) {
       .status-column-ready .column-header{
         animation: readyPulse 2.4s ease-in-out infinite;
+      }
+
+      .completed-card-just-finished{
+        animation: justFinishedPulse 2.2s ease-in-out infinite;
       }
 
       @keyframes readyPulse {
@@ -366,6 +243,15 @@
         }
         50% {
           box-shadow:0 10px 24px rgba(34,197,94,0.22);
+        }
+      }
+
+      @keyframes justFinishedPulse {
+        0%, 100% {
+          box-shadow:0 8px 22px rgba(245,158,11,0.12);
+        }
+        50% {
+          box-shadow:0 10px 26px rgba(245,158,11,0.24);
         }
       }
     }
@@ -532,37 +418,24 @@
       </section>
 
       <section id="recently-completed-section" class="mt-8 hidden">
-        <div class="completed-archive">
-          <button
-            id="recently-completed-toggle"
-            type="button"
-            class="completed-archive-toggle"
-            aria-expanded="false"
-            aria-controls="recently-completed-panel"
-          >
-            <div class="completed-archive-left">
-              <span class="completed-archive-icon" aria-hidden="true">✓</span>
-              <div>
-                <h2 class="completed-archive-title">Completed Archive</h2>
-                <p class="completed-archive-subtitle">
-                  Finished orders tucked away so Ready stays clean.
-                </p>
-              </div>
+        <div class="p-4 border border-gray-200 rounded-2xl bg-white shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">Recently Completed</h2>
+              <p class="text-sm text-gray-600 mt-1">
+                Finished orders so they don’t just disappear from Ready.
+              </p>
+              <p class="trust-booster">
+                Real orders. Real people. Real work getting done.
+              </p>
             </div>
 
-            <div class="completed-archive-right">
-              <span class="completed-archive-label" id="recently-completed-toggle-label">Show</span>
-              <span id="recently-completed-count" class="completed-archive-count">0</span>
-              <span class="completed-archive-chevron" aria-hidden="true">⌄</span>
-            </div>
-          </button>
-
-          <div id="recently-completed-panel" class="completed-archive-panel hidden">
-            <div id="recently-completed-list" class="completed-archive-list"></div>
-            <p class="completed-archive-note">
-              Recently finished orders stay here for a bit before aging out.
+            <p class="text-xs text-gray-500 sm:text-right">
+              Showing: <span id="recently-completed-count">0</span>
             </p>
           </div>
+
+          <div id="recently-completed-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4"></div>
         </div>
       </section>
 
@@ -605,6 +478,9 @@
 
   <script>
     const DATA_URL = "/order-status/data/order-status.json";
+    const RECENT_COMPLETED_LIMIT = 10;
+    const MOBILE_COMPLETED_LIMIT = 6;
+    const JUST_FINISHED_HOURS = 2;
 
     const STATUS_CONFIG = [
       {
@@ -635,7 +511,6 @@
     let recentlyCompleted = [];
     let activeFilter = "All";
     let searchTerm = "";
-    let completedExpanded = false;
 
     function formatDateTime(isoString) {
       if (!isoString) return "Unavailable";
@@ -668,6 +543,41 @@
       return STATUS_CONFIG.find((status) => status.name === statusName) || STATUS_CONFIG[0];
     }
 
+    function getCompletedTimestamp(order) {
+      const candidate = order.completedAt || order.updatedAt || order.createdAt;
+
+      if (!candidate) {
+        return 0;
+      }
+
+      const timestamp = new Date(candidate).getTime();
+      return Number.isNaN(timestamp) ? 0 : timestamp;
+    }
+
+    function isJustFinished(order) {
+      const completedTimestamp = getCompletedTimestamp(order);
+
+      if (!completedTimestamp) {
+        return false;
+      }
+
+      const ageMs = Date.now() - completedTimestamp;
+      return ageMs >= 0 && ageMs <= JUST_FINISHED_HOURS * 60 * 60 * 1000;
+    }
+
+    function getVisibleCompletedOrders() {
+      const filtered = recentlyCompleted
+        .filter(matchesCompletedSearch)
+        .sort((a, b) => getCompletedTimestamp(b) - getCompletedTimestamp(a))
+        .slice(0, RECENT_COMPLETED_LIMIT);
+
+      if (window.innerWidth < 640) {
+        return filtered.slice(0, MOBILE_COMPLETED_LIMIT);
+      }
+
+      return filtered;
+    }
+
     function createOrderCard(order) {
       const statusInfo = getStatusConfig(order.status);
       const displayStatus = statusInfo.display || order.status;
@@ -691,19 +601,30 @@
     }
 
     function createCompletedCard(order) {
+      const justFinished = isJustFinished(order);
+      const justFinishedClass = justFinished ? " completed-card-just-finished" : "";
+      const justFinishedBadge = justFinished
+        ? `
+          <div class="just-finished-badge">
+            🔥 Just Finished
+          </div>
+        `
+        : "";
+
       return `
-        <article class="order-card">
+        <article class="order-card${justFinishedClass}">
           <p class="text-[11px] font-bold uppercase tracking-wide text-[#007c9e]">
             Order #${escapeHtml(order.orderNumber)}
           </p>
           <h4 class="text-base font-extrabold text-[#003466] mt-1">
             ${escapeHtml(order.customer)}
           </h4>
-          <div class="mt-2.5">
+          <div class="mt-3">
             <span class="status-pill status-completed">
               Completed
             </span>
           </div>
+          ${justFinishedBadge}
           <p class="completed-meta">
             Finished: ${escapeHtml(formatDateTime(order.completedAt || order.updatedAt || order.createdAt))}
           </p>
@@ -755,39 +676,23 @@
       return haystack.includes(searchTerm.toLowerCase());
     }
 
-    function setCompletedExpanded(expanded) {
-      completedExpanded = expanded;
-
-      const toggle = document.getElementById("recently-completed-toggle");
-      const panel = document.getElementById("recently-completed-panel");
-      const label = document.getElementById("recently-completed-toggle-label");
-
-      toggle.setAttribute("aria-expanded", String(expanded));
-      panel.classList.toggle("hidden", !expanded);
-      label.textContent = expanded ? "Hide" : "Show";
-    }
-
     function renderRecentlyCompleted() {
       const section = document.getElementById("recently-completed-section");
       const list = document.getElementById("recently-completed-list");
       const count = document.getElementById("recently-completed-count");
 
-      const filteredCompleted = recentlyCompleted.filter(matchesCompletedSearch);
+      const visibleCompleted = getVisibleCompletedOrders();
 
-      count.textContent = filteredCompleted.length;
+      count.textContent = visibleCompleted.length;
 
-      if (filteredCompleted.length === 0) {
+      if (visibleCompleted.length === 0) {
         section.classList.add("hidden");
         list.innerHTML = "";
         return;
       }
 
       section.classList.remove("hidden");
-      list.innerHTML = filteredCompleted.map(createCompletedCard).join("");
-
-      if (searchTerm) {
-        setCompletedExpanded(true);
-      }
+      list.innerHTML = visibleCompleted.map(createCompletedCard).join("");
     }
 
     function renderBoard() {
@@ -871,12 +776,11 @@
       });
     });
 
-    document.getElementById("recently-completed-toggle").addEventListener("click", () => {
-      setCompletedExpanded(!completedExpanded);
+    window.addEventListener("resize", () => {
+      renderRecentlyCompleted();
     });
 
     setActiveFilterButton();
-    setCompletedExpanded(false);
     loadOrders();
   </script>
 </body>
