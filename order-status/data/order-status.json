@@ -1,31 +1,73 @@
 {
-  "generatedAt": "2026-04-07T15:30:01.628Z",
+  "generatedAt": "2026-04-07T15:58:24.795Z",
   "count": 5,
+  "completedCount": 3,
   "orders": [
     {
       "orderNumber": "40- REDO",
       "customer": "Olde Saratoga Stave Drum",
-      "status": "In Queue"
+      "status": "In Queue",
+      "createdAt": "2026-04-03 19:13:10",
+      "updatedAt": "2026-04-06 17:34:45",
+      "completedAt": null
     },
     {
       "orderNumber": "41",
       "customer": "Shinetime Soultions",
-      "status": "Ready for Pickup"
+      "status": "Ready for Pickup",
+      "createdAt": "2026-04-02 19:29:49",
+      "updatedAt": "2026-04-02 23:21:09",
+      "completedAt": null
     },
     {
       "orderNumber": "43",
       "customer": "Coastal Facility Svcs",
-      "status": "Order Received"
+      "status": "Order Received",
+      "createdAt": "2026-04-02 19:30:46",
+      "updatedAt": "2026-04-07 00:20:43",
+      "completedAt": null
     },
     {
       "orderNumber": "44",
       "customer": "McMillian Home Services",
-      "status": "In Production"
+      "status": "In Production",
+      "createdAt": "2026-04-02 19:31:55",
+      "updatedAt": "2026-04-07 12:13:12",
+      "completedAt": null
     },
     {
       "orderNumber": "47",
       "customer": "DAX Hauling and Services",
-      "status": "Order Received"
+      "status": "Order Received",
+      "createdAt": "2026-04-06 23:43:27",
+      "updatedAt": "2026-04-06 23:43:27",
+      "completedAt": null
+    }
+  ],
+  "recentlyCompleted": [
+    {
+      "orderNumber": "33",
+      "customer": "American Jail Assoc",
+      "status": "Completed",
+      "createdAt": "2026-04-02 19:28:15",
+      "updatedAt": "2026-04-07 14:44:25",
+      "completedAt": "2026-04-07T14:44:25.657Z"
+    },
+    {
+      "orderNumber": "2",
+      "customer": "C. Young",
+      "status": "Completed",
+      "createdAt": "2026-04-04 12:30:53",
+      "updatedAt": "2026-04-07 14:44:13",
+      "completedAt": "2026-04-07T14:44:13.155Z"
+    },
+    {
+      "orderNumber": "1224",
+      "customer": "T. Stone (Test)",
+      "status": "Completed",
+      "createdAt": "2026-04-02 18:21:57",
+      "updatedAt": "2026-04-06 17:35:40",
+      "completedAt": "2026-04-02T19:28:46.621Z"
     }
   ]
 }
