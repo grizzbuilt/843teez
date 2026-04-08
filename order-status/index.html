@@ -248,20 +248,29 @@
     }
 
     .recently-completed-toggle-icon{
-      transition:transform .2s ease;
+      transition:transform .25s ease;
       display:inline-block;
     }
 
-    .recently-completed-toggle[aria-expanded="false"] .recently-completed-toggle-icon{
+    .recently-completed-toggle[aria-expanded="true"] .recently-completed-toggle-icon{
       transform:rotate(180deg);
     }
 
     .recently-completed-body{
       padding:1rem;
+      overflow:hidden;
+      max-height:2000px;
+      opacity:1;
+      transition:max-height .3s ease, opacity .25s ease, padding-top .25s ease, padding-bottom .25s ease;
     }
 
     .recently-completed-body.hidden{
-      display:none;
+      display:block;
+      max-height:0;
+      opacity:0;
+      padding-top:0;
+      padding-bottom:0;
+      overflow:hidden;
     }
 
     .status-column-ready .column-header{
@@ -511,7 +520,7 @@
               <span class="recently-completed-kicker">Recently Completed</span>
               <div>
                 <h2 class="text-lg sm:text-xl font-extrabold text-[#003466]">Freshly finished orders</h2>
-                              <p class="trust-booster">
+                <p class="trust-booster">
                   Real orders. Real people. Real work getting done.
                 </p>
               </div>
@@ -524,9 +533,7 @@
               aria-expanded="false"
               aria-controls="recently-completed-body"
             >
-              <span>Showing <span id="recently-completed-count">0</span></span<span id="recently-completed-label">
-             Showing <span id="recently-completed-count">0</span>
-              </span>
+              <span id="recently-completed-label">Hidden <span id="recently-completed-count">0</span></span>
               <span class="recently-completed-toggle-icon">⌃</span>
             </button>
           </div>
@@ -774,45 +781,26 @@
 
       return haystack.includes(searchTerm.toLowerCase());
     }
-function syncRecentlyCompletedCollapseUi() {
-  const toggle = document.getElementById("recently-completed-toggle");
-  const body = document.getElementById("recently-completed-body");
-  const label = document.getElementById("recently-completed-label");
 
-  if (!toggle || !body || !label) {
-    return;
-  }
+    function syncRecentlyCompletedCollapseUi() {
+      const toggle = document.getElementById("recently-completed-toggle");
+      const body = document.getElementById("recently-completed-body");
+      const label = document.getElementById("recently-completed-label");
 
-  toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
+      if (!toggle || !body || !label) {
+        return;
+      }
 
-  if (recentlyCompletedCollapsed) {
-    body.classList.add("hidden");
-    label.firstChild.textContent = "Hidden ";
-  } else {
-    body.classList.remove("hidden");
-    label.firstChild.textContent = "Showing ";
-  }
-}
+      toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
 
-  const count = countEl.textContent;
-
-  toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
-
-  if (recentlyCompletedCollapsed) {
-    body.classList.add("hidden");
-    toggle.innerHTML = `
-      <span>Hidden ${count}</span>
-      <span class="recently-completed-toggle-icon">⌃</span>
-    `;
-  } else {
-    body.classList.remove("hidden");
-    toggle.innerHTML = `
-      <span>Showing ${count}</span>
-      <span class="recently-completed-toggle-icon">⌃</span>
-    `;
-  }
-}
-
+      if (recentlyCompletedCollapsed) {
+        body.classList.add("hidden");
+        label.firstChild.textContent = "Hidden ";
+      } else {
+        body.classList.remove("hidden");
+        label.firstChild.textContent = "Showing ";
+      }
+    }
 
     function bindRecentlyCompletedToggle() {
       const toggle = document.getElementById("recently-completed-toggle");
@@ -836,6 +824,10 @@ function syncRecentlyCompletedCollapseUi() {
 
       const visibleCompleted = getVisibleCompletedOrders();
 
+      if (!section || !list || !count) {
+        return;
+      }
+
       count.textContent = visibleCompleted.length;
 
       if (visibleCompleted.length === 0) {
@@ -857,6 +849,10 @@ function syncRecentlyCompletedCollapseUi() {
       STATUS_CONFIG.forEach((status) => {
         const column = document.getElementById(`col-${status.key}`);
         const count = document.getElementById(`count-${status.key}`);
+
+        if (!column || !count) {
+          return;
+        }
 
         const items = filteredOrders.filter((order) => order.status === status.name);
 
@@ -891,6 +887,10 @@ function syncRecentlyCompletedCollapseUi() {
       const board = document.getElementById("board");
       const lastUpdated = document.getElementById("last-updated");
 
+      if (!loadingState || !errorState || !board || !lastUpdated) {
+        return;
+      }
+
       loadingState.classList.remove("hidden");
       errorState.classList.add("hidden");
       board.classList.add("hidden");
@@ -920,7 +920,7 @@ function syncRecentlyCompletedCollapseUi() {
       }
     }
 
-    document.getElementById("search-input").addEventListener("input", (event) => {
+    document.getElementById("search-input")?.addEventListener("input", (event) => {
       searchTerm = event.target.value.trim();
       renderBoard();
     });
