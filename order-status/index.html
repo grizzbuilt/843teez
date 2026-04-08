@@ -252,7 +252,7 @@
       display:inline-block;
     }
 
-    .recently-completed-toggle[aria-expanded="true"] .recently-completed-toggle-icon{
+    .recently-completed-toggle[aria-expanded="false"] .recently-completed-toggle-icon{
       transform:rotate(180deg);
     }
 
@@ -883,7 +883,7 @@
         recentlyCompleted = Array.isArray(data.recentlyCompleted) ? data.recentlyCompleted : [];
         lastUpdated.textContent = formatDateTime(data.generatedAt);
 
-        recentlyCompletedCollapsed = false;
+        recentlyCompletedCollapsed = true;
         renderBoard();
 
         loadingState.classList.add("hidden");
