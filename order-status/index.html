@@ -524,7 +524,9 @@
               aria-expanded="false"
               aria-controls="recently-completed-body"
             >
-              <span>Showing <span id="recently-completed-count">0</span></span>
+              <span>Showing <span id="recently-completed-count">0</span></span<span id="recently-completed-label">
+             Showing <span id="recently-completed-count">0</span>
+              </span>
               <span class="recently-completed-toggle-icon">⌃</span>
             </button>
           </div>
@@ -775,11 +777,22 @@
 function syncRecentlyCompletedCollapseUi() {
   const toggle = document.getElementById("recently-completed-toggle");
   const body = document.getElementById("recently-completed-body");
-  const countEl = document.getElementById("recently-completed-count");
+  const label = document.getElementById("recently-completed-label");
 
-  if (!toggle || !body || !countEl) {
+  if (!toggle || !body || !label) {
     return;
   }
+
+  toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
+
+  if (recentlyCompletedCollapsed) {
+    body.classList.add("hidden");
+    label.firstChild.textContent = "Hidden ";
+  } else {
+    body.classList.remove("hidden");
+    label.firstChild.textContent = "Showing ";
+  }
+}
 
   const count = countEl.textContent;
 
