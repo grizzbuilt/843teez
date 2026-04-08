@@ -683,7 +683,6 @@
 
       return filtered;
     }
-
 function createOrderCard(order) {
   const statusInfo = getStatusConfig(order.status);
   const displayStatus = statusInfo.display || order.status;
@@ -695,7 +694,7 @@ function createOrderCard(order) {
 
   const smsLink = `sms:+18437330212?body=${smsMessage}`;
 
-const showTextButton = order.status === "Ready for Pickup";
+  const showTextButton = statusInfo.key === "ready-for-pickup";
 
   return `
     <article class="order-card">
@@ -729,6 +728,7 @@ const showTextButton = order.status === "Ready for Pickup";
     </article>
   `;
 }
+
 
     function createCompletedCard(order) {
       const justFinished = isJustFinished(order);
