@@ -521,7 +521,7 @@
               id="recently-completed-toggle"
               type="button"
               class="recently-completed-toggle"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="recently-completed-body"
             >
               <span>Showing <span id="recently-completed-count">0</span></span>
@@ -529,7 +529,7 @@
             </button>
           </div>
 
-          <div id="recently-completed-body" class="recently-completed-body">
+          <div id="recently-completed-body" class="recently-completed-body hidden">
             <div id="recently-completed-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
           </div>
         </div>
@@ -607,7 +607,7 @@
     let recentlyCompleted = [];
     let activeFilter = "All";
     let searchTerm = "";
-    let recentlyCompletedCollapsed = false;
+    let recentlyCompletedCollapsed = true;
 
     function formatDateTime(isoString) {
       if (!isoString) return "Unavailable";
