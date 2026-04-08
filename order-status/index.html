@@ -684,27 +684,51 @@
       return filtered;
     }
 
-    function createOrderCard(order) {
-      const statusInfo = getStatusConfig(order.status);
-      const displayStatus = statusInfo.display || order.status;
-      const tooltip = statusInfo.tooltip ? ` title="${escapeHtml(statusInfo.tooltip)}"` : "";
+function createOrderCard(order) {
+  const statusInfo = getStatusConfig(order.status);
+  const displayStatus = statusInfo.display || order.status;
+  const tooltip = statusInfo.tooltip ? ` title="${escapeHtml(statusInfo.tooltip)}"` : "";
 
-      return `
-        <article class="order-card">
-          <p class="text-[11px] font-bold uppercase tracking-wide text-[#007c9e]">
-            Order #${escapeHtml(order.orderNumber)}
-          </p>
-          <h4 class="text-base font-extrabold text-[#003466] mt-1">
-            ${escapeHtml(order.customer)}
-          </h4>
-          <div class="mt-3">
-            <span class="status-pill ${statusInfo.className}"${tooltip}>
-              ${escapeHtml(displayStatus)}
-            </span>
-          </div>
-        </article>
-      `;
-    }
+  const smsMessage = encodeURIComponent(
+    `Hi 843 Teez, I have a question about Order #${order.orderNumber} for ${order.customer}.`
+  );
+
+  const smsLink = `sms:+18437330212?body=${smsMessage}`;
+
+  const showTextButton = order.status === "Ready for Pickup";
+
+  return `
+    <article class="order-card">
+      <p class="text-[11px] font-bold uppercase tracking-wide text-[#007c9e]">
+        Order #${escapeHtml(order.orderNumber)}
+      </p>
+      <h4 class="text-base font-extrabold text-[#003466] mt-1">
+        ${escapeHtml(order.customer)}
+      </h4>
+
+      <div class="mt-3">
+        <span class="status-pill ${statusInfo.className}"${tooltip}>
+          ${escapeHtml(displayStatus)}
+        </span>
+      </div>
+
+      ${
+        showTextButton
+          ? `
+        <div class="mt-4">
+          <a
+            href="${smsLink}"
+            class="inline-block w-full text-center px-4 py-2 rounded-lg bg-[#007c9e] text-white font-bold text-sm hover:bg-[#005f73] transition"
+          >
+            Text Us About This Order
+          </a>
+        </div>
+      `
+          : ""
+      }
+    </article>
+  `;
+}
 
     function createCompletedCard(order) {
       const justFinished = isJustFinished(order);
