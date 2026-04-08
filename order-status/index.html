@@ -773,13 +773,33 @@
       return haystack.includes(searchTerm.toLowerCase());
     }
 
-    function syncRecentlyCompletedCollapseUi() {
-      const toggle = document.getElementById("recently-completed-toggle");
-      const body = document.getElementById("recently-completed-body");
+function syncRecentlyCompletedCollapseUi() {
+  const toggle = document.getElementById("recently-completed-toggle");
+  const body = document.getElementById("recently-completed-body");
+  const countEl = document.getElementById("recently-completed-count");
 
-      if (!toggle || !body) {
-        return;
-      }
+  if (!toggle || !body || !countEl) {
+    return;
+  }
+
+  const count = countEl.textContent;
+
+  toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
+
+  if (recentlyCompletedCollapsed) {
+    body.classList.add("hidden");
+    toggle.innerHTML = `
+      <span>Hidden ${count}</span>
+      <span class="recently-completed-toggle-icon">⌃</span>
+    `;
+  } else {
+    body.classList.remove("hidden");
+    toggle.innerHTML = `
+      <span>Showing ${count}</span>
+      <span class="recently-completed-toggle-icon">⌃</span>
+    `;
+  }
+}
 
       toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
 
