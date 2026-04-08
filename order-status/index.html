@@ -772,7 +772,6 @@
 
       return haystack.includes(searchTerm.toLowerCase());
     }
-
 function syncRecentlyCompletedCollapseUi() {
   const toggle = document.getElementById("recently-completed-toggle");
   const body = document.getElementById("recently-completed-body");
@@ -801,14 +800,6 @@ function syncRecentlyCompletedCollapseUi() {
   }
 }
 
-      toggle.setAttribute("aria-expanded", String(!recentlyCompletedCollapsed));
-
-      if (recentlyCompletedCollapsed) {
-        body.classList.add("hidden");
-      } else {
-        body.classList.remove("hidden");
-      }
-    }
 
     function bindRecentlyCompletedToggle() {
       const toggle = document.getElementById("recently-completed-toggle");
