@@ -1,197 +1,272 @@
-// blog-dtf-vs-screen.html //
+<!-- blog-dtf-vs-screen.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+
+<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4PVF756J01');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-4PVF756J01');
 </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom style for the specific background texture and font */
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: #f8fcff;
-            background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
-            background-size: 300px;
-        }
+<script src="https://cdn.tailwindcss.com"></script>
 
-        /* Custom scrollbar for better visual */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        /* Key brand colors */
-        .btn-primary {
-            background-color: #003466; /* Deep Navy */
-        }
-        .btn-primary:hover {
-            background-color: #007c9e; /* Teal Blue */
-        }
+<style>
+body{
+font-family:'Inter',system-ui,sans-serif;
+background-color:#f8fcff;
+background-image:url('https://843teez.com/surf-texture.png');
+background-repeat:repeat;
+background-size:300px;
+}
 
-        /* Ensure the main container grows to fill the page height */
-        #main-content {
-            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
-        }
-        .blog-post-content h2 {
-            @apply text-2xl font-bold text-[#003466] mt-6 mb-3 border-b pb-1;
-        }
-        .blog-post-content h3 {
-            @apply text-xl font-semibold text-red-600 mt-4 mb-2;
-        }
-    </style>
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-thumb{background-color:#007c9e;border-radius:4px;}
+::-webkit-scrollbar-track{background:#f0f0f0;}
 
-    <title>843 Teez | DTF vs. Screen Printing: How to Choose Your Custom Print Method</title>
-    <meta name="description" content="DTF vs. Screen Printing—which is right for your custom t-shirt order? We break down the differences in cost, quality, and quantity to help you decide." />
+.btn-primary{background:#003466;}
+.btn-primary:hover{background:#007c9e;}
 
+.content h2{
+margin-top:1.5rem;
+margin-bottom:.75rem;
+font-size:1.5rem;
+font-weight:800;
+color:#003466;
+border-bottom:1px solid #e5e7eb;
+padding-bottom:.25rem;
+}
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "tr3lwvejev");
-    </script>
+.content h3{
+margin-top:1rem;
+margin-bottom:.5rem;
+font-size:1.25rem;
+font-weight:700;
+color:#dc2626;
+}
+</style>
+
+<title>DTF vs Screen Printing | Which Is Best for Custom Shirts?</title>
+<meta name="description" content="DTF vs screen printing explained. Learn which printing method is best for your custom shirts based on quantity, design, cost, and turnaround time in Conway SC."/>
+
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
+<div class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl">
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+<header class="text-center mb-10">
 
-        <header class="text-center mb-8">
-            <img
-                src="https://843teez.com/843teezlogo.png"
-                alt="843 Teez Logo"
-                class="max-w-xs mx-auto mb-4 w-5/6"
-            />
-            <div class="flex items-center justify-center space-x-4 mb-2">
-                <h1 class="text-3xl font-extrabold text-[#007c9e]">
-                    Blog Post
-                </h1>
-           
-            </div>
-            <p class="text-sm text-gray-600">
-                Custom printing tips, design spotlights, and news from our Conway, SC shop.
-            </p>
-            <div class="mt-4">
-                <a href="blog.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                    Back to Blog Index
-                </a>
-            </div>
-        </header>
+<a href="/blog.html">
+<img src="https://843teez.com/843teezlogo.png"
+class="max-w-xs mx-auto mb-4 w-5/6"/>
+</a>
 
-        <div class="max-w-3xl mx-auto py-6 text-gray-700 leading-relaxed blog-post-content">
-            
-            <h1 class="text-4xl font-extrabold text-red-600 mb-2">DTF vs. Screen Printing: How to Choose the Best Print Method for Your Custom T-Shirt</h1>
-            <p class="text-sm text-gray-500 mb-6">Posted: November 21, 2025 | By: 843 Teez Team</p>
+<h1 class="text-3xl sm:text-4xl font-extrabold text-[#007c9e]">
+DTF vs Screen Printing: Which One Should You Use?
+</h1>
 
-            <div class="text-center p-4 mb-6 italic border-l-4 border-[#007c9e] bg-blue-50 text-gray-800">
-                DTF (Direct-to-Film) and traditional Screen Printing are the two powerhouses of custom apparel. Both are fantastic, but one is always better suited for your specific project. It’s not about which is "better," but which is better *for the job*.
-            </div>
-            
-            <p class="mb-4">
-                We offer both methods locally in Conway, SC, and we're here to help you pick the right process to maximize your quality and budget. Here’s a quick comparison of the two:
-            </p>
+<p class="text-sm text-gray-600 max-w-2xl mx-auto">
+Not all custom shirts are printed the same way. Here’s how to choose the right method for your design, quantity, and budget.
+</p>
 
-            <h2>1. Color & Detail: The DTF Advantage</h2>
-            <p class="mb-4">
-                If your design is colorful, complex, or photo-realistic, **DTF is the clear winner.**
-            </p>
-            <ul class="list-disc list-outside ml-6 space-y-1 mb-6">
-                <li><span class="font-bold text-red-600">DTF (Direct-to-Film):</span> Perfect for designs with unlimited colors, gradients, fine lines, or photographs. It handles high-resolution graphics flawlessly.</li>
-                <li><span class="font-bold text-[#003466]">Screen Printing:</span> Best for 1 to 3 solid colors. Every color requires a separate screen setup, making complex, multi-color designs very expensive for small runs. At 843 Teez, we're set up for single color screen printing.</li>
-            </ul>
-            
-            <h2>2. Quantity & Cost: The Bulk Break-Even Point</h2>
-            <p class="mb-4">
-                Cost is the main factor that determines which method you should use, particularly for large orders.
-            </p>
-            <ul class="list-disc list-outside ml-6 space-y-1 mb-6">
-                <li><span class="font-bold text-red-600">DTF:</span> **Ideal for 1 to 24 units.** It requires no expensive setup screens, meaning the cost-per-shirt remains low even for single items. This is why we can offer **No Minimums**.</li>
-                <li><span class="font-bold text-[#003466]">Screen Printing:</span> **Ideal for 25+ units.** There is a fixed, upfront cost for screen setup, but once the screens are made, the cost-per-shirt drops dramatically for large volume orders.</li>
-            </ul>
+<div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+<a href="/quote.html"
+class="px-8 py-3 text-white font-bold rounded-xl btn-primary">
+Request a Quote
+</a>
 
-            <h2>3. Durability & Hand Feel</h2>
-            <p class="mb-4">
-                Both are professional and built to last, but they feel very different on the shirt.
-            </p>
-            <div class="flex flex-wrap md:flex-nowrap gap-6 mb-6">
-                <div class="w-full md:w-1/2 p-4 border border-gray-300 rounded-lg bg-gray-50">
-                    <h3 class="text-[#003466] mt-0">DTF Hand Feel: Soft & Smooth</h3>
-                    <p class="text-sm">DTF creates a smooth, almost vinyl-like transfer. It's highly flexible and lightweight, offering excellent wash durability with minimal cracking.</p>
-                </div>
-                <div class="w-full md:w-1/2 p-4 border border-gray-300 rounded-lg bg-gray-50">
-                    <h3 class="text-[#003466] mt-0">Screen Print Hand Feel: Thick & Tactile</h3>
-                    <p class="text-sm">Screen printing layers ink directly onto the fabric, resulting in a slightly raised, very durable print. It’s the traditional choice for maximum longevity, especially on simple logos.</p>
-                </div>
-            </div>
-            
-            <h2>The 843 Teez Recommendation Summary</h2>
-            <p class="mb-4">
-                When you contact us for a quote, keep these simple rules in mind:
-            </p>
-            <ul class="list-decimal list-outside ml-6 space-y-2 mb-6 font-semibold">
-                <li>**Choose DTF if:** You need 1-24 shirts, or your design has many colors/gradients (even on a large order).</li>
-                <li>**Choose Screen Printing if:** You need 25+ shirts and your design uses only 1 solid colors.</li>
-            </ul>
+<a href="/blog.html"
+class="px-8 py-3 font-bold rounded-xl bg-red-600 text-white hover:bg-red-700">
+Back to Blog
+</a>
+</div>
 
-            <div class="text-center p-6 bg-red-100 border-2 border-red-500 rounded-xl mt-6">
-                <p class="text-xl font-bold text-[#003466] mb-3">
-                    Ready to start your custom project?
-                </p>
-                <a href="index.html#contact" class="inline-block mt-2 px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700">
-                    Get a Custom Quote Now
-                </a>
-            </div>
-            
-        </div>
-        
+<p class="text-xs text-gray-500 mt-4">
+Posted: November 21, 2025 | Updated: April 2026
+</p>
 
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-            <p>Woman & Veteran-owned local apparel.</p>
-            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
-        </footer>
-    </div>
+</header>
 
-    <script>
-        // --- CART STATE MANAGEMENT (Minimal setup to update header count) ---
-        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        
-        // Updates the global cart count (needed for header)
-        const updateGlobalCartSummary = () => {
-            const globalViewCartButton = document.getElementById('global-view-cart-button');
-            
-            let totalItems = 0;
+<div class="max-w-3xl mx-auto content text-gray-700 leading-relaxed">
 
-            cart.forEach(item => {
-                totalItems += item.quantity;
-            });
+<div class="text-center p-4 mb-6 italic border-l-4 border-[#007c9e] bg-blue-50 rounded-lg">
+The biggest mistake people make? Choosing the wrong printing method for their order.
+</div>
 
-            document.getElementById('global-item-count').textContent = totalItems;
-            globalViewCartButton.classList.toggle('disabled:opacity-50', totalItems === 0);
-            globalViewCartButton.disabled = totalItems === 0;
-        };
+<h2>The Short Answer</h2>
 
-        // --- INITIALIZATION ---
-        window.onload = () => {
-            updateGlobalCartSummary();
-        };
-    </script>
+<p>
+If you're ordering <strong>small quantities (1–24 shirts)</strong>, DTF is usually the best choice.
+</p>
+
+<p>
+If you're ordering <strong>25+ shirts with simple designs</strong>, screen printing usually wins.
+</p>
+
+<h2>DTF vs Screen Printing (Quick Comparison)</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
+<div class="p-4 border rounded-xl bg-white">
+<h3 class="mt-0 text-[#003466]">DTF Printing</h3>
+<ul class="list-disc ml-6 text-sm space-y-1">
+<li>No minimums</li>
+<li>Full color designs</li>
+<li>Fast turnaround</li>
+<li>Best for small orders</li>
+</ul>
+</div>
+
+<div class="p-4 border rounded-xl bg-white">
+<h3 class="mt-0 text-[#003466]">Screen Printing</h3>
+<ul class="list-disc ml-6 text-sm space-y-1">
+<li>Best for bulk orders</li>
+<li>Simple designs</li>
+<li>Lower cost per shirt at volume</li>
+<li>Requires setup time</li>
+</ul>
+</div>
+
+</div>
+
+<h2>1. Design Complexity</h2>
+
+<p>
+If your design includes gradients, multiple colors, or detailed artwork—DTF wins every time.
+</p>
+
+<p>
+Screen printing is better for clean, simple designs like logos or text with one or two colors.
+</p>
+
+<h2>2. Quantity Matters Most</h2>
+
+<p>
+This is where most decisions are made:
+</p>
+
+<ul class="list-disc ml-6 space-y-2 mb-6">
+<li><strong>1–24 shirts → DTF</strong></li>
+<li><strong>25+ shirts → Screen Printing</strong></li>
+</ul>
+
+<p>
+Trying to force screen printing on a small order usually ends up costing more, not less.
+</p>
+
+<h2>3. Turnaround Time</h2>
+
+<p>
+DTF is faster because there’s no setup required.
+</p>
+
+<p>
+Screen printing takes longer upfront because screens have to be created before printing begins.
+</p>
+
+<p>
+👉 Need something fast? Check out:
+<a href="/blog-fast-shirt-printing-conway.html"
+class="text-[#007c9e] font-bold hover:underline">
+Where to Get Shirts Fast in Conway, SC
+</a>
+</p>
+
+<h2>4. Cost Breakdown</h2>
+
+<p>
+DTF keeps costs consistent for small orders.
+</p>
+
+<p>
+Screen printing becomes cheaper per shirt as quantity increases.
+</p>
+
+<p>
+👉 Want real pricing?
+<a href="/blog-how-much-custom-shirts-cost.html"
+class="text-[#007c9e] font-bold hover:underline">
+How Much Do Custom Shirts Cost?
+</a>
+</p>
+
+<h2>What Most People Get Wrong</h2>
+
+<p>
+A lot of people assume screen printing is always cheaper.
+</p>
+
+<p>
+That’s only true for bulk orders.
+</p>
+
+<p>
+For small runs with full-color designs, DTF is almost always the better option.
+</p>
+
+<h2>Best Choice for Conway, SC Orders</h2>
+
+<p>
+If you're ordering locally in Conway or Myrtle Beach, the best method depends on your order—not a one-size-fits-all rule.
+</p>
+
+<p>
+👉 Need help deciding?
+<a href="/custom-tshirts-conway-sc.html"
+class="text-[#007c9e] font-bold hover:underline">
+Custom T-Shirt Printing in Conway SC
+</a>
+</p>
+
+<div class="text-center p-6 bg-red-100 border-2 border-red-500 rounded-2xl mt-6">
+
+<p class="text-xl font-extrabold text-[#003466] mb-2">
+Not sure which method to use?
+</p>
+
+<p class="text-sm text-gray-700 mb-5">
+Tell us your design, quantity, and timeline—we’ll point you in the right direction.
+</p>
+
+<a href="/quote.html"
+class="px-8 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700">
+Request a Quote
+</a>
+
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>
+DTF is best for small, full-color, fast-turnaround orders.
+</p>
+
+<p>
+Screen printing is best for simple, high-volume jobs.
+</p>
+
+<p>
+The right choice depends on your project—not a generic rule.
+</p>
+
+</div>
+
+<footer class="text-center mt-12 pt-6 border-t text-xs text-[#003466] font-semibold">
+<p>843 Teez™ is a <a href="http://grizzbuilt.com" class="text-[#007c9e]">GrizzBuilt™</a> brand.</p>
+<p>Woman & Veteran-owned local apparel.</p>
+<p>© 2026 843 Teez™. Made in Conway, SC.</p>
+</footer>
+
+</div>
+
 </body>
 </html>
