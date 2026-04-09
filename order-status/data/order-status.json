@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08T23:30:04.554Z",
+  "generatedAt": "2026-04-09T10:40:22.286Z",
   "count": 6,
   "completedCount": 4,
   "orders": [
@@ -24,7 +24,7 @@
       "customer": "McMillian Home Services",
       "status": "In Queue",
       "createdAt": "2026-04-02 19:31:55",
-      "updatedAt": "2026-04-08 12:40:41",
+      "updatedAt": "2026-04-08 23:41:47",
       "completedAt": null
     },
     {
@@ -46,9 +46,9 @@
     {
       "orderNumber": "843-2026-0048",
       "customer": "J & C Small Engine Repair",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-04-07 21:47:42",
-      "updatedAt": "2026-04-08 12:40:15",
+      "updatedAt": "2026-04-08 23:41:12",
       "completedAt": null
     }
   ],
