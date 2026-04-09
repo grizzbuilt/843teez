@@ -1,0 +1,316 @@
+<!--
+  File: store/cart.html
+  Purpose:
+  - Display the customer's current shopping cart
+  - Read cart data from localStorage
+  - Show subtotal, tax, and estimated total
+  - Let the customer remove one quantity at a time
+  - Link back to the store and forward to checkout
+
+  Notes:
+  - Cart items are stored in localStorage under "843teez_cart"
+  - Normalized to support both old and new cart field names:
+      qty <-> quantity
+      apparelType <-> type
+  - This file expects the main store page to live at /store/index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-4PVF756J01');
+    </script>
+
+    <meta name="robots" content="noindex, follow">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>843 Teez | Review Your Cart</title>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #f8fcff;
+            background-image: url('https://843teez.com/surf-texture.png');
+            background-repeat: repeat;
+            background-size: 300px;
+        }
+
+        .btn-primary {
+            background-color: #003466;
+        }
+
+        .btn-primary:hover {
+            background-color: #007c9e;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #007c9e;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-4 sm:p-8 pt-16">
+
+<div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm">
+
+    <header class="text-center mb-8">
+        <img src="https://843teez.com/843teezlogo.png" alt="843 Teez Logo" class="max-w-xs mx-auto mb-4">
+
+        <h1 class="text-3xl font-extrabold text-[#007c9e]">
+            Review Your Cart
+        </h1>
+
+        <a href="cart.html"
+           id="global-view-cart-button"
+           class="inline-flex items-center bg-red-600 text-white font-bold px-3 py-1 rounded-full shadow-md mt-3 disabled:opacity-50"
+           disabled>
+            Cart (<span id="global-item-count">0</span>)
+        </a>
+
+        <div class="mt-4">
+            <a href="index.html"
+               class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center justify-center">
+                ← Back to Shop
+            </a>
+        </div>
+    </header>
+
+    <!-- CART AREA -->
+    <div id="cart-view" class="max-w-3xl mx-auto">
+
+        <div id="cart-items-display" class="bg-white p-6 rounded-xl border-2 border-[#007c9e] shadow-lg mb-8">
+
+            <h2 class="text-2xl font-bold text-[#003466] border-b pb-2 mb-4">
+                Items in Your Cart
+            </h2>
+
+            <div id="cart-items" class="space-y-4">
+                <p class="text-gray-500 text-base text-center italic py-4">Loading cart...</p>
+            </div>
+
+            <!-- TOTALS -->
+            <div class="mt-6 pt-4 border-t border-gray-200">
+                <div class="flex justify-between text-base text-gray-600">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+
+                <div class="flex justify-between text-base text-red-600">
+                    <span>Tax (8%):</span>
+                    <span id="cart-tax">$0.00</span>
+                </div>
+
+                <div class="flex justify-between text-base text-gray-600 mb-2">
+                    <span>Shipping:</span>
+                    <span>TBD at checkout</span>
+                </div>
+
+                <div class="flex justify-between font-bold text-xl text-[#003466] border-t pt-2">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+
+                <a href="checkout.html"
+                   id="goto-checkout-button"
+                   class="w-full mt-6 text-white font-bold py-3 rounded-xl shadow-md btn-primary text-center inline-block disabled:opacity-50"
+                   disabled>
+                    Continue to Checkout
+                </a>
+            </div>
+        </div>
+
+        <a href="index.html"
+           class="text-[#007c9e] hover:text-[#003466] font-semibold block text-center mt-4">
+            ← Continue Shopping
+        </a>
+
+    </div>
+
+    <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold">
+        <p>843 Teez™ is a <a href="https://grizzbuilt.com" class="underline text-[#007c9e]" target="_blank">GrizzBuilt™</a> brand.</p>
+        <p>Woman & Veteran-owned • Made in Conway, SC</p>
+        <p>&copy; 2025 843 Teez™</p>
+    </footer>
+
+</div>
+
+<script>
+/* -------------------------------
+   FILE: store/cart.html
+   PURPOSE:
+   - Render items stored in localStorage cart
+   - Support current and legacy cart field names
+--------------------------------*/
+
+/* -------------------------------
+   GLOBAL STATE
+--------------------------------*/
+const SALES_TAX_RATE = 0.08;
+
+const getStoredCart = () => {
+    try {
+        const raw = JSON.parse(localStorage.getItem("843teez_cart")) || [];
+        return Array.isArray(raw) ? raw : [];
+    } catch (error) {
+        console.error("Could not parse cart from localStorage:", error);
+        return [];
+    }
+};
+
+let cart = getStoredCart();
+
+/* -------------------------------
+   HELPERS
+--------------------------------*/
+const formatCurrency = (amt) => `$${Number(amt || 0).toFixed(2)}`;
+
+const saveCart = () => {
+    localStorage.setItem("843teez_cart", JSON.stringify(cart));
+};
+
+const normalizeCartItem = (item) => {
+    const quantity = Number(
+        item.quantity ?? item.qty ?? 0
+    );
+
+    const type = item.type ?? item.apparelType ?? "";
+
+    return {
+        id: item.id ?? "",
+        name: item.name ?? "Unnamed Item",
+        type,
+        price: Number(item.price ?? 0),
+        size: item.size ?? "",
+        color: item.color ?? "",
+        quantity: quantity > 0 ? quantity : 0
+    };
+};
+
+const normalizeCart = () => {
+    cart = cart
+        .map(normalizeCartItem)
+        .filter(item => item.quantity > 0);
+
+    saveCart();
+};
+
+/* -------------------------------
+   REMOVE ONE ITEM
+--------------------------------*/
+const removeFromCart = (index) => {
+    if (!cart[index]) return;
+
+    cart[index].quantity -= 1;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+
+    saveCart();
+    updateCartSummary();
+    renderCart();
+};
+
+/* -------------------------------
+   RENDER CART ITEMS
+--------------------------------*/
+const renderCart = () => {
+    const container = document.getElementById("cart-items");
+    const checkoutBtn = document.getElementById("goto-checkout-button");
+
+    if (cart.length === 0) {
+        container.innerHTML = `
+            <p class="text-gray-500 text-base text-center italic py-4">
+                Your cart is empty.
+            </p>`;
+        checkoutBtn.disabled = true;
+        return;
+    }
+
+    checkoutBtn.disabled = false;
+
+    container.innerHTML = cart.map((item, index) => {
+        const lineTotal = item.price * item.quantity;
+        const displayType = String(item.type || "").replace(/_/g, " ");
+        const displayColor = String(item.color || "").replace(/_/g, " ");
+
+        return `
+        <div class="flex items-start justify-between border-b pb-3">
+            <div class="flex-grow pr-4">
+                <p class="font-bold text-[#003466]">${item.name}</p>
+
+                <p class="text-sm text-gray-700">
+                    ${displayType} –
+                    ${displayColor} –
+                    Size ${item.size || ""}
+                </p>
+
+                <p class="text-sm text-gray-500 mt-1">
+                    ${formatCurrency(item.price)} × ${item.quantity}
+                </p>
+            </div>
+
+            <div class="flex flex-col items-end">
+                <span class="font-bold text-lg text-red-600 mb-1">
+                    ${formatCurrency(lineTotal)}
+                </span>
+                <button onclick="removeFromCart(${index})"
+                        class="text-sm text-gray-500 hover:text-red-700 underline">
+                    Remove One
+                </button>
+            </div>
+        </div>`;
+    }).join("");
+};
+
+/* -------------------------------
+   UPDATE TOTALS
+--------------------------------*/
+const updateCartSummary = () => {
+    let subtotal = 0;
+    let totalItems = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+        totalItems += item.quantity;
+    });
+
+    const tax = subtotal * SALES_TAX_RATE;
+    const total = subtotal + tax;
+
+    document.getElementById("global-item-count").textContent = totalItems;
+    document.getElementById("cart-subtotal").textContent = formatCurrency(subtotal);
+    document.getElementById("cart-tax").textContent = formatCurrency(tax);
+    document.getElementById("cart-total").textContent = formatCurrency(total);
+
+    const headerBtn = document.getElementById("global-view-cart-button");
+    headerBtn.disabled = totalItems === 0;
+};
+
+/* -------------------------------
+   INIT
+--------------------------------*/
+window.onload = () => {
+    normalizeCart();
+    updateCartSummary();
+    renderCart();
+};
+</script>
+
+</body>
+</html>
