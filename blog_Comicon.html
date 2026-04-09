@@ -1,178 +1,251 @@
-// blog_Comicon.html //
+<!-- blog-comicon.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4PVF756J01');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-4PVF756J01');
 </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom style for the specific background texture and font */
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: #f8fcff;
-            background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
-            background-size: 300px;
-        }
+<script src="https://cdn.tailwindcss.com"></script>
 
-        /* Custom scrollbar for better visual */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        /* Key brand colors */
-        .btn-primary {
-            background-color: #003466; /* Deep Navy */
-        }
-        .btn-primary:hover {
-            background-color: #007c9e; /* Teal Blue */
-        }
+<style>
+body{
+font-family:'Inter',system-ui,sans-serif;
+background:#f8fcff url('https://843teez.com/surf-texture.png') repeat;
+background-size:300px;
+}
 
-        /* Ensure the main container grows to fill the page height */
-        #main-content {
-            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
-        }
-        .blog-post-content h2 {
-            @apply text-2xl font-bold text-[#003466] mt-6 mb-3 border-b pb-1;
-        }
-        .blog-post-content h3 {
-            @apply text-xl font-semibold text-red-600 mt-4 mb-2;
-        }
-    </style>
+.content h2{
+margin-top:1.5rem;
+margin-bottom:.75rem;
+font-size:1.5rem;
+font-weight:800;
+color:#003466;
+border-bottom:1px solid #e5e7eb;
+padding-bottom:.25rem;
+}
 
-    <title>843 Teez | Power ComiCon Recap: Florence, SC</title>
-    <meta name="description" content="A recap of 843 Teez’s trip to Power ComiCon in Florence, SC! We brought exclusive designs and connected with fans, collectors, and fellow makers." />
+.content h3{
+margin-top:1rem;
+margin-bottom:.5rem;
+font-size:1.25rem;
+font-weight:700;
+color:#dc2626;
+}
+</style>
 
+<title>Custom Event Shirts | Power ComiCon Florence SC Recap | 843 Teez</title>
+<meta name="description" content="See how 843 Teez creates custom shirts for events, conventions, and fandoms. Recap of Power ComiCon in Florence SC and how custom apparel connects communities."/>
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "tr3lwvejev");
-    </script>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
+<div class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl">
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+<header class="text-center mb-10">
 
-        <header class="text-center mb-8">
-            <img
-                src="https://843teez.com/843teezlogo.png"
-                alt="843 Teez Logo"
-                class="max-w-xs mx-auto mb-4 w-5/6"
-            />
-            <div class="flex items-center justify-center space-x-4 mb-2">
-                <h1 class="text-3xl font-extrabold text-[#007c9e]">
-                    Blog Post
-                </h1>
-          
-            </div>
-            <p class="text-sm text-gray-600">
-                Custom printing tips, design spotlights, and news from our Conway, SC shop.
-            </p>
-            <div class="mt-4">
-                <a href="blog.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                    Back to Blog Index
-                </a>
-            </div>
-        </header>
+<a href="/blog.html">
+<img src="https://843teez.com/843teezlogo.png"
+class="max-w-xs mx-auto mb-4 w-5/6"/>
+</a>
 
-        <div class="max-w-3xl mx-auto py-6 text-gray-700 leading-relaxed blog-post-content">
-            
-            <h1 class="text-4xl font-extrabold text-red-600 mb-2">Power ComiCon Recap: Bold Tees, Big Fandoms, and Florence Fun!</h1>
-            <p class="text-sm text-gray-500 mb-6">Posted: September 19, 2025 | By: Heather & Todd</p>
-            
-            <p class="mb-4">
-                Last weekend, the 843 Teez crew of **Heather & Todd** took our coastal creativity on the road to **Power ComiCon in Florence, South Carolina**! We packed up our boldest, weirdest, and most exclusive designs to share with fans, collectors, and fellow makers at one of the Southeast’s best pop culture events.
-            </p>
+<h1 class="text-3xl sm:text-4xl font-extrabold text-[#007c9e]">
+Power ComiCon Recap: Custom Tees, Big Fandoms, and Florence Energy
+</h1>
 
-            <h2>What We Brought</h2>
-            <p class="mb-4">
-                We didn’t just bring t-shirts — we brought statements you can wear. From limited-run prints you couldn’t find anywhere else, to designs that mashed up pop culture with that signature 843 flavor, our booth pushed the boundaries of what a con tee could be. Fans loved the fresh, loud, and unforgettable looks.
-            </p>
+<p class="text-sm text-gray-600 max-w-2xl mx-auto">
+What happens when custom apparel meets fandom culture? Here’s what we learned from Power ComiCon in Florence, SC.
+</p>
 
-            <h2>Why It Mattered</h2>
-            <p class="mb-4">
-                Power ComiCon wasn’t just about comics — it was about community, creativity, and fandom. That’s exactly what 843 Teez is built on. We loved seeing how our designs sparked conversations, laughs, and memories. Being surrounded by cosplay energy and fan passion gave us a whole new wave of inspiration for what’s next.
-            </p>
+<div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+<a href="/quote.html"
+class="px-8 py-3 text-white font-bold rounded-xl bg-[#003466] hover:bg-[#007c9e]">
+Request a Quote
+</a>
 
-            <h2>Exclusive Event Teez</h2>
-            <p class="mb-6">
-                We rolled out **five brand-new, event-exclusive designs** just for Power ComiCon. Once they were gone, they were gone — and they sold fast! Collectors, cosplayers, and fans alike walked away with something truly one-of-a-kind.
-            </p>
-            
-            <div class="text-center p-6 my-8 bg-green-100 border-2 border-green-500 rounded-xl">
-                <h3 class="text-2xl font-extrabold text-green-600 mb-2">Catch Us Next!</h3>
-                <p class="text-xl font-bold text-[#003466] mb-3">
-                    If you missed us at Power ComiCon, don’t worry—
-                </p>
-                <p class="text-xl font-black text-green-700 mb-4">
-                    Next weekend (Sept 27th and 28th) we'll be in Myrtle Beach, for the **Southeast Punk Flea Market**!
-                </p>
-                <a href="index.html#contact" class="inline-block mt-4 px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-green-600 hover:bg-green-700">
-                    Get a Custom Quote Now
-                </a>
-            </div>
+<a href="/blog.html"
+class="px-8 py-3 font-bold rounded-xl bg-red-600 text-white hover:bg-red-700">
+Back to Blog
+</a>
+</div>
 
-            <h2>Thank You</h2>
-            <p class="mb-6">
-                A huge thank you to everyone who stopped by our booth, grabbed a tee, or just hung out to talk fandoms with us. The support means everything, and this is just the beginning.
-            </p>
-            <p class="mt-8 pt-4 border-t border-gray-200 text-right font-bold text-[#003466]">
-                If you missed us, you can still catch our latest drops on our <a href="https://www.instagram.com/843teez" class="text-[#007c9e] hover:underline">Instagram</a> and <a href="https://www.facebook.com/843teez" class="text-[#007c9e] hover:underline">Facebook</a> pages, @843Teez.
-            </p>
-            
-        </div>
-        
+<p class="text-xs text-gray-500 mt-4">
+Posted: September 19, 2025 | Updated: April 2026
+</p>
 
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-            <p>Woman & Veteran-owned local apparel.</p>
-            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
-        </footer>
-    </div>
+</header>
 
-    <script>
-        // --- CART STATE MANAGEMENT (Minimal setup to update header count) ---
-        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        
-        // Updates the global cart count (needed for header)
-        const updateGlobalCartSummary = () => {
-            const globalViewCartButton = document.getElementById('global-view-cart-button');
-            
-            let totalItems = 0;
+<div class="max-w-3xl mx-auto content text-gray-700 leading-relaxed">
 
-            cart.forEach(item => {
-                totalItems += item.quantity;
-            });
+<div class="text-center p-4 mb-6 italic border-l-4 border-[#007c9e] bg-blue-50 rounded-lg">
+Events like ComiCon prove one thing fast—people don’t want boring shirts. They want something that represents what they’re into.
+</div>
 
-            document.getElementById('global-item-count').textContent = totalItems;
-            globalViewCartButton.classList.toggle('disabled:opacity-50', totalItems === 0);
-            globalViewCartButton.disabled = totalItems === 0;
-        };
+<h2>Custom Shirts Meet Fandom Culture</h2>
 
-        // --- INITIALIZATION ---
-        window.onload = () => {
-            updateGlobalCartSummary();
-        };
-    </script>
+<p>
+Last weekend, the 843 Teez crew—Heather & Todd—hit the road to <strong>Power ComiCon in Florence, South Carolina</strong> with one goal:
+bring something different to the table.
+</p>
+
+<p>
+Not generic merch. Not copy-paste designs.
+Real shirts with personality.
+</p>
+
+<h2>What We Brought</h2>
+
+<p>
+We showed up with a mix of:
+</p>
+
+<div class="p-4 border rounded-xl bg-gray-50 mb-6">
+
+<ul class="list-disc ml-6 space-y-2 text-sm">
+<li>Limited-run custom designs</li>
+<li>Pop culture-inspired graphics</li>
+<li>Original concepts you won’t find online</li>
+<li>That signature 843 edge</li>
+</ul>
+
+</div>
+
+<p>
+And people noticed.
+</p>
+
+<h2>Why Events Like This Matter</h2>
+
+<p>
+Events like ComiCon aren’t just about comics—they’re about identity.
+</p>
+
+<p>
+People want to represent:
+</p>
+
+<ul class="list-disc ml-6 space-y-2 mb-6">
+<li>The fandoms they love</li>
+<li>The jokes they get</li>
+<li>The culture they’re part of</li>
+</ul>
+
+<p>
+That’s exactly where custom apparel shines.
+</p>
+
+<h2>Custom Shirts for Events & Groups</h2>
+
+<p>
+This is where a lot of people start asking:
+</p>
+
+<p>
+“Can I make something like this for my group, event, or brand?”
+</p>
+
+<p>
+Short answer: yeah.
+</p>
+
+<p>
+👉 Learn how it works:
+<a href="/custom-tshirts-conway-sc.html"
+class="text-[#007c9e] font-bold hover:underline">
+Custom T-Shirt Printing in Conway SC
+</a>
+</p>
+
+<h2>DTF Printing Made This Possible</h2>
+
+<p>
+Most of the designs we brought were printed using DTF.
+</p>
+
+<p>
+Why?
+</p>
+
+<ul class="list-disc ml-6 space-y-2 mb-6">
+<li>Full color without extra setup</li>
+<li>Perfect for small runs</li>
+<li>Fast turnaround</li>
+</ul>
+
+<p>
+👉 Learn more:
+<a href="/dtf-printing-conway-sc.html"
+class="text-[#007c9e] font-bold hover:underline">
+DTF Printing in Conway SC
+</a>
+</p>
+
+<h2>What We Learned</h2>
+
+<p>
+The biggest takeaway?
+</p>
+
+<p>
+People don’t want safe designs.
+They want something that feels like them.
+</p>
+
+<p>
+And when you give them that—they respond fast.
+</p>
+
+<div class="text-center p-6 bg-green-100 border-2 border-green-500 rounded-2xl mt-6">
+
+<p class="text-xl font-extrabold text-[#003466] mb-2">
+Missed us at ComiCon?
+</p>
+
+<p class="text-sm text-gray-700 mb-5">
+We’re always working on new designs—and we can build something custom just for you.
+</p>
+
+<a href="/quote.html"
+class="px-8 py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700">
+Start Your Custom Shirt
+</a>
+
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>
+Custom shirts aren’t just merch—they’re identity.
+</p>
+
+<p>
+Whether it’s a convention, a brand, or a group idea, the right design makes people want to wear it.
+</p>
+
+<p>
+That’s what we’re building at 843 Teez.
+</p>
+
+</div>
+
+<footer class="text-center mt-12 pt-6 border-t text-xs text-[#003466] font-semibold">
+<p>843 Teez™ is a <a href="http://grizzbuilt.com" class="text-[#007c9e]">GrizzBuilt™</a> brand.</p>
+<p>Woman & Veteran-owned local apparel.</p>
+<p>© 2026 843 Teez™. Made in Conway, SC.</p>
+</footer>
+
+</div>
+
 </body>
 </html>
