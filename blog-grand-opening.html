@@ -1,189 +1,226 @@
-// blog-grand-opening.html //
+<!-- blog-grand-opening.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PVF756J01"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4PVF756J01');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-4PVF756J01');
 </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom style for the specific background texture and font */
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background-color: #f8fcff;
-            background-image: url('https://843teez.com/surf-texture.png');
-            background-repeat: repeat;
-            background-size: 300px;
-        }
+<script src="https://cdn.tailwindcss.com"></script>
 
-        /* Custom scrollbar for better visual */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background-color: #007c9e; border-radius: 4px; }
-        ::-webkit-scrollbar-track { background-color: #f0f0f0; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        /* Key brand colors */
-        .btn-primary {
-            background-color: #003466; /* Deep Navy */
-        }
-        .btn-primary:hover {
-            background-color: #007c9e; /* Teal Blue */
-        }
+<style>
+body{
+font-family:'Inter',system-ui,sans-serif;
+background:#f8fcff url('https://843teez.com/surf-texture.png') repeat;
+background-size:300px;
+}
 
-        /* Ensure the main container grows to fill the page height */
-        #main-content {
-            min-height: calc(100vh - 80px); /* Adjust for padding/margins */
-        }
-        .blog-post-content h2 {
-            @apply text-2xl font-bold text-[#003466] mt-6 mb-3 border-b pb-1;
-        }
-        .blog-post-content h3 {
-            @apply text-xl font-semibold text-red-600 mt-4 mb-2;
-        }
-    </style>
+.content h2{
+margin-top:1.5rem;
+margin-bottom:.75rem;
+font-size:1.5rem;
+font-weight:800;
+color:#003466;
+border-bottom:1px solid #e5e7eb;
+padding-bottom:.25rem;
+}
 
-    <title>843 Teez | Grand Opening: We're Finally Live in Conway, SC!</title>
-    <meta name="description" content="The official launch announcement for 843 Teez, offering custom DTF and screen printed tees inspired by Myrtle Beach, Conway, and the Grand Strand." />
+.content h3{
+margin-top:1rem;
+margin-bottom:.5rem;
+font-size:1.25rem;
+font-weight:700;
+color:#dc2626;
+}
+</style>
 
+<title>843 Teez Grand Opening | Custom T-Shirts in Conway SC</title>
+<meta name="description" content="843 Teez is live in Conway SC offering custom t-shirt printing, DTF, and screen printing. Learn what we do and how to get your custom shirts started."/>
 
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "tr3lwvejev");
-    </script>
 </head>
 
 <body class="min-h-screen p-4 sm:p-8 pt-16">
 
-    <div id="main-content" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl">
+<div class="max-w-6xl mx-auto p-6 sm:p-10 md:p-12 bg-white/80 rounded-2xl shadow-xl">
 
-        <header class="text-center mb-8">
-            <img
-                src="https://843teez.com/843teezlogo.png"
-                alt="843 Teez Logo"
-                class="max-w-xs mx-auto mb-4 w-5/6"
-            />
-            <div class="flex items-center justify-center space-x-4 mb-2">
-                <h1 class="text-3xl font-extrabold text-[#007c9e]">
-                    Blog Post
-                </h1>
-            
-            </div>
-            <p class="text-sm text-gray-600">
-                Custom printing tips, design spotlights, and news from our Conway, SC shop.
-            </p>
-            <div class="mt-4">
-                <a href="blog.html" class="text-[#007c9e] hover:text-[#003466] font-semibold flex items-center mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                    </svg>
-                    Back to Blog Index
-                </a>
-            </div>
-        </header>
+<header class="text-center mb-10">
 
-        <div class="max-w-3xl mx-auto py-6 text-gray-700 leading-relaxed blog-post-content">
-            
-            <h1 class="text-4xl font-extrabold text-red-600 mb-2">Grand Opening: We're Finally Live in Conway, SC!</h1>
-            <p class="text-sm text-gray-500 mb-6">Posted: August 1, 2025 | By: Grizz</p>
+<a href="/blog.html">
+<img src="https://843teez.com/843teezlogo.png"
+class="max-w-xs mx-auto mb-4 w-5/6"/>
+</a>
 
-            <div class="p-4 mb-6 italic border-l-4 border-[#007c9e] bg-blue-50 text-gray-800">
-                Hey y’all — we finally did it. 843Teez is live, local, and ready to put some attitude on your chest.
-                We’re proud to be based right here in Conway, South Carolina, slingin’ custom graphic tees inspired by everything we love — like Myrtle Beach madness, redneck river days, inside jokes, and that stubborn coastal sunburn that never quite fades. Whether you’re a Dirty Myrtle lifer or just like your shirts loud, we’ve got something for you.
-            </div>
+<h1 class="text-3xl sm:text-4xl font-extrabold text-[#007c9e]">
+843 Teez Is Officially Live in Conway, SC
+</h1>
 
-            <h2>🎨 What We Make</h2>
-            <ul class="list-disc list-outside ml-6 space-y-1 mb-6">
-                <li>Custom DTF (Direct-to-Film) tees – bold colors, smooth prints, long-lasting.</li>
-                <li>Single-color screen prints – classic look, vintage vibe.</li>
-                <li>Designs that get attention – funny, sarcastic, sometimes questionable.</li>
-            </ul>
-            <p class="mb-4">
-                And if you’ve got an idea? We’ll help bring it to life. That’s what 843Teez is all about.
-            </p>
+<p class="text-sm text-gray-600 max-w-2xl mx-auto">
+Custom shirts, loud ideas, and a local brand built for Conway, Myrtle Beach, and the Grand Strand.
+</p>
 
-            <h2>🎉 Why Now?</h2>
-            <p class="mb-4">
-                Because the world needs more shirts that say what you’re actually thinking. And because Conway deserves a local brand with grit, heart, and a little chaos. We’ve been cooking up these designs for months, and the press is finally hot.
-            </p>
+<div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+<a href="/quote.html"
+class="px-8 py-3 text-white font-bold rounded-xl bg-[#003466] hover:bg-[#007c9e]">
+Request a Quote
+</a>
 
-            <div class="text-center p-6 my-8 bg-red-100 border-2 border-red-500 rounded-xl">
-                <h3 class="text-3xl font-extrabold text-red-600">Grand Opening Sale!</h3>
-                <p class="text-xl font-bold text-[#003466] mb-3">
-                    This Grand Opening Sale is our way of saying thanks —
-                </p>
-                <p class="text-2xl font-black text-red-700 mb-4">
-                    💥 Use code **843LAUNCH** for 10% off everything + FREE SHIPPING, this week only.
-                </p>
-                <p class="text-sm italic text-gray-700">
-                    Because friends don’t let friends pay full price.
-                </p>
-                <a href="index.html" class="inline-block mt-4 px-8 py-3 text-white font-bold rounded-xl transition-all duration-200 shadow-md bg-red-600 hover:bg-red-700">
-                    Shop the Sale Now
-                </a>
-            </div>
+<a href="/blog.html"
+class="px-8 py-3 font-bold rounded-xl bg-red-600 text-white hover:bg-red-700">
+Back to Blog
+</a>
+</div>
 
-            <h2>🏝️ What’s Next?</h2>
-            <p class="mb-4">
-                We’ll be dropping new shirts, going to local events, and maybe even throwing together a few surprise giveaways. You’ll also see behind-the-scenes stuff, gear tips, and local shoutouts right here on this blog.
-            </p>
-            <p class="mb-6">
-                👉 Hit that email signup if you want the drop before the drop.
-            </p>
-            
-            <p class="mt-8 pt-4 border-t border-gray-200 text-right font-bold text-[#003466]">
-                Thanks for being part of Day One. We’re just getting started — and the heat press is fired up.
-            </p>
-            <p class="text-right italic font-semibold text-gray-600">
-                – Grizz<br>
-                Chief-Imagination-Officer / Shirt Slinger / Probably Covered in Transfer Film
-            </p>
-            
-        </div>
-        
+<p class="text-xs text-gray-500 mt-4">
+Posted: August 1, 2025 | Updated: April 2026
+</p>
 
-        <footer class="text-center mt-12 pt-6 border-t border-gray-200 text-[#003466] text-xs font-semibold space-y-1">
-            <p>843 Teez™ is a <a href="http://grizzbuilt.com" target="_blank" class="text-[#007c9e] hover:underline">GrizzBuilt™</a> brand.</p>
-            <p>Woman & Veteran-owned local apparel.</p>
-            <p>&copy; 2025 843 Teez™. All rights reserved. Made in Conway, SC.</p>
-        </footer>
-    </div>
+</header>
 
-    <script>
-        // --- CART STATE MANAGEMENT (Minimal setup to update header count) ---
-        let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
-        
-        // Updates the global cart count (needed for header)
-        const updateGlobalCartSummary = () => {
-            const globalViewCartButton = document.getElementById('global-view-cart-button');
-            
-            let totalItems = 0;
+<div class="max-w-3xl mx-auto content text-gray-700 leading-relaxed">
 
-            cart.forEach(item => {
-                totalItems += item.quantity;
-            });
+<div class="text-center p-4 mb-6 italic border-l-4 border-[#007c9e] bg-blue-50 rounded-lg">
+We finally pulled the trigger. 843 Teez is live, local, and ready to put something better on your shirt than whatever everyone else is wearing.
+</div>
 
-            document.getElementById('global-item-count').textContent = totalItems;
-            globalViewCartButton.classList.toggle('disabled:opacity-50', totalItems === 0);
-            globalViewCartButton.disabled = totalItems === 0;
-        };
+<h2>What 843 Teez Actually Does</h2>
 
-        // --- INITIALIZATION ---
-        window.onload = () => {
-            updateGlobalCartSummary();
-        };
-    </script>
+<p>
+We’re a <strong>custom t-shirt printing shop in Conway, SC</strong> focused on making shirts that people actually want to wear.
+</p>
+
+<div class="p-4 border rounded-xl bg-gray-50 mb-6">
+
+<ul class="list-disc ml-6 space-y-2 text-sm">
+<li>Full-color DTF printing (no minimums)</li>
+<li>Screen printing for bulk orders</li>
+<li>Custom designs built from your ideas</li>
+<li>Local service — not a faceless website</li>
+</ul>
+
+</div>
+
+<p>
+👉 Learn more:
+<a href="/custom-tshirts-conway-sc.html"
+class="text-[#007c9e] font-bold hover:underline">
+Custom T-Shirt Printing in Conway SC
+</a>
+</p>
+
+<h2>Why We Started This</h2>
+
+<p>
+Because most shirts are either boring… or just bad.
+</p>
+
+<p>
+And because Conway deserved a local option that actually cares about quality, turnaround time, and making something you’re proud to wear.
+</p>
+
+<p>
+We built this to be simple:
+</p>
+
+<ul class="list-disc ml-6 space-y-2 mb-6">
+<li>You bring the idea</li>
+<li>We make it work</li>
+<li>You get something solid</li>
+</ul>
+
+<h2>What Makes Us Different</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
+<div class="p-4 border rounded-xl bg-white">
+<h3 class="mt-0">No Minimums</h3>
+<p class="text-sm">Order one shirt or one hundred—we don’t force bulk.</p>
+</div>
+
+<div class="p-4 border rounded-xl bg-white">
+<h3 class="mt-0">Local & Fast</h3>
+<p class="text-sm">Based in Conway, serving Myrtle Beach and the Grand Strand.</p>
+</div>
+
+<div class="p-4 border rounded-xl bg-white">
+<h3 class="mt-0">Real Designs</h3>
+<p class="text-sm">Not clipart junk—actual ideas that fit your brand or vibe.</p>
+</div>
+
+<div class="p-4 border rounded-xl bg-white">
+<h3 class="mt-0">Straight Answers</h3>
+<p class="text-sm">We’ll tell you what works—and what doesn’t.</p>
+</div>
+
+</div>
+
+<h2>How to Get Started</h2>
+
+<p>
+If you’ve got an idea—even a rough one—we can help you turn it into something real.
+</p>
+
+<p>
+👉 Not sure about pricing?
+<a href="/blog-how-much-custom-shirts-cost.html"
+class="text-[#007c9e] font-bold hover:underline">
+How Much Do Custom Shirts Cost?
+</a>
+</p>
+
+<p>
+👉 Not sure about printing method?
+<a href="/blog-best-printing-method-small-orders.html"
+class="text-[#007c9e] font-bold hover:underline">
+Best Printing Method for Small Orders
+</a>
+</p>
+
+<div class="text-center p-6 bg-red-100 border-2 border-red-500 rounded-2xl mt-6">
+
+<p class="text-xl font-extrabold text-[#003466] mb-2">
+Ready to make your shirts?
+</p>
+
+<p class="text-sm text-gray-700 mb-5">
+Tell us what you need—we’ll help you figure out the best way to do it.
+</p>
+
+<a href="/quote.html"
+class="px-8 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700">
+Request a Quote
+</a>
+
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>
+843 Teez is built for people who want something better than generic.
+</p>
+
+<p>
+We’re local, we’re hands-on, and we actually care how your shirts turn out.
+</p>
+
+</div>
+
+<footer class="text-center mt-12 pt-6 border-t text-xs text-[#003466] font-semibold">
+<p>843 Teez™ is a <a href="http://grizzbuilt.com" class="text-[#007c9e]">GrizzBuilt™</a> brand.</p>
+<p>Woman & Veteran-owned local apparel.</p>
+<p>© 2026 843 Teez™. Made in Conway, SC.</p>
+</footer>
+
+</div>
+
 </body>
 </html>
