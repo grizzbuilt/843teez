@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T23:00:01.629Z",
+  "generatedAt": "2026-04-09T23:30:01.616Z",
   "count": 6,
   "completedCount": 4,
   "orders": [
@@ -22,9 +22,9 @@
     {
       "orderNumber": "843-2026-0044",
       "customer": "McMillian Home Services",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-04-02 19:31:55",
-      "updatedAt": "2026-04-09 22:56:04",
+      "updatedAt": "2026-04-09 23:13:46",
       "completedAt": null
     },
     {
