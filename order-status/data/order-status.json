@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T22:00:01.605Z",
+  "generatedAt": "2026-04-09T22:30:00.624Z",
   "count": 6,
   "completedCount": 4,
   "orders": [
@@ -38,17 +38,17 @@
     {
       "orderNumber": "843-2026-0047",
       "customer": "DAX Hauling and Services",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-04-06 23:43:27",
-      "updatedAt": "2026-04-08 12:41:01",
+      "updatedAt": "2026-04-09 22:18:31",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0048",
       "customer": "J & C Small Engine Repair",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-04-07 21:47:42",
-      "updatedAt": "2026-04-08 23:41:12",
+      "updatedAt": "2026-04-09 22:18:29",
       "completedAt": null
     }
   ],
