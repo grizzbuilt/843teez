@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T22:30:00.624Z",
+  "generatedAt": "2026-04-09T23:00:01.629Z",
   "count": 6,
   "completedCount": 4,
   "orders": [
@@ -22,9 +22,9 @@
     {
       "orderNumber": "843-2026-0044",
       "customer": "McMillian Home Services",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-04-02 19:31:55",
-      "updatedAt": "2026-04-08 23:41:47",
+      "updatedAt": "2026-04-09 22:56:04",
       "completedAt": null
     },
     {
@@ -32,23 +32,23 @@
       "customer": "TBD",
       "status": "Order Received",
       "createdAt": "2026-04-08 12:38:16",
-      "updatedAt": "2026-04-08 12:41:15",
+      "updatedAt": "2026-04-09 22:56:01",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0047",
       "customer": "DAX Hauling and Services",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-04-06 23:43:27",
-      "updatedAt": "2026-04-09 22:18:31",
+      "updatedAt": "2026-04-09 22:38:06",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0048",
       "customer": "J & C Small Engine Repair",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-04-07 21:47:42",
-      "updatedAt": "2026-04-09 22:18:29",
+      "updatedAt": "2026-04-09 22:45:31",
       "completedAt": null
     }
   ],
