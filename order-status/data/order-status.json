@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-10T15:30:03.640Z",
-  "count": 5,
-  "completedCount": 5,
+  "generatedAt": "2026-04-10T16:00:01.624Z",
+  "count": 4,
+  "completedCount": 6,
   "orders": [
     {
       "orderNumber": "843-2026-0041",
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0043",
       "customer": "Coastal Facility Svcs",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-04-02 19:30:46",
-      "updatedAt": "2026-04-08 12:40:01",
+      "updatedAt": "2026-04-10 15:56:28",
       "completedAt": null
     },
     {
@@ -34,17 +34,17 @@
       "createdAt": "2026-04-06 23:43:27",
       "updatedAt": "2026-04-09 22:38:06",
       "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0048",
-      "customer": "J & C Small Engine Repair",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-04-07 21:47:42",
-      "updatedAt": "2026-04-09 22:45:31",
-      "completedAt": null
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0048",
+      "customer": "J & C Small Engine Repair",
+      "status": "Completed",
+      "createdAt": "2026-04-07 21:47:42",
+      "updatedAt": "2026-04-10 15:55:33",
+      "completedAt": "2026-04-10T15:55:33.497Z"
+    },
     {
       "orderNumber": "843-2026-0044",
       "customer": "McMillian Home Services",
