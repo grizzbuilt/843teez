@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-10T14:30:01.631Z",
-  "count": 6,
-  "completedCount": 4,
+  "generatedAt": "2026-04-10T15:00:01.643Z",
+  "count": 5,
+  "completedCount": 5,
   "orders": [
     {
       "orderNumber": "843-2026-0041",
@@ -17,14 +17,6 @@
       "status": "Order Received",
       "createdAt": "2026-04-02 19:30:46",
       "updatedAt": "2026-04-08 12:40:01",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0044",
-      "customer": "McMillian Home Services",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-04-02 19:31:55",
-      "updatedAt": "2026-04-09 23:13:46",
       "completedAt": null
     },
     {
@@ -53,6 +45,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0044",
+      "customer": "McMillian Home Services",
+      "status": "Completed",
+      "createdAt": "2026-04-02 19:31:55",
+      "updatedAt": "2026-04-10 14:46:23",
+      "completedAt": "2026-04-10T14:46:23.998Z"
+    },
     {
       "orderNumber": "843-2026-0040",
       "customer": "Hammer & Dice",
