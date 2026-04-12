@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-12T12:30:04.627Z",
-  "count": 3,
-  "completedCount": 7,
+  "generatedAt": "2026-04-12T13:00:01.632Z",
+  "count": 2,
+  "completedCount": 8,
   "orders": [
     {
       "orderNumber": "843-2026-0041",
@@ -9,14 +9,6 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-04-02 19:29:49",
       "updatedAt": "2026-04-08 12:41:29",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0043",
-      "customer": "Coastal Facility Svcs",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-04-02 19:30:46",
-      "updatedAt": "2026-04-11 13:38:03",
       "completedAt": null
     },
     {
@@ -29,6 +21,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0043",
+      "customer": "Coastal Facility Svcs",
+      "status": "Completed",
+      "createdAt": "2026-04-02 19:30:46",
+      "updatedAt": "2026-04-12 12:49:52",
+      "completedAt": "2026-04-12T12:49:52.421Z"
+    },
     {
       "orderNumber": "843-2026-0046",
       "customer": "Harvie tiny tee",
