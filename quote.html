@@ -385,14 +385,13 @@
 
           <form
             action="/thank-you.html"
-            name="843Teezcontact"
+            name="843TeezQuoteForm"
             method="POST"
-            enctype="multipart/form-data"
             data-netlify-recaptcha="true"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="843Teezcontact" />
+            <input type="hidden" name="form-name" value="843TeezQuoteForm" />
             <input type="hidden" name="form-location" value="Quote Page Form" />
             <input type="hidden" name="subject" value="843 Teez Custom Quote Request" />
 
@@ -421,24 +420,24 @@
 
             <label class="label">What do you need?</label>
             <div class="checkbox-grid">
-              <label class="checkbox-option"><input type="checkbox" name="items-needed[]" value="T-Shirts" /> T-Shirts</label>
-              <label class="checkbox-option"><input type="checkbox" name="items-needed[]" value="Long Sleeve Shirts" /> Long Sleeve Shirts</label>
-              <label class="checkbox-option"><input type="checkbox" name="items-needed[]" value="Hoodies / Sweatshirts" /> Hoodies / Sweatshirts</label>
-              <label class="checkbox-option"><input type="checkbox" name="items-needed[]" value="Hats" /> Hats</label>
-              <label class="checkbox-option"><input type="checkbox" name="items-needed[]" value="Other" /> Other</label>
+              <label class="checkbox-option"><input type="checkbox" name="item_tshirts" value="Yes" /> T-Shirts</label>
+              <label class="checkbox-option"><input type="checkbox" name="item_long_sleeve" value="Yes" /> Long Sleeve Shirts</label>
+              <label class="checkbox-option"><input type="checkbox" name="item_hoodies" value="Yes" /> Hoodies / Sweatshirts</label>
+              <label class="checkbox-option"><input type="checkbox" name="item_hats" value="Yes" /> Hats</label>
+              <label class="checkbox-option"><input type="checkbox" name="item_other" value="Yes" /> Other</label>
             </div>
 
-            <label class="label" for="shirt-style">Garment or style preference</label>
+            <label class="label" for="shirt_style">Garment or style preference</label>
             <input
               class="input"
               type="text"
-              name="shirt-style"
-              id="shirt-style"
+              name="shirt_style"
+              id="shirt_style"
               placeholder="Example: black tees, performance shirts, Richardson hats, or help me choose"
             />
 
-            <label class="label" for="design-type">Design style</label>
-            <select class="input" name="design-type" id="design-type">
+            <label class="label" for="design_type">Design style</label>
+            <select class="input" name="design_type" id="design_type">
               <option value="">Not sure yet</option>
               <option value="Simple 1-2 colors">Simple (1–2 colors)</option>
               <option value="Full color / detailed">Full Color / Detailed</option>
@@ -448,12 +447,12 @@
 
             <label class="label">Where should the design go?</label>
             <div class="checkbox-grid">
-              <label class="checkbox-option"><input type="checkbox" name="placement[]" value="Left Chest" /> Left Chest</label>
-              <label class="checkbox-option"><input type="checkbox" name="placement[]" value="Full Front" /> Full Front</label>
-              <label class="checkbox-option"><input type="checkbox" name="placement[]" value="Full Back" /> Full Back</label>
-              <label class="checkbox-option"><input type="checkbox" name="placement[]" value="Sleeve" /> Sleeve</label>
-              <label class="checkbox-option"><input type="checkbox" name="placement[]" value="Hat Front" /> Hat Front</label>
-              <label class="checkbox-option"><input type="checkbox" name="placement[]" value="Not Sure Yet" /> Not Sure Yet</label>
+              <label class="checkbox-option"><input type="checkbox" name="placement_left_chest" value="Yes" /> Left Chest</label>
+              <label class="checkbox-option"><input type="checkbox" name="placement_full_front" value="Yes" /> Full Front</label>
+              <label class="checkbox-option"><input type="checkbox" name="placement_full_back" value="Yes" /> Full Back</label>
+              <label class="checkbox-option"><input type="checkbox" name="placement_sleeve" value="Yes" /> Sleeve</label>
+              <label class="checkbox-option"><input type="checkbox" name="placement_hat_front" value="Yes" /> Hat Front</label>
+              <label class="checkbox-option"><input type="checkbox" name="placement_not_sure" value="Yes" /> Not Sure Yet</label>
             </div>
 
             <label class="label" for="sizes">Sizes needed</label>
@@ -465,29 +464,25 @@
               placeholder="Example: S-2, M-6, L-8, XL-4 or not sure yet"
             />
 
-            <label class="label" for="shirt-color">Shirt / hat color</label>
+            <label class="label" for="shirt_color">Shirt / hat color</label>
             <input
               class="input"
               type="text"
-              name="shirt-color"
-              id="shirt-color"
+              name="shirt_color"
+              id="shirt_color"
               placeholder="Example: black, safety green, khaki hats, or help me choose"
             />
 
             <label class="label" for="deadline">When do you need them?</label>
             <input class="input" type="date" name="deadline" id="deadline" />
 
-            <label class="label" for="logo">Upload your logo or artwork</label>
-            <input class="input" type="file" name="logo" id="logo" />
-
-            <label class="label" for="shirt-details">Anything else we should know?</label>
+            <label class="label" for="shirt_details">Anything else we should know?</label>
             <textarea
               class="input"
-              name="shirt-details"
-              id="shirt-details"
+              name="shirt_details"
+              id="shirt_details"
               rows="6"
-              required
-              placeholder="Example: 25 black work shirts with a left chest logo and full back print, plus 10 hats with the logo on front. Need them in 2 weeks."
+              placeholder="Anything else? Special instructions, design ideas, or notes (optional)."
             ></textarea>
 
             <div class="mt-4" data-netlify-recaptcha="true"></div>
