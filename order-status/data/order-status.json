@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-13T14:00:01.625Z",
-  "count": 1,
+  "generatedAt": "2026-04-13T14:30:01.628Z",
+  "count": 2,
   "completedCount": 9,
   "orders": [
     {
@@ -9,6 +9,14 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-04-06 23:43:27",
       "updatedAt": "2026-04-13 13:27:44",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0049",
+      "customer": "The Unpredictibles Band",
+      "status": "Order Received",
+      "createdAt": "2026-04-13 14:03:22",
+      "updatedAt": "2026-04-13 14:06:31",
       "completedAt": null
     }
   ],
