@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-17T21:30:01.618Z",
-  "count": 2,
-  "completedCount": 9,
+  "generatedAt": "2026-04-17T22:00:01.614Z",
+  "count": 1,
+  "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0047",
@@ -10,17 +10,17 @@
       "createdAt": "2026-04-06 23:43:27",
       "updatedAt": "2026-04-13 13:27:44",
       "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0049",
-      "customer": "The Unpredictibles Band",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-04-13 14:03:22",
-      "updatedAt": "2026-04-15 23:14:32",
-      "completedAt": null
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0049",
+      "customer": "The Unpredictibles Band",
+      "status": "Completed",
+      "createdAt": "2026-04-13 14:03:22",
+      "updatedAt": "2026-04-17 21:55:35",
+      "completedAt": "2026-04-17T21:55:35.296Z"
+    },
     {
       "orderNumber": "843-2026-0041",
       "customer": "Shinetime Soultions",
