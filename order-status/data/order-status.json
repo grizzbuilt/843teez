@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-04-18T19:00:03.657Z",
-  "count": 1,
+  "generatedAt": "2026-04-18T19:30:01.626Z",
+  "count": 0,
   "completedCount": 10,
-  "orders": [
+  "orders": [],
+  "recentlyCompleted": [
     {
       "orderNumber": "843-2026-0047",
       "customer": "DAX Hauling and Services",
-      "status": "Ready for Pickup",
+      "status": "Completed",
       "createdAt": "2026-04-06 23:43:27",
-      "updatedAt": "2026-04-13 13:27:44",
-      "completedAt": null
-    }
-  ],
-  "recentlyCompleted": [
+      "updatedAt": "2026-04-18 19:27:28",
+      "completedAt": "2026-04-18T19:27:28.554Z"
+    },
     {
       "orderNumber": "843-2026-0049",
       "customer": "The Unpredictibles Band",
@@ -84,14 +83,6 @@
       "createdAt": "2026-04-04 12:30:53",
       "updatedAt": "2026-04-08 12:42:41",
       "completedAt": "2026-04-07T14:44:13.155Z"
-    },
-    {
-      "orderNumber": "843-2026-0001",
-      "customer": "T. Stone (Test)",
-      "status": "Completed",
-      "createdAt": "2026-04-02 18:21:57",
-      "updatedAt": "2026-04-08 12:42:13",
-      "completedAt": "2026-04-02T19:28:46.621Z"
     }
   ]
 }
