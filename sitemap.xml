@@ -7,7 +7,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Homepage -->
   <url>
     <loc>https://843teez.com/</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,21 +19,21 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- CORE MONEY PAGES -->
   <url>
     <loc>https://843teez.com/custom-tshirts-conway-sc.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://843teez.com/dtf-printing-conway-sc.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://843teez.com/screen-printing-myrtle-beach-sc.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
