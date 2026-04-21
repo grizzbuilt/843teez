@@ -66,10 +66,6 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://843teez.com/843teezlogo.webp</image:loc>
-      <image:caption>843 Teez Tee Party Custom Shirt Event</image:caption>
-    </image:image>
   </url>
 
   <!-- CONVERSION PAGES -->
@@ -90,7 +86,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- BLOG INDEX -->
   <url>
     <loc>https://843teez.com/blog.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -127,6 +123,14 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://843teez.com/blog-best-custom-tshirt-conway-sc.html</loc>
     <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- NEW BLOG POST -->
+  <url>
+    <loc>https://843teez.com/blog-customer-service-custom-tshirts-conway-sc.html</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
