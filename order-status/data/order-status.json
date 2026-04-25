@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T13:30:03.760Z",
+  "generatedAt": "2026-04-25T14:00:01.637Z",
   "count": 3,
   "completedCount": 10,
   "orders": [
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0051",
       "customer": "Courte Sea Concrete",
-      "status": "Order Received",
+      "status": "Ready for Pickup",
       "createdAt": "2026-04-21 20:23:50",
-      "updatedAt": "2026-04-24 11:13:32",
+      "updatedAt": "2026-04-25 13:52:23",
       "completedAt": null
     },
     {
