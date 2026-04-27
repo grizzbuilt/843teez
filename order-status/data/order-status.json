@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-27T10:30:04.636Z",
-  "count": 3,
+  "generatedAt": "2026-04-27T11:00:01.624Z",
+  "count": 2,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "Order Received",
       "createdAt": "2026-04-19 15:58:43",
       "updatedAt": "2026-04-24 11:13:33",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0051",
-      "customer": "Courte Sea Concrete",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-04-21 20:23:50",
-      "updatedAt": "2026-04-25 13:52:23",
       "completedAt": null
     },
     {
@@ -29,6 +21,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0051",
+      "customer": "Courte Sea Concrete",
+      "status": "Completed",
+      "createdAt": "2026-04-21 20:23:50",
+      "updatedAt": "2026-04-27 10:56:37",
+      "completedAt": "2026-04-27T10:56:37.364Z"
+    },
     {
       "orderNumber": "843-2026-0047",
       "customer": "DAX Hauling and Services",
@@ -100,14 +100,6 @@
       "createdAt": "2026-04-02 19:28:15",
       "updatedAt": "2026-04-08 12:41:57",
       "completedAt": "2026-04-07T14:44:25.657Z"
-    },
-    {
-      "orderNumber": "843-2026-0045",
-      "customer": "C. Young",
-      "status": "Completed",
-      "createdAt": "2026-04-04 12:30:53",
-      "updatedAt": "2026-04-08 12:42:41",
-      "completedAt": "2026-04-07T14:44:13.155Z"
     }
   ]
 }
