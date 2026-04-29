@@ -3,7 +3,11 @@
   Purpose: 843 Teez homepage
   Data: Static homepage content + internal links
   Maintained by: GrizzBuilt LLC
-  Last Updated: 2026-04-24
+  Last Updated: 2026-04-29
+  Notes:
+  - Added AI/search-friendly Quick Answers section using static HTML only.
+  - Expanded FAQPage schema to match high-value local search questions.
+  - No new scripts, fonts, images, tracking, or render-blocking assets added.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +53,6 @@
     imagesizes="(max-width: 640px) 275px, 320px"
     fetchpriority="high"
   />
-
 
   <link rel="stylesheet" href="/assets/css/tailwind.css">
 
@@ -251,10 +254,34 @@
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"Do you offer custom t-shirt printing near Conway and Myrtle Beach?",
+        "name":"Where can I get custom t-shirts printed in Conway, SC?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. 843 Teez is based in Conway, South Carolina and serves Myrtle Beach and the Grand Strand with custom t-shirts, DTF printing, and screen printing."
+          "text":"843 Teez offers custom t-shirt printing in Conway, South Carolina for businesses, events, teams, families, brands, and local customers across the Grand Strand."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you offer custom t-shirt printing near Myrtle Beach?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. 843 Teez is based in Conway, SC and serves Myrtle Beach, Carolina Forest, Surfside Beach, Socastee, North Myrtle Beach, Horry County, and the Grand Strand."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you offer DTF printing in Conway, SC?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. 843 Teez offers full-color DTF printing in Conway, SC for custom shirts, detailed artwork, small orders, one-off shirts, and no-minimum apparel jobs."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you offer screen printing near Myrtle Beach?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. 843 Teez offers screen printing for Myrtle Beach, Conway, and Grand Strand customers. Screen printing is often a strong choice for larger shirt orders, staff apparel, event shirts, and simpler designs."
         }
       },
       {
@@ -262,7 +289,7 @@
         "name":"Do you have minimum order requirements?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"No. We can help with one shirt, small runs, and larger bulk orders. DTF is great for no-minimum jobs, while screen printing is often best for bigger quantities."
+          "text":"No. 843 Teez can help with one shirt, small runs, and larger bulk orders. DTF printing is great for no-minimum jobs, while screen printing is often best for bigger quantities."
         }
       },
       {
@@ -275,10 +302,18 @@
       },
       {
         "@type":"Question",
+        "name":"How do I get a quote from 843 Teez?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"You can request a quote through the 843 Teez quote page, call 843-350-1943, or email info@843teez.com with your shirt quantity, sizes, artwork, print locations, and deadline."
+        }
+      },
+      {
+        "@type":"Question",
         "name":"Can you help if I’m not sure what I need yet?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. If you are unsure about quantities, garment type, design placement, or the best print method, just send what you know and we’ll help you sort it out."
+          "text":"Yes. If you are unsure about quantities, garment type, design placement, artwork, or the best print method, send what you know and 843 Teez will help you sort it out."
         }
       }
     ]
@@ -443,6 +478,7 @@
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#services">Services</a>
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#samples">Samples</a>
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#pricing">Pricing</a>
+        <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#quick-answers">Quick Answers</a>
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="#quote">Quote</a>
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/FAQ.html">FAQ</a>
         <a class="px-4 py-2 rounded-xl bg-white border border-gray-200 shadow-sm font-semibold text-[#003466] hover:text-[#007c9e]" href="/blog.html">Blog</a>
@@ -653,6 +689,73 @@
              href="/quote.html">
             Get a Fast Quote
           </a>
+        </div>
+      </section>
+
+      <section id="quick-answers" class="cv-auto">
+        <h2>Custom T-Shirt Printing in Conway, SC — Quick Answers</h2>
+
+        <p class="mb-4">
+          Looking for a local shirt printer near Conway or Myrtle Beach? Here are the quick answers most people need before asking for a quote.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Where can I get custom t-shirts printed in Conway, SC?</h3>
+            <p class="mb-0">
+              <strong>843 Teez</strong> prints custom t-shirts in <strong>Conway, South Carolina</strong> for businesses,
+              events, teams, families, local brands, fundraisers, schools, and everyday shirt ideas.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Do you print shirts near Myrtle Beach?</h3>
+            <p class="mb-0">
+              Yes. We serve <strong>Myrtle Beach</strong>, Conway, Carolina Forest, Surfside Beach, Socastee,
+              North Myrtle Beach, Horry County, and the <strong>Grand Strand</strong>.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Do you offer DTF printing in Conway, SC?</h3>
+            <p class="mb-0">
+              Yes. Our <a href="/dtf-printing-conway-sc.html" class="text-[#007c9e] hover:text-[#003466] font-semibold">DTF printing</a>
+              is a strong option for full-color artwork, detailed designs, no-minimum orders, one-off shirts, and smaller custom apparel runs.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Do you offer screen printing near Myrtle Beach?</h3>
+            <p class="mb-0">
+              Yes. Our <a href="/screen-printing-myrtle-beach-sc.html" class="text-[#007c9e] hover:text-[#003466] font-semibold">screen printing</a>
+              is a good fit for larger shirt orders, staff shirts, event tees, school shirts, simple designs, and bulk apparel.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">Can I order just one custom shirt?</h3>
+            <p class="mb-0">
+              Yes. We can help with one shirt, a small batch, or a larger run. For one-offs and smaller orders,
+              <strong>DTF printing</strong> is usually the best place to start.
+            </p>
+          </div>
+
+          <div class="p-5 border border-gray-200 rounded-2xl bg-white">
+            <h3 class="mt-0">How do I get a custom shirt quote?</h3>
+            <p class="mb-0">
+              Start with our <a href="/quote.html" class="text-[#007c9e] hover:text-[#003466] font-semibold">quote form</a>,
+              call <a href="tel:8433501943" class="text-[#007c9e] hover:text-[#003466] font-semibold">(843) 350-1943</a>,
+              or email <a href="mailto:info@843teez.com?subject=Quote%20Request%20-%20843%20Teez" class="text-[#007c9e] hover:text-[#003466] font-semibold">info@843teez.com</a>.
+              Send your quantity, sizes, shirt color, artwork, print locations, and deadline if you have them.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-5 p-4 rounded-xl bg-blue-50 border border-blue-100">
+          <p class="text-sm mb-0">
+            Not sure whether you need DTF, screen printing, or something else? Tell us what you’re making and when you need it.
+            We’ll help you pick the print method that makes the most sense instead of making you guess.
+          </p>
         </div>
       </section>
 
