@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-02T13:30:01.641Z",
+  "generatedAt": "2026-05-02T14:00:01.620Z",
   "count": 3,
   "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0050",
       "customer": "Conway Quilters",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-04-19 15:58:43",
-      "updatedAt": "2026-04-30 20:15:30",
+      "updatedAt": "2026-05-02 13:37:21",
       "completedAt": null
     },
     {
