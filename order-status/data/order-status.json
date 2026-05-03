@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T15:30:01.636Z",
+  "generatedAt": "2026-05-03T16:00:01.617Z",
   "count": 3,
   "completedCount": 10,
   "orders": [
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0052",
       "customer": "Daughters of Both Suns",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-04-25 11:56:23",
-      "updatedAt": "2026-05-03 15:28:34",
+      "updatedAt": "2026-05-03 15:54:49",
       "completedAt": null
     },
     {
