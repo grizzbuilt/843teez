@@ -1,2 +1,22 @@
 # Redirect old homepage to canonical homepage
 /index.html   /   301
+/89index.html   /   301
+/index-old.html   /   301
+/newIndex.html   /   301
+/new_index.html   /   301
+/old_index.html   /   301
+
+# Redirect old category/store-style pages to the live store
+/clothing.html   /store/   301
+/originals.html   /store/   301
+/limited_edition.html   /store/   301
+/christmas.html   /store/   301
+/fall.html   /store/   301
+/store/store.html   /store/   301
+/store/originals.html   /store/   301
+/store/limited_edition.html   /store/   301
+/store/christmas.html   /store/   301
+/store/fall.html   /store/   301
+
+# Keep archived cleanup files out of public access
+/_archive/*   /404.html   404
