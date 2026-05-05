@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-05T21:30:01.626Z",
-  "count": 5,
+  "generatedAt": "2026-05-05T22:00:01.627Z",
+  "count": 6,
   "completedCount": 10,
   "orders": [
     {
@@ -41,6 +41,14 @@
       "status": "Order Received",
       "createdAt": "2026-05-05 14:26:05",
       "updatedAt": "2026-05-05 14:29:04",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0056",
+      "customer": "Fast Freddy Detailing",
+      "status": "Order Received",
+      "createdAt": "2026-05-05 21:56:18",
+      "updatedAt": "2026-05-05 21:56:18",
       "completedAt": null
     }
   ],
