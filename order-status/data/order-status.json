@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-05T14:00:01.641Z",
-  "count": 4,
+  "generatedAt": "2026-05-05T14:30:01.632Z",
+  "count": 5,
   "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0050",
       "customer": "Conway Quilters",
-      "status": "In Production",
+      "status": "In Queue",
       "createdAt": "2026-04-19 15:58:43",
-      "updatedAt": "2026-05-02 18:30:17",
+      "updatedAt": "2026-05-05 14:27:05",
       "completedAt": null
     },
     {
@@ -24,7 +24,7 @@
       "customer": "Horry County Parks & Rec",
       "status": "Order Received",
       "createdAt": "2026-05-01 19:12:11",
-      "updatedAt": "2026-05-01 19:12:11",
+      "updatedAt": "2026-05-05 14:26:08",
       "completedAt": null
     },
     {
@@ -32,7 +32,15 @@
       "customer": "HCPD - Soccer Cup",
       "status": "Order Received",
       "createdAt": "2026-05-05 12:43:51",
-      "updatedAt": "2026-05-05 12:43:51",
+      "updatedAt": "2026-05-05 14:26:21",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0055",
+      "customer": "Ellis OTW Hauling  & Deliver",
+      "status": "Order Received",
+      "createdAt": "2026-05-05 14:26:05",
+      "updatedAt": "2026-05-05 14:29:04",
       "completedAt": null
     }
   ],
