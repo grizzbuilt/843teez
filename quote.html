@@ -516,17 +516,35 @@
             <label class="label" for="deadline">When do you need them?</label>
             <input class="input" type="date" name="deadline" id="deadline" />
 
-            <label class="label" for="logo">Upload your logo or artwork</label>
+            <label class="label" for="artwork_1">Upload Artwork / Reference Image 1</label>
             <div class="upload-box">
               <input
                 class="input"
                 type="file"
-                name="logo"
-                id="logo"
-                accept=".png,.jpg,.jpeg,.pdf,.svg,.ai,.eps"
+                name="artwork_1"
+                id="artwork_1"
+                accept="image/*,.pdf"
+              />
+
+              <label class="label" for="artwork_2">Optional Artwork / Reference Image 2</label>
+              <input
+                class="input"
+                type="file"
+                name="artwork_2"
+                id="artwork_2"
+                accept="image/*,.pdf"
+              />
+
+              <label class="label" for="artwork_3">Optional Artwork / Reference Image 3</label>
+              <input
+                class="input"
+                type="file"
+                name="artwork_3"
+                id="artwork_3"
+                accept="image/*,.pdf"
               />
               <p class="helper-text">
-                Max file size: 8MB. Best formats: PNG, JPG, PDF, SVG, AI, or EPS.
+                You can upload up to 3 files. JPG, PNG, or PDF preferred. Total upload size must stay under 8 MB.
               </p>
             </div>
 
@@ -593,7 +611,11 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const logoInput = document.getElementById('logo');
+      const artworkInputs = [
+        document.getElementById('artwork_1'),
+        document.getElementById('artwork_2'),
+        document.getElementById('artwork_3')
+      ].filter(Boolean);
       const quantityInput = document.getElementById('quantity');
       const quantityTierInput = document.getElementById('quantity_tier');
 
@@ -617,17 +639,23 @@
         quantityInput.addEventListener('change', updateQuantityTier);
       }
 
-      if (logoInput) {
-        logoInput.addEventListener('change', function () {
-          const file = this.files && this.files[0];
-          const maxSize = 8 * 1024 * 1024;
+      function getTotalArtworkSize() {
+        return artworkInputs.reduce(function (total, input) {
+          const file = input.files && input.files[0];
+          return total + (file ? file.size : 0);
+        }, 0);
+      }
 
-          if (file && file.size > maxSize) {
-            alert('That file is too large. Please upload a file under 8MB.');
+      artworkInputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+          const maxTotalSize = 8 * 1024 * 1024;
+
+          if (getTotalArtworkSize() > maxTotalSize) {
+            alert('Total upload size must stay under 8 MB. Please remove one file or choose smaller files.');
             this.value = '';
           }
         });
-      }
+      });
 
       updateQuantityTier();
     });
