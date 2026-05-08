@@ -437,15 +437,20 @@
             <label class="label" for="phone">Phone Number</label>
             <input class="input" type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Optional, but helpful for faster follow-up" />
 
-            <label class="label" for="quantity">How many items do you need?</label>
-            <select class="input" name="quantity" id="quantity" required>
-              <option value="">Select quantity</option>
-              <option value="1-10">1–10</option>
-              <option value="11-24">11–24</option>
-              <option value="25-49">25–49</option>
-              <option value="50-99">50–99</option>
-              <option value="100+">100+</option>
-            </select>
+            <label class="label" for="quantity">Number of Shirts</label>
+            <input
+              class="input"
+              type="number"
+              name="quantity"
+              id="quantity"
+              min="1"
+              step="1"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              placeholder="Example: 36"
+              required
+            />
+            <input type="hidden" name="quantity_tier" id="quantity_tier" value="" />
 
             <label class="label">What do you need?</label>
             <div class="checkbox-grid">
@@ -589,6 +594,28 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const logoInput = document.getElementById('logo');
+      const quantityInput = document.getElementById('quantity');
+      const quantityTierInput = document.getElementById('quantity_tier');
+
+      function getQuantityTier(quantity) {
+        if (!Number.isInteger(quantity) || quantity < 1) return '';
+        if (quantity <= 10) return '1-10';
+        if (quantity <= 24) return '11-24';
+        if (quantity <= 49) return '25-49';
+        if (quantity <= 99) return '50-99';
+        return '100+';
+      }
+
+      function updateQuantityTier() {
+        if (!quantityInput || !quantityTierInput) return;
+        const quantity = Number(quantityInput.value);
+        quantityTierInput.value = getQuantityTier(quantity);
+      }
+
+      if (quantityInput) {
+        quantityInput.addEventListener('input', updateQuantityTier);
+        quantityInput.addEventListener('change', updateQuantityTier);
+      }
 
       if (logoInput) {
         logoInput.addEventListener('change', function () {
@@ -601,6 +628,8 @@
           }
         });
       }
+
+      updateQuantityTier();
     });
   </script>
 </body>
