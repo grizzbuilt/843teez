@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-09T17:00:01.641Z",
+  "generatedAt": "2026-05-09T17:30:01.621Z",
   "count": 6,
   "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0050",
       "customer": "Conway Quilters",
-      "status": "In Production",
+      "status": "In Queue",
       "createdAt": "2026-04-19 15:58:43",
-      "updatedAt": "2026-05-09 15:58:31",
+      "updatedAt": "2026-05-09 17:01:10",
       "completedAt": null
     },
     {
@@ -38,17 +38,17 @@
     {
       "orderNumber": "843-2026-0055",
       "customer": "Ellis OTW Hauling  & Deliver",
-      "status": "Order Received",
+      "status": "Ready for Pickup",
       "createdAt": "2026-05-05 14:26:05",
-      "updatedAt": "2026-05-05 14:29:04",
+      "updatedAt": "2026-05-09 17:24:07",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0056",
       "customer": "Fast Freddy Detailing",
-      "status": "Order Received",
+      "status": "In Production",
       "createdAt": "2026-05-05 21:56:18",
-      "updatedAt": "2026-05-05 21:56:18",
+      "updatedAt": "2026-05-09 17:27:51",
       "completedAt": null
     }
   ],
