@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-10T21:00:01.644Z",
-  "count": 6,
+  "generatedAt": "2026-05-10T21:30:01.627Z",
+  "count": 5,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-04-19 15:58:43",
       "updatedAt": "2026-05-10 16:54:51",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0052",
-      "customer": "Daughters of Both Suns",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-04-25 11:56:23",
-      "updatedAt": "2026-05-03 15:54:49",
       "completedAt": null
     },
     {
@@ -53,6 +45,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0052",
+      "customer": "Daughters of Both Suns",
+      "status": "Completed",
+      "createdAt": "2026-04-25 11:56:23",
+      "updatedAt": "2026-05-10 21:28:51",
+      "completedAt": "2026-05-10T21:28:51.836Z"
+    },
     {
       "orderNumber": "843-2026-0051",
       "customer": "Courte Sea Concrete",
@@ -124,14 +124,6 @@
       "createdAt": "2026-04-03 19:13:10",
       "updatedAt": "2026-04-08 12:42:25",
       "completedAt": "2026-04-07T22:54:03.243Z"
-    },
-    {
-      "orderNumber": "843-2026-0033",
-      "customer": "American Jail Assoc",
-      "status": "Completed",
-      "createdAt": "2026-04-02 19:28:15",
-      "updatedAt": "2026-04-08 12:41:57",
-      "completedAt": "2026-04-07T14:44:25.657Z"
     }
   ]
 }
