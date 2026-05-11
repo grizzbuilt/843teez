@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-11T18:00:01.642Z",
-  "count": 3,
+  "generatedAt": "2026-05-11T18:30:01.638Z",
+  "count": 2,
   "completedCount": 10,
   "orders": [
     {
@@ -18,17 +18,17 @@
       "createdAt": "2026-05-05 12:43:51",
       "updatedAt": "2026-05-05 14:26:21",
       "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0055",
-      "customer": "Ellis OTW Hauling  & Deliver",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-05-05 14:26:05",
-      "updatedAt": "2026-05-09 17:24:07",
-      "completedAt": null
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0055",
+      "customer": "Ellis OTW Hauling  & Deliver",
+      "status": "Completed",
+      "createdAt": "2026-05-05 14:26:05",
+      "updatedAt": "2026-05-11 18:15:50",
+      "completedAt": "2026-05-11T18:15:50.871Z"
+    },
     {
       "orderNumber": "843-2026-0056",
       "customer": "Fast Freddy Detailing",
@@ -100,14 +100,6 @@
       "createdAt": "2026-04-08 12:38:16",
       "updatedAt": "2026-04-11 13:47:37",
       "completedAt": "2026-04-11T13:47:37.070Z"
-    },
-    {
-      "orderNumber": "843-2026-0048",
-      "customer": "J & C Small Engine Repair",
-      "status": "Completed",
-      "createdAt": "2026-04-07 21:47:42",
-      "updatedAt": "2026-04-10 15:55:33",
-      "completedAt": "2026-04-10T15:55:33.497Z"
     }
   ]
 }
