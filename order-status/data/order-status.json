@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-16T15:00:01.631Z",
+  "generatedAt": "2026-05-16T15:30:01.616Z",
   "count": 5,
   "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0053",
       "customer": "Horry County Parks & Rec - Summer Camp",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-05-01 19:12:11",
-      "updatedAt": "2026-05-13 21:43:50",
+      "updatedAt": "2026-05-16 15:11:53",
       "completedAt": null
     },
     {
@@ -16,7 +16,7 @@
       "customer": "HCPD - Soccer Cup",
       "status": "In Production",
       "createdAt": "2026-05-05 12:43:51",
-      "updatedAt": "2026-05-16 14:59:57",
+      "updatedAt": "2026-05-16 15:11:42",
       "completedAt": null
     },
     {
