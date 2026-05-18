@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-18T12:00:01.639Z",
-  "count": 6,
+  "generatedAt": "2026-05-18T12:30:01.622Z",
+  "count": 5,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "In Production",
       "createdAt": "2026-05-01 19:12:11",
       "updatedAt": "2026-05-17 20:10:18",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0054",
-      "customer": "HCPD - Soccer Cup",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-05-05 12:43:51",
-      "updatedAt": "2026-05-16 18:30:23",
       "completedAt": null
     },
     {
@@ -53,6 +45,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0054",
+      "customer": "HCPD - Soccer Cup",
+      "status": "Completed",
+      "createdAt": "2026-05-05 12:43:51",
+      "updatedAt": "2026-05-18 12:22:52",
+      "completedAt": "2026-05-18T12:22:52.140Z"
+    },
     {
       "orderNumber": "843-2026-0055",
       "customer": "Ellis OTW Hauling  & Deliver",
@@ -124,14 +124,6 @@
       "createdAt": "2026-04-02 19:30:46",
       "updatedAt": "2026-04-12 12:49:52",
       "completedAt": "2026-04-12T12:49:52.421Z"
-    },
-    {
-      "orderNumber": "843-2026-0046",
-      "customer": "Harvie tiny tee",
-      "status": "Completed",
-      "createdAt": "2026-04-08 12:38:16",
-      "updatedAt": "2026-04-11 13:47:37",
-      "completedAt": "2026-04-11T13:47:37.070Z"
     }
   ]
 }
