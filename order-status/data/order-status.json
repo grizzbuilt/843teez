@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T13:00:01.626Z",
+  "generatedAt": "2026-05-20T13:30:01.639Z",
   "count": 6,
   "completedCount": 10,
   "orders": [
@@ -32,7 +32,7 @@
       "customer": "Sloan's Sweets",
       "status": "Order Received",
       "createdAt": "2026-05-15 10:31:40",
-      "updatedAt": "2026-05-19 15:51:08",
+      "updatedAt": "2026-05-20 13:01:31",
       "completedAt": null
     },
     {
@@ -40,15 +40,15 @@
       "customer": "Daughters of both suns",
       "status": "Order Received",
       "createdAt": "2026-05-16 21:17:05",
-      "updatedAt": "2026-05-19 15:51:09",
+      "updatedAt": "2026-05-20 13:00:30",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0061",
       "customer": "K. Gomez",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-05-18 14:44:20",
-      "updatedAt": "2026-05-19 15:51:26",
+      "updatedAt": "2026-05-20 13:00:16",
       "completedAt": null
     }
   ],
