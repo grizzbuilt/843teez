@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T19:30:01.631Z",
+  "generatedAt": "2026-05-21T20:00:01.630Z",
   "count": 6,
   "completedCount": 10,
   "orders": [
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0057",
       "customer": "E.P Property Services",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-05-12 19:48:43",
-      "updatedAt": "2026-05-21 19:24:07",
+      "updatedAt": "2026-05-21 19:32:59",
       "completedAt": null
     },
     {
