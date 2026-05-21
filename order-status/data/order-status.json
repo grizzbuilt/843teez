@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T18:00:01.629Z",
+  "generatedAt": "2026-05-21T18:30:01.625Z",
   "count": 6,
   "completedCount": 10,
   "orders": [
@@ -14,25 +14,25 @@
     {
       "orderNumber": "843-2026-0057",
       "customer": "E.P Property Services",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-05-12 19:48:43",
-      "updatedAt": "2026-05-19 15:51:04",
+      "updatedAt": "2026-05-21 18:18:58",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0058",
       "customer": "DAX Hauling and Services",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-05-14 22:40:06",
-      "updatedAt": "2026-05-19 15:51:13",
+      "updatedAt": "2026-05-21 18:18:59",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0059",
       "customer": "Sloan's Sweets",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-05-15 10:31:40",
-      "updatedAt": "2026-05-20 13:01:31",
+      "updatedAt": "2026-05-21 18:18:56",
       "completedAt": null
     },
     {
