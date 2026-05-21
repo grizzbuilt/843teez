@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-21T22:00:01.626Z",
-  "count": 6,
+  "generatedAt": "2026-05-21T22:30:01.639Z",
+  "count": 4,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "In Production",
       "createdAt": "2026-05-01 19:12:11",
       "updatedAt": "2026-05-18 22:50:33",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0057",
-      "customer": "E.P Property Services",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-05-12 19:48:43",
-      "updatedAt": "2026-05-21 19:32:59",
       "completedAt": null
     },
     {
@@ -42,17 +34,25 @@
       "createdAt": "2026-05-16 21:17:05",
       "updatedAt": "2026-05-20 13:00:30",
       "completedAt": null
+    }
+  ],
+  "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0057",
+      "customer": "E.P Property Services",
+      "status": "Completed",
+      "createdAt": "2026-05-12 19:48:43",
+      "updatedAt": "2026-05-21 22:19:28",
+      "completedAt": "2026-05-21T22:19:28.860Z"
     },
     {
       "orderNumber": "843-2026-0061",
       "customer": "K. Gomez",
-      "status": "Ready for Pickup",
+      "status": "Completed",
       "createdAt": "2026-05-18 14:44:20",
-      "updatedAt": "2026-05-20 21:45:12",
-      "completedAt": null
-    }
-  ],
-  "recentlyCompleted": [
+      "updatedAt": "2026-05-21 22:19:27",
+      "completedAt": "2026-05-21T22:19:27.532Z"
+    },
     {
       "orderNumber": "843-2026-0054",
       "customer": "HCPD - Soccer Cup",
@@ -116,22 +116,6 @@
       "createdAt": "2026-04-13 14:03:22",
       "updatedAt": "2026-04-17 21:55:35",
       "completedAt": "2026-04-17T21:55:35.296Z"
-    },
-    {
-      "orderNumber": "843-2026-0041",
-      "customer": "Shinetime Soultions",
-      "status": "Completed",
-      "createdAt": "2026-04-02 19:29:49",
-      "updatedAt": "2026-04-13 13:27:40",
-      "completedAt": "2026-04-13T13:27:40.759Z"
-    },
-    {
-      "orderNumber": "843-2026-0043",
-      "customer": "Coastal Facility Svcs",
-      "status": "Completed",
-      "createdAt": "2026-04-02 19:30:46",
-      "updatedAt": "2026-04-12 12:49:52",
-      "completedAt": "2026-04-12T12:49:52.421Z"
     }
   ]
 }
