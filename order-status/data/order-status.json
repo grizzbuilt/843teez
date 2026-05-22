@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T12:30:01.640Z",
+  "generatedAt": "2026-05-22T13:00:01.624Z",
   "count": 4,
   "completedCount": 10,
   "orders": [
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0058",
       "customer": "DAX Hauling and Services",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-05-14 22:40:06",
-      "updatedAt": "2026-05-22 12:27:23",
+      "updatedAt": "2026-05-22 12:50:39",
       "completedAt": null
     },
     {
