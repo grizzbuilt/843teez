@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:30:01.425Z",
+  "generatedAt": "2026-05-23T17:00:01.662Z",
   "count": 5,
   "completedCount": 10,
   "orders": [
@@ -8,15 +8,15 @@
       "customer": "Horry County Parks & Rec - Summer Camp",
       "status": "In Production",
       "createdAt": "2026-05-01 19:12:11",
-      "updatedAt": "2026-05-23 16:15:51",
+      "updatedAt": "2026-05-23 16:44:22",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0059",
       "customer": "Sloan's Sweets",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-05-15 10:31:40",
-      "updatedAt": "2026-05-21 18:18:56",
+      "updatedAt": "2026-05-23 16:36:56",
       "completedAt": null
     },
     {
