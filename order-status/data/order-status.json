@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T17:30:01.700Z",
+  "generatedAt": "2026-05-24T18:00:01.653Z",
   "count": 5,
   "completedCount": 10,
   "orders": [
@@ -16,15 +16,15 @@
       "customer": "Sloan's Sweets",
       "status": "In Production",
       "createdAt": "2026-05-15 10:31:40",
-      "updatedAt": "2026-05-23 19:41:28",
+      "updatedAt": "2026-05-24 17:56:29",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0060",
       "customer": "Daughters of both suns",
-      "status": "In Queue",
+      "status": "Ready for Pickup",
       "createdAt": "2026-05-16 21:17:05",
-      "updatedAt": "2026-05-24 13:36:43",
+      "updatedAt": "2026-05-24 17:44:07",
       "completedAt": null
     },
     {
