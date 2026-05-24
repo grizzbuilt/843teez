@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T13:30:01.645Z",
+  "generatedAt": "2026-05-24T14:00:01.640Z",
   "count": 5,
   "completedCount": 10,
   "orders": [
@@ -22,9 +22,9 @@
     {
       "orderNumber": "843-2026-0060",
       "customer": "Daughters of both suns",
-      "status": "Order Received",
+      "status": "In Queue",
       "createdAt": "2026-05-16 21:17:05",
-      "updatedAt": "2026-05-20 13:00:30",
+      "updatedAt": "2026-05-24 13:36:43",
       "completedAt": null
     },
     {
@@ -32,7 +32,7 @@
       "customer": "HCPR Summer Camp - Counsler Teez",
       "status": "Order Received",
       "createdAt": "2026-05-22 21:43:32",
-      "updatedAt": "2026-05-22 21:43:52",
+      "updatedAt": "2026-05-24 13:36:55",
       "completedAt": null
     },
     {
@@ -40,7 +40,7 @@
       "customer": "Conway Quilters",
       "status": "Order Received",
       "createdAt": "2026-05-22 21:58:14",
-      "updatedAt": "2026-05-22 21:58:14",
+      "updatedAt": "2026-05-24 13:36:56",
       "completedAt": null
     }
   ],
