@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-25T22:00:01.638Z",
-  "count": 4,
+  "generatedAt": "2026-05-25T22:30:01.648Z",
+  "count": 3,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "In Production",
       "createdAt": "2026-05-01 19:12:11",
       "updatedAt": "2026-05-23 19:47:51",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0059",
-      "customer": "Sloan's Sweets",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-05-15 10:31:40",
-      "updatedAt": "2026-05-24 18:43:28",
       "completedAt": null
     },
     {
@@ -37,6 +29,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0059",
+      "customer": "Sloan's Sweets",
+      "status": "Completed",
+      "createdAt": "2026-05-15 10:31:40",
+      "updatedAt": "2026-05-25 22:00:12",
+      "completedAt": "2026-05-25T22:00:12.275Z"
+    },
     {
       "orderNumber": "843-2026-0060",
       "customer": "Daughters of both suns",
@@ -108,14 +108,6 @@
       "createdAt": "2026-04-25 11:56:23",
       "updatedAt": "2026-05-10 21:28:51",
       "completedAt": "2026-05-10T21:28:51.836Z"
-    },
-    {
-      "orderNumber": "843-2026-0051",
-      "customer": "Courte Sea Concrete",
-      "status": "Completed",
-      "createdAt": "2026-04-21 20:23:50",
-      "updatedAt": "2026-04-27 10:56:37",
-      "completedAt": "2026-04-27T10:56:37.364Z"
     }
   ]
 }
