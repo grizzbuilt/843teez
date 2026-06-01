@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-01T12:00:01.668Z",
+  "generatedAt": "2026-06-01T12:30:01.630Z",
   "count": 3,
   "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0053",
       "customer": "Horry County Parks & Rec - Summer Camp",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-05-01 19:12:11",
-      "updatedAt": "2026-06-01 11:49:01",
+      "updatedAt": "2026-06-01 12:28:20",
       "completedAt": null
     },
     {
