@@ -1,14 +1,30 @@
 {
-  "generatedAt": "2026-06-05T11:00:01.642Z",
-  "count": 1,
+  "generatedAt": "2026-06-05T11:30:01.624Z",
+  "count": 3,
   "completedCount": 10,
   "orders": [
     {
       "orderNumber": "843-2026-0063",
       "customer": "Conway Quilters",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-05-22 21:58:14",
-      "updatedAt": "2026-06-02 15:27:40",
+      "updatedAt": "2026-06-05 11:17:26",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0064",
+      "customer": "HCPR Summer Camp & CounselorTeez",
+      "status": "Order Received",
+      "createdAt": "2026-06-05 11:11:54",
+      "updatedAt": "2026-06-05 11:11:54",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0065",
+      "customer": "Adams MMA - Samples",
+      "status": "Order Received",
+      "createdAt": "2026-06-05 11:18:16",
+      "updatedAt": "2026-06-05 11:18:16",
       "completedAt": null
     }
   ],
