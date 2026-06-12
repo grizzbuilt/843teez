@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-12T13:00:01.619Z",
-  "count": 3,
+  "generatedAt": "2026-06-12T13:30:01.624Z",
+  "count": 4,
   "completedCount": 10,
   "orders": [
     {
@@ -25,6 +25,14 @@
       "status": "In Queue",
       "createdAt": "2026-06-05 11:18:16",
       "updatedAt": "2026-06-11 22:37:39",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0066",
+      "customer": "K. Gomes",
+      "status": "Order Received",
+      "createdAt": "2026-06-12 13:25:39",
+      "updatedAt": "2026-06-12 13:27:30",
       "completedAt": null
     }
   ],
