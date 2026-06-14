@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T19:00:01.622Z",
+  "generatedAt": "2026-06-14T19:30:01.620Z",
   "count": 5,
   "completedCount": 10,
   "orders": [
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0064",
       "customer": "HCPR Summer Camp & CounselorTeez",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-06-05 11:11:54",
-      "updatedAt": "2026-06-14 17:04:52",
+      "updatedAt": "2026-06-14 19:23:13",
       "completedAt": null
     },
     {
