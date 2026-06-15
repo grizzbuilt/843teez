@@ -18,5 +18,8 @@
 /store/christmas.html   /store/   301
 /store/fall.html   /store/   301
 
+# Redirect inactive screen printing service page to custom shirts
+/screen-printing-myrtle-beach-sc.html   /custom-tshirts-conway-sc.html   301
+
 # Keep archived cleanup files out of public access
 /_archive/*   /404.html   404
