@@ -60,19 +60,12 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.75</priority>
   </url>
 
-  <!-- CONVERSION PAGES -->
+  <!-- CONVERSION PAGE -->
   <url>
     <loc>https://843teez.com/quote.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/thank-you.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 
   <!-- BLOG INDEX -->
