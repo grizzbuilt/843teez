@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-15T12:30:01.614Z",
-  "count": 5,
+  "generatedAt": "2026-06-15T13:00:01.647Z",
+  "count": 4,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-05-22 21:58:14",
       "updatedAt": "2026-06-11 22:37:32",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0064",
-      "customer": "HCPR Summer Camp & CounselorTeez",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-06-05 11:11:54",
-      "updatedAt": "2026-06-14 19:23:13",
       "completedAt": null
     },
     {
@@ -45,6 +37,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0064",
+      "customer": "HCPR Summer Camp & CounselorTeez",
+      "status": "Completed",
+      "createdAt": "2026-06-05 11:11:54",
+      "updatedAt": "2026-06-15 12:52:16",
+      "completedAt": "2026-06-15T12:52:16.756Z"
+    },
     {
       "orderNumber": "843-2026-0062",
       "customer": "HCPR Summer Camp - Counsler Teez",
@@ -116,14 +116,6 @@
       "createdAt": "2026-05-05 14:26:05",
       "updatedAt": "2026-05-11 18:15:50",
       "completedAt": "2026-05-11T18:15:50.871Z"
-    },
-    {
-      "orderNumber": "843-2026-0056",
-      "customer": "Fast Freddy Detailing",
-      "status": "Completed",
-      "createdAt": "2026-05-05 21:56:18",
-      "updatedAt": "2026-05-11 15:00:08",
-      "completedAt": "2026-05-11T15:00:08.597Z"
     }
   ]
 }
