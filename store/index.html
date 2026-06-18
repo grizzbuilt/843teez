@@ -174,13 +174,11 @@
         <h2 class="text-2xl sm:text-3xl font-bold text-[#003466] mb-6 border-b pb-2">Featured Apparel</h2>
 
         <div id="category-filter" class="flex flex-wrap justify-center divide-x-4 divide-gray-300 mb-8 pt-4 border-b pb-4">
-          <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
-          <button onclick="window.location.href='originals.html'" class="category-btn px-4">843 Teez Originals</button>
-
-          <button onclick="window.location.href='/christmas.html'" class="category-btn px-4">Christmas</button>
-          <button onclick="window.location.href='/fall.html'" class="category-btn px-4">Fall & Halloween</button>
-
-          <button onclick="window.location.href='limited_edition.html'" class="category-btn px-4">Limited Edition Teez</button>
+          <button onclick="filterProducts('all')" data-category="all" class="category-btn active px-4">All Designs</button>
+          <button onclick="filterProducts('Originals')" data-category="Originals" class="category-btn px-4">843 Teez Originals</button>
+          <button onclick="filterProducts('Christmas')" data-category="Christmas" class="category-btn px-4">Christmas</button>
+          <button onclick="filterProducts('Fall')" data-category="Fall" class="category-btn px-4">Fall & Halloween</button>
+          <button onclick="filterProducts('LE')" data-category="LE" class="category-btn px-4">Limited Edition Teez</button>
         </div>
 
         <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -303,9 +301,10 @@
       activeFilter = category;
       renderProducts();
 
-      document.querySelectorAll('#category-filter button').forEach(btn => btn.classList.remove('active'));
-      const firstBtn = document.querySelector('#category-filter button:first-child');
-      if (firstBtn) firstBtn.classList.add('active');
+      document.querySelectorAll('#category-filter button').forEach(btn => {
+        const isActive = String(btn.dataset.category).toLowerCase() === String(category).toLowerCase();
+        btn.classList.toggle('active', isActive);
+      });
     };
 
     const renderProducts = () => {
