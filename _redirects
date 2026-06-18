@@ -10,13 +10,11 @@
 /clothing.html   /store/   301
 /originals.html   /store/   301
 /limited_edition.html   /store/   301
-/christmas.html   /store/   301
-/fall.html   /store/   301
 /store/store.html   /store/   301
 /store/originals.html   /store/   301
 /store/limited_edition.html   /store/   301
-/store/christmas.html   /store/   301
-/store/fall.html   /store/   301
+/store/christmas.html   /christmas.html   301
+/store/fall.html   /fall.html   301
 
 # Redirect inactive screen printing service page to custom shirts
 /screen-printing-myrtle-beach-sc.html   /custom-tshirts-conway-sc.html   301

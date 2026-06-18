@@ -140,8 +140,9 @@ const updateCartSummary = () => {
     let totalItems = 0, subtotal = 0;
 
     cart.forEach(item => {
-        subtotal += item.price * item.qty;
-        totalItems += item.qty;
+        const quantity = Number(item.quantity ?? item.qty ?? 0);
+        subtotal += item.price * quantity;
+        totalItems += quantity;
     });
 
     const tax = subtotal * 0.08;
@@ -247,7 +248,7 @@ const renderProducts = () => {
 };
 
 const attachCardEvents = (products) => {
-    document.querySelectorAll(".bg-white").forEach((card, i) => {
+    document.querySelectorAll("#product-grid .bg-white").forEach((card, i) => {
         const product = products[i];
         if (!product) return;
 

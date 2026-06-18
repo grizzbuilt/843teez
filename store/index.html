@@ -177,10 +177,8 @@
           <button onclick="filterProducts('all')" class="category-btn active px-4">All Designs</button>
           <button onclick="window.location.href='originals.html'" class="category-btn px-4">843 Teez Originals</button>
 
-          <!-- OPTIONAL: Seasonal buttons hidden on main index page
-          <button onclick="window.location.href='christmas.html'" class="category-btn px-4">Christmas</button>
-          <button onclick="window.location.href='fall.html'" class="category-btn px-4">Fall & Halloween</button>
-          -->
+          <button onclick="window.location.href='/christmas.html'" class="category-btn px-4">Christmas</button>
+          <button onclick="window.location.href='/fall.html'" class="category-btn px-4">Fall & Halloween</button>
 
           <button onclick="window.location.href='limited_edition.html'" class="category-btn px-4">Limited Edition Teez</button>
         </div>
@@ -242,13 +240,6 @@
     };
     const ALL_SIZES = Object.keys(SIZE_UPCHARGES);
 
-    // Hide seasonal categories on the main index page (robust)
-    const HIDDEN_CATEGORIES_ON_INDEX = new Set(["christmas", "fall"]);
-    const isHiddenOnIndex = (category) => {
-      const cat = String(category || "").trim().toLowerCase();
-      return HIDDEN_CATEGORIES_ON_INDEX.has(cat);
-    };
-
     // --- 2. GLOBAL STATE ---
     let cart = JSON.parse(localStorage.getItem('843teez_cart')) || [];
     let allProducts = [];
@@ -297,8 +288,7 @@
         const data = await response.json();
         const loadedProducts = Array.isArray(data) ? data : (data.products || []);
 
-        // Keep the global list filtered for this page
-        allProducts = loadedProducts.filter(p => !isHiddenOnIndex(p.category));
+        allProducts = loadedProducts;
 
         renderProducts();
         updateCartSummary();
@@ -322,12 +312,9 @@
       const grid = document.getElementById('product-grid');
       let productSchema = [];
 
-      // Bulletproof: hide seasonal again at render time
-      const baseList = allProducts.filter(p => !isHiddenOnIndex(p.category));
-
       const filteredProducts = activeFilter === 'all'
-        ? baseList
-        : baseList.filter(p =>
+        ? allProducts
+        : allProducts.filter(p =>
             String(p.category || "").trim().toLowerCase() === String(activeFilter).trim().toLowerCase()
           );
 
@@ -485,8 +472,7 @@
     };
 
     const addToCart = (productId) => {
-      // Safest: only allow add from non-hidden items shown on this page
-      const product = allProducts.find(p => p.id === productId && !isHiddenOnIndex(p.category));
+      const product = allProducts.find(p => p.id === productId);
       if (!product) return;
 
       const typeSelector = document.getElementById(`type-${productId}`);
