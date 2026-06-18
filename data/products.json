@@ -230,7 +230,7 @@
         "5XL": 6
       },
       "name": "Wet Bandit Plumbing",
-      "thumbnail": "/store/wetbanditModel.png",
+      "thumbnail": "/store/wetbanditmodel.png",
       "product_options": [
         "Tee_Shirt",
         "Sweatshirt",
@@ -250,7 +250,7 @@
       "id": "C103",
       "category": "Christmas",
       "imageUrls": [
-        "/store/wetbanditModel.png",
+        "/store/wetbanditmodel.png",
         "/store/BanditNatural.jpg",
         "/store/BanditGray.jpg",
         "/store/BanditPink.jpg",
@@ -634,7 +634,7 @@
       "category": "LE",
       "imageUrls": [
         "/store/certweirdmodel.png",
-        "/store/CertWeirdtee.jpg"
+        "/store/CertWeirdTee.jpg"
       ]
     },
     {
@@ -751,10 +751,10 @@
       "id": "C201",
       "category": "Christmas",
       "imageUrls": [
-        "/store/YuleModel.png",
-        "/store/YuleRoyal.jpg",
-        "/store/YuleLBlue.jpg",
-        "/store/YuleLpint.jpg",
+        "/store/yulemodel.png",
+        "/store/yuleroyal.jpg",
+        "/store/yulelblue.jpg",
+        "/store/yulelpint.jpg",
         "/store/YuleDaisy.jpg"
       ]
     },
