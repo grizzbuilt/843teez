@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-19T11:00:01.633Z",
-  "count": 5,
+  "generatedAt": "2026-06-19T11:30:01.621Z",
+  "count": 6,
   "completedCount": 10,
   "orders": [
     {
@@ -41,6 +41,14 @@
       "status": "Order Received",
       "createdAt": "2026-06-16 20:52:12",
       "updatedAt": "2026-06-16 20:52:12",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0069",
+      "customer": "Legends Painting",
+      "status": "Order Received",
+      "createdAt": "2026-06-19 11:13:21",
+      "updatedAt": "2026-06-19 11:13:21",
       "completedAt": null
     }
   ],
