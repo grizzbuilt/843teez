@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-22T15:30:01.630Z",
-  "count": 5,
+  "generatedAt": "2026-06-22T16:00:01.622Z",
+  "count": 4,
   "completedCount": 10,
   "orders": [
     {
@@ -17,14 +17,6 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-06-12 13:25:39",
       "updatedAt": "2026-06-21 13:41:19",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0067",
-      "customer": "J. Gayz",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-06-12 17:58:40",
-      "updatedAt": "2026-06-21 15:48:32",
       "completedAt": null
     },
     {
@@ -45,6 +37,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0067",
+      "customer": "J. Gayz",
+      "status": "Completed",
+      "createdAt": "2026-06-12 17:58:40",
+      "updatedAt": "2026-06-22 15:51:59",
+      "completedAt": "2026-06-22T15:51:59.181Z"
+    },
     {
       "orderNumber": "843-2026-0063",
       "customer": "Conway Quilters",
@@ -116,14 +116,6 @@
       "createdAt": "2026-05-18 14:44:20",
       "updatedAt": "2026-05-21 22:19:27",
       "completedAt": "2026-05-21T22:19:27.532Z"
-    },
-    {
-      "orderNumber": "843-2026-0054",
-      "customer": "HCPD - Soccer Cup",
-      "status": "Completed",
-      "createdAt": "2026-05-05 12:43:51",
-      "updatedAt": "2026-05-18 12:22:52",
-      "completedAt": "2026-05-18T12:22:52.140Z"
     }
   ]
 }
