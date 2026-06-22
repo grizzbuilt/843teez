@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-22T20:30:01.703Z",
-  "count": 4,
+  "generatedAt": "2026-06-22T21:00:01.621Z",
+  "count": 3,
   "completedCount": 10,
   "orders": [
     {
@@ -9,14 +9,6 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-06-05 11:18:16",
       "updatedAt": "2026-06-13 23:25:14",
-      "completedAt": null
-    },
-    {
-      "orderNumber": "843-2026-0066",
-      "customer": "K. Gomes",
-      "status": "Ready for Pickup",
-      "createdAt": "2026-06-12 13:25:39",
-      "updatedAt": "2026-06-21 13:41:19",
       "completedAt": null
     },
     {
@@ -37,6 +29,14 @@
     }
   ],
   "recentlyCompleted": [
+    {
+      "orderNumber": "843-2026-0066",
+      "customer": "K. Gomes",
+      "status": "Completed",
+      "createdAt": "2026-06-12 13:25:39",
+      "updatedAt": "2026-06-22 20:54:50",
+      "completedAt": "2026-06-22T20:54:50.566Z"
+    },
     {
       "orderNumber": "843-2026-0067",
       "customer": "J. Gayz",
@@ -108,14 +108,6 @@
       "createdAt": "2026-05-12 19:48:43",
       "updatedAt": "2026-05-21 22:19:28",
       "completedAt": "2026-05-21T22:19:28.860Z"
-    },
-    {
-      "orderNumber": "843-2026-0061",
-      "customer": "K. Gomez",
-      "status": "Completed",
-      "createdAt": "2026-05-18 14:44:20",
-      "updatedAt": "2026-05-21 22:19:27",
-      "completedAt": "2026-05-21T22:19:27.532Z"
     }
   ]
 }
