@@ -46,7 +46,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   </url>
 
   <url>
-    <loc>https://843teez.com/about.html</loc>
+    <loc>https://843teez.com/about</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

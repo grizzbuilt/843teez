@@ -8,6 +8,7 @@
 
 # Serve the trust page at its clean public URL
 /why-local-businesses-trust-843-teez   /why-local-businesses-trust-843-teez.html   200
+/about   /about.html   200
 
 # Redirect old category/store-style pages to the live store
 /clothing.html   /store/   301
