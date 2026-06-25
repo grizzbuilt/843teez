@@ -7,8 +7,8 @@
 /old_index.html   /   301!
 
 # Serve the trust page at its clean public URL
-/why-local-businesses-trust-843-teez   /why-local-businesses-trust-843-teez.html   200
-/about   /about.html   200
+/why-local-businesses-trust-843-teez   /why-local-businesses-trust-843-teez.html   200!
+/about   /about.html   200!
 
 # Redirect old category/store-style pages to the live store
 /clothing.html   /store/   301!
@@ -26,4 +26,4 @@
 /screen-printing-myrtle-beach-sc   /custom-tshirts-conway-sc.html   301!
 
 # Keep archived cleanup files out of public access
-/_archive/*   /404.html   404
+/_archive/*   /404.html   404!
