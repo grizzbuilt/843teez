@@ -46,7 +46,14 @@
 
   <url>
     <loc>https://843teez.com/custom-event-shirts-myrtle-beach.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://843teez.com/fundraiser-shirts-myrtle-beach.html</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
