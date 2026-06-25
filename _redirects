@@ -1,29 +1,29 @@
 # Redirect old homepage to canonical homepage
-/index.html   /   301
-/89index.html   /   301
-/index-old.html   /   301
-/newIndex.html   /   301
-/new_index.html   /   301
-/old_index.html   /   301
+/index.html   /   301!
+/89index.html   /   301!
+/index-old.html   /   301!
+/newIndex.html   /   301!
+/new_index.html   /   301!
+/old_index.html   /   301!
 
 # Serve the trust page at its clean public URL
 /why-local-businesses-trust-843-teez   /why-local-businesses-trust-843-teez.html   200
 /about   /about.html   200
 
 # Redirect old category/store-style pages to the live store
-/clothing.html   /store/   301
-/originals.html   /store/   301
-/limited_edition.html   /store/   301
-/store/store.html   /store/   301
-/store/originals.html   /store/   301
-/store/limited_edition.html   /store/   301
-/store/christmas.html   /christmas.html   301
-/store/fall.html   /fall.html   301
+/clothing.html   /store/   301!
+/originals.html   /store/   301!
+/limited_edition.html   /store/   301!
+/store/store.html   /store/   301!
+/store/originals.html   /store/   301!
+/store/limited_edition.html   /store/   301!
+/store/christmas.html   /christmas.html   301!
+/store/fall.html   /fall.html   301!
 
 # Redirect inactive screen printing service page to custom shirts
-/screen-printing-myrtle-beach-sc.html   /custom-tshirts-conway-sc.html   301
-/screen-printing-myrtle-beach-sc.htm   /custom-tshirts-conway-sc.html   301
-/screen-printing-myrtle-beach-sc   /custom-tshirts-conway-sc.html   301
+/screen-printing-myrtle-beach-sc.html   /custom-tshirts-conway-sc.html   301!
+/screen-printing-myrtle-beach-sc.htm   /custom-tshirts-conway-sc.html   301!
+/screen-printing-myrtle-beach-sc   /custom-tshirts-conway-sc.html   301!
 
 # Keep archived cleanup files out of public access
 /_archive/*   /404.html   404
