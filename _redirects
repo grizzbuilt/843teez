@@ -22,6 +22,8 @@
 
 # Redirect inactive screen printing service page to custom shirts
 /screen-printing-myrtle-beach-sc.html   /custom-tshirts-conway-sc.html   301
+/screen-printing-myrtle-beach-sc.htm   /custom-tshirts-conway-sc.html   301
+/screen-printing-myrtle-beach-sc   /custom-tshirts-conway-sc.html   301
 
 # Keep archived cleanup files out of public access
 /_archive/*   /404.html   404
