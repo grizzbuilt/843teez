@@ -2,3 +2,18 @@
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+[[redirects]]
+  from = "/screen-printing-myrtle-beach-sc.html"
+  to = "/custom-tshirts-conway-sc.html"
+  status = 301
+
+[[redirects]]
+  from = "/screen-printing-myrtle-beach-sc.htm"
+  to = "/custom-tshirts-conway-sc.html"
+  status = 301
+
+[[redirects]]
+  from = "/screen-printing-myrtle-beach-sc"
+  to = "/custom-tshirts-conway-sc.html"
+  status = 301
