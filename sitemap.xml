@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Homepage -->
   <url>
     <loc>https://843teez.com/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,7 +15,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
-  <!-- CORE MONEY PAGES -->
+  <!-- Core service pages -->
   <url>
     <loc>https://843teez.com/custom-tshirts-conway-sc.html</loc>
     <lastmod>2026-06-16</lastmod>
@@ -30,26 +30,11 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.95</priority>
   </url>
 
-  <!-- LOCAL / SUPPORTING PAGES -->
   <url>
     <loc>https://843teez.com/custom-business-shirts-myrtle-beach.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/why-local-businesses-trust-843-teez</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://843teez.com/about</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
@@ -73,15 +58,30 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.8</priority>
   </url>
 
-  <!-- CAMPAIGN / EVENT PAGE -->
+  <!-- About / trust pages -->
   <url>
-    <loc>https://843teez.com/teeparty.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://843teez.com/why-local-businesses-trust-843-teez</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://843teez.com/about</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Campaign / event page -->
+  <url>
+    <loc>https://843teez.com/heathers-tee-party.html</loc>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
-  <!-- CONVERSION PAGE -->
+  <!-- Conversion page -->
   <url>
     <loc>https://843teez.com/quote.html</loc>
     <lastmod>2026-06-15</lastmod>
@@ -89,7 +89,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.85</priority>
   </url>
 
-  <!-- BLOG INDEX -->
+  <!-- Blog index -->
   <url>
     <loc>https://843teez.com/blog.html</loc>
     <lastmod>2026-06-15</lastmod>
@@ -97,14 +97,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.8</priority>
   </url>
 
-  <!-- BLOG POSTS -->
-  <url>
-    <loc>https://843teez.com/custom-tshirt-printing-conway-sc.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  <!-- Blog posts -->
   <url>
     <loc>https://843teez.com/blog-how-much-custom-shirts-cost.html</loc>
     <lastmod>2026-06-15</lastmod>
@@ -133,7 +126,6 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.8</priority>
   </url>
 
-  <!-- NEW BLOG POST -->
   <url>
     <loc>https://843teez.com/blog-customer-service-custom-tshirts-conway-sc.html</loc>
     <lastmod>2026-06-15</lastmod>
@@ -205,10 +197,10 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <priority>0.85</priority>
   </url>
 
-  <!-- STORE -->
+  <!-- Store -->
   <url>
     <loc>https://843teez.com/store/</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
