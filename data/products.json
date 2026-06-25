@@ -28,6 +28,7 @@
         "Hoodie": 39
       },
       "id": "O101",
+      "is_active": false,
       "category": "Originals",
       "imageUrls": [
         "/store/ConwayModel.png",
@@ -58,6 +59,7 @@
         "Baseball_Tee": 28
       },
       "id": "O102",
+      "is_active": true,
       "category": "Originals",
       "imageUrls": [
         "/store/ConwaySTModel.png",
@@ -91,6 +93,7 @@
         "Hoodie": 39
       },
       "id": "O103",
+      "is_active": true,
       "category": "Originals",
       "imageUrls": [
         "/store/HstConwayModel.png",
@@ -127,6 +130,7 @@
         "Sweatshirt": 37
       },
       "id": "F101",
+      "is_active": true,
       "category": "Fall",
       "imageUrls": [
         "/store/FallCandleModel.png",
