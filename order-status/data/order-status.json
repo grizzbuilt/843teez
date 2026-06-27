@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T16:30:01.441Z",
+  "generatedAt": "2026-06-27T17:00:01.645Z",
   "count": 3,
   "completedCount": 10,
   "orders": [
@@ -22,9 +22,9 @@
     {
       "orderNumber": "843-2026-0069",
       "customer": "Legends Painting",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-06-19 11:13:21",
-      "updatedAt": "2026-06-25 10:19:50",
+      "updatedAt": "2026-06-27 16:33:10",
       "completedAt": null
     }
   ],
