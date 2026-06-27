@@ -140,39 +140,53 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Heather's Tee Party",
-    "description": "A hands-on make your own shirt party by 843 Teez in Conway, South Carolina. Guests choose from pre-made designs, help place the artwork, press the shirt with guidance, and wear it home.",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "organizer": {
-      "@type": "Organization",
-      "name": "843 Teez",
-      "url": "https://843teez.com/",
-      "telephone": "+1-843-350-1943",
-      "email": "info@843teez.com"
-    },
-    "location": {
-      "@type": "Place",
-      "name": "843 Teez",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Conway",
-        "addressRegion": "SC",
-        "postalCode": "29526",
-        "addressCountry": "US"
+    "@graph": [
+      {
+        "@type": "PrintShop",
+        "@id": "https://843teez.com/#business",
+        "name": "843 Teez",
+        "url": "https://843teez.com/",
+        "telephone": "+1-843-350-1943",
+        "email": "info@843teez.com",
+        "image": "https://843teez.com/843teez.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Conway",
+          "addressRegion": "SC",
+          "postalCode": "29526",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Conway" },
+          { "@type": "City", "name": "Myrtle Beach" },
+          { "@type": "AdministrativeArea", "name": "Grand Strand" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://843teez.com/heathers-tee-party.html#service",
+        "name": "Heather's Tee Party",
+        "serviceType": "Private custom shirt party experience",
+        "url": "https://843teez.com/heathers-tee-party.html",
+        "description": "A hands-on private shirt party service by 843 Teez. Guests choose from pre-made designs, help place the artwork, press their shirts with guidance, and wear them home.",
+        "provider": {
+          "@id": "https://843teez.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Conway" },
+          { "@type": "City", "name": "Myrtle Beach" },
+          { "@type": "AdministrativeArea", "name": "Grand Strand" }
+        ],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Families, birthday groups, girls' nights, youth groups, and private parties"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://843teez.com/quote.html"
+        }
       }
-    },
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Families, birthday groups, girls' nights, youth groups, and private parties"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://843teez.com/quote.html",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    ]
   }
   </script>
 
