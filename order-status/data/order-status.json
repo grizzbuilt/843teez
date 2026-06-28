@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T18:30:01.614Z",
+  "generatedAt": "2026-06-28T19:00:01.648Z",
   "count": 3,
   "completedCount": 10,
   "orders": [
@@ -14,17 +14,17 @@
     {
       "orderNumber": "843-2026-0068",
       "customer": "Conway Architectural Salvage and Heritage Project",
-      "status": "In Queue",
+      "status": "In Production",
       "createdAt": "2026-06-16 20:52:12",
-      "updatedAt": "2026-06-21 15:48:35",
+      "updatedAt": "2026-06-28 18:34:40",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0069",
       "customer": "Legends Painting",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-06-19 11:13:21",
-      "updatedAt": "2026-06-27 16:33:10",
+      "updatedAt": "2026-06-28 18:34:36",
       "completedAt": null
     }
   ],
