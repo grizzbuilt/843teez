@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-28T22:30:01.617Z",
-  "count": 3,
+  "generatedAt": "2026-06-28T23:00:01.647Z",
+  "count": 4,
   "completedCount": 10,
   "orders": [
     {
@@ -25,6 +25,14 @@
       "status": "Ready for Pickup",
       "createdAt": "2026-06-19 11:13:21",
       "updatedAt": "2026-06-28 18:34:36",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0070",
+      "customer": "N.Barnes",
+      "status": "Order Received",
+      "createdAt": "2026-06-28 22:49:03",
+      "updatedAt": "2026-06-28 22:49:03",
       "completedAt": null
     }
   ],
