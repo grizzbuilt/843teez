@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-30T00:30:01.615Z",
-  "count": 4,
+  "generatedAt": "2026-06-30T01:00:01.638Z",
+  "count": 5,
   "completedCount": 10,
   "orders": [
     {
@@ -30,9 +30,17 @@
     {
       "orderNumber": "843-2026-0070",
       "customer": "N.Barnes",
-      "status": "In Queue",
+      "status": "Ready for Pickup",
       "createdAt": "2026-06-28 22:49:03",
-      "updatedAt": "2026-06-29 15:42:13",
+      "updatedAt": "2026-06-30 00:44:37",
+      "completedAt": null
+    },
+    {
+      "orderNumber": "843-2026-0071",
+      "customer": "Fizzy Sips",
+      "status": "Order Received",
+      "createdAt": "2026-06-30 00:42:20",
+      "updatedAt": "2026-06-30 00:42:20",
       "completedAt": null
     }
   ],
