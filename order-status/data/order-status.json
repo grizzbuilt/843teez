@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T22:30:01.627Z",
+  "generatedAt": "2026-06-30T23:00:01.632Z",
   "count": 6,
   "completedCount": 10,
   "orders": [
@@ -38,17 +38,17 @@
     {
       "orderNumber": "843-2026-0071",
       "customer": "Fizzy Sips",
-      "status": "In Production",
+      "status": "In Queue",
       "createdAt": "2026-06-30 00:42:20",
-      "updatedAt": "2026-06-30 19:54:51",
+      "updatedAt": "2026-06-30 22:52:52",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0072",
       "customer": "S.Fischett",
-      "status": "In Production",
+      "status": "Ready for Pickup",
       "createdAt": "2026-06-30 13:16:12",
-      "updatedAt": "2026-06-30 19:54:49",
+      "updatedAt": "2026-06-30 22:52:42",
       "completedAt": null
     }
   ],
