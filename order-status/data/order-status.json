@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T19:30:01.612Z",
+  "generatedAt": "2026-06-30T20:00:01.622Z",
   "count": 6,
   "completedCount": 10,
   "orders": [
@@ -14,9 +14,9 @@
     {
       "orderNumber": "843-2026-0068",
       "customer": "Conway Architectural Salvage and Heritage Project",
-      "status": "In Production",
+      "status": "In Queue",
       "createdAt": "2026-06-16 20:52:12",
-      "updatedAt": "2026-06-28 18:34:40",
+      "updatedAt": "2026-06-30 19:54:47",
       "completedAt": null
     },
     {
@@ -38,17 +38,17 @@
     {
       "orderNumber": "843-2026-0071",
       "customer": "Fizzy Sips",
-      "status": "Order Received",
+      "status": "In Production",
       "createdAt": "2026-06-30 00:42:20",
-      "updatedAt": "2026-06-30 00:42:20",
+      "updatedAt": "2026-06-30 19:54:51",
       "completedAt": null
     },
     {
       "orderNumber": "843-2026-0072",
       "customer": "S.Fischett",
-      "status": "Order Received",
+      "status": "In Production",
       "createdAt": "2026-06-30 13:16:12",
-      "updatedAt": "2026-06-30 13:16:12",
+      "updatedAt": "2026-06-30 19:54:49",
       "completedAt": null
     }
   ],
